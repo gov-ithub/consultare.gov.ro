@@ -20,10 +20,13 @@ O altă funcționalitate a platformei ar fi ca pentru o anumită categorie de ut
 
 Setul de date există deja, fiind în prezent, centralizat manual de echipa Ministerului pentru Consultare Publică și Dialog Civic, este nevoie doar de transformarea lui în unul accesibil, într-o platformă web.
 
-# Platforme de dezvoltare:
+# Tehnologii:
 Microsoft .NET Web API
+
 Microsoft SQL Server
+
 AngularJS 2
+
 
 # Doresti sa contribui?
 Contacteaza-ne sau trimite un e-mail la carol.braileanu@ithub.gov.ro.
