@@ -19,3 +19,11 @@ De asemenea, un alt aspect important ce poate fi realizat este evidențierea ter
 O altă funcționalitate a platformei ar fi ca pentru o anumită categorie de utilizatori (cei înscriși în www.ruti.gov.ro) să se trimită o alertă atunci când un minister a încărcat un act normativ în consultare publică, în funcție de domeniul de interes selectat de respectivul utilizator. 
 
 Setul de date există deja, fiind în prezent, centralizat manual de echipa Ministerului pentru Consultare Publică și Dialog Civic, este nevoie doar de transformarea lui în unul accesibil, într-o platformă web.
+
+# Platforme de dezvoltare:
+Microsoft .NET Web API
+Microsoft SQL Server
+AngularJS 2
+
+# Doresti sa contribui?
+Contacteaza-ne sau trimite un e-mail la carol.braileanu@ithub.gov.ro.
