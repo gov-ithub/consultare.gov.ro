@@ -1,0 +1,1 @@
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\obj\Debug\Consultare.WebApi.Tests.csprojResolveAssemblyReference.cache
