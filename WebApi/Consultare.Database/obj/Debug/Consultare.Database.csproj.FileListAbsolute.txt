@@ -14,3 +14,4 @@ C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\Microsoft.AspNet.Identity.
 C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.Migrations.IdentityUser.resources
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.csproj.GenerateResource.Cache
+C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.Migrations.FirstEntities.resources

@@ -58,10 +58,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
-    <Compile Include="DatabaseEntities\IdentityUser.cs" />
+    <Compile Include="DatabaseEntities\Institution.cs" />
+    <Compile Include="DatabaseEntities\Minister.cs" />
+    <Compile Include="DatabaseEntities\Proposal.cs" />
     <Compile Include="Migrations\201610251327087_IdentityUser.cs" />
     <Compile Include="Migrations\201610251327087_IdentityUser.Designer.cs">
       <DependentUpon>201610251327087_IdentityUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610270839042_FirstEntities.cs" />
+    <Compile Include="Migrations\201610270839042_FirstEntities.Designer.cs">
+      <DependentUpon>201610270839042_FirstEntities.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +79,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610251327087_IdentityUser.resx">
       <DependentUpon>201610251327087_IdentityUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610270839042_FirstEntities.resx">
+      <DependentUpon>201610270839042_FirstEntities.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
