@@ -12,7 +12,6 @@ namespace Consultare.Database
 {
     public class DatabaseContext : IdentityDbContext<IdentityUser>
     {
-        public DbSet<Ministery> Ministeries { get; set; }
         public DbSet<Proposal> Proposals { get; set; }
         public DbSet<Institution> Institutions { get; set; }
 

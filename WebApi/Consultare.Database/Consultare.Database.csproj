@@ -59,7 +59,6 @@
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="DatabaseEntities\Institution.cs" />
-    <Compile Include="DatabaseEntities\Minister.cs" />
     <Compile Include="DatabaseEntities\Proposal.cs" />
     <Compile Include="Migrations\201610251327087_IdentityUser.cs" />
     <Compile Include="Migrations\201610251327087_IdentityUser.Designer.cs">
@@ -68,6 +67,18 @@
     <Compile Include="Migrations\201610270839042_FirstEntities.cs" />
     <Compile Include="Migrations\201610270839042_FirstEntities.Designer.cs">
       <DependentUpon>201610270839042_FirstEntities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610270846360_ProposalObservations.cs" />
+    <Compile Include="Migrations\201610270846360_ProposalObservations.Designer.cs">
+      <DependentUpon>201610270846360_ProposalObservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311143165_RemoveMinisteries.cs" />
+    <Compile Include="Migrations\201610311143165_RemoveMinisteries.Designer.cs">
+      <DependentUpon>201610311143165_RemoveMinisteries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610311631182_updateDB4.cs" />
+    <Compile Include="Migrations\201610311631182_updateDB4.Designer.cs">
+      <DependentUpon>201610311631182_updateDB4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +93,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610270839042_FirstEntities.resx">
       <DependentUpon>201610270839042_FirstEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610270846360_ProposalObservations.resx">
+      <DependentUpon>201610270846360_ProposalObservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311143165_RemoveMinisteries.resx">
+      <DependentUpon>201610311143165_RemoveMinisteries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610311631182_updateDB4.resx">
+      <DependentUpon>201610311631182_updateDB4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

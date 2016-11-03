@@ -67,3 +67,7 @@ C:\Work\GovITHub\WebApi\Consultare.WebApi\bin\System.Web.Http.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi\bin\System.Web.Http.WebHost.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi\obj\Debug\Consultare.WebApi.dll
 C:\Work\GovITHub\WebApi\Consultare.WebApi\obj\Debug\Consultare.WebApi.pdb
+C:\Work\GovITHub\WebApi\Consultare.WebApi\bin\AutoMapper.dll
+C:\Work\GovITHub\WebApi\Consultare.WebApi\bin\AutoMapper.xml
+C:\Work\GovITHub\WebApi\Consultare.WebApi\bin\System.Web.Http.Cors.dll
+C:\Work\GovITHub\WebApi\Consultare.WebApi\bin\System.Web.Http.Cors.xml

@@ -1,0 +1,21 @@
+<table class="table table-striped">
+<tr>
+  <th>Institutie</th>
+  <th>Titlu</th>
+</tr>
+<tr>
+  <th><select class="form-control">
+    <option value="">- selecteaza institutie -</option>
+    
+    </select></th>
+  <th><input type="text" class="form-control"></th>
+</tr>
+<tr *ngFor="let item of items">
+ <td>
+  {{item.institution.name}}
+  </td>
+  <td style="height:60px; overflow:hidden">
+  {{item.title}}
+  </td>
+</tr>
+</table>

@@ -1,7 +1,9 @@
 ﻿using Consultare.Database;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -27,7 +29,6 @@ namespace Consultare.WebApi
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
 
-            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
             IdentityUser user = await this._userManager.FindAsync(context.UserName, context.Password);
 
@@ -38,9 +39,12 @@ namespace Consultare.WebApi
             }
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            identity.AddClaim(new Claim("sub", context.UserName));
-            identity.AddClaim(new Claim("role", "user"));
-
+            identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
+            identity.AddClaims(_userManager.GetClaims(user.Id));
+            AuthenticationManager.(new AuthenticationProperties
+            {
+                IsPersistent = true
+            }, identity);
             context.Validated(identity);
 
         }

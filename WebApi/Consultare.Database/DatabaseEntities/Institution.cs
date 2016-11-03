@@ -12,5 +12,6 @@ namespace Consultare.Database.DatabaseEntities
         public int Id { get; set; }
         [StringLength(255)]
         public string Name { get; set; }
+        public string Type { get; set; }
     }
 }

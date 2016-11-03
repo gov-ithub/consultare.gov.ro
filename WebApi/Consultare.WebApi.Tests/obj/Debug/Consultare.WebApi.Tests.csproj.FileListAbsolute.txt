@@ -30,7 +30,6 @@ C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\EntityFramework.dll
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\System.Web.Http.Owin.dll
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Cors.dll
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Security.dll
-C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\System.Web.Cors.dll
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Consultare.WebApi.pdb
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.xml
@@ -47,3 +46,5 @@ C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Cors.xm
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\obj\Debug\Consultare.WebApi.Tests.dll
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\obj\Debug\Consultare.WebApi.Tests.pdb
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\AutoMapper.dll
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\AutoMapper.xml
