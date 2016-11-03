@@ -35,30 +35,20 @@ Contacteaza-ne sau trimite un e-mail la carol.braileanu@ithub.gov.ro.
 
 ## Web API
 
-Deschide proiectul WebApi cu Visual Studio 2015, seteaza proiectul `Consultare.Database` ca startup project
-
-In `Package Manager Console` selecteaza proiectul `Consultare.Database` si ruleaza `Update-Database`
-
-Creaza site pentru proiecul WebApi cu root in `WebApi\Consultare.WebApi\`. Implicit este folosita adresa: `http://localhost:90`.
-
-Build
+* Deschide proiectul WebApi cu Visual Studio 2015, seteaza proiectul `Consultare.Database` ca startup project
+* In `Package Manager Console` selecteaza proiectul `Consultare.Database` si ruleaza `Update-Database`
+* Creaza site pentru proiecul WebApi cu root in `WebApi\Consultare.WebApi\`. Implicit este folosita adresa: `http://localhost:90`.
+* Build
 
 ## Frontend
 
-Instaleaza `Node.js`
-
-Instaleaza angular-cli: `npm install angular-cli -g`
-
-In Command Prompt mergi in folderul ConsultareWeb si ruleaza `npm install`
-
-Seteaza adresa pentru WebApi in `src\environments\environment.ts`
-
-Build cu `ng build`
-
-Watch cu `ng build --watch`
-
-Test cu `ng start`
-
-Lint cu `ng lint` 
+* Instaleaza `Node.js`
+* Instaleaza angular-cli: `npm install angular-cli -g`
+* In Command Prompt mergi in folderul ConsultareWeb si ruleaza `npm install`
+* Seteaza adresa pentru WebApi in `src\environments\environment.ts`
+* Build cu `ng build`
+* Watch cu `ng build --watch`
+* Test cu `ng start`
+* Lint cu `ng lint` 
 
 `// Please lint your code before pushing`
