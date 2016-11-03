@@ -25,17 +25,18 @@ export class UserAccountService {
         var expDate = new Date();
         expDate.setSeconds(expDate.getSeconds() + result.expires_in);
         this.cookieService.put("auth_token", result.access_token, { expires: expDate });
+        this.getCurrentUser(true);
       });
       return obs;
   }
   
-  getCurrentUser() {
-    if (this.currentUser===undefined)
+  getCurrentUser(force:boolean = false) {
+    if (this.currentUser===undefined || force)
     {
       this.http.get('/api/account/me').map((result)=>result.json()).subscribe((result)=>
         {
-          this.currentUser=result; 
-          console.log(result);
+          this.currentUser=result;
+          console.log(this.currentUser);
         });
     }
   }

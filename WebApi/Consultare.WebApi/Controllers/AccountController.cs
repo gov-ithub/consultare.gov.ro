@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Consultare.Database;
+using Consultare.Database.DatabaseEntities;
 using Consultare.WebApi.Base;
 using Consultare.WebApi.Models;
 using Microsoft.AspNet.Identity;
@@ -23,18 +24,17 @@ namespace Consultare.WebApi.Controllers
         [Route("register")]
         public async Task<IdentityResult> RegisterUser(UserModel userModel)
         {
-            IdentityUser user = new IdentityUser {
+            ApplicationUser user = new ApplicationUser {
                 UserName = userModel.UserName,
             };
-            user.Claims.Add(new IdentityUserClaim { ClaimType = ClaimTypes.Role, ClaimValue = "User" });
+            user.Claims.Add(new IdentityUserClaim() { ClaimType = ClaimTypes.Role, ClaimValue = "User" });
+            user.Claims.Add(new IdentityUserClaim() { ClaimType = ClaimTypes.Role, ClaimValue = "Administrator" });
 
-            var result = await this.userManager.CreateAsync(user, userModel.Password);
+            var result = await this.UserManager.CreateAsync(user, userModel.Password);
             return result;
         }
 
 
-
-        [Authorize]
         [Route("me")]
         public ClaimsIdentityModel GetCurrentUser()
         {
@@ -44,6 +44,7 @@ namespace Consultare.WebApi.Controllers
                 cfg.CreateMap<ClaimsIdentity, ClaimsIdentityModel>();
                 cfg.CreateMap<Claim, ClaimModel>();
             });
+
             return Mapper.Map<ClaimsIdentityModel>(cl);
         }
 

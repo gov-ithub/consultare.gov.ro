@@ -1,6 +1,9 @@
 ﻿using Consultare.Database;
+using Consultare.Database.DatabaseEntities;
+using Consultare.Database.IdentityHelpers;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
 using System.Net;
@@ -11,13 +14,10 @@ namespace Consultare.WebApi
 {
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
-        private UserManager<IdentityUser> _userManager;
-        private DatabaseContext _context;
+        private ApplicationUserManager _userManager;
 
         public SimpleAuthorizationServerProvider()
         {
-            this._context = new DatabaseContext();
-            this._userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(_context));
         }
 
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
@@ -25,12 +25,12 @@ namespace Consultare.WebApi
             context.Validated();
         }
 
-
+        
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
+            this._userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
-
-            IdentityUser user = await this._userManager.FindAsync(context.UserName, context.Password);
+            ApplicationUser user = await _userManager.FindAsync(context.UserName, context.Password);
 
             if (user == null)
             {
@@ -38,14 +38,11 @@ namespace Consultare.WebApi
                 return;
             }
 
-            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
-            identity.AddClaims(_userManager.GetClaims(user.Id));
-            AuthenticationManager.(new AuthenticationProperties
-            {
-                IsPersistent = true
-            }, identity);
-            context.Validated(identity);
+            ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(_userManager, "JWT");
+
+            var ticket = new AuthenticationTicket(oAuthIdentity, null);
+
+            context.Validated(ticket);
 
         }
     }

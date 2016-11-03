@@ -39,7 +39,6 @@ C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Securit
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Consultare.Database.pdb
-C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\EntityFramework.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\System.Web.Http.Owin.xml
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Cors.xml
@@ -48,3 +47,8 @@ C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\obj\Debug\Consultare.WebApi.Test
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\obj\Debug\Consultare.WebApi.Tests.pdb
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\AutoMapper.dll
 C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\AutoMapper.xml
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Work\GovITHub\WebApi\Consultare.WebApi.Tests\bin\Debug\Newtonsoft.Json.xml

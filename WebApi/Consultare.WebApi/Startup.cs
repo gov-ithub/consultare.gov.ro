@@ -1,4 +1,6 @@
-﻿using Microsoft.Owin;
+﻿using Consultare.Database;
+using Consultare.Database.IdentityHelpers;
+using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using System;
@@ -34,7 +36,8 @@ namespace Consultare.WebApi
                 Provider = new SimpleAuthorizationServerProvider(),
                 
             };
-
+            app.CreatePerOwinContext(()=>new DatabaseContext());
+            app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             // Token Generation
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
