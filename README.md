@@ -30,3 +30,5 @@ AngularJS 2
 
 # Doresti sa contribui?
 Contacteaza-ne sau trimite un e-mail la carol.braileanu@ithub.gov.ro.
+
+[Intra pe wiki] (https://github.com/gov-ithub/consultare.gov.ro/wiki) pentru instructiuni de instalare
