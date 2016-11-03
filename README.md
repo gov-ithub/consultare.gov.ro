@@ -35,11 +35,11 @@ Contacteaza-ne sau trimite un e-mail la carol.braileanu@ithub.gov.ro.
 
 ## Web API
 
-Deschide proiectul WebApi cu Visual Studio 2015, seteaza proiectul Consultare.Database ca startup project
+Deschide proiectul WebApi cu Visual Studio 2015, seteaza proiectul `Consultare.Database` ca startup project
 
-In Package Manager Console selecteaza proiectul Consultare.Database si ruleaza Update-Database
+In `Package Manager Console` selecteaza proiectul `Consultare.Database` si ruleaza `Update-Database`
 
-Creaza site pentru proiecul WebApi cu root in WebApi\Consultare.WebApi\. Implicit este folosita adresa: http://localhost:90.
+Creaza site pentru proiecul WebApi cu root in `WebApi\Consultare.WebApi\`. Implicit este folosita adresa: `http://localhost:90`.
 
 Build
 
@@ -59,4 +59,6 @@ Watch cu `ng build --watch`
 
 Test cu `ng start`
 
-Lint cu `ng lint` `// Please lint your code before pushing`
+Lint cu `ng lint` 
+
+`// Please lint your code before pushing`
