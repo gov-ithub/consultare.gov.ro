@@ -32,7 +32,7 @@ export class UserAccountService {
   getCurrentUser() {
     if (this.currentUser===undefined)
     {
-      this.http.get('/api/account/me').map((result)=>result.json()).subscribe((result)=>
+      this.http.get('/api/account/me1').map((result)=>result.json()).subscribe((result)=>
         {
           this.currentUser=result; 
           console.log(result);
