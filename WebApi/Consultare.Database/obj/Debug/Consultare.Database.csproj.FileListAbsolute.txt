@@ -5,7 +5,6 @@ C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\EntityFramework.dll
 C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\EntityFramework.SqlServer.dll
 C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\EntityFramework.xml
 C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\EntityFramework.SqlServer.xml
-C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.csprojResolveAssemblyReference.cache
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.dll
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.pdb
 C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\Microsoft.AspNet.Identity.Core.dll
@@ -27,3 +26,4 @@ C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\Microsoft.Owin.Security.OA
 C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\Newtonsoft.Json.xml
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.Migrations.Initial.resources
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.csproj.GenerateResource.Cache
+C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.Migrations.RoleClaims2.resources

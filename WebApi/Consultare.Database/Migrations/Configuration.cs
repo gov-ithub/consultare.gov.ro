@@ -1,11 +1,15 @@
 namespace Consultare.Database.Migrations
 {
+    using DatabaseEntities;
+    using IdentityHelpers;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<Consultare.Database.DatabaseContext>
+    using System.Security.Claims;
+    public sealed class Configuration : DbMigrationsConfiguration<Consultare.Database.DatabaseContext>
     {
         public Configuration()
         {
@@ -14,18 +18,50 @@ namespace Consultare.Database.Migrations
 
         protected override void Seed(Consultare.Database.DatabaseContext context)
         {
-            //  This method will be called after migrating to the latest version.
+           
+            if (context.Roles.Count()>0)
+                return;
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            ApplicationRole adminRole = new ApplicationRole("Administrator");
+            ApplicationRole userRole = new ApplicationRole() { Name = "User" };
+            var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
+            var roleManager = new RoleManager<ApplicationRole>(new RoleStore<ApplicationRole>(context));
+            roleManager.Create(adminRole);
+            roleManager.Create(userRole);
+
+            adminRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
+            context.SaveChanges();
+
+            ApplicationUser usrAdmin = new ApplicationUser
+            {
+                UserName = "admin",
+                FirstName = "Admin",
+                LastName = "Lastname",
+                Email = "Email@admin.com"
+            };
+
+            var createResult = userManager.Create(usrAdmin, "admin1");
+
+            if (createResult.Errors.Count() > 0)
+                throw new Exception(createResult.Errors.First());
+            userManager.AddToRole(usrAdmin.Id, "Administrator");
+            userManager.AddToRole(usrAdmin.Id, "User");
+
+            ApplicationUser usrUser = new ApplicationUser
+            {
+                UserName = "user",
+                FirstName = "User1",
+                LastName = "Lastname",
+                Email = "Email@user1.com"
+            };
+
+            var createAdminResult = userManager.Create(usrUser, "user12");
+
+            if (createAdminResult.Errors.Count() > 0)
+                throw new Exception(createAdminResult.Errors.First());
+            userManager.AddToRole(usrUser.Id, "User");
+
+            base.Seed(context);
         }
     }
 }

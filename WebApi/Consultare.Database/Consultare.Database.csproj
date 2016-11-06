@@ -86,13 +86,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
+    <Compile Include="DatabaseEntities\ApplicationRole.cs" />
     <Compile Include="DatabaseEntities\ApplicationUser.cs" />
     <Compile Include="DatabaseEntities\Institution.cs" />
     <Compile Include="DatabaseEntities\Proposal.cs" />
+    <Compile Include="DatabaseEntities\RoleClaim.cs" />
     <Compile Include="IdentityHelpers\ApplicationUserManager.cs" />
     <Compile Include="Migrations\201611031535049_Initial.cs" />
     <Compile Include="Migrations\201611031535049_Initial.Designer.cs">
       <DependentUpon>201611031535049_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611041548592_RoleClaims2.cs" />
+    <Compile Include="Migrations\201611041548592_RoleClaims2.Designer.cs">
+      <DependentUpon>201611041548592_RoleClaims2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +112,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611031535049_Initial.resx">
       <DependentUpon>201611031535049_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611041548592_RoleClaims2.resx">
+      <DependentUpon>201611041548592_RoleClaims2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

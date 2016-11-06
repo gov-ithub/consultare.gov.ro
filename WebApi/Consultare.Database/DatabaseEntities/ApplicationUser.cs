@@ -15,6 +15,7 @@ namespace Consultare.Database.DatabaseEntities
         public ApplicationUser()
         {
             this.DateCreated = DateTime.Now;
+            Id = Guid.NewGuid().ToString();
         }
         [StringLength(255)]
         public string FirstName { get; set; }

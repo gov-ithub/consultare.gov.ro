@@ -27,7 +27,7 @@ namespace Consultare.WebApi.Controllers
         [Route("find")]
         public List<ProposalModel> FindProposal(string searchString="", string type="")
         {
-            List<Proposal> lstProposals = this.context.Proposals.ToList();
+            List<Proposal> lstProposals = this.DbContext.Proposals.ToList();
             Mapper.Initialize(cfg => {
                 cfg.CreateMap<Proposal, ProposalModel>();
                 cfg.CreateMap<Institution, InstitutionModel>();

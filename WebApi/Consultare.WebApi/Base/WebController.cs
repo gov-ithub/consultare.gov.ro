@@ -1,4 +1,5 @@
 ﻿using Consultare.Database;
+using Consultare.Database.DatabaseEntities;
 using Consultare.Database.IdentityHelpers;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -14,11 +15,14 @@ namespace Consultare.WebApi.Base
 {
 	public class WebController : ApiController
     {
-        protected DatabaseContext context;
+        private DatabaseContext context;
         private ApplicationUserManager _userManager;
-        public WebController()
-        {
-            this.context = new DatabaseContext();
+
+        protected DatabaseContext DbContext {
+            get
+            {
+                return context ?? (context = new DatabaseContext());
+            }
         }
 
         protected ApplicationUserManager UserManager
@@ -28,5 +32,6 @@ namespace Consultare.WebApi.Base
                 return _userManager ?? (_userManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>());
             }
         }
+
     }
 }

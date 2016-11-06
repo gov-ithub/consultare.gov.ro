@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { UserAccountService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
   
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private userService: UserAccountService){
+  }; 
+
+  ngOnInit(){
+    this.userService.getCurrentUser(true);
+  }
   title = 'app works!';
 }

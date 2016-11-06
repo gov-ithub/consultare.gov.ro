@@ -7,7 +7,7 @@ namespace Consultare.WebApi.Models
 {
     public class ClaimModel
     {
-        public string Type { get; set; }
-        public string Value { get; set; }
+        public string ClaimType { get; set; }
+        public string ClaimValue { get; set; }
     }
 }

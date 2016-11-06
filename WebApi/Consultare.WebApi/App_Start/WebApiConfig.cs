@@ -1,6 +1,8 @@
-﻿using Newtonsoft.Json.Serialization;
+﻿using Consultare.Database;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
@@ -25,6 +27,17 @@ namespace Consultare.WebApi
 
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            PrepareDbMigration();
         }
+
+        private static void PrepareDbMigration()
+        {
+            System.Data.Entity.Database.SetInitializer<DatabaseContext>(new MigrateDatabaseToLatestVersion<DatabaseContext, Consultare.Database.Migrations.Configuration>());
+            DatabaseContext context = new DatabaseContext();
+            context.Database.Initialize(false);
+            System.Data.Entity.Database.SetInitializer<DatabaseContext>(null);
+        }
+
     }
 }

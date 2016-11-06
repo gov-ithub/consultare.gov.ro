@@ -4,11 +4,12 @@ import { InterceptorService } from 'ng2-interceptors';
 import { Headers } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/share';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class UserAccountService {
 
-  private currentUser: any;
+  private currentUser: any = {};
 
   constructor(private cookieService: CookieService, private http: InterceptorService) {
     this.getCurrentUser();
@@ -19,9 +20,9 @@ export class UserAccountService {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     
-    var obs = this.http.post('/api/token', body, { headers:headers }).map((result)=>result.json()).share();
+    var obs = this.http.post('/api/token', body, { headers:headers }).map((result)=>result.json()).catch((res)=>{return Observable.of(res).map(o => o.json());}).share();
 
-      obs.subscribe((result)=>{
+      obs.subscribe((result)=> {
         var expDate = new Date();
         expDate.setSeconds(expDate.getSeconds() + result.expires_in);
         this.cookieService.put("auth_token", result.access_token, { expires: expDate });
@@ -31,13 +32,17 @@ export class UserAccountService {
   }
   
   getCurrentUser(force:boolean = false) {
-    if (this.currentUser===undefined || force)
+    if (!this.currentUser.id || force)
     {
       this.http.get('/api/account/me').map((result)=>result.json()).subscribe((result)=>
         {
-          this.currentUser=result;
-          console.log(this.currentUser);
+          this.currentUser=result || this.currentUser;
         });
     }
+  }
+
+  logout(){
+    this.currentUser={};
+    this.cookieService.remove("auth_token");
   }
 }

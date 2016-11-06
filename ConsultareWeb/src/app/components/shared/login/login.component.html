@@ -12,6 +12,7 @@
   <div class="form-group">
     <input type="password" placeholder="parola" class="form-control" name="password" [(ngModel)]="currentUser.password">
   </div>
+  <div class="alert alert-danger" *ngIf="loginError">{{ loginError }}</div>
 </div>
 <div class="modal-footer text-center">
   <input type="submit" class="btn btn-default" (click)="userLogin()" value="Login">

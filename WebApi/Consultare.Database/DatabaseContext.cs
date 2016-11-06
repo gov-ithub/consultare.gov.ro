@@ -14,6 +14,7 @@ namespace Consultare.Database
     {
         public DbSet<Proposal> Proposals { get; set; }
         public DbSet<Institution> Institutions { get; set; }
+        public DbSet<RoleClaim> RoleClaims { get; set; }
 
         public DatabaseContext(): base("Name=DatabaseContext")
         {

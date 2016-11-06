@@ -21,8 +21,9 @@ namespace Consultare.Database.IdentityHelpers
         {
             var appDbContext = context.Get<DatabaseContext>();
             var appUserManager = new ApplicationUserManager(new UserStore<ApplicationUser>(appDbContext));
-
             return appUserManager;
         }
+
+        
     }
 }

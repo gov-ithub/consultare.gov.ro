@@ -10,7 +10,7 @@ import { UserAccountService } from '../../../services';
 })
 export class LoginComponent implements OnInit {
   public currentUser:any = {}; 
-
+  private loginError:string;
   constructor(private activeModal: NgbActiveModal, private userAccountService: UserAccountService) { 
   }
 
@@ -18,6 +18,11 @@ export class LoginComponent implements OnInit {
   }
 
   userLogin(){ 
-    this.userAccountService.login(this.currentUser);
+    this.userAccountService.login(this.currentUser).subscribe((result)=>{
+      if (result.error)
+        this.loginError=result.error_description;
+      else
+        this.activeModal.close();
+    });
   }
 }
