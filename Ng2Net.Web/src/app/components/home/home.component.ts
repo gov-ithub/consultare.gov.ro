@@ -8,13 +8,14 @@ import { ProposalsService } from '../../services/index';
 })
 export class HomeComponent implements OnInit {
 
+  private items: any = [];
+
   constructor(private proposalsService: ProposalsService) { }
 
-  private items:any = [];
   ngOnInit() {
-      this.proposalsService.getDocuments().subscribe((result)=>{
+      this.proposalsService.getDocuments().subscribe((result) => {
         this.items = result;
-      })
+      });
   }
 
 }

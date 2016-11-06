@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { provideInterceptorService } from 'ng2-interceptors';
-import { XHRBackend, RequestOptions, Http } from '@angular/http';
 import { ServerURLInterceptor, ProposalsService, UserAccountService } from './services';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/shared/login/login.component';
@@ -33,11 +32,11 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
     provideInterceptorService([
       new ServerURLInterceptor(new CookieService())
     ]),
-    ProposalsService,
+     ProposalsService,
      CookieService,
      UserAccountService,
   ],
-  entryComponents:[
+  entryComponents: [
     LoginComponent
   ],
   bootstrap: [AppComponent]

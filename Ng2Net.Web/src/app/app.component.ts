@@ -5,14 +5,12 @@ import { UserAccountService } from './services';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  
 })
 export class AppComponent implements OnInit {
-  constructor(private userService: UserAccountService){
-  }; 
+  constructor(private userService: UserAccountService) {
+  };
 
-  ngOnInit(){
+  ngOnInit() {
     this.userService.getCurrentUser(true);
   }
-  title = 'app works!';
 }
