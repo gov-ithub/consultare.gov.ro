@@ -3,6 +3,7 @@
     <li role="presentation"><a href="#">Reports</a></li>
     <li role="presentation" *ngIf="!userService.currentUser.id"><a href="#" (click)="openLogin()">Login</a></li>
     <li role="presentation" *ngIf="userService.currentUser.claims?.adminLogin"><a href="#">Admin</a></li>
+    <li role="presentation" *ngIf="userService.currentUser.claims?.developer"><a href="#">Developer area</a></li>
     <li role="presentation" *ngIf="userService.currentUser.id"><a href="#" (click)="userService.logout()">Logout</a></li>
     <div class="pull-right" *ngIf="userService.currentUser.id">Hello, {{userService.currentUser.firstName}} {{userService.currentUser.lastName}}!<br />{{userService.currentUser.email}}</div>
 </ul>

@@ -24,12 +24,16 @@ namespace Consultare.Database.Migrations
 
             ApplicationRole adminRole = new ApplicationRole("Administrator");
             ApplicationRole userRole = new ApplicationRole() { Name = "User" };
+            ApplicationRole devRole = new ApplicationRole() { Name = "Developer" };
             var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
             var roleManager = new RoleManager<ApplicationRole>(new RoleStore<ApplicationRole>(context));
             roleManager.Create(adminRole);
             roleManager.Create(userRole);
+            roleManager.Create(devRole);
 
             adminRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
+            devRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
+            devRole.Claims.Add(new RoleClaim() { ClaimType = "Developer", ClaimValue = "true" });
             context.SaveChanges();
 
             ApplicationUser usrAdmin = new ApplicationUser
@@ -60,6 +64,23 @@ namespace Consultare.Database.Migrations
             if (createAdminResult.Errors.Count() > 0)
                 throw new Exception(createAdminResult.Errors.First());
             userManager.AddToRole(usrUser.Id, "User");
+
+
+            ApplicationUser devUser = new ApplicationUser
+            {
+                UserName = "dev",
+                FirstName = "Developer",
+                LastName = "Lastname",
+                Email = "Email@developer.com"
+            };
+
+            var createDevResult = userManager.Create(devUser, "dev123");
+
+            if (createDevResult.Errors.Count() > 0)
+                throw new Exception(createDevResult.Errors.First());
+            userManager.AddToRole(devUser.Id, "User");
+            userManager.AddToRole(devUser.Id, "Administrator");
+            userManager.AddToRole(devUser.Id, "Developer");
 
             base.Seed(context);
         }

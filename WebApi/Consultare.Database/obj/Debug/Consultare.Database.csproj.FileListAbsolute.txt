@@ -27,3 +27,4 @@ C:\Work\GovITHub\WebApi\Consultare.Database\bin\Debug\Newtonsoft.Json.xml
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.Migrations.Initial.resources
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.csproj.GenerateResource.Cache
 C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.Migrations.RoleClaims2.resources
+C:\Work\GovITHub\WebApi\Consultare.Database\obj\Debug\Consultare.Database.csprojResolveAssemblyReference.cache
