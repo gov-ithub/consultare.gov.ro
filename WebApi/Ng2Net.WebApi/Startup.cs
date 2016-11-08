@@ -10,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using Microsoft.Owin.Security.Google;
 
 [assembly: OwinStartup(typeof(Ng2Net.WebApi.Startup))]
 namespace Ng2Net.WebApi
@@ -43,7 +44,7 @@ namespace Ng2Net.WebApi
             // Token Generation
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
-
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions { ClientId = "1" });
         }
 
     }
