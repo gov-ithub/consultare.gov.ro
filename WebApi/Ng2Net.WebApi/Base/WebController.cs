@@ -10,6 +10,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using Microsoft.Owin.Security.DataProtection;
+using System.Security.Claims;
 
 namespace Ng2Net.WebApi.Base
 {
@@ -17,8 +19,10 @@ namespace Ng2Net.WebApi.Base
     {
         private DatabaseContext context;
         private ApplicationUserManager _userManager;
+        private static DpapiDataProtectionProvider _tokenProvider;
+        private ApplicationUser _currentUser;
 
-        protected DatabaseContext DbContext {
+        public DatabaseContext DbContext {
             get
             {
                 return context ?? (context = new DatabaseContext());
@@ -29,9 +33,27 @@ namespace Ng2Net.WebApi.Base
         {
             get
             {
-                return _userManager ?? (_userManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>());
+                if (_userManager == null)
+                {
+                    if (_tokenProvider == null)
+                        _tokenProvider = new DpapiDataProtectionProvider();
+                    _userManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                    _userManager.UserTokenProvider = new DataProtectorTokenProvider<ApplicationUser>(_tokenProvider.Create("ResetPassword")) { TokenLifespan = TimeSpan.FromDays(1) };
+                }
+                return _userManager;
             }
         }
 
+        public ApplicationUser CurrentUser {
+            get {
+                if (_currentUser == null)
+                {
+                    ClaimsIdentity cl = (ClaimsIdentity)User.Identity;
+                    this._currentUser = UserManager.FindById(cl.GetUserId());
+                }
+
+                return _currentUser;
+            }
+        }
     }
 }

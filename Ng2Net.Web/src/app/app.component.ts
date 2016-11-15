@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserAccountService } from './services';
+import { UserAccountService, HttpClient } from './services';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { UserAccountService } from './services';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(private userService: UserAccountService) {
+  constructor(private userService: UserAccountService, private http: HttpClient) {
   };
 
   ngOnInit() {

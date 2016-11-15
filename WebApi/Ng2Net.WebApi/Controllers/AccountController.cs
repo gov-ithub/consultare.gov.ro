@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Owin;
+using Ng2Net.Core;
+using Ng2Web.WebApi.CustomAttributes;
 
 namespace Ng2Net.WebApi.Controllers
 {
@@ -28,7 +30,7 @@ namespace Ng2Net.WebApi.Controllers
                 UserName = userModel.UserName,
             };
 
-            var result = await this.UserManager.CreateAsync(user, userModel.Password);
+            var result = await UserManager.CreateAsync(user, userModel.Password);
             UserManager.AddToRole(user.Id, "User");
             return result;
         }
@@ -38,21 +40,47 @@ namespace Ng2Net.WebApi.Controllers
         public ClaimsIdentityModel GetCurrentUser()
         {
             
-            ClaimsIdentity cl = (ClaimsIdentity)User.Identity;
-            ApplicationUser user = this.UserManager.FindById(cl.GetUserId());
-            if (user == null)
+            if (CurrentUser == null)
                 return null;
             Mapper.Initialize(cfg => {
                 cfg.CreateMap<ApplicationUser, ClaimsIdentityModel>();
                 cfg.CreateMap<RoleClaim, ClaimModel>();
             });
-            ClaimsIdentityModel result = Mapper.Map<ClaimsIdentityModel>(user);
-            string[] arrRoleId = user.Roles.Select(r => r.RoleId).ToArray();
-            List<RoleClaim> lstRoleClaims = DbContext.RoleClaims.Where(c => arrRoleId.Contains(c.RoleId)).ToList();
-            result.Claims = user.Claims.ToDictionary(x=>x.ClaimType, x=>x.ClaimValue);
-            lstRoleClaims.ForEach(c=> { try { result.Claims.Add(c.ClaimType, c.ClaimValue); } catch { } });
+            ClaimsIdentityModel result = Mapper.Map<ClaimsIdentityModel>(CurrentUser);
+            result.Claims = AccountQueries.GetClaimsDictionaryByUser(CurrentUser, this.DbContext);
             return result;
         }
 
+        [HttpPost]
+        [Route("send-reset-password")]
+        public async Task<object> SendResetPassword([FromBody] ClaimsIdentityModel userModel)
+        {
+            ApplicationUser user = await UserManager.FindByEmailAsync(userModel.Email);
+            if (user == null)
+                return new { error=true, message = "email_not_found" };
+            Notification not = new Notification
+            {
+                Subject = "Reset your password",
+                Body = "http://ng2net.start/reset-password/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GeneratePasswordResetToken(user.Id)),
+                From = "carol.braileanu@gmail.com",
+                To = user.Email
+            };
+            this.DbContext.Notifications.Add(not);
+            this.DbContext.SaveChanges();
+            return new { result="success", message="email_sent" };
+            
+        }
+
+        [HttpPost]
+        [Route("reset-password")]
+        public async Task<object> ResetPassword([FromBody] ResetPasswordModel resetModel)
+        {
+            IdentityResult result = await UserManager.ResetPasswordAsync(resetModel.UserId, resetModel.Token, resetModel.Password);
+            if (result.Succeeded)
+                return new { message = "password_reset" };
+            else
+                return new { error = true, message = "password_reset_failed" };
+
+        }
     }
 }

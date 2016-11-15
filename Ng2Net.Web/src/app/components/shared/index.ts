@@ -1,2 +1,2 @@
 export * from './navbar/navbar.component';
-export * from './login/login.component';
+export * from './html/html.component';

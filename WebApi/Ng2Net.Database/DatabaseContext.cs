@@ -12,9 +12,9 @@ namespace Ng2Net.Database
 {
     public class DatabaseContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Proposal> Proposals { get; set; }
-        public DbSet<Institution> Institutions { get; set; }
         public DbSet<RoleClaim> RoleClaims { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<HtmlContent> HtmlContents { get; set; }
 
         public DatabaseContext(): base("Name=DatabaseContext")
         {
@@ -35,8 +35,6 @@ namespace Ng2Net.Database
             modelBuilder.Entity<ApplicationUser>().HasMany(u => u.Logins).WithMany().Map(cs => { cs.MapLeftKey("Id"); cs.MapRightKey("UserId"); });
             modelBuilder.Entity<IdentityRole>().HasMany(u => u.Users).WithOptional().HasForeignKey(l => l.RoleId);
 
-            modelBuilder.Entity<Proposal>().HasRequired(t => t.Institution).WithMany().WillCascadeOnDelete(false);
-            modelBuilder.Entity<Proposal>().HasRequired(t => t.InitiatingInstitution).WithMany().WillCascadeOnDelete(false);
 
         }
 

@@ -34,6 +34,8 @@ namespace Ng2Net.Database.Migrations
             adminRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
             devRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
             devRole.Claims.Add(new RoleClaim() { ClaimType = "Developer", ClaimValue = "true" });
+            adminRole.Claims.Add(new RoleClaim() { ClaimType = "EditHtmlContent", ClaimValue = "true" });
+            
             context.SaveChanges();
 
             ApplicationUser usrAdmin = new ApplicationUser

@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Consultare.WebApi</RootNamespace>
-    <AssemblyName>Consultare.WebApi</AssemblyName>
+    <RootNamespace>Ng2Net.WebApi</RootNamespace>
+    <AssemblyName>Ng2Net.WebApi</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
@@ -187,8 +187,11 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Base\WebController.cs" />
-    <Compile Include="Controllers\ProposalController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HtmlContentController.cs" />
+    <Compile Include="CustomAttributes\AuthenticationAttribute.cs" />
+    <Compile Include="Models\HtmlContentModel.cs" />
+    <Compile Include="Models\ResetPasswordModel.cs" />
     <Compile Include="Models\ClaimsIdentityModel.cs" />
     <Compile Include="Models\ClaimsModel.cs" />
     <Compile Include="Models\InstitutionModel.cs" />
@@ -214,6 +217,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ng2Net.Core\Ng2Net.Core.csproj">
+      <Project>{A9A352CC-69F5-4289-9DC4-584D94869338}</Project>
+      <Name>Ng2Net.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ng2Net.Database\Ng2Net.Database.csproj">
       <Project>{fd80eef7-e6cf-4f77-81a1-01a9df7a76ac}</Project>
       <Name>Consultare.Database</Name>
@@ -234,7 +241,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10512</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:90</IISUrl>
+          <IISUrl>http://api.consultare.gov.start</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

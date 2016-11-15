@@ -1,0 +1,9 @@
+<app-header *ngIf="userAccountService.currentUser?.claims?.adminLogin === 'true'"></app-header>
+<app-menu-aside *ngIf="userAccountService.currentUser?.claims?.adminLogin === 'true'"></app-menu-aside>
+<div [class]="userAccountService.currentUser?.claims?.adminLogin ? 'content-wrapper' : ''" style="min-height: 915px;">
+    <router-outlet></router-outlet>
+</div>
+<div class="progress progress-sm" *ngIf="(http.loading | async) > 0" style="top:0px; position:fixed; width:100%">
+    <div class="progress-bar active progress-bar-warning progress-bar-striped" role="progressbar" style="width: 100%">
+    </div>
+</div>

@@ -7,8 +7,8 @@
     <ProjectGuid>{FD80EEF7-E6CF-4F77-81A1-01A9DF7A76AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Consultare.Database</RootNamespace>
-    <AssemblyName>Consultare.Database</AssemblyName>
+    <RootNamespace>Ng2Net.Database</RootNamespace>
+    <AssemblyName>Ng2Net.Database</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -89,17 +89,38 @@
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="DatabaseEntities\ApplicationRole.cs" />
     <Compile Include="DatabaseEntities\ApplicationUser.cs" />
-    <Compile Include="DatabaseEntities\Institution.cs" />
-    <Compile Include="DatabaseEntities\Proposal.cs" />
+    <Compile Include="DatabaseEntities\HtmlContent.cs" />
+    <Compile Include="DatabaseEntities\Notification.cs" />
     <Compile Include="DatabaseEntities\RoleClaim.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="IdentityHelpers\ApplicationUserManager.cs" />
-    <Compile Include="Migrations\201611031535049_Initial.cs" />
-    <Compile Include="Migrations\201611031535049_Initial.Designer.cs">
-      <DependentUpon>201611031535049_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201611090944468_Initial.cs" />
+    <Compile Include="Migrations\201611090944468_Initial.Designer.cs">
+      <DependentUpon>201611090944468_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611041548592_RoleClaims2.cs" />
-    <Compile Include="Migrations\201611041548592_RoleClaims2.Designer.cs">
-      <DependentUpon>201611041548592_RoleClaims2.cs</DependentUpon>
+    <Compile Include="Migrations\201611101521041_NotificationProcessor.cs" />
+    <Compile Include="Migrations\201611101521041_NotificationProcessor.Designer.cs">
+      <DependentUpon>201611101521041_NotificationProcessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611101545309_Notifications2.cs" />
+    <Compile Include="Migrations\201611101545309_Notifications2.Designer.cs">
+      <DependentUpon>201611101545309_Notifications2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611112122173_HtmlContents.cs" />
+    <Compile Include="Migrations\201611112122173_HtmlContents.Designer.cs">
+      <DependentUpon>201611112122173_HtmlContents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611112152152_HtmlContents2.cs" />
+    <Compile Include="Migrations\201611112152152_HtmlContents2.Designer.cs">
+      <DependentUpon>201611112152152_HtmlContents2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611112225149_HtmlContents3.cs" />
+    <Compile Include="Migrations\201611112225149_HtmlContents3.Designer.cs">
+      <DependentUpon>201611112225149_HtmlContents3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611122054310_HtmlContentUrl.cs" />
+    <Compile Include="Migrations\201611122054310_HtmlContentUrl.Designer.cs">
+      <DependentUpon>201611122054310_HtmlContentUrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,11 +132,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611031535049_Initial.resx">
-      <DependentUpon>201611031535049_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611090944468_Initial.resx">
+      <DependentUpon>201611090944468_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611041548592_RoleClaims2.resx">
-      <DependentUpon>201611041548592_RoleClaims2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611101521041_NotificationProcessor.resx">
+      <DependentUpon>201611101521041_NotificationProcessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611101545309_Notifications2.resx">
+      <DependentUpon>201611101545309_Notifications2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611112122173_HtmlContents.resx">
+      <DependentUpon>201611112122173_HtmlContents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611112152152_HtmlContents2.resx">
+      <DependentUpon>201611112152152_HtmlContents2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611112225149_HtmlContents3.resx">
+      <DependentUpon>201611112225149_HtmlContents3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611122054310_HtmlContentUrl.resx">
+      <DependentUpon>201611122054310_HtmlContentUrl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
