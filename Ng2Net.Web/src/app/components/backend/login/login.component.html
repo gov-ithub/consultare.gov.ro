@@ -1,0 +1,31 @@
+<div class="login-box">
+  <div class="login-logo">
+    <img src='assets/images/sigla-govithub.png' />
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg"><app-html contentName="backend.login.prompt"></app-html></p>
+  <div class="callout callout-danger" *ngIf="userAccountService.authError">{{ userAccountService.authError }}</div>
+
+    <form #myForm="ngForm" novalidate>
+      <div class="form-group has-feedback">
+        <input type="text" placeholder="{{ 'backend.login.email' | htmlContent:contentService.htmlContent }}" name="email" [(ngModel)]="currentUser.email" required class="form-control">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" placeholder="{{ 'backend.login.password' | htmlContent:contentService.htmlContent }}" class="form-control" name="password" required [(ngModel)]="currentUser.password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-7">
+          <a [routerLink]="'/' +activatedRoute.snapshot.parent.url + '/forgot-password'"><app-html contentName="backend.login.forgotPassword"></app-html></a>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-5">
+          <button type="submit" (click)="userLogin()" class="btn btn-primary btn-block btn-flat"><app-html contentName="backend.login.signin"></app-html></button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+  </div>
+</div>

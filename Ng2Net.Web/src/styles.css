@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+.logo-loader {
+    margin-top: 300px;
+    text-align: center;
+    display: block;
+    margin: 300px auto 0px auto;
+    width: 300px;
+}
+.loader-container
+{ 
+    text-align: center;
+    color: #fff
+}
+a { cursor: pointer }
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.box-tools-btn{
+margin-left:5px; display:inline-block
+}
+
+form {
+    display:inline
+}
