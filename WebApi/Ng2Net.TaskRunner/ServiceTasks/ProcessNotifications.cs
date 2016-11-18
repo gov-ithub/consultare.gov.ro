@@ -15,6 +15,12 @@ namespace Ng2Net.TaskRunner.ServiceTasks
             _repository = repository;
         }
 
+
+
+
+        //test
+
+
         public void Run(string settings)
         {
             NotificationProcessor proc = new NotificationProcessor(_repository, JsonConvert.DeserializeObject<NotificationProcessorSettings>(settings));
