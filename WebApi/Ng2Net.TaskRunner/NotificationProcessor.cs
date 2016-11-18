@@ -20,14 +20,12 @@ namespace Ng2Net.TaskRunner
         public int FailedNotifications { get; set; }
         public int TotalNotifications { get; set; }
         private NotificationProcessorSettings _settings;
-        private Logging log;
         private IRepository<Notification> _repository;
 
-        public NotificationProcessor(IRepository<Notification> repository, NotificationProcessorSettings settings, Logging _log)
+        public NotificationProcessor(IRepository<Notification> repository, NotificationProcessorSettings settings)
         {
             this._repository = repository;
             this._settings = settings;
-            this.log = _log;
         }
 
         public string LogFileName { get; set; }
@@ -61,7 +59,7 @@ namespace Ng2Net.TaskRunner
             }
 
             string message = shortMessage + "\r\n" + exc.StackTrace;
-            log.LogMessage(message);
+            Logging.LogMessage(message);
             return shortMessage;
         }
 

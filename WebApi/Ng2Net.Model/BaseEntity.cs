@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Ng2Net.Infrastructure.Model
+namespace Ng2Net.Model
 {
     public abstract class BaseEntity
     {

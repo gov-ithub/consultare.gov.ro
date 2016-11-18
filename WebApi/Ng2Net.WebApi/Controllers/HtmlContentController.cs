@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Ng2Net.Data;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Infrastructure.Services;
 using Ng2Net.Model.Admin;
 using Ng2Net.Services.Admin;
@@ -17,10 +18,10 @@ namespace Ng2Net.WebApi.Controllers
     [RoutePrefix("api/content")]
     public class HtmlContentController : BaseController
     {
-        private HtmlContentService _service;
+        private IHtmlContentService _service;
 
         //refactor to di
-        public HtmlContentController()
+        public HtmlContentController(IHtmlContentService _service)
         {
             _service = ServiceFactory.Create<HtmlContentService, EfRepository<HtmlContent>>();
         }

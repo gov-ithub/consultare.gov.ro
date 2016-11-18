@@ -13,18 +13,19 @@ using Ng2Net.Model.Scheduler;
 using Ng2Net.Services.Scheduler;
 using Ng2Net.Infrastructure.Services;
 using Ng2Net.Infrastructure.Data;
+using Ng2Net.Infrastructure.Interfaces;
 
 namespace Ng2Net.WebApi.Controllers
 {
     [RoutePrefix("api/account")]
     public class AccountController : BaseController
     {
-        private ApplicationAccountService _accountService;
+        private IApplicationAccountService _accountService;
         private NotificationService _notificationSevice;
         //to be changed using di
-        public AccountController()
+        public AccountController(IApplicationAccountService accountService)
         {
-            _accountService = new ApplicationAccountService(new DatabaseContext());
+            _accountService = accountService;
             _notificationSevice = ServiceFactory.Create<NotificationService, EfRepository<Notification>>();
         }
 

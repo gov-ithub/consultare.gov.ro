@@ -1,6 +1,5 @@
 namespace Ng2Net.Model.Scheduler
 {
-    using Infrastructure.Model;
     using System;    
     using System.ComponentModel.DataAnnotations;   
     using System.Net.Mail;    

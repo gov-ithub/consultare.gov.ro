@@ -1,15 +1,12 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
-using Ng2Net.Data;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Security;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ng2Net.Services.Security
 {
-    public class ApplicationAccountService
+    public class ApplicationAccountService : IApplicationAccountService
     {
         private IdentityDbContext<ApplicationUser> _context;
 

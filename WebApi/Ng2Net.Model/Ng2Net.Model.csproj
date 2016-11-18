@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="Scheduler\Notification.cs" />
     <Compile Include="Security\ApplicationRole.cs" />
     <Compile Include="Security\ApplicationUser.cs" />
@@ -65,12 +66,6 @@
     <Compile Include="Business\Institution.cs" />
     <Compile Include="Business\Proposal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ng2Net.Infrastructure\Ng2Net.Infrastructure.csproj">
-      <Project>{a9a352cc-69f5-4289-9dc4-584d94869338}</Project>
-      <Name>Ng2Net.Infrastructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

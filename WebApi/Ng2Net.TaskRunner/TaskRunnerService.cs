@@ -30,19 +30,19 @@ namespace Ng2Net.TaskRunner
                 foreach (ServiceTask task in ServiceTask.GetTasks())
                 {
 
-                    log.LogMessageLine("Registering Service Task: " + task.Name + "; Channel=" + task.CurrentChannel + "; Occurs every " + task.Frequency + " seconds");
+                    Logging.LogMessage("Registering Service Task: " + task.Name + "; Channel=" + task.CurrentChannel + "; Occurs every " + task.Frequency + " seconds");
                     Thread t = new Thread(new ThreadStart(delegate ()
                     {
                         doWorkEvery(task);
                     }));
                     _threads.Add(t);
                     t.Start();
-                    log.LogMessageLine("Registered successfully");
+                    Logging.LogMessage("Registered successfully");
                 }
             }
             catch (Exception ex)
             {
-                log.LogException(ex);
+                Logging.LogException(ex);
             }
         }
 
@@ -65,11 +65,11 @@ namespace Ng2Net.TaskRunner
             try
             {
                 IServiceTask serviceTask = (IServiceTask)Activator.CreateInstance(task.ExecuteAssembly, task.ExecuteModule).Unwrap();                
-                serviceTask.Run(log, task.Settings);
+                serviceTask.Run(task.Settings);
             }
             catch (Exception ex)
             {
-                log.LogException(ex);
+                Logging.LogException(ex);
             }
         }
 

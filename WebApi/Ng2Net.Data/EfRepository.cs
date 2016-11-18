@@ -1,5 +1,5 @@
 ﻿using Ng2Net.Infrastructure.Data;
-using Ng2Net.Infrastructure.Model;
+using Ng2Net.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

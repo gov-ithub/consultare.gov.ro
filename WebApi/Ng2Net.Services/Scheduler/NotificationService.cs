@@ -1,12 +1,11 @@
 ﻿using Ng2Net.Infrastructure.Data;
-using Ng2Net.Model.Admin;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Scheduler;
-using System.Linq;
 
 
 namespace Ng2Net.Services.Scheduler
 {
-    public class NotificationService
+    public class NotificationService: INotificationService
     {
         private IRepository<Notification> _repository;
 

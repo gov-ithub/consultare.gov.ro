@@ -15,12 +15,12 @@ namespace Ng2Net.TaskRunner.ServiceTasks
             _repository = repository;
         }
 
-        public void Run(Logging log, string settings)
+        public void Run(string settings)
         {
-            NotificationProcessor proc = new NotificationProcessor(_repository, JsonConvert.DeserializeObject<NotificationProcessorSettings>(settings), log);
+            NotificationProcessor proc = new NotificationProcessor(_repository, JsonConvert.DeserializeObject<NotificationProcessorSettings>(settings));
             int Processed = proc.ProcessQueue();
             if (Processed > 0)
-                log.LogMessage(string.Format("NotificationProcessor: Processed {0} notifications\r\n", Processed.ToString()));
+                Logging.LogMessage(string.Format("NotificationProcessor: Processed {0} notifications\r\n", Processed.ToString()));
 
         }
 

@@ -1,14 +1,11 @@
 ﻿using Ng2Net.Infrastructure.Data;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Admin;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ng2Net.Services.Admin
 {
-    public class HtmlContentService
+    public class HtmlContentService : IHtmlContentService
     {
         private IRepository<HtmlContent> _repository;
 

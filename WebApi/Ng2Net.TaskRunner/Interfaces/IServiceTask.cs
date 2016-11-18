@@ -9,6 +9,6 @@ namespace Ng2Net.TaskRunner.Interfaces
 {
     public interface IServiceTask
     {
-        void Run(Logging logger, string settings);
+        void Run(string settings);
     }
 }
