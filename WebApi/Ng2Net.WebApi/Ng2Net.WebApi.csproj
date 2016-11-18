@@ -186,17 +186,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Base\WebController.cs" />
+    <Compile Include="Base\BaseController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HtmlContentController.cs" />
     <Compile Include="CustomAttributes\AuthenticationAttribute.cs" />
-    <Compile Include="Models\HtmlContentModel.cs" />
-    <Compile Include="Models\ResetPasswordModel.cs" />
-    <Compile Include="Models\ClaimsIdentityModel.cs" />
-    <Compile Include="Models\ClaimsModel.cs" />
-    <Compile Include="Models\InstitutionModel.cs" />
-    <Compile Include="Models\ProposalModel.cs" />
-    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="DTO\ClaimsDTO.cs" />
+    <Compile Include="DTO\ClaimsIdentityDTO.cs" />
+    <Compile Include="DTO\HtmlContentDTO.cs" />
+    <Compile Include="DTO\ResetPasswordDTO.cs" />
+    <Compile Include="DTO\UserLoginDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
@@ -217,13 +215,21 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ng2Net.Core\Ng2Net.Core.csproj">
-      <Project>{A9A352CC-69F5-4289-9DC4-584D94869338}</Project>
-      <Name>Ng2Net.Core</Name>
+    <ProjectReference Include="..\Ng2Net.Data\Ng2Net.Data.csproj">
+      <Project>{FD80EEF7-E6CF-4F77-81A1-01A9DF7A76AC}</Project>
+      <Name>Ng2Net.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ng2Net.Database\Ng2Net.Database.csproj">
-      <Project>{fd80eef7-e6cf-4f77-81a1-01a9df7a76ac}</Project>
-      <Name>Consultare.Database</Name>
+    <ProjectReference Include="..\Ng2Net.Infrastructure\Ng2Net.Infrastructure.csproj">
+      <Project>{A9A352CC-69F5-4289-9DC4-584D94869338}</Project>
+      <Name>Ng2Net.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ng2Net.Model\Ng2Net.Model.csproj">
+      <Project>{77FD617F-D8EF-4EC5-9663-203968F99F00}</Project>
+      <Name>Ng2Net.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ng2Net.Services\Ng2Net.Services.csproj">
+      <Project>{66B7E9FD-57D9-45AB-A659-875E0352EE53}</Project>
+      <Name>Ng2Net.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

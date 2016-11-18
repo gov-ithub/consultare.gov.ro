@@ -57,14 +57,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -87,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Classes\ServiceTask.cs" />
     <Compile Include="Interfaces\IServiceTask.cs" />
+    <Compile Include="NotificationProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceTasks\ProcessNotifications.cs" />
@@ -114,15 +107,14 @@
     </Content>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Ng2Net.Core\Ng2Net.Core.csproj">
-      <Project>{a9a352cc-69f5-4289-9dc4-584d94869338}</Project>
-      <Name>Ng2Net.Core</Name>
+    <ProjectReference Include="..\Ng2Net.Infrastructure\Ng2Net.Infrastructure.csproj">
+      <Project>{A9A352CC-69F5-4289-9DC4-584D94869338}</Project>
+      <Name>Ng2Net.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ng2Net.Database\Ng2Net.Database.csproj">
-      <Project>{fd80eef7-e6cf-4f77-81a1-01a9df7a76ac}</Project>
-      <Name>Ng2Net.Database</Name>
+    <ProjectReference Include="..\Ng2Net.Model\Ng2Net.Model.csproj">
+      <Project>{77FD617F-D8EF-4EC5-9663-203968F99F00}</Project>
+      <Name>Ng2Net.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

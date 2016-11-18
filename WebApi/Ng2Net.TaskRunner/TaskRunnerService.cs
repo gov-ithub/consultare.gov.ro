@@ -1,18 +1,10 @@
 ﻿using Ng2Web.TaskRunner.Classes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Timers;
-using System.Threading.Tasks;
 using System.Threading;
-using Ng2Net.Core;
 using Ng2Net.TaskRunner.Interfaces;
-using Ng2Net.Database;
+using Ng2Net.Infrastrucure.Logging;
 
 namespace Ng2Net.TaskRunner
 {
@@ -72,9 +64,8 @@ namespace Ng2Net.TaskRunner
         {
             try
             {
-                IServiceTask serviceTask = (IServiceTask)Activator.CreateInstance(task.ExecuteAssembly, task.ExecuteModule).Unwrap();
-                DatabaseContext context = new DatabaseContext();
-                serviceTask.Run(context, log, task.Settings);
+                IServiceTask serviceTask = (IServiceTask)Activator.CreateInstance(task.ExecuteAssembly, task.ExecuteModule).Unwrap();                
+                serviceTask.Run(log, task.Settings);
             }
             catch (Exception ex)
             {

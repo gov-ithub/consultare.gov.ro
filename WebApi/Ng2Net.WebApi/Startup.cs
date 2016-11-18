@@ -1,16 +1,10 @@
-﻿using Ng2Net.Database;
-using Ng2Net.Database.IdentityHelpers;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
+using Ng2Net.Data;
+using Ng2Net.Services;
 using Owin;
 using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
-using System.Web.Http.Cors;
-using Microsoft.Owin.Security.Google;
 
 [assembly: OwinStartup(typeof(Ng2Net.WebApi.Startup))]
 namespace Ng2Net.WebApi
@@ -39,8 +33,9 @@ namespace Ng2Net.WebApi
                 Provider = new SimpleAuthorizationServerProvider(),
                 
             };
+            //investigate di here
             app.CreatePerOwinContext(()=>new DatabaseContext());
-            app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
+            app.CreatePerOwinContext<ApplicationUserService>(ApplicationUserService.Create);
             // Token Generation
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());

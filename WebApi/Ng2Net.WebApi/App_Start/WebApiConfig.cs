@@ -1,5 +1,5 @@
-﻿using Ng2Net.Database;
-using Newtonsoft.Json.Serialization;
+﻿using Newtonsoft.Json.Serialization;
+using Ng2Net.Data;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -24,9 +24,10 @@ namespace Ng2Net.WebApi
             PrepareDbMigration();
         }
 
+        //to be removed
         private static void PrepareDbMigration()
         {
-            System.Data.Entity.Database.SetInitializer<DatabaseContext>(new MigrateDatabaseToLatestVersion<DatabaseContext, Ng2Net.Database.Migrations.Configuration>());
+            System.Data.Entity.Database.SetInitializer<DatabaseContext>(new MigrateDatabaseToLatestVersion<DatabaseContext, Ng2Net.Data.Migrations.Configuration>());
             DatabaseContext context = new DatabaseContext();
             context.Database.Initialize(false);
             System.Data.Entity.Database.SetInitializer<DatabaseContext>(null);

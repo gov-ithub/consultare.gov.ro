@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
-using Ng2Net.Core;
-using Ng2Net.Database;
+using Ng2Net.Data;
+using Ng2Net.Infrastructure.Services;
+using Ng2Net.Model.Admin;
+using Ng2Net.Services.Admin;
 using Ng2Net.WebApi.Base;
-using Ng2Net.WebApi.Models;
+using Ng2Net.WebApi.DTO;
 using Ng2Web.WebApi.CustomAttributes;
 using System;
 using System.Collections.Generic;
@@ -13,48 +15,55 @@ using System.Web.Http;
 namespace Ng2Net.WebApi.Controllers
 {
     [RoutePrefix("api/content")]
-    public class HtmlContentController : WebController
+    public class HtmlContentController : BaseController
     {
-        
-        [Authentication(Claims = new string[] {"EditHtmlContent"})]
+        private HtmlContentService _service;
+
+        //refactor to di
+        public HtmlContentController()
+        {
+            _service = ServiceFactory.Create<HtmlContentService, EfRepository<HtmlContent>>();
+        }
+
+        [Authentication(Claims = new string[] { "EditHtmlContent" })]
         [HttpGet]
         [Route("list")]
-        public List<HtmlContentModel> List(string filterQuery = "", int page = 0, int pageSize = 0)
+        public List<HtmlContentDTO> List(string filterQuery = "", int page = 0, int pageSize = 0)
         {
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentModel>(); });
-            return Mapper.Map<List<HtmlContentModel>>(HtmlContentQueries.GetHtmlContents(this.DbContext, filterQuery, page * pageSize, pageSize));
+            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); });
+            return Mapper.Map<List<HtmlContentDTO>>(_service.GetHtmlContents(filterQuery, page * pageSize, pageSize));
         }
 
         [HttpGet]
         [Route("get")]
         public Dictionary<string, string> Get()
         {
-            return HtmlContentQueries.GetHtmlContents(this.DbContext).ToDictionary(x=>x.Name, y=>y.Content);
+            return _service.GetHtmlContents().ToDictionary(x => x.Name, y => y.Content);
         }
 
         [Authentication(Claims = new string[] { "EditHtmlContent" })]
         [HttpGet]
         [Route("get/{id}")]
-        public HtmlContentModel Get(string id)
+        public HtmlContentDTO Get(string id)
         {
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentModel>(); });
+            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); });
 
-            return Mapper.Map<HtmlContentModel>(HtmlContentQueries.GetHtmlContent(DbContext, id));
+            return Mapper.Map<HtmlContentDTO>(_service.GetHtmlContent(id));
         }
 
 
         [Authentication(Claims = new string[] { "EditHtmlContent" })]
         [HttpPost]
         [Route("save")]
-        public HtmlContentModel Get([FromBody] HtmlContentModel model)
+        public HtmlContentDTO Get([FromBody] HtmlContentDTO model)
         {
-            HtmlContent content = string.IsNullOrEmpty(model.Id) ? new HtmlContent() : HtmlContentQueries.GetHtmlContent(this.DbContext, model.Id);
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContentModel, HtmlContent>(); });
+            HtmlContent content = string.IsNullOrEmpty(model.Id) ? new HtmlContent() : _service.GetHtmlContent(model.Id);
+            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContentDTO, HtmlContent>(); });
             Mapper.Map(model, content);
             content.Id = string.IsNullOrEmpty(content.Id) ? Guid.NewGuid().ToString() : content.Id;
-            HtmlContentQueries.SaveHtmlContent(content, this.DbContext);
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentModel>(); });
-            return Mapper.Map<HtmlContentModel>(content);
+            _service.SaveHtmlContent(content);
+            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); });
+            return Mapper.Map<HtmlContentDTO>(content);
         }
 
 
@@ -63,9 +72,8 @@ namespace Ng2Net.WebApi.Controllers
         [Route("{id}")]
         public object Delete(string id)
         {
-            HtmlContentQueries.DeleteHtmlContent(this.DbContext, id);
+            _service.DeleteHtmlContent(id);
             return null;
         }
-
     }
 }

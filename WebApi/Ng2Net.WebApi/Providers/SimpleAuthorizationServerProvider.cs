@@ -1,20 +1,16 @@
-﻿using Ng2Net.Database;
-using Ng2Net.Database.DatabaseEntities;
-using Ng2Net.Database.IdentityHelpers;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Ng2Net.Services;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
-using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Ng2Net.Model.Security;
 
 namespace Ng2Net.WebApi
 {
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
-        private ApplicationUserManager _userManager;
+        private ApplicationUserService _userManager;
 
         public SimpleAuthorizationServerProvider()
         {
@@ -28,7 +24,7 @@ namespace Ng2Net.WebApi
         
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-            this._userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
+            this._userManager = context.OwinContext.GetUserManager<ApplicationUserService>();
 
             ApplicationUser user = await _userManager.FindAsync(context.UserName, context.Password);
 
