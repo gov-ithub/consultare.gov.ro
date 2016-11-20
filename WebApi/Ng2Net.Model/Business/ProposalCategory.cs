@@ -1,14 +1,15 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Ng2Net.Model.Business
 {
-    public class Institution : BaseEntity
+    public class ProposalCategory : BaseEntity
     {
         public string Name { get; set; }
-        public string Type { get; set; }
         public string Url { get; set; }
-        public IEnumerable<Proposal> Proposals { get; set; }
     }
 }

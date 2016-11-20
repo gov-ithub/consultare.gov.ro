@@ -85,6 +85,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BaseService.cs" />
+    <Compile Include="Business\InstitutionService.cs" />
+    <Compile Include="Business\CategoryService.cs" />
+    <Compile Include="Business\ProposalService.cs" />
     <Compile Include="Scheduler\NotificationService.cs" />
     <Compile Include="Security\ApplicationAccountService.cs" />
     <Compile Include="Admin\HtmlContentService.cs" />
@@ -105,9 +109,7 @@
       <Name>Ng2Net.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

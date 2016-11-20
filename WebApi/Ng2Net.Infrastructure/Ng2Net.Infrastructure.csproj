@@ -74,7 +74,11 @@
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Interfaces\IApplicationAccountService.cs" />
     <Compile Include="Interfaces\IApplicationUserService.cs" />
+    <Compile Include="Interfaces\IBaseService.cs" />
     <Compile Include="Interfaces\IHtmlContentService.cs" />
+    <Compile Include="Interfaces\IProposalService.cs" />
+    <Compile Include="Interfaces\ICategoryService.cs" />
+    <Compile Include="Interfaces\IInstitutionService.cs" />
     <Compile Include="Interfaces\INotificationService.cs" />
     <Compile Include="Logging\LoggingInterceptionBehavior.cs" />
     <Compile Include="Logging\Logging.cs" />

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Ng2Net.Model.Business
 {
@@ -18,5 +20,6 @@ namespace Ng2Net.Model.Business
         public string Email { get; set; }
 
         public string Observations { get; set; }
+        public IList<ProposalCategory> ProposalCategories { get; set; }
     }
 }

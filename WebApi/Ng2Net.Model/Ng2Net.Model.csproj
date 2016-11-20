@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Business\ProposalCategory.cs" />
     <Compile Include="Scheduler\Notification.cs" />
     <Compile Include="Security\ApplicationRole.cs" />
     <Compile Include="Security\ApplicationUser.cs" />
