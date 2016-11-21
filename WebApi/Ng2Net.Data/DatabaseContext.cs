@@ -4,6 +4,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using Ng2Net.Model.Security;
 using Ng2Net.Model.Scheduler;
 using Ng2Net.Model.Admin;
+using Ng2Net.Model.Business;
 
 namespace Ng2Net.Data
 {
@@ -32,7 +33,10 @@ namespace Ng2Net.Data
             modelBuilder.Entity<ApplicationUser>().HasMany(u => u.Logins).WithMany().Map(cs => { cs.MapLeftKey("Id"); cs.MapRightKey("UserId"); });
             modelBuilder.Entity<IdentityRole>().HasMany(u => u.Users).WithOptional().HasForeignKey(l => l.RoleId);
 
-
+            modelBuilder.Entity<ProposalCategory>().HasKey(p => p.Id).HasMany(p => p.Proposals);
+            modelBuilder.Entity<Institution>().HasKey(i=>i.Id).HasMany(i => i.Proposals).WithOptional().HasForeignKey(i => i.InstitutionId);
+            modelBuilder.Entity<Proposal>().HasKey(i => i.Id).HasOptional(p => p.InitiatingInstitution);
+            modelBuilder.Entity<Proposal>().HasRequired(p => p.Institution);
         }
 
 

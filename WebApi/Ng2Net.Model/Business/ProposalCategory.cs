@@ -9,7 +9,12 @@ namespace Ng2Net.Model.Business
 {
     public class ProposalCategory : BaseEntity
     {
+        [Required]
+        [StringLength(255)]
         public string Name { get; set; }
+        [Required]
+        [StringLength(255)]
         public string Url { get; set; }
+        public IList<Proposal> Proposals { get; set; }
     }
 }

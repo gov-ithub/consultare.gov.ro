@@ -9,6 +9,6 @@ namespace Ng2Net.Model.Business
         public string Name { get; set; }
         public string Type { get; set; }
         public string Url { get; set; }
-        public IEnumerable<Proposal> Proposals { get; set; }
+        public IList<Proposal> Proposals { get; set; }
     }
 }
