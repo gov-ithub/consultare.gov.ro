@@ -218,6 +218,9 @@
     <Compile Include="Base\BaseController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HtmlContentController.cs" />
+    <Compile Include="Controllers\InstitutionController.cs" />
+    <Compile Include="Controllers\ProposalsController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="CustomAttributes\AuthenticationAttribute.cs" />
     <Compile Include="DTO\ClaimsDTO.cs" />
     <Compile Include="DTO\ClaimsIdentityDTO.cs" />

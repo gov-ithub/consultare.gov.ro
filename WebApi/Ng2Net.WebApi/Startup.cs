@@ -16,7 +16,7 @@ namespace Ng2Net.WebApi
         {
             ConfigureOAuth(app);
             HttpConfiguration config = new HttpConfiguration();
-
+            UnityConfig.RegisterComponents();
             WebApiConfig.Register(config);
             app.UseWebApi(config);
         }
