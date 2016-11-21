@@ -1,9 +1,13 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
+using Newtonsoft.Json.Serialization;
 using Ng2Net.Data;
 using Ng2Net.Services;
+using Ng2Net.WebApi.App_Start;
 using Owin;
 using System;
+using System.Linq;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 
 [assembly: OwinStartup(typeof(Ng2Net.WebApi.Startup))]
@@ -14,10 +18,16 @@ namespace Ng2Net.WebApi
     {
         public void Configuration(IAppBuilder app)
         {
+            var config = new HttpConfiguration();
+
+            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            config.MapHttpAttributeRoutes();
+            var container = UnityConfig.RegisterComponents();
+            config.DependencyResolver = new UnityResolver(container);
+            //WebApiConfig.Register(config);
             ConfigureOAuth(app);
-            HttpConfiguration config = new HttpConfiguration();
-            UnityConfig.RegisterComponents();
-            WebApiConfig.Register(config);
             app.UseWebApi(config);
         }
 

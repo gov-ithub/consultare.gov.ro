@@ -12,9 +12,6 @@ namespace Ng2Net.Model.Scheduler
             this.Status = "NEW";
         }
 
-        [Key]
-        public string Id { get; set; }
-
         [Required]
         [StringLength(255)]
         public string From { get; set; }

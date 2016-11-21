@@ -22,7 +22,7 @@ namespace Ng2Net.WebApi
 {
     public static class UnityConfig
     {
-        public static void RegisterComponents()
+        public static IUnityContainer RegisterComponents()
         {
 			var container = new UnityContainer();
             container.AddNewExtension<Interception>();
@@ -30,17 +30,17 @@ namespace Ng2Net.WebApi
             var interceptor = new Interceptor<InterfaceInterceptor>();
             var behaver = new InterceptionBehavior<LoggingInterceptionBehavior>();
 
-            container
-                .RegisterType<IRepository<BaseEntity>, EfRepository<BaseEntity>>(interceptor, behaver)
-                .RegisterType<IdentityDbContext<ApplicationUser>, DatabaseContext>(interceptor, behaver)
-                .RegisterType<IApplicationAccountService, ApplicationAccountService>(interceptor, behaver)
-                .RegisterType<IHtmlContentService, HtmlContentService>(interceptor, behaver)
-                .RegisterType<INotificationService, NotificationService>(interceptor, behaver)
-                .RegisterType<IProposalService, ProposalService>(interceptor, behaver)
-                .RegisterType<IInstitutionService, InstitutionService>(interceptor, behaver)
-                .RegisterType<ICategoryService, CategoryService>(interceptor, behaver);
+            container.RegisterType<IBaseService<BaseEntity>, BaseService<BaseEntity>>(interceptor, behaver);
+            container.RegisterType<IRepository<BaseEntity>, EfRepository<BaseEntity>>(interceptor, behaver);
+            container.RegisterType<IdentityDbContext>(new InjectionFactory(c=>new DatabaseContext()));
+            container.RegisterType<IApplicationAccountService, ApplicationAccountService>(interceptor, behaver);
+            container.RegisterType<IHtmlContentService, HtmlContentService>(interceptor, behaver);
+            container.RegisterType<ICategoryService, CategoryService>(interceptor, behaver);
+            container.RegisterType<INotificationService, NotificationService>(interceptor, behaver);
+            container.RegisterType<IProposalService, ProposalService>(interceptor, behaver);
+            container.RegisterType<IInstitutionService, InstitutionService>(interceptor, behaver);
 
-            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+            return container;
         }
     }
 }                                                                                                                                                          

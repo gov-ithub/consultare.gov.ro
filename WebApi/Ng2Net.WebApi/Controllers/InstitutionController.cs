@@ -10,8 +10,8 @@ using System.Web.Http;
 
 namespace Ng2Net.WebApi.Controllers
 {
-    [RoutePrefix("/api/institutions")]
-    public class InstitutionController : BaseController
+    [RoutePrefix("api/institutions")]
+    public class InstitutionController : ApiController
     {
         private IInstitutionService instService;
 
@@ -20,21 +20,27 @@ namespace Ng2Net.WebApi.Controllers
             this.instService = instService;
         }
 
+        [HttpPost]
+        [Route("add")]
         public Institution Add(Institution entity)
         {
             return instService.Add(entity);
         }
 
+        [HttpPost]
         public void Delete(Institution entity)
         {
             instService.Delete(entity);
         }
 
+        [HttpPost]
         public Institution Edit(Institution entity)
         {
             return instService.Edit(entity);
         }
 
+        [HttpGet]
+        [Route("get")]
         public virtual IEnumerable<Institution> Get()
         {
             return instService.Get();
