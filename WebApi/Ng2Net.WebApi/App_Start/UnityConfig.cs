@@ -5,18 +5,13 @@ using Ng2Net.Data;
 using Ng2Net.Infrastructure.Data;
 using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Infrastructure.Logging;
-using Ng2Net.Infrastructure.Services;
-using Ng2Net.Model;
-using Ng2Net.Model.Admin;
 using Ng2Net.Model.Business;
-using Ng2Net.Model.Scheduler;
 using Ng2Net.Model.Security;
 using Ng2Net.Services.Admin;
 using Ng2Net.Services.Business;
 using Ng2Net.Services.Scheduler;
 using Ng2Net.Services.Security;
 using System.Web.Http;
-using Unity.WebApi;
 
 namespace Ng2Net.WebApi
 {
@@ -30,15 +25,17 @@ namespace Ng2Net.WebApi
             var interceptor = new Interceptor<InterfaceInterceptor>();
             var behaver = new InterceptionBehavior<LoggingInterceptionBehavior>();
 
-            container.RegisterType<IBaseService<BaseEntity>, BaseService<BaseEntity>>(interceptor, behaver);
-            container.RegisterType<IRepository<BaseEntity>, EfRepository<BaseEntity>>(interceptor, behaver);
-            container.RegisterType<IdentityDbContext>(new InjectionFactory(c=>new DatabaseContext()));
+            container.RegisterType<IdentityDbContext<ApplicationUser>, DatabaseContext>(interceptor, behaver);
+            container.RegisterInstance<IRepository<ProposalCategory>>(new EfRepository<ProposalCategory>());
+            container.RegisterInstance<IRepository<Proposal>>(new EfRepository<Proposal>());
+            container.RegisterInstance<IRepository<Institution>>(new EfRepository<Institution>());
             container.RegisterType<IApplicationAccountService, ApplicationAccountService>(interceptor, behaver);
             container.RegisterType<IHtmlContentService, HtmlContentService>(interceptor, behaver);
             container.RegisterType<ICategoryService, CategoryService>(interceptor, behaver);
             container.RegisterType<INotificationService, NotificationService>(interceptor, behaver);
             container.RegisterType<IProposalService, ProposalService>(interceptor, behaver);
             container.RegisterType<IInstitutionService, InstitutionService>(interceptor, behaver);
+            container.RegisterType<ApiController, ApiController>(interceptor, behaver);
 
             return container;
         }

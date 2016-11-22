@@ -11,7 +11,7 @@ using System.Web.Http;
 namespace Ng2Net.WebApi.Controllers
 {
     [RoutePrefix("api/institutions")]
-    public class InstitutionController : ApiController
+    public class InstitutionController : BaseController
     {
         private IInstitutionService instService;
 
