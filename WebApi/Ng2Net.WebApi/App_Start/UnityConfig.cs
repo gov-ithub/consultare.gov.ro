@@ -5,7 +5,9 @@ using Ng2Net.Data;
 using Ng2Net.Infrastructure.Data;
 using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Infrastructure.Logging;
+using Ng2Net.Model.Admin;
 using Ng2Net.Model.Business;
+using Ng2Net.Model.Scheduler;
 using Ng2Net.Model.Security;
 using Ng2Net.Services.Admin;
 using Ng2Net.Services.Business;
@@ -25,10 +27,12 @@ namespace Ng2Net.WebApi
             var interceptor = new Interceptor<InterfaceInterceptor>();
             var behaver = new InterceptionBehavior<LoggingInterceptionBehavior>();
 
-            container.RegisterType<IdentityDbContext<ApplicationUser>, DatabaseContext>(interceptor, behaver);
+            container.RegisterInstance<IdentityDbContext<ApplicationUser>>(new DatabaseContext());
             container.RegisterInstance<IRepository<ProposalCategory>>(new EfRepository<ProposalCategory>());
             container.RegisterInstance<IRepository<Proposal>>(new EfRepository<Proposal>());
             container.RegisterInstance<IRepository<Institution>>(new EfRepository<Institution>());
+            container.RegisterInstance<IRepository<Notification>>(new EfRepository<Notification>());
+            container.RegisterInstance<IRepository<HtmlContent>>(new EfRepository<HtmlContent>());
             container.RegisterType<IApplicationAccountService, ApplicationAccountService>(interceptor, behaver);
             container.RegisterType<IHtmlContentService, HtmlContentService>(interceptor, behaver);
             container.RegisterType<ICategoryService, CategoryService>(interceptor, behaver);

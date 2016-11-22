@@ -21,12 +21,12 @@ namespace Ng2Net.WebApi.Controllers
     public class AccountController : BaseController
     {
         private IApplicationAccountService _accountService;
-        private NotificationService _notificationSevice;
+        private INotificationService _notificationSevice;
         //to be changed using di
-        public AccountController(IApplicationAccountService accountService)
+        public AccountController(IApplicationAccountService accountService, INotificationService notificationSevice)
         {
             _accountService = accountService;
-            _notificationSevice = ServiceFactory.Create<NotificationService, EfRepository<Notification>>();
+            _notificationSevice = notificationSevice;
         }
 
         [Route("register")]
