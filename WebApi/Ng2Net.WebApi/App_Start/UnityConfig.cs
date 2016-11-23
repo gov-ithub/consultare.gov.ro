@@ -41,6 +41,8 @@ namespace Ng2Net.WebApi
             container.RegisterType<INotificationService, NotificationService>(interceptor, behaver);
             container.RegisterType<IProposalService, ProposalService>(interceptor, behaver);
             container.RegisterType<IInstitutionService, InstitutionService>(interceptor, behaver);
+            container.RegisterType<IApplicationAccountService, ApplicationAccountService>(interceptor, behaver);
+            container.RegisterType<INotificationService, NotificationService>(interceptor, behaver);
 
             return container;
         }        

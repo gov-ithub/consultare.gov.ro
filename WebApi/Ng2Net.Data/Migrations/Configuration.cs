@@ -21,12 +21,12 @@ namespace Ng2Net.Data.Migrations
 
             if (context.Roles.Count() > 0)
                 return;
-            if (System.Diagnostics.Debugger.IsAttached == false)
-            {
+            //if (System.Diagnostics.Debugger.IsAttached == false)
+            //{
 
-                System.Diagnostics.Debugger.Launch();
+            //    System.Diagnostics.Debugger.Launch();
 
-            }
+            //}
             ApplicationRole adminRole = new ApplicationRole("Administrator");
             ApplicationRole userRole = new ApplicationRole() { Name = "User" };
             ApplicationRole devRole = new ApplicationRole() { Name = "Developer" };
