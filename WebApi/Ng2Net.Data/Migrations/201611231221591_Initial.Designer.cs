@@ -7,13 +7,13 @@ namespace Ng2Net.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class HtmlContents2 : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(HtmlContents2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611112152152_HtmlContents2"; }
+            get { return "201611231221591_Initial"; }
         }
         
         string IMigrationMetadata.Source

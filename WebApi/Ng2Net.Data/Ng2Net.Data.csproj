@@ -90,37 +90,9 @@
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="EfRepository.cs" />
-    <Compile Include="Migrations\201611090944468_Initial.cs" />
-    <Compile Include="Migrations\201611090944468_Initial.Designer.cs">
-      <DependentUpon>201611090944468_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611101521041_NotificationProcessor.cs" />
-    <Compile Include="Migrations\201611101521041_NotificationProcessor.Designer.cs">
-      <DependentUpon>201611101521041_NotificationProcessor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611101545309_Notifications2.cs" />
-    <Compile Include="Migrations\201611101545309_Notifications2.Designer.cs">
-      <DependentUpon>201611101545309_Notifications2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611112122173_HtmlContents.cs" />
-    <Compile Include="Migrations\201611112122173_HtmlContents.Designer.cs">
-      <DependentUpon>201611112122173_HtmlContents.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611112152152_HtmlContents2.cs" />
-    <Compile Include="Migrations\201611112152152_HtmlContents2.Designer.cs">
-      <DependentUpon>201611112152152_HtmlContents2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611112225149_HtmlContents3.cs" />
-    <Compile Include="Migrations\201611112225149_HtmlContents3.Designer.cs">
-      <DependentUpon>201611112225149_HtmlContents3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611122054310_HtmlContentUrl.cs" />
-    <Compile Include="Migrations\201611122054310_HtmlContentUrl.Designer.cs">
-      <DependentUpon>201611122054310_HtmlContentUrl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611212123442_BusinessEntities.cs" />
-    <Compile Include="Migrations\201611212123442_BusinessEntities.Designer.cs">
-      <DependentUpon>201611212123442_BusinessEntities.cs</DependentUpon>
+    <Compile Include="Migrations\201611231221591_Initial.cs" />
+    <Compile Include="Migrations\201611231221591_Initial.Designer.cs">
+      <DependentUpon>201611231221591_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,32 +102,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611090944468_Initial.resx">
-      <DependentUpon>201611090944468_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611101521041_NotificationProcessor.resx">
-      <DependentUpon>201611101521041_NotificationProcessor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611101545309_Notifications2.resx">
-      <DependentUpon>201611101545309_Notifications2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611112122173_HtmlContents.resx">
-      <DependentUpon>201611112122173_HtmlContents.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611112152152_HtmlContents2.resx">
-      <DependentUpon>201611112152152_HtmlContents2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611112225149_HtmlContents3.resx">
-      <DependentUpon>201611112225149_HtmlContents3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611122054310_HtmlContentUrl.resx">
-      <DependentUpon>201611122054310_HtmlContentUrl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611212123442_BusinessEntities.resx">
-      <DependentUpon>201611212123442_BusinessEntities.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ng2Net.Infrastructure\Ng2Net.Infrastructure.csproj">
@@ -169,6 +115,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IdentityHelpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611231221591_Initial.resx">
+      <DependentUpon>201611231221591_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
