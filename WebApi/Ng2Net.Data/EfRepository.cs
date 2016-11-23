@@ -27,11 +27,11 @@ namespace Ng2Net.Data
         /// Ctor
         /// </summary>
         /// <param name="context">Object context</param>
-        public EfRepository()
-        {
-            //use dependecy injection when the project gets bigger
-            this._context = new DatabaseContext();
-        }
+        //public EfRepository()
+        //{
+        //    //use dependecy injection when the project gets bigger
+        //    this._context = new DatabaseContext();
+        //}
 
         public EfRepository(DbContext context)
         {

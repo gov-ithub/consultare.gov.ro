@@ -1,14 +1,16 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
+using Microsoft.Practices.Unity;
 using Newtonsoft.Json.Serialization;
 using Ng2Net.Data;
 using Ng2Net.Services;
-using Ng2Net.WebApi.App_Start;
 using Owin;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using Unity.WebApi;
 
 [assembly: OwinStartup(typeof(Ng2Net.WebApi.Startup))]
 namespace Ng2Net.WebApi
@@ -20,19 +22,16 @@ namespace Ng2Net.WebApi
         {
             var config = new HttpConfiguration();
 
-            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
-            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-
-            config.MapHttpAttributeRoutes();
             var container = UnityConfig.RegisterComponents();
-            config.DependencyResolver = new UnityResolver(container);
-            //WebApiConfig.Register(config);
-            ConfigureOAuth(app);
+            config.DependencyResolver = new UnityDependencyResolver(container);
+
+            WebApiConfig.Register(config);            
+            ConfigureOAuth(app, container);
             app.UseWebApi(config);
         }
 
 
-        private void ConfigureOAuth(IAppBuilder app)
+        private void ConfigureOAuth(IAppBuilder app, IUnityContainer container)
         {
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
@@ -44,7 +43,7 @@ namespace Ng2Net.WebApi
                 
             };
             //investigate di here
-            app.CreatePerOwinContext(()=>new DatabaseContext());
+            app.CreatePerOwinContext(() => container.Resolve<DbContext>());
             app.CreatePerOwinContext<ApplicationUserService>(ApplicationUserService.Create);
             // Token Generation
             app.UseOAuthAuthorizationServer(OAuthServerOptions);

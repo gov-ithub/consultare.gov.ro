@@ -17,10 +17,15 @@ namespace Ng2Net.Data.Migrations
 
         protected override void Seed(Ng2Net.Data.DatabaseContext context)
         {
-           
-            if (context.Roles.Count()>0)
-                return;
 
+            if (context.Roles.Count() > 0)
+                return;
+            if (System.Diagnostics.Debugger.IsAttached == false)
+            {
+
+                System.Diagnostics.Debugger.Launch();
+
+            }
             ApplicationRole adminRole = new ApplicationRole("Administrator");
             ApplicationRole userRole = new ApplicationRole() { Name = "User" };
             ApplicationRole devRole = new ApplicationRole() { Name = "Developer" };

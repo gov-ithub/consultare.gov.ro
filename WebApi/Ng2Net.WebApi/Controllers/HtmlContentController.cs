@@ -21,9 +21,9 @@ namespace Ng2Net.WebApi.Controllers
         private IHtmlContentService _service;
 
         //refactor to di
-        public HtmlContentController(IHtmlContentService _service)
+        public HtmlContentController(IHtmlContentService service)
         {
-            _service = ServiceFactory.Create<HtmlContentService, EfRepository<HtmlContent>>();
+            _service = service;
         }
 
         [Authentication(Claims = new string[] { "EditHtmlContent" })]
