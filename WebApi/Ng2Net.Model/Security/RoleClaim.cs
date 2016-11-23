@@ -9,10 +9,8 @@ using System.Threading.Tasks;
 
 namespace Ng2Net.Model.Security
 {
-    public class RoleClaim
+    public class RoleClaim : BaseEntity
     {
-        [Key]
-        public string Id { get; set; }
         public string ClaimType { get; set; }
         public string ClaimValue { get; set; }
         public string RoleId { get; set; }

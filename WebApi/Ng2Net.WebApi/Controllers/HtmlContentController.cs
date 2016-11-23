@@ -32,7 +32,7 @@ namespace Ng2Net.WebApi.Controllers
         public List<HtmlContentDTO> List(string filterQuery = "", int page = 0, int pageSize = 0)
         {
             Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); });
-            return Mapper.Map<List<HtmlContentDTO>>(_service.GetHtmlContents(filterQuery, page * pageSize, pageSize));
+            return Mapper.Map<List<HtmlContentDTO>>(_service.GetHtmlContents(filterQuery, page * pageSize, pageSize).ToList());
         }
 
         [HttpGet]
