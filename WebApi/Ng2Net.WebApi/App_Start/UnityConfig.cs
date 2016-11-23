@@ -1,3 +1,4 @@
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
@@ -31,7 +32,9 @@ namespace Ng2Net.WebApi
             var interceptor = new Interceptor<InterfaceInterceptor>();
             var behaver = new InterceptionBehavior<LoggingInterceptionBehavior>();
             
-            container.RegisterInstance<DbContext>(new DatabaseContext());            
+            container.RegisterType<DbContext, DatabaseContext>(new HierarchicalLifetimeManager());
+            container.RegisterType<IdentityDbContext<ApplicationUser>, DatabaseContext>(new HierarchicalLifetimeManager());            
+
             container.RegisterType(typeof(IRepository<>), typeof(EfRepository<>));
 
 
