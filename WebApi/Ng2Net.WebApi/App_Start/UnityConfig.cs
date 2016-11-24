@@ -33,7 +33,7 @@ namespace Ng2Net.WebApi
             var behaver = new InterceptionBehavior<LoggingInterceptionBehavior>();
             
             container.RegisterType<DbContext, DatabaseContext>(new HierarchicalLifetimeManager());
-            container.RegisterType<IdentityDbContext<ApplicationUser>, DatabaseContext>(new HierarchicalLifetimeManager());            
+            container.RegisterType<IdentityDbContext<ApplicationUser>, DatabaseContext>(new PerResolveLifetimeManager());            
 
             container.RegisterType(typeof(IRepository<>), typeof(EfRepository<>));
 
@@ -43,7 +43,6 @@ namespace Ng2Net.WebApi
             container.RegisterType<ICategoryService, CategoryService>(interceptor, behaver);
             container.RegisterType<INotificationService, NotificationService>(interceptor, behaver);
             container.RegisterType<IProposalService, ProposalService>(interceptor, behaver);
-            container.RegisterType<IInstitutionService, InstitutionService>(interceptor, behaver);
             container.RegisterType<IApplicationAccountService, ApplicationAccountService>(interceptor, behaver);
             container.RegisterType<INotificationService, NotificationService>(interceptor, behaver);
 
