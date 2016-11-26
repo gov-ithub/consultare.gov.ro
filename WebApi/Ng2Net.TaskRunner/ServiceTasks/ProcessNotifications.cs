@@ -23,6 +23,5 @@ namespace Ng2Net.TaskRunner.ServiceTasks
                 Logging.LogMessage(string.Format("NotificationProcessor: Processed {0} notifications\r\n", Processed.ToString()));
 
         }
-
     }
 }

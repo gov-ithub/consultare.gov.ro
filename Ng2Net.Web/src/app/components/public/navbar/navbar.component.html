@@ -1,0 +1,19 @@
+<header [class]="'header-fixed ' + scrollPos" scrollSpy>
+    <div class="container">
+<div class="navbar-header">
+    <a class="navbar-brand hidden-lg hidden-md" href=""><i class="fa fa-bars"></i></a>
+    <a class="navbar-brand navbar-logo" routerLink="/"><img src="assets/images/sigla-econsultare.png"></a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
+    <li role="presentation" routerLinkActive="active"><a routerLink="/">Propuneri legislative</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink="/">Arhiva</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink="/">Despre econsultare</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink="/">Contact</a></li>
+    <li role="presentation" *ngIf="!userService.currentUser.id"><a class="header-login" (click)="openLogin()">Intra in cont</a></li>
+    <li role="presentation" *ngIf="userService.currentUser.id"><a class="header-login" (click)="userService.logout()">Iesi din cont</a></li>
+    <div class="pull-right" *ngIf="userService.currentUser.id">Hello, {{userService.currentUser.firstName}} {{userService.currentUser.lastName}}!<br />{{userService.currentUser.email}}</div>
+</ul>
+</div>
+</div>
+</header>

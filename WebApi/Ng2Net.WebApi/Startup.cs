@@ -19,7 +19,7 @@ namespace Ng2Net.WebApi
         public void Configuration(IAppBuilder app)
         {
             var config = new HttpConfiguration();
-
+            log4net.Config.XmlConfigurator.Configure();
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 

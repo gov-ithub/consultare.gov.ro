@@ -21,9 +21,11 @@
    </div>
 </div>
   </div>
-<ckeditor name="ckEditor"
+<ckeditor *ngIf="editMode === 'RICH'" name="ckEditor"
     [(ngModel)]="htmlContent.content"
     [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
+    <textarea class="form-control" style="height:500px" *ngIf="editMode === 'HTML'" name="contentEdit"
+    [(ngModel)]="htmlContent.content"></textarea>
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" type="submit"><app-html contentName="backend.content.save"></app-html></button>
