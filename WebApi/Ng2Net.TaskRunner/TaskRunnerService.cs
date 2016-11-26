@@ -5,6 +5,7 @@ using System.ServiceProcess;
 using System.Threading;
 using Ng2Net.TaskRunner.Interfaces;
 using Ng2Net.Infrastrucure.Logging;
+using Microsoft.Practices.Unity;
 
 namespace Ng2Net.TaskRunner
 {
@@ -12,10 +13,11 @@ namespace Ng2Net.TaskRunner
     {
         List<Thread> _threads = new List<Thread>();
         Logging log = new Logging();
-
+        IUnityContainer container;
 
         public TaskRunnerService()
         {
+            container = UnityConfig.RegisterComponents();
             InitializeComponent();
         }
         protected override void OnStart(string[] args)

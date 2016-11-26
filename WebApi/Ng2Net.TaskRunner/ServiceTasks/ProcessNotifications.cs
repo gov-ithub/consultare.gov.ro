@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Ng2Net.Infrastructure.Data;
 using Ng2Net.Model.Scheduler;
 using Ng2Net.Infrastrucure.Logging;
+using Ng2Net.Data;
 
 namespace Ng2Net.TaskRunner.ServiceTasks
 {
@@ -10,9 +11,9 @@ namespace Ng2Net.TaskRunner.ServiceTasks
     {
         private IRepository<Notification> _repository;
 
-        public ProcessNotifications(IRepository<Notification> repository)
+        public ProcessNotifications()
         {
-            _repository = repository;
+            _repository = new EfRepository<Notification>();
         }
 
         public void Run(string settings)

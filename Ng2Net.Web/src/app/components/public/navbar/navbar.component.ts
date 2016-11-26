@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { UserAccountService } from '../../../services';
+import { PublicLoginComponent } from '../';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollSpyService } from 'ng2-scrollspy';
 
@@ -26,7 +27,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   openLogin() {
-    
+    let modal = this.modalService.open(PublicLoginComponent, { size: 'sm', keyboard: false });
   }
 
 }
