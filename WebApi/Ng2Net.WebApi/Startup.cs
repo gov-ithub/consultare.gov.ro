@@ -20,6 +20,7 @@ namespace Ng2Net.WebApi
     {
         public void Configuration(IAppBuilder app)
         {
+            log4net.Config.XmlConfigurator.Configure();
             var config = new HttpConfiguration();
 
             var container = UnityConfig.RegisterComponents();
