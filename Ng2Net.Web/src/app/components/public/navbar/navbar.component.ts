@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { UserAccountService } from '../../../services';
-//import { PublicLoginComponent } from '../';
+import { PublicLoginComponent } from '../';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollSpyService } from 'ng2-scrollspy';
 

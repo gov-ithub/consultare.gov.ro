@@ -12,7 +12,8 @@ import { HomeComponent, HomeMasterComponent, NavbarComponent, PublicLoginCompone
   declarations: [
     HomeComponent,
     HomeMasterComponent,
-    NavbarComponent
+    NavbarComponent,
+    PublicLoginComponent
   ],
   entryComponents: [
     PublicLoginComponent
