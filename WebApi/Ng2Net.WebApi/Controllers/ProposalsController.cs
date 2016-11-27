@@ -20,24 +20,36 @@ namespace Ng2Net.WebApi.Controllers
             this.proposalService = proposalService;
         }
 
+        [HttpPost]
         public Proposal Add(Proposal entity)
         {
             return proposalService.Add(entity);
         }
 
+        [HttpPost]
         public void Delete(Proposal entity)
         {
             proposalService.Delete(entity);
         }
 
+        [HttpPost]
         public Proposal Edit(Proposal entity)
         {
             return proposalService.Edit(entity);
         }
 
+        [HttpGet]
+        [Route("get")]
         public virtual IEnumerable<Proposal> Get()
         {
             return proposalService.Get();
+        }
+
+        [HttpGet]
+        [Route("list")]
+        public IEnumerable<Proposal> List(string filterQuery = "", int page = 0, int pageSize = 0)
+        {
+            return new List<Proposal>();
         }
     }
 }

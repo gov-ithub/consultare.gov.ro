@@ -34,6 +34,7 @@ namespace Ng2Net.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route("edit")]
         public Institution Edit(Institution entity)
         {
             return instService.Edit(entity);
