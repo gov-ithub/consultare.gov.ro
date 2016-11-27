@@ -19,7 +19,7 @@
         <form #myform="ngForm" (submit)="refresh()">
           <div style="display:inline-block">
             <div class="input-group input-group-sm" style="width: 150px;">
-              <input type="text" [(ngModel)]="filterQuery" name="table_search" class="form-control pull-right" placeholder="{{contentService.htmlContent['backend.content.page.contentlist.search']}}">
+              <input type="text" [(ngModel)]="filterQuery" name="table_search" class="form-control pull-right" placeholder="Search">
 
               <div class="input-group-btn">
                 <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
@@ -53,7 +53,7 @@
             <app-html contentName="backend.content.delete"></app-html>
           </th>
         </tr>
-        <tr *ngFor="let item of htmlContents">
+        <tr *ngFor="let item of proposals">
           <td><a (click)="openEdit(item)">{{item.name}}</a></td>
           <td>{{item.content}}</td>
           <td>{{item.url}}</td>

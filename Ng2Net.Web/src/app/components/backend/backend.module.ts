@@ -11,7 +11,9 @@ import { BackendLoginComponent,
     BackendHomeComponent,
   ContentEditComponent,
   BackendMasterComponent,
-  ContentListComponent } from './';
+  ContentListComponent,
+  ProposalListComponent,
+  ProposalEditComponent } from './';
 import { HtmlComponent  } from '../shared';
 import { HtmlContentPipe, EqualValidatorDirective } from '../../directives';
 import { BackendRoutes } from './backend.routes';
@@ -32,10 +34,12 @@ import { SharedModule } from '../shared/shared.module';
     BackendMasterComponent,
     ContentListComponent,
     ContentEditComponent,
-    
+    ProposalListComponent,
+    ProposalEditComponent
   ],
   entryComponents: [
-    ContentEditComponent
+    ContentEditComponent,
+    ProposalEditComponent
   ],
 
 })

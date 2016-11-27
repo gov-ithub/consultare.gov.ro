@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ApplicationRoutes } from './app.routes';
 import { AppComponent } from './app.component';
-import { UserAccountService, HttpClient, ContentService, ClaimsGuardService } from './services';
+import { UserAccountService, HttpClient, ContentService, ClaimsGuardService, ProposalService } from './services';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { GlobalService } from './services/global/global.service';
 import { EqualValidatorDirective } from './directives/equal-validator';
@@ -14,6 +14,7 @@ import { HtmlComponent } from './components/shared';
 import { HtmlContentPipe } from './directives';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule.forRoot(ApplicationRoutes),
     NgbModule.forRoot(),
     CKEditorModule,
+    Ng2DatetimePickerModule
   ],
   providers: [
      ClaimsGuardService,
@@ -36,7 +38,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      UserAccountService,
      GlobalService,
      HttpClient,
-     ContentService
+     ContentService,
+     ProposalService
   ],
   exports: [ 
     BrowserModule,
