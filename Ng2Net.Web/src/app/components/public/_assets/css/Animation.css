@@ -2,7 +2,7 @@ header {
  animation-name: dropHeader;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
-    animation-duration: 0.6s;
+    animation-duration: 0.3s;
 }
 
 @keyframes dropHeader {

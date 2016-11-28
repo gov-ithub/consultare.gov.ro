@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://api.ng2net.start'
+  apiUrl: 'http://api.consultare.gov.start'
 };

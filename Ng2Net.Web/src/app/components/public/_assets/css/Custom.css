@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+BODY{ font-family: 'Open Sans'}
 .header-fixed{ top:0px; width:100%; position:fixed; }
 .header-fixed a { text-transform: uppercase; }
+.header-fixed.top .navbar-logo.top, .header-fixed.scroll .navbar-logo.scroll { display: inherit }
+.header-fixed.top .navbar-logo.scroll, .header-fixed.scroll .navbar-logo.top { display: none }
 .header-fixed.top a { color:#FFFFFF; }
 .header-fixed.scroll { background-color:#FFFFFF;  }
 .header-fixed .nav { font-family: 'Lato'; font-weight: bold }
@@ -11,12 +15,19 @@
 .header-login { background-color:#1956aa; padding:8px 15px !important; margin:16px 0px; border-radius: 3px }
 .header-login:hover { color:#FFFFFF }
 .hero { background: url('assets/public/images/hero.jpg') no-repeat; background-size: cover; height:767px }
+.hero .heroContent { font-weight: 300; padding-top:200px; font-size:40pt; line-height: 40pt; color:#FFFFFF  }
 .hero-bottom { background: url('assets/public/images/hero-bottom.jpg') no-repeat; background-size: cover; height:477px; width:100% }
 .contact{ padding: 80px 0px; }
 .contact H1 { color:#999999 }
 .btn-feedback { border: solid 2px #1956aa; border-radius: 2px; color: #1956aa; display:inline-block; padding:8px; }
 footer { background-color:#cacaca; color:#5a6165; padding: 10px 0px }
 footer a { text-decoration: none; color:#212121 }
+.hero .heroSubtitle, .hero-bottom .heroSubtitle  { font-size: 14pt; line-height: 22pt; margin-top:20px; margin-bottom: 10px }
+.hero-bottom { text-align: center }
+/* Bootstrap */
+.btn { font-family: Lato; font-size:11pt; text-transform: uppercase; border-radius: 3px }
+.btn-primary { background-color:#1956aa; }
+.hero-bottom .heroContent { font-weight: 300; padding-top:130px; font-size:32pt; line-height: 32pt; color:#FFFFFF  }
 
 
 /*=========================

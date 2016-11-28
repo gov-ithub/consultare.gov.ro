@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   openLogin() {
-    //let modal = this.modalService.open(PublicLoginComponent, { size: 'sm', keyboard: false });
+    let modal = this.modalService.open(PublicLoginComponent, { size: 'sm', keyboard: false });
   }
 
 }

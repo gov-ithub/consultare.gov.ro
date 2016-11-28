@@ -1,6 +1,8 @@
-﻿using Ng2Net.Infrastructure.Interfaces;
+﻿using AutoMapper;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Business;
 using Ng2Net.WebApi.Base;
+using Ng2Net.WebApi.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,28 +24,35 @@ namespace Ng2Net.WebApi.Controllers
 
         [HttpPost]
         [Route("add")]
-        public Institution Add(Institution entity)
+        public Institution Add(InstitutionDTO entity)
         {
-            return instService.Add(entity);
+            Mapper.Initialize(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); });
+            return instService.Add(Mapper.Map<Institution>(entity));
         }
 
         [HttpPost]
-        public void Delete(Institution entity)
+        public void Delete(InstitutionDTO entity)
         {
-            instService.Delete(entity);
+            instService.Delete(instService.GetById(entity.Id));
         }
 
         [HttpPost]
-        public Institution Edit(Institution entity)
+        public Institution Edit(InstitutionDTO entity)
         {
-            return instService.Edit(entity);
+            instService.GetById(entity.Id);
+            Mapper.Initialize(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); });
+            var result = Mapper.Map<Institution>(entity);
+            if (string.IsNullOrEmpty(result.Id))
+                result.Id = Guid.NewGuid().ToString();
+            return instService.Edit(result);
         }
 
         [HttpGet]
         [Route("get")]
-        public virtual IEnumerable<Institution> Get()
+        public virtual IEnumerable<InstitutionDTO> Get()
         {
-            return instService.Get();
+            Mapper.Initialize(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); });
+            return Mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get());
         }
     }
 }

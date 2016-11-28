@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ApplicationRoutes } from '../../app.routes';
 import { AppComponent } from '../../app.component';
-import { UserAccountService, HttpClient, ContentService, ClaimsGuardService } from '../../services';
+import { UserAccountService, HttpClient, ContentService, ClaimsGuardService, InstitutionService } from '../../services';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { GlobalService } from '../../services/global/global.service';
 import { EqualValidatorDirective } from '../../directives/equal-validator';
@@ -17,7 +17,6 @@ import { HtmlComponent } from '../../components/shared';
 import { HtmlContentPipe } from '../../directives';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
      GlobalService,
      HttpClient,
      ContentService,
-     {provide: LocationStrategy, useClass: HashLocationStrategy}
+     InstitutionService
   ],
   exports: [ 
     BrowserModule,
