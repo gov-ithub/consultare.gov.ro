@@ -24,10 +24,12 @@ footer { background-color:#cacaca; color:#5a6165; padding: 10px 0px }
 footer a { text-decoration: none; color:#212121 }
 .hero .heroSubtitle, .hero-bottom .heroSubtitle  { font-size: 14pt; line-height: 22pt; margin-top:20px; margin-bottom: 10px }
 .hero-bottom { text-align: center }
+.hero-bottom .heroContent { font-weight: 300; padding-top:130px; font-size:32pt; line-height: 32pt; color:#FFFFFF  }
+
+
 /* Bootstrap */
 .btn { font-family: Lato; font-size:11pt; text-transform: uppercase; border-radius: 3px }
 .btn-primary { background-color:#1956aa; }
-.hero-bottom .heroContent { font-weight: 300; padding-top:130px; font-size:32pt; line-height: 32pt; color:#FFFFFF  }
 
 
 /*=========================
