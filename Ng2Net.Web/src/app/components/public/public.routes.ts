@@ -4,5 +4,5 @@ import { HomeComponent, HomeMasterComponent } from './';
 
 export const PublicRoutes: Routes = [
       { path: '', component: HomeMasterComponent, children: [
-      { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent }
 ]} ];

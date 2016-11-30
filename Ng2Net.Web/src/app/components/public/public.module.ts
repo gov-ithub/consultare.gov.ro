@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { ScrollSpyModule } from 'ng2-scrollspy';
-import { HomeComponent, HomeMasterComponent, PublicSignupComponent, NavbarComponent, PublicLoginComponent } from './';
+import { HomeComponent, HomeMasterComponent, PublicSignupComponent, NavbarComponent, PublicLoginComponent, ProposalsComponent } from './';
 
 @NgModule({
   imports: [
@@ -14,7 +14,8 @@ import { HomeComponent, HomeMasterComponent, PublicSignupComponent, NavbarCompon
     HomeMasterComponent,
     NavbarComponent,
     PublicLoginComponent,
-    PublicSignupComponent
+    PublicSignupComponent,
+    ProposalsComponent
   ],
   entryComponents: [
     PublicLoginComponent,

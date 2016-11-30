@@ -40,8 +40,8 @@ namespace Ng2Net.WebApi.Controllers
         public Institution Edit(InstitutionDTO entity)
         {
             instService.GetById(entity.Id);
-            Mapper.Initialize(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); });
-            var result = Mapper.Map<Institution>(entity);
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); }).CreateMapper();
+            var result = mapper.Map<Institution>(entity);
             if (string.IsNullOrEmpty(result.Id))
                 result.Id = Guid.NewGuid().ToString();
             return instService.Edit(result);
@@ -51,8 +51,8 @@ namespace Ng2Net.WebApi.Controllers
         [Route("get")]
         public virtual IEnumerable<InstitutionDTO> Get()
         {
-            Mapper.Initialize(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); });
-            return Mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get());
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
+            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get());
         }
     }
 }

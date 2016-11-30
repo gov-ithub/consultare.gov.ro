@@ -1,6 +1,8 @@
-﻿using Ng2Net.Infrastructure.Interfaces;
+﻿using AutoMapper;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Business;
 using Ng2Net.WebApi.Base;
+using Ng2Net.WebApi.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +40,22 @@ namespace Ng2Net.WebApi.Controllers
         public virtual IEnumerable<Proposal> Get()
         {
             return proposalService.Get();
+        }
+
+        [HttpGet]
+        [Route("find")]
+        public virtual IEnumerable<ProposalDTO> Find(string filterQuery = "", int pageNo = 0, int pageSize = 0)
+        {
+            if (pageSize <= 0)
+                return null;
+
+            var mapper = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Proposal, ProposalDTO>();
+                cfg.CreateMap<Institution, InstitutionDTO>();
+            }).CreateMapper();
+
+
+            return mapper.Map<List<ProposalDTO>>(proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery)).Skip(pageNo*pageSize).Take(pageSize).ToList());
         }
     }
 }

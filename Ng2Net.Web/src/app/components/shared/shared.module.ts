@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ApplicationRoutes } from '../../app.routes';
 import { AppComponent } from '../../app.component';
-import { UserAccountService, HttpClient, ContentService, ClaimsGuardService, InstitutionService } from '../../services';
+import { UserAccountService, HttpClient, ProposalsService, ContentService, ClaimsGuardService, InstitutionService } from '../../services';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { GlobalService } from '../../services/global/global.service';
 import { EqualValidatorDirective } from '../../directives/equal-validator';
@@ -40,7 +40,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      GlobalService,
      HttpClient,
      ContentService,
-     InstitutionService
+     InstitutionService,
+     ProposalsService
   ],
   exports: [ 
     BrowserModule,
