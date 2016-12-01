@@ -102,6 +102,10 @@
     <Compile Include="Migrations\201611291127446_ProposalsCorrection.Designer.cs">
       <DependentUpon>201611291127446_ProposalsCorrection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612011542403_ProposalTitle.cs" />
+    <Compile Include="Migrations\201612011542403_ProposalTitle.Designer.cs">
+      <DependentUpon>201612011542403_ProposalTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -133,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611291127446_ProposalsCorrection.resx">
       <DependentUpon>201611291127446_ProposalsCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011542403_ProposalTitle.resx">
+      <DependentUpon>201612011542403_ProposalTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

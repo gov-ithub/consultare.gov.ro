@@ -2,13 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ng2Net.Model.Business
 {
     public class Proposal : BaseEntity
     {
         [Required]
-        [StringLength(1000)]
+        [Column(TypeName="nvarchar(max)")]
         public string Title { get; set; }
         public string InstitutionId { get; set; }
         public virtual Institution Institution { get; set; }
