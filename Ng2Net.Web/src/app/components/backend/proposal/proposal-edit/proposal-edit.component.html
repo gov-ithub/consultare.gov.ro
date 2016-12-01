@@ -20,24 +20,24 @@
                     <div class="col-lg-8">
                         <div class="form-group">
                             <label><app-html contentName="backend.label.title"></app-html>:</label>
-                            <input class="form-control" required [(ngModel)]="proposal.title" name="name" />
+                            <input class="form-control" required [(ngModel)]="proposal.title" name="title" />
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!--div class="row">
                     <div class="col-lg-8">
                         <div class="form-group">
                             <label><app-html contentName="backend.label.description"></app-html>:</label>
                             <input class="form-control" required [(ngModel)]="proposal.description" name="name" />
                         </div>
                     </div>
-                </div>
+                </div-->
                 <ckeditor name="ckEditor" [(ngModel)]="proposal.description" [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="form-group">
                             <label><app-html contentName="backend.label.startdate"></app-html>:</label>
-                            <input [(ngModel)]="proposal.startdate" required ng2-datetime-picker date-only="true"/>
+                            <input [(ngModel)]="proposal.startdate" name="startdate" required ng2-datetime-picker date-only="true"/>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     <div class="col-lg-8">
                         <div class="form-group">
                             <label><app-html contentName="backend.label.enddate"></app-html>:</label>
-                            <input [(ngModel)]="proposal.enddate" required ng2-datetime-picker date-only="true"/>
+                            <input [(ngModel)]="proposal.enddate" name="enddate" required ng2-datetime-picker date-only="true"/>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="col-lg-8">
                         <div class="form-group">
                             <label><app-html contentName="backend.label.limitdate"></app-html>:</label>
-                            <input [(ngModel)]="proposal.limitdate" required ng2-datetime-picker date-only="true"/>
+                            <input [(ngModel)]="proposal.limitdate" name="limitdate" required ng2-datetime-picker date-only="true"/>
                         </div>
                     </div>
                 </div>
@@ -61,19 +61,10 @@
                     <div class="col-lg-8">
                         <div class="form-group">
                             <label><app-html contentName="backend.label.email"></app-html>:</label>
-                            <input class="form-control" required [(ngModel)]="proposal.email" name="name" />
+                            <input class="form-control" required [(ngModel)]="proposal.email" name="email" />
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="form-group">
-                            <label><app-html contentName="backend.label.observations"></app-html>:</label>
-                            <input class="form-control" required [(ngModel)]="proposal.observations" name="name" />
-                        </div>
-                    </div>
-                </div>
-                <ckeditor name="ckEditor" [(ngModel)]="proposal.observations" [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
             </form>
         </div>
     </div>
