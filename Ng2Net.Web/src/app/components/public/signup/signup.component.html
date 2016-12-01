@@ -1,0 +1,39 @@
+<div class="modal-header">
+ <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+     <h4 class="modal-title">Creeaza cont nou</h4>
+</div>
+<div class="modal-body">
+  <div class="callout callout-danger" *ngIf="userAccountService.authError">{{ userAccountService.authError }}</div>
+    <form #myForm="ngForm" novalidate>
+      
+      <div class="form-group has-feedback">
+        <input type="text" placeholder="prenume" name="prenume" [(ngModel)]="currentUser.firstName" required class="form-control">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" placeholder="nume" name="nume" [(ngModel)]="currentUser.lastName" required class="form-control">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" placeholder="adresa e-mail" name="email" [(ngModel)]="currentUser.email" required class="form-control">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" placeholder="parola" class="form-control" name="password" required [(ngModel)]="currentUser.password">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" placeholder="repeta parola" class="form-control" name="password2" required [(ngModel)]="currentUser.password2">
+      </div>
+
+      <fieldset>
+        <legend>Institutii de interes</legend>
+        <div class="small">Selectati institutiile pentru care doriti sa fiti notificat.</div>
+        <div class="col-md-6" *ngFor="let item of institutions">
+        <input id="test" type="checkbox" />
+        <label for="test">{{item.name}}</label>
+        </div>
+      </fieldset>
+    </form>
+</div>
+<div class="modal-footer">
+  <button type="submit" (click)="userRegister()" class="btn btn-primary btn-block btn-flat">Creeaza cont</button>
+</div>

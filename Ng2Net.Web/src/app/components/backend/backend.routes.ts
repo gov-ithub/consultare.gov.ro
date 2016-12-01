@@ -1,8 +1,11 @@
 import { Routes } from '@angular/router';
-import { BackendLoginComponent, ContentListComponent, ForgotPasswordComponent, ResetPasswordComponent, ProposalListComponent, ProposalEditComponent, BackendHomeComponent } from './';
+import { BackendLoginComponent, ContentListComponent, ForgotPasswordComponent, ResetPasswordComponent, BackendHomeComponent, BackendMasterComponent, ProposalListComponent, ProposalEditComponent } from './';
 import { ClaimsGuardService } from '../../services';
 
 export const BackendRoutes: Routes = [
+      { path: 'admin', component: BackendMasterComponent, children: 
+
+[
       { path: 'login', component: BackendLoginComponent },
       { path: 'forgot-password', component: ForgotPasswordComponent },
       { path: 'reset-password/:userId', component: ResetPasswordComponent },
@@ -19,4 +22,4 @@ export const BackendRoutes: Routes = [
             path: 'proposal-edit', component: ProposalEditComponent, data: { claims: ['editHtmlContent'] },
             canActivate: [ClaimsGuardService]
       }
-];
+] }];

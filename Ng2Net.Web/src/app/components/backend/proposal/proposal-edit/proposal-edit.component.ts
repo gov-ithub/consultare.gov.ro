@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { ProposalService, HttpClient } from '../../../../services';
+import { ProposalsService, HttpClient } from '../../../../services';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -16,7 +16,7 @@ export class ProposalEditComponent implements OnInit {
   @ViewChild('myForm')
   private myForm: NgForm;
 
-  constructor(private proposalService: ProposalService, private http: HttpClient ) { }
+  constructor(private proposalService: ProposalsService, private http: HttpClient ) { }
 
   ngOnInit() {
   }

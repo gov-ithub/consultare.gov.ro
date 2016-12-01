@@ -23,10 +23,12 @@ namespace Ng2Net.WebApi
             log4net.Config.XmlConfigurator.Configure();
             var config = new HttpConfiguration();
 
-            var container = UnityConfig.RegisterComponents();
-            config.DependencyResolver = new UnityDependencyResolver(container);
+            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            WebApiConfig.Register(config);            
+	    var container = UnityConfig.RegisterComponents();
+            config.DependencyResolver = new UnityDependencyResolver(container);            
+	    //WebApiConfig.Register(config);            
             ConfigureOAuth(app, container);
             app.UseWebApi(config);
         }

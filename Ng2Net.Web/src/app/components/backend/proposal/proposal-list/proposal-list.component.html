@@ -54,8 +54,8 @@
           </th>
         </tr>
         <tr *ngFor="let item of proposals">
-          <td><a (click)="openEdit(item)">{{item.name}}</a></td>
-          <td>{{item.content}}</td>
+          <td><a (click)="openEdit(item)">{{item.title}}</a></td>
+          <td>{{item.title}}</td>
           <td>{{item.url}}</td>
           <td><button class="btn btn-sm btn-default" (click)="delete(item)" type="button"><i class="fa fa-trash"></i></button></td>
         </tr>

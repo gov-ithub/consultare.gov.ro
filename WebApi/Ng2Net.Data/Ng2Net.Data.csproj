@@ -94,6 +94,14 @@
     <Compile Include="Migrations\201611231221591_Initial.Designer.cs">
       <DependentUpon>201611231221591_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611261118515_ApplicationUserSubscriptions.cs" />
+    <Compile Include="Migrations\201611261118515_ApplicationUserSubscriptions.Designer.cs">
+      <DependentUpon>201611261118515_ApplicationUserSubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611291127446_ProposalsCorrection.cs" />
+    <Compile Include="Migrations\201611291127446_ProposalsCorrection.Designer.cs">
+      <DependentUpon>201611291127446_ProposalsCorrection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -119,6 +127,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611231221591_Initial.resx">
       <DependentUpon>201611231221591_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611261118515_ApplicationUserSubscriptions.resx">
+      <DependentUpon>201611261118515_ApplicationUserSubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611291127446_ProposalsCorrection.resx">
+      <DependentUpon>201611291127446_ProposalsCorrection.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

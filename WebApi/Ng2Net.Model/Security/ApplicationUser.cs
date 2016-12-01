@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Ng2Net.Model.Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -23,6 +24,8 @@ namespace Ng2Net.Model.Security
         public string LastName { get; set; }
 
         public DateTime DateCreated { get; set; }
+
+        public virtual IList<Institution> Subscriptions { get; set; }
 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)

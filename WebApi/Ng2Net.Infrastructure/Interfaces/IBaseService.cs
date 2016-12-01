@@ -12,5 +12,6 @@ namespace Ng2Net.Infrastructure.Interfaces
         T Add(T entity);
         T Edit(T entity);
         void Delete(T entity);
+        T GetById(string id);
     }
 }

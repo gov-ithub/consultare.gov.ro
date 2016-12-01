@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProposalService, HttpClient } from '../../../../services';
+import { ProposalsService, HttpClient } from '../../../../services';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProposalEditComponent } from '../../';
 
@@ -13,18 +13,18 @@ export class ProposalListComponent implements OnInit {
   private proposals: any[] = [];
   private filterQuery: string = '';
 
-  constructor(private router: Router, private route: ActivatedRoute, private proposalService: ProposalService, private http: HttpClient) { }
+  constructor(private router: Router, private route: ActivatedRoute, private proposalService: ProposalsService, private http: HttpClient) { }
 
   ngOnInit() {
     this.refresh();
   }
 
   refresh() {
-    this.proposalService.listProposals(this.filterQuery).subscribe(result => this.proposals = result);
+    this.proposalService.listProposals(this.filterQuery, 0, 50).subscribe(result => this.proposals = result);
   }
 
   openEdit(proposal: any) {
-    this.router.navigate([`/proposal-edit`]);
+    this.router.navigate([`admin/proposal-edit`]);
   }
 
   delete(proposal: any) {
