@@ -17,13 +17,13 @@ import { HtmlComponent } from '../../components/shared';
 import { HtmlContentPipe } from '../../directives';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
 @NgModule({
   declarations: [
     EqualValidatorDirective,
     HtmlComponent, 
-    HtmlContentPipe,
-    
+    HtmlContentPipe
   ],
   imports: [
     BrowserModule,
@@ -31,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpModule,
     RouterModule.forRoot(ApplicationRoutes),
     NgbModule.forRoot(),
-    CKEditorModule
+    CKEditorModule,
+    NKDatetimeModule
   ],
   providers: [
      ClaimsGuardService,
@@ -53,6 +54,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EqualValidatorDirective,
     HtmlComponent, 
     HtmlContentPipe,
+    NKDatetimeModule 
 
 ],
 })
