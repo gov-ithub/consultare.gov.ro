@@ -16,10 +16,14 @@ export const BackendRoutes: Routes = [
             path: 'content-list', component: ContentListComponent, data: { claims: ['editHtmlContent'] },
             canActivate: [ClaimsGuardService]
       }, {
-            path: 'proposal-list', component: ProposalListComponent, data: { claims: ['editHtmlContent'] },
+            path: 'proposal-list', component: ProposalListComponent, data: { claims: ['editProposals'] },
             canActivate: [ClaimsGuardService]
       }, {
-            path: 'proposal-edit', component: ProposalEditComponent, data: { claims: ['editHtmlContent'] },
+            path: 'proposal-edit/:id', component: ProposalEditComponent, data: { claims: ['editProposals'] },
+            canActivate: [ClaimsGuardService]
+      }
+      , {
+            path: 'proposal-edit', component: ProposalEditComponent, data: { claims: ['editProposals'] },
             canActivate: [ClaimsGuardService]
       }
 ] }];

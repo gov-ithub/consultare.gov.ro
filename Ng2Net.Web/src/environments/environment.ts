@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://193.230.8.66:81'
+  apiUrl: 'http://api.consultare.gov.start'
 };
