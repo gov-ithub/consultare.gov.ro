@@ -36,10 +36,12 @@ namespace Ng2Net.Data.Migrations
             roleManager.Create(userRole);
             roleManager.Create(devRole);
 
-            adminRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
             devRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
             devRole.Claims.Add(new RoleClaim() { ClaimType = "Developer", ClaimValue = "true" });
+            devRole.Claims.Add(new RoleClaim() { ClaimType = "EditProposals", ClaimValue = "true" });
+            adminRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
             adminRole.Claims.Add(new RoleClaim() { ClaimType = "EditHtmlContent", ClaimValue = "true" });
+            adminRole.Claims.Add(new RoleClaim() { ClaimType = "EditProposals", ClaimValue = "true" });
 
             context.SaveChanges();
 
