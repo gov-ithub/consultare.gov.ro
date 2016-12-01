@@ -15,13 +15,12 @@ namespace Ng2Net.WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
-            config.MapHttpAttributeRoutes();
-
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+            config.MapHttpAttributeRoutes();           
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            PrepareDbMigration();
+            //PrepareDbMigration();
         }
 
         //to be removed

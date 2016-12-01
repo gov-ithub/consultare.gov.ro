@@ -9,5 +9,7 @@ namespace Ng2Net.Services.Business
         public ProposalService(IRepository<Proposal> repository) : base(repository)
         {
         }
+
+
     }
 }

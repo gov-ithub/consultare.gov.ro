@@ -14,6 +14,7 @@ export class ContentEditComponent implements OnInit {
   private htmlContent: any = {};
   private parentComponent: any = {};
   private result: string;
+  private editMode: string = "HTML";
   @ViewChild('myForm')
   private myForm: NgForm;
 

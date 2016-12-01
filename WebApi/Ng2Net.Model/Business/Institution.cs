@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Ng2Net.Model.Security;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -10,5 +11,6 @@ namespace Ng2Net.Model.Business
         public string Type { get; set; }
         public string Url { get; set; }
         public IList<Proposal> Proposals { get; set; }
+        public virtual IList<ApplicationUser> SubscribedUsers { get; set; }
     }
 }

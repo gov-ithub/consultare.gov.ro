@@ -1,0 +1,29 @@
+<div class="modal-header">
+ <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+     <h4 class="modal-title"><app-html contentName="backend.content.edit"></app-html></h4>
+</div>
+<div class="modal-body">
+  <div class="callout callout-danger" *ngIf="userAccountService.authError">{{ userAccountService.authError }}</div>
+    <form #myForm="ngForm" novalidate>
+      <div class="form-group has-feedback">
+        <input type="text" placeholder="{{ 'backend.login.email' | htmlContent:contentService.htmlContent }}" name="email" [(ngModel)]="currentUser.email" required class="form-control">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" placeholder="{{ 'backend.login.password' | htmlContent:contentService.htmlContent }}" class="form-control" name="password" required [(ngModel)]="currentUser.password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-7">
+          <a><app-html contentName="backend.login.forgotPassword"></app-html></a>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-5">
+          <button type="submit" (click)="userLogin()" class="btn btn-primary btn-block btn-flat"><app-html contentName="backend.login.signin"></app-html></button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+</div>

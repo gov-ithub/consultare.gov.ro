@@ -1,11 +1,12 @@
 namespace Ng2Net.Data.Migrations
-{    
+{
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Model.Security;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Data.Entity.Validation;
     using System.Linq;
     using System.Security.Claims;
     public sealed class Configuration : DbMigrationsConfiguration<Ng2Net.Data.DatabaseContext>
@@ -17,10 +18,15 @@ namespace Ng2Net.Data.Migrations
 
         protected override void Seed(Ng2Net.Data.DatabaseContext context)
         {
-           
-            if (context.Roles.Count()>0)
-                return;
 
+            if (context.Roles.Count() > 0)
+                return;
+            //if (System.Diagnostics.Debugger.IsAttached == false)
+            //{
+
+            //    System.Diagnostics.Debugger.Launch();
+
+            //}
             ApplicationRole adminRole = new ApplicationRole("Administrator");
             ApplicationRole userRole = new ApplicationRole() { Name = "User" };
             ApplicationRole devRole = new ApplicationRole() { Name = "Developer" };
@@ -34,7 +40,7 @@ namespace Ng2Net.Data.Migrations
             devRole.Claims.Add(new RoleClaim() { ClaimType = "AdminLogin", ClaimValue = "true" });
             devRole.Claims.Add(new RoleClaim() { ClaimType = "Developer", ClaimValue = "true" });
             adminRole.Claims.Add(new RoleClaim() { ClaimType = "EditHtmlContent", ClaimValue = "true" });
-            
+
             context.SaveChanges();
 
             ApplicationUser usrAdmin = new ApplicationUser

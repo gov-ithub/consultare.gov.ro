@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://api.ng2net.start'
+  apiUrl: 'http://193.230.8.66:81'
 };

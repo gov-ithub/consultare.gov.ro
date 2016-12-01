@@ -1,5 +1,7 @@
 export * from './content/content-list/content-list.component';
 export * from './content/content-edit/content-edit.component';
+export * from './proposal/proposal-list/proposal-list.component';
+export * from './proposal/proposal-edit/proposal-edit.component';
 export * from './login/login.component';
 export * from './app-header/app-header.component';
 export * from './menu-aside/menu-aside.component';

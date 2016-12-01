@@ -38,5 +38,10 @@ namespace Ng2Net.Services.Business
         {
             return _repository.GetMany();
         }
+
+        public virtual T GetById(string id)
+        {
+            return _repository.GetById(id);
+        }
     }
 }

@@ -21,9 +21,9 @@ namespace Ng2Net.WebApi.Controllers
         private IHtmlContentService _service;
 
         //refactor to di
-        public HtmlContentController(IHtmlContentService _service)
+        public HtmlContentController(IHtmlContentService service)
         {
-            _service = ServiceFactory.Create<HtmlContentService, EfRepository<HtmlContent>>();
+            _service = service;
         }
 
         [Authentication(Claims = new string[] { "EditHtmlContent" })]
@@ -31,8 +31,8 @@ namespace Ng2Net.WebApi.Controllers
         [Route("list")]
         public List<HtmlContentDTO> List(string filterQuery = "", int page = 0, int pageSize = 0)
         {
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); });
-            return Mapper.Map<List<HtmlContentDTO>>(_service.GetHtmlContents(filterQuery, page * pageSize, pageSize));
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); }).CreateMapper();
+            return mapper.Map<List<HtmlContentDTO>>(_service.GetHtmlContents(filterQuery, page * pageSize, pageSize).ToList());
         }
 
         [HttpGet]
@@ -47,9 +47,9 @@ namespace Ng2Net.WebApi.Controllers
         [Route("get/{id}")]
         public HtmlContentDTO Get(string id)
         {
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); });
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); }).CreateMapper();
 
-            return Mapper.Map<HtmlContentDTO>(_service.GetHtmlContent(id));
+            return mapper.Map<HtmlContentDTO>(_service.GetHtmlContent(id));
         }
 
 
@@ -59,12 +59,12 @@ namespace Ng2Net.WebApi.Controllers
         public HtmlContentDTO Get([FromBody] HtmlContentDTO model)
         {
             HtmlContent content = string.IsNullOrEmpty(model.Id) ? new HtmlContent() : _service.GetHtmlContent(model.Id);
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContentDTO, HtmlContent>(); });
-            Mapper.Map(model, content);
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<HtmlContentDTO, HtmlContent>(); }).CreateMapper();
+            mapper.Map(model, content);
             content.Id = string.IsNullOrEmpty(content.Id) ? Guid.NewGuid().ToString() : content.Id;
             _service.SaveHtmlContent(content);
-            Mapper.Initialize(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); });
-            return Mapper.Map<HtmlContentDTO>(content);
+            mapper = new MapperConfiguration(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); }).CreateMapper();
+            return mapper.Map<HtmlContentDTO>(content);
         }
 
 

@@ -14,7 +14,7 @@ namespace Ng2Net.Data
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<HtmlContent> HtmlContents { get; set; }
 
-        public DatabaseContext(): base("Name=DatabaseContext")
+        public DatabaseContext(): base("name=DefaultConnection")
         {
 
         }
