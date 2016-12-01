@@ -106,6 +106,10 @@
     <Compile Include="Migrations\201612011542403_ProposalTitle.Designer.cs">
       <DependentUpon>201612011542403_ProposalTitle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612011713398_UserSubscribe.cs" />
+    <Compile Include="Migrations\201612011713398_UserSubscribe.Designer.cs">
+      <DependentUpon>201612011713398_UserSubscribe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -140,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612011542403_ProposalTitle.resx">
       <DependentUpon>201612011542403_ProposalTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011713398_UserSubscribe.resx">
+      <DependentUpon>201612011713398_UserSubscribe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

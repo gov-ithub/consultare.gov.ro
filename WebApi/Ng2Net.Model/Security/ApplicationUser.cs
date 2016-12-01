@@ -25,6 +25,10 @@ namespace Ng2Net.Model.Security
 
         public DateTime DateCreated { get; set; }
 
+        public string UnsubscribeToken { get; set; }
+
+        public bool SubscribedToAll { get; set; }
+
         public virtual IList<Institution> Subscriptions { get; set; }
 
 
