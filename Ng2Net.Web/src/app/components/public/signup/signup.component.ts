@@ -13,6 +13,7 @@ export class PublicSignupComponent implements OnInit {
   public currentUser: any = {};
   @ViewChild('myForm')
   private myForm: NgForm;
+  private subscribeAll: boolean = true;
 
   private institutions: any[];
   constructor( private activeModal: NgbActiveModal, 
@@ -23,7 +24,7 @@ export class PublicSignupComponent implements OnInit {
  ) { }
 
   ngOnInit() {
-    this.institutionService.getInstitutions().subscribe(result => {this.institutions = result;this.changeDetectorRef.detectChanges();});
+    this.institutionService.getInstitutions().subscribe(result => { this.institutions = result; this.changeDetectorRef.detectChanges(); });
   }
 
 

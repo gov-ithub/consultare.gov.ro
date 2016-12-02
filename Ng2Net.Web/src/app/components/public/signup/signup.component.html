@@ -24,14 +24,34 @@
         <input type="password" placeholder="repeta parola" class="form-control" name="password2" required [(ngModel)]="currentUser.password2">
       </div>
 
-      <fieldset>
-        <legend>Institutii de interes</legend>
-        <div class="small">Selectati institutiile pentru care doriti sa fiti notificat.</div>
-        <div class="col-md-6" *ngFor="let item of institutions">
-        <input id="test" type="checkbox" />
-        <label for="test">{{item.name}}</label>
+      <div class="form-group">
+        <div class="row">
+          <md-radio-group name="showDetails" [(ngModel)]="subscribeAll">
+            <div class="col-md-6">
+            <md-radio-button [value]="true">Vreau sa primesc propunerile legislative in dezbatere publica prin e-mail saptamanal.</md-radio-button>
+            </div>
+            <div class="col-md-6">
+            <md-radio-button [value]="false">Vreau sa selectez institutiile de la care primesc e-mail saptamanal.</md-radio-button>
+            </div>
+          </md-radio-group>
+
         </div>
+      </div>
+      
+      <fieldset *ngIf="!subscribeAll">
+        <legend style="margin-bottom:0px;">Institutii de interes</legend>
+        <div class="small" style="margin-bottom:15px">Selectati institutiile pentru care doriti sa fiti notificat.</div>
+        <div class="container-fluid login-inst-fieldset">
+          <div class="col-md-6" *ngFor="let item of institutions; let index = index">
+            <md-checkbox>{{item.name}}</md-checkbox>
+          </div>
+        </div>
+        <hr />
       </fieldset>
+      
+      <div class="text-center">
+        <re-captcha language="ro" site_key="6LenoA0UAAAAALsqEBPPeqyeh_3ea0XsrhgsAhl7"></re-captcha>
+      </div> 
     </form>
 </div>
 <div class="modal-footer">

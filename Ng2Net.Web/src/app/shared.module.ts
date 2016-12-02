@@ -15,6 +15,7 @@ import { HtmlContentPipe } from './directives';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+import { ReCaptchaModule } from 'angular2-recaptcha';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
     RouterModule.forRoot(ApplicationRoutes),
     NgbModule.forRoot(),
     CKEditorModule,
-    NKDatetimeModule
+    NKDatetimeModule,
+    ReCaptchaModule
   ],
   providers: [
      ClaimsGuardService,
@@ -51,7 +53,7 @@ import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
     EqualValidatorDirective,
     HtmlComponent, 
     HtmlContentPipe,
-
+    ReCaptchaModule
 ],
 })
 export class SharedModule { }
