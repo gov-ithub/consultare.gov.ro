@@ -31,7 +31,7 @@ footer a { text-decoration: none; color:#212121 }
 /* Bootstrap */
 .btn { font-family: Lato; font-size:11pt; text-transform: uppercase; border-radius: 3px }
 .btn-primary { background-color:#1956aa; }
-.md-radio-container { vertical-align: middle }
+.md-radio-container { vertical-align: middle; top:0px !important }
 .md-radio-label-content { display:inline !important; padding-left: 0px !important;  padding-top:3px !important }
 .md-radio-label { white-space: normal !important; display:inline !important; }
 

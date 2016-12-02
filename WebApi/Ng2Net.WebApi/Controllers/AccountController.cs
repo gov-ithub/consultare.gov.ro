@@ -14,6 +14,12 @@ using Ng2Net.Services.Scheduler;
 using Ng2Net.Infrastructure.Services;
 using Ng2Net.Infrastructure.Data;
 using Ng2Net.Infrastructure.Interfaces;
+using Ng2Net.Model.Business;
+using System;
+using System.Data.Entity;
+using System.Collections.Generic;
+using Ng2Net.Services.Business;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace Ng2Net.WebApi.Controllers
 {
@@ -22,23 +28,50 @@ namespace Ng2Net.WebApi.Controllers
     {
         private IApplicationAccountService _accountService;
         private INotificationService _notificationSevice;
+        private IInstitutionService _institutionService;
         //to be changed using di
-        public AccountController(IApplicationAccountService accountService, INotificationService notificationService)
+        public AccountController(IApplicationAccountService accountService, INotificationService notificationService, IInstitutionService institutionService)
         {
             _accountService = accountService;
             _notificationSevice = notificationService;
+            _institutionService = institutionService;
         }
 
-        [Route("register")]
-        public async Task<IdentityResult> RegisterUser(UserLoginDTO userDTO)
+        [Route("save")]
+        public async Task<IdentityResult> SaveUser(ClaimsIdentityDTO claimsDTO)
         {
-            ApplicationUser user = new ApplicationUser
-            {
-                UserName = userDTO.UserName,
-            };
+            var applicationUser = string.IsNullOrEmpty(claimsDTO.Id) ? new ApplicationUser() : UserManager.FindById(claimsDTO.Id);
+            var mapper = new MapperConfiguration(cfg => {
+                cfg.CreateMap<ClaimsIdentityDTO, ApplicationUser>().ForMember(dest => dest.Subscriptions, opt => opt.UseValue<IList<InstitutionDTO>>(null));
+            }).CreateMapper();
+            mapper.Map(claimsDTO, applicationUser);
+            applicationUser.UserName = claimsDTO.Email;
+            _institutionService = new InstitutionService(new Data.EfRepository<Institution>(HttpContext.Current.GetOwinContext().Get<DbContext>()));
 
-            var result = await UserManager.CreateAsync(user, userDTO.Password);
-            UserManager.AddToRole(user.Id, "User");
+            if (!claimsDTO.SubscribedToAll)
+            {
+                foreach (InstitutionDTO inst in claimsDTO.Subscriptions)
+                {
+                    Institution currentInstitution = _institutionService.GetById(inst.Id);
+                    if (currentInstitution == null) continue;
+                    if (!applicationUser.Subscriptions.Contains(currentInstitution)) applicationUser.Subscriptions.Add(currentInstitution);
+                }
+            }
+            else
+                applicationUser.Subscriptions.Clear();
+
+            IdentityResult result;
+            if (string.IsNullOrEmpty(applicationUser.Id))
+            {
+                applicationUser.Id = Guid.NewGuid().ToString();
+                result = await UserManager.CreateAsync(applicationUser, claimsDTO.Password);
+            }
+            else
+            {
+                result = await UserManager.UpdateAsync(applicationUser);
+            }
+
+            UserManager.AddToRole(applicationUser.Id, "User");
             return result;
         }
 
@@ -53,6 +86,7 @@ namespace Ng2Net.WebApi.Controllers
             {
                 cfg.CreateMap<ApplicationUser, ClaimsIdentityDTO>();
                 cfg.CreateMap<RoleClaim, ClaimDTO>();
+                cfg.CreateMap<Institution, InstitutionDTO>();
             });
             ClaimsIdentityDTO result = Mapper.Map<ClaimsIdentityDTO>(CurrentUser);
             result.Claims = _accountService.GetClaimsDictionaryByUser(CurrentUser);

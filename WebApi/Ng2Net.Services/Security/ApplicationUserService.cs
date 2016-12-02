@@ -4,12 +4,16 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Ng2Net.Data;
 using Ng2Net.Model.Security;
+using Ng2Net.Services.Security;
 using System.Data.Entity;
 
 namespace Ng2Net.Services
 {
     public class ApplicationUserService : UserManager<ApplicationUser>
     {
+        public ApplicationAccountService _accountService;
+
+
         public ApplicationUserService(IUserStore<ApplicationUser> store): base(store)
         {
         }
