@@ -10,7 +10,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PublicSignupComponent implements OnInit {
 
-  public currentUser: any = {};
+  public currentUser: any = { subscribedToAll: true };
   @ViewChild('myForm')
   private myForm: NgForm;
 
@@ -23,7 +23,7 @@ export class PublicSignupComponent implements OnInit {
  ) { }
 
   ngOnInit() {
-    this.institutionService.getInstitutions().subscribe(result => {this.institutions = result;this.changeDetectorRef.detectChanges();});
+    this.institutionService.getInstitutions().subscribe(result => { this.institutions = result; this.changeDetectorRef.detectChanges(); });
   }
 
 
@@ -31,7 +31,8 @@ export class PublicSignupComponent implements OnInit {
   userRegister() {
     if (!this.myForm.valid)
       return;
-    this.userAccountService.login(this.currentUser).subscribe((result) => {
+    this.currentUser.subscriptions = this.institutions.filter(i => i.selected);
+    this.userAccountService.register(this.currentUser).subscribe((result) => {
       if (!result.error) {
         this.activeModal.close();
       }

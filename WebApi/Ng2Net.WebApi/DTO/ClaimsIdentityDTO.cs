@@ -19,7 +19,13 @@ namespace Ng2Net.WebApi.DTO
 
         public string Email { get; set; }
 
+        public string Password { get; set; }
+
+        public bool SubscribedToAll { get; set; }
+
         public Dictionary<string, string> Claims { get; set; }
+
+        public IList<InstitutionDTO> Subscriptions { get; set; }
 
     }
 }

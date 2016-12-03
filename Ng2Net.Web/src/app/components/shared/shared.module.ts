@@ -17,13 +17,15 @@ import { HtmlComponent } from '../../components/shared';
 import { HtmlContentPipe } from '../../directives';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+import { MaterialModule } from '@angular/material';
+import { ReCaptchaModule } from 'angular2-recaptcha';
 
 @NgModule({
   declarations: [
     EqualValidatorDirective,
     HtmlComponent, 
-    HtmlContentPipe,
-    
+    HtmlContentPipe
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpModule,
     RouterModule.forRoot(ApplicationRoutes),
     NgbModule.forRoot(),
-    CKEditorModule
+    CKEditorModule,
+    NKDatetimeModule,
+    MaterialModule.forRoot(),
+    ReCaptchaModule
   ],
   providers: [
      ClaimsGuardService,
@@ -53,7 +58,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EqualValidatorDirective,
     HtmlComponent, 
     HtmlContentPipe,
-
+    NKDatetimeModule,
+    MaterialModule,
+    ReCaptchaModule
 ],
 })
 export class SharedModule { }

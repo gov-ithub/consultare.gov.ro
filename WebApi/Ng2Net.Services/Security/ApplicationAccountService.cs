@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Security;
+using Ng2Net.Services.Business;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,6 +10,7 @@ namespace Ng2Net.Services.Security
     public class ApplicationAccountService : IApplicationAccountService
     {
         private IdentityDbContext<ApplicationUser> _context;
+        
 
         public ApplicationAccountService(IdentityDbContext<ApplicationUser> context)
         {
@@ -23,5 +25,7 @@ namespace Ng2Net.Services.Security
             lstRoleClaims.ForEach(c => { try { result.Add(c.ClaimType, c.ClaimValue); } catch { } });
             return result;
         }
+
+        
     }
 }

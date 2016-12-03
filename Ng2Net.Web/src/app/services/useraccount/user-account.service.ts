@@ -70,4 +70,11 @@ export class UserAccountService {
       .share();
       return obs;
   }
+
+  register(user: any) {
+      let obs = this.http.post('/api/account/save', user)
+      .map((result) => result.json())
+      .share();
+      return obs;  
+  }
 }

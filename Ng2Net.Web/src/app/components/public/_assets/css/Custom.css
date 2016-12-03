@@ -25,12 +25,15 @@ footer a { text-decoration: none; color:#212121 }
 .hero .heroSubtitle, .hero-bottom .heroSubtitle  { font-size: 14pt; line-height: 22pt; margin-top:20px; margin-bottom: 10px }
 .hero-bottom { text-align: center }
 .hero-bottom .heroContent { font-weight: 300; padding-top:130px; font-size:32pt; line-height: 32pt; color:#FFFFFF  }
+.login-inst-fieldset { max-height:300px; padding:20px 0px; overflow-y: auto; margin-bottom: 20px }
 
 
 /* Bootstrap */
 .btn { font-family: Lato; font-size:11pt; text-transform: uppercase; border-radius: 3px }
 .btn-primary { background-color:#1956aa; }
-
+.md-radio-container { vertical-align: middle; top:0px !important }
+.md-radio-label-content { display:inline !important; padding-left: 0px !important;  padding-top:3px !important }
+.md-radio-label { white-space: normal !important; display:inline !important; }
 
 /*=========================
   Icons

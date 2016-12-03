@@ -13,7 +13,7 @@ namespace Ng2Net.Data
         public DbSet<RoleClaim> RoleClaims { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<HtmlContent> HtmlContents { get; set; }
-        public DbSet<TaskRunnerLog> TaskRunnerLog { get; set; }
+        public DbSet<Institution> Institutions { get; set; }
 
         public DatabaseContext(): base("name=DefaultConnection")
         {

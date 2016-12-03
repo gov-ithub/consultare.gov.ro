@@ -14,7 +14,8 @@ import { HtmlComponent } from './components/shared';
 import { HtmlContentPipe } from './directives';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+import { ReCaptchaModule } from 'angular2-recaptcha';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
     RouterModule.forRoot(ApplicationRoutes),
     NgbModule.forRoot(),
     CKEditorModule,
-    Ng2DatetimePickerModule
+    NKDatetimeModule,
+    ReCaptchaModule
   ],
   providers: [
      ClaimsGuardService,
@@ -51,7 +53,7 @@ import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
     EqualValidatorDirective,
     HtmlComponent, 
     HtmlContentPipe,
-
+    ReCaptchaModule
 ],
 })
 export class SharedModule { }
