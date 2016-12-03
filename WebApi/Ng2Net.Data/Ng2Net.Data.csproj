@@ -110,6 +110,10 @@
     <Compile Include="Migrations\201612011713398_UserSubscribe.Designer.cs">
       <DependentUpon>201612011713398_UserSubscribe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612012158351_TaskRunnerLog.cs" />
+    <Compile Include="Migrations\201612012158351_TaskRunnerLog.Designer.cs">
+      <DependentUpon>201612012158351_TaskRunnerLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -147,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612011713398_UserSubscribe.resx">
       <DependentUpon>201612011713398_UserSubscribe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612012158351_TaskRunnerLog.resx">
+      <DependentUpon>201612012158351_TaskRunnerLog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

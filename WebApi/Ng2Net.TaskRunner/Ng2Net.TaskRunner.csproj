@@ -127,6 +127,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceTasks\ProcessNotifications.cs" />
+    <Compile Include="ServiceTasks\ProcessSubscriptions.cs" />
+    <Compile Include="SubscriptionProcessor.cs" />
     <Compile Include="TaskRunnerService.cs">
       <SubType>Component</SubType>
     </Compile>
