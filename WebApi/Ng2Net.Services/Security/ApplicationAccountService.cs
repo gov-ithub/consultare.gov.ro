@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Ng2Net.Data;
 using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Security;
 using Ng2Net.Services.Business;
@@ -9,12 +10,13 @@ namespace Ng2Net.Services.Security
 {
     public class ApplicationAccountService : IApplicationAccountService
     {
-        private IdentityDbContext<ApplicationUser> _context;
-        
+        private DatabaseContext _context;
+        private IApplicationUserService _applicationUserService;
 
-        public ApplicationAccountService(IdentityDbContext<ApplicationUser> context)
+        public ApplicationAccountService(DatabaseContext context)
         {
             _context = context;
+            _applicationUserService = new ApplicationUserService(new UserStore<ApplicationUser>(_context));
         }
 
         public Dictionary<string, string> GetClaimsDictionaryByUser(ApplicationUser user)
@@ -26,6 +28,19 @@ namespace Ng2Net.Services.Security
             return result;
         }
 
-        
+        public IApplicationUserService UserService
+        {
+            get { return _applicationUserService; }
+        }
+
+        public ApplicationUser GetById(string id)
+        {
+            return _context.Users.FirstOrDefault(u=>u.Id == id);
+        }
+
+        public int Save()
+        {
+            return _context.SaveChanges();
+        }
     }
 }

@@ -3,13 +3,14 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Ng2Net.Data;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Security;
 using Ng2Net.Services.Security;
 using System.Data.Entity;
 
 namespace Ng2Net.Services
 {
-    public class ApplicationUserService : UserManager<ApplicationUser>
+    public class ApplicationUserService : UserManager<ApplicationUser>, IApplicationUserService
     {
         public ApplicationAccountService _accountService;
 

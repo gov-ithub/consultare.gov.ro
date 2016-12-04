@@ -20,6 +20,7 @@ using System.Data.Entity;
 using System.Collections.Generic;
 using Ng2Net.Services.Business;
 using Microsoft.AspNet.Identity.Owin;
+using Ng2Net.Services;
 
 namespace Ng2Net.WebApi.Controllers
 {
@@ -38,15 +39,25 @@ namespace Ng2Net.WebApi.Controllers
         }
 
         [Route("save")]
-        public async Task<IdentityResult> SaveUser(ClaimsIdentityDTO claimsDTO)
+        public async Task<ClaimsIdentityDTO> SaveUser(ClaimsIdentityDTO claimsDTO)
         {
-            var applicationUser = string.IsNullOrEmpty(claimsDTO.Id) ? new ApplicationUser() : UserManager.FindById(claimsDTO.Id);
+            var applicationUser = string.IsNullOrEmpty(claimsDTO.Id) ? new ApplicationUser() : _accountService.GetById(claimsDTO.Id);
             var mapper = new MapperConfiguration(cfg => {
                 cfg.CreateMap<ClaimsIdentityDTO, ApplicationUser>().ForMember(dest => dest.Subscriptions, opt => opt.UseValue<IList<InstitutionDTO>>(null));
             }).CreateMapper();
             mapper.Map(claimsDTO, applicationUser);
             applicationUser.UserName = claimsDTO.Email;
-            _institutionService = new InstitutionService(new Data.EfRepository<Institution>(HttpContext.Current.GetOwinContext().Get<DbContext>()));
+
+
+            IdentityResult result = null;
+            if (string.IsNullOrEmpty(applicationUser.Id))
+            {
+                applicationUser.Id = Guid.NewGuid().ToString();
+                result = await ((ApplicationUserService)_accountService.UserService).CreateAsync(applicationUser, claimsDTO.Password);
+                if (!result.Succeeded) throw new Exception(result.Errors.ToString());
+                ((ApplicationUserService)_accountService.UserService).AddToRole(applicationUser.Id, "User");
+            }
+
 
             if (!claimsDTO.SubscribedToAll)
             {
@@ -60,19 +71,9 @@ namespace Ng2Net.WebApi.Controllers
             else
                 applicationUser.Subscriptions.Clear();
 
-            IdentityResult result;
-            if (string.IsNullOrEmpty(applicationUser.Id))
-            {
-                applicationUser.Id = Guid.NewGuid().ToString();
-                result = await UserManager.CreateAsync(applicationUser, claimsDTO.Password);
-            }
-            else
-            {
-                result = await UserManager.UpdateAsync(applicationUser);
-            }
+            int x = _accountService.Save();
 
-            UserManager.AddToRole(applicationUser.Id, "User");
-            return result;
+            return GetDTOFromUser(applicationUser);
         }
 
 
@@ -82,14 +83,19 @@ namespace Ng2Net.WebApi.Controllers
 
             if (CurrentUser == null)
                 return null;
+            return GetDTOFromUser(this.CurrentUser);
+        }
+
+        public ClaimsIdentityDTO GetDTOFromUser(ApplicationUser user)
+        {
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<ApplicationUser, ClaimsIdentityDTO>();
                 cfg.CreateMap<RoleClaim, ClaimDTO>();
                 cfg.CreateMap<Institution, InstitutionDTO>();
             });
-            ClaimsIdentityDTO result = Mapper.Map<ClaimsIdentityDTO>(CurrentUser);
-            result.Claims = _accountService.GetClaimsDictionaryByUser(CurrentUser);
+            ClaimsIdentityDTO result = Mapper.Map<ClaimsIdentityDTO>(user);
+            result.Claims = _accountService.GetClaimsDictionaryByUser(user);
             return result;
         }
 
