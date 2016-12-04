@@ -4,27 +4,22 @@ using Ng2Net.Infrastructure.Data;
 using Ng2Net.Model.Scheduler;
 using Ng2Net.Infrastrucure.Logging;
 using Ng2Net.Data;
+using Ng2Net.Model.Business;
 
 namespace Ng2Net.TaskRunner.ServiceTasks
 {
-    public class ProcessNotifications : IServiceTask
+    class ProcessSubscriptions : IServiceTask
     {
-        private IRepository<Notification> _repository;
+        private IRepository<Proposal> _repository;
 
-        public ProcessNotifications()
+        public ProcessSubscriptions()
         {
-            _repository = new EfRepository<Notification>(new DatabaseContext());
+            _repository = new EfRepository<Proposal>(new DatabaseContext());
         }
-
-
-
-
-        //test
-
 
         public void Run(string settings)
         {
-            NotificationProcessor proc = new NotificationProcessor(_repository, JsonConvert.DeserializeObject<NotificationProcessorSettings>(settings));
+            SubscriptionProcessor proc = new SubscriptionProcessor(_repository, JsonConvert.DeserializeObject<SubscriptionProcessorSettings>(settings));
             int Processed = proc.ProcessQueue();
             if (Processed > 0)
                 Logging.LogMessage(string.Format("NotificationProcessor: Processed {0} notifications\r\n", Processed.ToString()));
