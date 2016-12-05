@@ -20,7 +20,7 @@ namespace Ng2Net.WebApi
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            //PrepareDbMigration();
+            PrepareDbMigration();
         }
 
         //to be removed
