@@ -60,7 +60,7 @@ namespace Ng2Net.WebApi.Controllers
             }).CreateMapper();
 
 
-            return mapper.Map<List<ProposalDTO>>(proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery)).Skip(pageNo*pageSize).Take(pageSize).ToList());
+            return mapper.Map<List<ProposalDTO>>(proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery)).OrderByDescending(p=>p.StartDate).Skip(pageNo*pageSize).Take(pageSize).ToList());
         }
     }
 }

@@ -114,6 +114,18 @@
     <Compile Include="Migrations\201612021523333_AddNewStuff.Designer.cs">
       <DependentUpon>201612021523333_AddNewStuff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612042014537_Subscrioptions.cs" />
+    <Compile Include="Migrations\201612042014537_Subscrioptions.Designer.cs">
+      <DependentUpon>201612042014537_Subscrioptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612050000086_ProposalDocumentTypes.cs" />
+    <Compile Include="Migrations\201612050000086_ProposalDocumentTypes.Designer.cs">
+      <DependentUpon>201612050000086_ProposalDocumentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612050002179_ProposalDocumentTypes1.cs" />
+    <Compile Include="Migrations\201612050002179_ProposalDocumentTypes1.Designer.cs">
+      <DependentUpon>201612050002179_ProposalDocumentTypes1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -154,6 +166,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612021523333_AddNewStuff.resx">
       <DependentUpon>201612021523333_AddNewStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612042014537_Subscrioptions.resx">
+      <DependentUpon>201612042014537_Subscrioptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612050000086_ProposalDocumentTypes.resx">
+      <DependentUpon>201612050000086_ProposalDocumentTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612050002179_ProposalDocumentTypes1.resx">
+      <DependentUpon>201612050002179_ProposalDocumentTypes1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

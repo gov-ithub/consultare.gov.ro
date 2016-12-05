@@ -25,8 +25,9 @@ namespace Ng2Net.Model.Business
         [Required]
         [StringLength(1000)]
         public string Email { get; set; }
-
+        public string Documents { get; set; }
         public string Observations { get; set; }
+        public bool Archived { get; set; }
         public IList<ProposalCategory> ProposalCategories { get; set; }
     }
 }

@@ -1,0 +1,46 @@
+<section class="proposals">
+<div class="container">
+<div class="proposals-title">Propuneri legislative noi</div>
+<form (submit)="refreshData(0)" #myForm="ngForm">
+
+<div class="row" *ngIf="showSearch">
+  <div class="form-group">
+      <input type="text" name="filter" [(ngModel)]="filterQuery" class="form-control">
+  </div>
+    <div class="form-group">
+    <select name="institution" class="form-control">
+    <option value="">- selecteaza institutie -</option>
+    <option *ngFor="let item of institutions" value="{{item.id}}">{{item.name}}</option>
+    </select>
+    </div>
+    <button class="btn btn-default" type="submit">Submit</button>
+
+</div>
+  </form>
+
+<div class="proposal" *ngFor="let item of items">
+ <div class="proposal-title">
+    {{item.title}}
+  </div>
+    <div class="proposal-links">
+      <a *ngIf="item.email" href="mailto:{{item.email}}"><i class="fa fa-lg fa-envelope-o"></i></a>
+      <a *ngIf="item.link" href="{{item.link}}" target="_blank"><i class="fa fa-lg fa-link"></i></a>
+  </div>
+
+  <div class="proposal-left">
+    <div class="proposal-institution">
+      {{item.institution.name}} <span *ngIf="item.institution.name !== item.initiatingInstitution.name">/ {{item.initiatingInstitution.name}}</span>
+    </div>
+
+    <div class="proposal-date" *ngIf="item.startDate">
+      Data publicarii: {{item.startDate | amDateFormat:'DD.MM.YYYY'}}
+    </div>
+    <div class="proposal-date" *ngIf="item.endDate">
+      Data incheierii dezbaterii publice: {{item.endDate | amDateFormat:'DD.MM.YYYY'}}
+    </div>
+  </div>
+    <hr style="clear:both; " />
+
+</div>
+</div>
+</section>

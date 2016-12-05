@@ -40,23 +40,24 @@
 
       <table class="table table-hover">
         <tr>
-          <th>
-            <app-html contentName="backend.content.name"></app-html>
+          <th style="width:80px">
+            <app-html contentName="Data publicarii"></app-html>
+          </th>
+
+          <th style="width:150px">
+            Institutie
           </th>
           <th>
-            <app-html contentName="backend.content.content"></app-html>
-          </th>
-          <th>
-            <app-html contentName="backend.content.url"></app-html>
+            <app-html contentName="Titlu"></app-html>
           </th>
           <th style="width:50px;" class="text-center">
             <app-html contentName="backend.content.delete"></app-html>
           </th>
         </tr>
         <tr *ngFor="let item of proposals">
+          <td>{{item.startDate | amDateFormat:'DD.MM.YYYY'}}</td>
+          <td>{{item.institution.name}}</td>
           <td><a (click)="openEdit(item)">{{item.title}}</a></td>
-          <td>{{item.title}}</td>
-          <td>{{item.url}}</td>
           <td><button class="btn btn-sm btn-default" (click)="delete(item)" type="button"><i class="fa fa-trash"></i></button></td>
         </tr>
       </table>

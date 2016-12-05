@@ -15,7 +15,7 @@ namespace Ng2Net.WebApi.DTO
         public virtual InstitutionDTO InitiatingInstitution { get; set; }
         public string Description { get; set; }
         public DateTime? StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public DateTime? LimitDate { get; set; }
 
         public string Link { get; set; }

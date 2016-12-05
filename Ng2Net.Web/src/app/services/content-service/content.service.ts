@@ -15,7 +15,6 @@ export class ContentService {
     this.http.get(`/api/content/get`)
     .map(result => result.json()).subscribe(result => {
       this.htmlContent = result;
-      console.log(this.htmlContent);
     }); 
   }
 

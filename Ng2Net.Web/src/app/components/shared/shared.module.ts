@@ -20,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { MaterialModule } from '@angular/material';
 import { ReCaptchaModule } from 'angular2-recaptcha';
+import { MomentModule } from 'angular2-moment';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ReCaptchaModule } from 'angular2-recaptcha';
     CKEditorModule,
     NKDatetimeModule,
     MaterialModule.forRoot(),
-    ReCaptchaModule
+    ReCaptchaModule,
+    MomentModule
   ],
   providers: [
      ClaimsGuardService,
@@ -60,7 +62,8 @@ import { ReCaptchaModule } from 'angular2-recaptcha';
     HtmlContentPipe,
     NKDatetimeModule,
     MaterialModule,
-    ReCaptchaModule
+    ReCaptchaModule,
+    MomentModule
 ],
 })
 export class SharedModule { }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ProposalsService, InstitutionService } from '../../../services';
+import { Component, OnInit, Input } from '@angular/core';
+import { ProposalsService, InstitutionService } from '../../../../services';
 
 @Component({
   selector: 'app-proposals',
@@ -11,6 +11,8 @@ export class ProposalsComponent implements OnInit {
   private institutions: any[];
   private items: any = [];
   private filterQuery: string = '';
+  @Input()
+  public showSearch: boolean;
   constructor(private proposalsService: ProposalsService,
     private institutionService: InstitutionService
 ) { }
@@ -22,8 +24,8 @@ export class ProposalsComponent implements OnInit {
   }
 
   refreshData(pageNo: number)
-  { console.log(this.filterQuery);
-      this.proposalsService.listProposals(this.filterQuery, pageNo, 10).subscribe((result) => {
+  {
+      this.proposalsService.listProposals(this.filterQuery, pageNo, 5).subscribe((result) => {
         this.items = result;
       });
   }

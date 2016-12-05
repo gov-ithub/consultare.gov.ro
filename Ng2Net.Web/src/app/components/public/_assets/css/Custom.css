@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700');
 BODY{ font-family: 'Open Sans'}
 .header-fixed{ top:0px; width:100%; position:fixed; }
 .header-fixed a { text-transform: uppercase; }
@@ -28,8 +29,17 @@ footer a { text-decoration: none; color:#212121 }
 .login-inst-fieldset { max-height:300px; padding:20px 0px; overflow-y: auto; margin-bottom: 20px }
 
 
+/* Proposals */
+.proposals { margin:50px 0px }
+.proposal .proposal-left { float:left; margin-bottom: 20px }
+.proposal-institution { color:#ef734c; font-size: 10pt  }
+.proposals-title { font-family: Lato; font-size: 28pt; font-weight: 300;  margin:40px 0px }
+.proposals .proposal-title { font-family: "Open Sans"; font-size:16pt; font-weight: 300; text-transform: uppercase; }
+.proposal .proposal-date { font-size: 10pt }
+.proposal .proposal-links { float:right }
+
 /* Bootstrap */
-.btn { font-family: Lato; font-size:11pt; text-transform: uppercase; border-radius: 3px }
+.btn { font-family: Lato; font-size:11pt; border-radius: 3px }
 .btn-primary { background-color:#1956aa; }
 .md-radio-container { vertical-align: middle; top:0px !important }
 .md-radio-label-content { display:inline !important; padding-left: 0px !important;  padding-top:3px !important }
