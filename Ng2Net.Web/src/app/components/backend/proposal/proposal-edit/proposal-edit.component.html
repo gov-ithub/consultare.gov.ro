@@ -33,7 +33,15 @@
                     </div>
                 </div-->
 
-
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <label><app-html contentName="backend.label.institution"></app-html>:</label>
+                            <input class="form-control" required [(ngModel)]="proposal.institution" name="institution" />
+                            <button type="button" (click)="browseInstitution({})" class="btn btn-sm btn-info pull-right box-tools-btn" name="browseInst"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
                 <ckeditor name="ckEditor" [(ngModel)]="proposal.description" [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
                 <div class="row">
                     <div class="col-lg-8">

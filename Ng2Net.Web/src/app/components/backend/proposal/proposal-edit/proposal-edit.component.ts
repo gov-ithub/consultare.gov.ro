@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { ProposalsService, HttpClient } from '../../../../services';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
+import { InstitutionListComponent } from '../../';
 
 @Component({
   selector: 'app-proposal-edit',
@@ -16,9 +18,14 @@ export class ProposalEditComponent implements OnInit {
   @ViewChild('myForm')
   private myForm: NgForm;
 
-  constructor(private proposalService: ProposalsService, private http: HttpClient ) { }
+  constructor(private modalService: NgbModal, private proposalService: ProposalsService, private http: HttpClient ) { }
 
   ngOnInit() {
+  }
+
+  browseInstitution(){
+    let modal = this.modalService.open(InstitutionListComponent, { size: 'lg', keyboard: false });
+    modal.componentInstance.parentComponent = this;
   }
 
   save() {
