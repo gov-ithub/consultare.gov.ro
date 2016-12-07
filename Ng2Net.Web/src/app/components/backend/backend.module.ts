@@ -14,8 +14,6 @@ import { BackendLoginComponent,
   ContentListComponent,
   ProposalListComponent,
   ProposalEditComponent } from './';
-import { HtmlComponent  } from '../shared';
-import { HtmlContentPipe, EqualValidatorDirective } from '../../directives';
 import { BackendRoutes } from './backend.routes';
 import { SharedModule } from '../shared/shared.module';
 import { InstitutionEditComponent } from './institution/institution-edit/institution-edit.component';

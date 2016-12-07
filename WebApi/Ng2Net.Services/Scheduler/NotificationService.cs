@@ -19,5 +19,7 @@ namespace Ng2Net.Services.Scheduler
             _repository.Insert(notification);
             _repository.Save();
         }
+
+        //public static Notification ConstructNotification
     }
 }

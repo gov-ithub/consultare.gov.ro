@@ -36,6 +36,7 @@ namespace Ng2Net.WebApi
             if (!user.EmailConfirmed)
             {
                 context.SetError("account_unconfirmed", "Contul nu a fost confirmat");
+                return;
             }
 
             ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(_userManager, "JWT");

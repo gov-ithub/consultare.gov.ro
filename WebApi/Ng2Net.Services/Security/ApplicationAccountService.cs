@@ -43,7 +43,7 @@ namespace Ng2Net.Services.Security
 
         public int Save()
         {
-            var changedEntries = _context.ChangeTracker.Entries().Where(e => new EntityState[] { /*EntityState.Added*,*/ EntityState.Modified/*, EntityState.Deleted*/ }.Contains(e.State)).Where(e => Type.GetType("ApplicationUser").IsAssignableFrom(e.Entity.GetType())).ToList();
+            var changedEntries = _context.ChangeTracker.Entries().Where(e => new EntityState[] { /*EntityState.Added*,*/ EntityState.Modified/*, EntityState.Deleted*/ }.Contains(e.State)).Where(e => typeof(ApplicationUser).IsAssignableFrom(e.Entity.GetType())).ToList();
 
             foreach (var user in changedEntries)
             {
