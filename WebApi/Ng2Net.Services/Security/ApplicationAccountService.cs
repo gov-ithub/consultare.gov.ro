@@ -3,8 +3,11 @@ using Ng2Net.Data;
 using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Security;
 using Ng2Net.Services.Business;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Data.Entity.Infrastructure;
 
 namespace Ng2Net.Services.Security
 {
@@ -40,7 +43,24 @@ namespace Ng2Net.Services.Security
 
         public int Save()
         {
+            var changedEntries = _context.ChangeTracker.Entries().Where(e => new EntityState[] { /*EntityState.Added*,*/ EntityState.Modified/*, EntityState.Deleted*/ }.Contains(e.State)).Where(e => Type.GetType("ApplicationUser").IsAssignableFrom(e.Entity.GetType())).ToList();
+
+            foreach (var user in changedEntries)
+            {
+                RunRules(user);
+            }
+
             return _context.SaveChanges();
+        }
+
+        private void RunRules(DbEntityEntry user)
+        {
+            ApplicationUser applicationUser = ((ApplicationUser)user.Entity);
+            if (user.OriginalValues["Email"].ToString() != applicationUser.Email)
+            {
+                applicationUser.EmailConfirmed = false;
+            }
+
         }
     }
 }

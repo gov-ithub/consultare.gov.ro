@@ -35,6 +35,12 @@ export class ContentService {
     return obs;
   }
 
+  getHtmlContentByUrl(url: string) {
+    let obs = this.http.get(`/api/content/getbyurl/${url}`)
+    .map(result => result.json()).share();
+    return obs;
+  }
+
   saveHtmlContent(htmlContent: any) {
     let obs = this.http.post(`/api/content/save`, htmlContent)
     .map(result => result.json()).share();

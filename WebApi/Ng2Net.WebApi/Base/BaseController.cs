@@ -17,19 +17,24 @@ namespace Ng2Net.WebApi.Base
 	public class BaseController : ApiController
     {        
         private ApplicationUserService _userManager;
-        private static DpapiDataProtectionProvider _tokenProvider;
+        private static IDataProtector _dataProtector;
         private ApplicationUser _currentUser;
         
         protected ApplicationUserService UserManager
         {
             get
             {
+
                 if (_userManager == null)
                 {
-                    if (_tokenProvider == null)
-                        _tokenProvider = new DpapiDataProtectionProvider();
+                    if (_dataProtector == null)
+                    {
+                        var _tokenProvider = new DpapiDataProtectionProvider();
+                        _dataProtector = _tokenProvider.Create("ConfirmEmail", "ResetPassword");
+                    }
+
                     _userManager = Request.GetOwinContext().GetUserManager<ApplicationUserService>();
-                    _userManager.UserTokenProvider = new DataProtectorTokenProvider<ApplicationUser>(_tokenProvider.Create("ResetPassword")) { TokenLifespan = TimeSpan.FromDays(1) };
+                    _userManager.UserTokenProvider = new DataProtectorTokenProvider<ApplicationUser>(_dataProtector) { TokenLifespan = TimeSpan.FromDays(1) };
                 }
                 return _userManager;
             }

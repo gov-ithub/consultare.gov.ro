@@ -5,3 +5,5 @@ export * from './global/global.service';
 export * from './content-service/content.service';
 export * from './institution/institution.service';
 export * from './proposals/proposals.service';
+export * from './pager/pager.service';
+export * from './pager/pager.config';

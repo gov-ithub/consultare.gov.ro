@@ -1,0 +1,38 @@
+<div class="modal-header">
+ <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+     <h4 class="modal-title">Intra in cont</h4>
+</div>
+<form #myForm="ngForm" novalidate>
+  <span *ngIf="login">
+  <div class="modal-body">
+    <div class="callout callout-danger" *ngIf="userAccountService.authError">{{ userAccountService.authError }}</div>
+        <div class="form-group has-feedback">
+          <input type="text" placeholder="{{ 'backend.login.email' | htmlContent:contentService.htmlContent }}" name="email" [(ngModel)]="currentUser.email" required class="form-control">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" placeholder="{{ 'backend.login.password' | htmlContent:contentService.htmlContent }}" class="form-control" name="password" required [(ngModel)]="currentUser.password">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+  </div>
+  <div class="modal-footer container-fluid">
+        <div class="row">
+          <div class="col-xs-7 text-left">
+            <a (click)="openForgotPassword()"><app-html contentName="backend.login.forgotPassword"></app-html></a><br />
+            <a (click)="openResendEmail()">Nu ai primit e-mail de activare?</a>
+          </div>
+          <!-- /.col -->
+          <div class="col-xs-5">
+            <button type="submit" (click)="userLogin()" class="btn btn-primary btn-block btn-flat"><app-html contentName="backend.login.signin"></app-html></button>
+          </div>
+          <!-- /.col -->
+        </div>
+  </div>
+    </span>
+
+</form>
+<span *ngIf="forgotPassword">
+  test
+</span>

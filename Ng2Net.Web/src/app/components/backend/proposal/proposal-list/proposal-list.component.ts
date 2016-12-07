@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProposalsService, HttpClient } from '../../../../services';
+import { ProposalsService, HttpClient, PagerService } from '../../../../services';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProposalEditComponent } from '../../';
 
@@ -12,15 +12,20 @@ export class ProposalListComponent implements OnInit {
 
   private proposals: any[] = [];
   private filterQuery: string = '';
+  private pagerInstance='proposals.component';
 
-  constructor(private router: Router, private route: ActivatedRoute, private proposalService: ProposalsService, private http: HttpClient) { }
+  constructor(private router: Router, private route: ActivatedRoute, private proposalService: ProposalsService, private http: HttpClient,
+  private pagerService: PagerService) { }
 
   ngOnInit() {
-    this.refresh();
+    this.refresh(0);
   }
 
-  refresh() {
-    this.proposalService.listProposals(this.filterQuery, 0, 50).subscribe(result => this.proposals = result);
+  refresh(pageNo: number) {
+    this.proposalService.listProposals(this.filterQuery, pageNo, this.pagerService.defaultPagerConfig.pageSize).subscribe(result => {
+      this.proposals = result.results
+      this.pagerService.refreshInstances(this.pagerInstance, pageNo, result.totalResults);
+    });
   }
 
   openEdit(proposal: any) {
@@ -29,7 +34,7 @@ export class ProposalListComponent implements OnInit {
 
   delete(proposal: any) {
     if (confirm('Are you sure?')) {
-    this.proposalService.deleteProposal(proposal.id).subscribe(() => this.refresh());
+      this.proposalService.deleteProposal(proposal.id).subscribe(() => this.refresh(0));
     }
   }
 }

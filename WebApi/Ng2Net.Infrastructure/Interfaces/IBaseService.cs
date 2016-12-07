@@ -8,7 +8,7 @@ namespace Ng2Net.Infrastructure.Interfaces
 {
     public interface IBaseService<T>
     {
-        IEnumerable<T> Get();
+        IQueryable<T> Get();
         T Add(T entity);
         T Edit(T entity);
         void Delete(T entity);

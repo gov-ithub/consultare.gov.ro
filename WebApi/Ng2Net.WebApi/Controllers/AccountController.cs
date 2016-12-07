@@ -43,11 +43,11 @@ namespace Ng2Net.WebApi.Controllers
         {
             var applicationUser = string.IsNullOrEmpty(claimsDTO.Id) ? new ApplicationUser() : _accountService.GetById(claimsDTO.Id);
             var mapper = new MapperConfiguration(cfg => {
-                cfg.CreateMap<ClaimsIdentityDTO, ApplicationUser>().ForMember(dest => dest.Subscriptions, opt => opt.UseValue<IList<InstitutionDTO>>(null));
+                cfg.CreateMap<ClaimsIdentityDTO, ApplicationUser>().ForMember(dest => dest.Subscriptions, opt => opt.UseValue<IList<InstitutionDTO>>(null)).ForMember(dest => dest.Claims, opt => opt.Ignore());
             }).CreateMapper();
             mapper.Map(claimsDTO, applicationUser);
             applicationUser.UserName = claimsDTO.Email;
-
+            bool sendConfirmationEmail = false;
 
             IdentityResult result = null;
             if (string.IsNullOrEmpty(applicationUser.Id))
@@ -56,9 +56,10 @@ namespace Ng2Net.WebApi.Controllers
                 result = await ((ApplicationUserService)_accountService.UserService).CreateAsync(applicationUser, claimsDTO.Password);
                 if (!result.Succeeded) throw new Exception(result.Errors.ToString());
                 ((ApplicationUserService)_accountService.UserService).AddToRole(applicationUser.Id, "User");
+                sendConfirmationEmail = true;
             }
 
-
+            applicationUser.Subscriptions.Clear();
             if (!claimsDTO.SubscribedToAll)
             {
                 foreach (InstitutionDTO inst in claimsDTO.Subscriptions)
@@ -68,19 +69,18 @@ namespace Ng2Net.WebApi.Controllers
                     if (!applicationUser.Subscriptions.Contains(currentInstitution)) applicationUser.Subscriptions.Add(currentInstitution);
                 }
             }
-            else
-                applicationUser.Subscriptions.Clear();
 
             int x = _accountService.Save();
-
-            return GetDTOFromUser(applicationUser);
+            var resultDTO = GetDTOFromUser(applicationUser);
+            if (sendConfirmationEmail)
+                await this.SendConfirmEmail(resultDTO);
+            return resultDTO;
         }
 
 
         [Route("me")]
         public ClaimsIdentityDTO GetCurrentUser()
         {
-
             if (CurrentUser == null)
                 return null;
             return GetDTOFromUser(this.CurrentUser);
@@ -109,7 +109,27 @@ namespace Ng2Net.WebApi.Controllers
             Notification not = new Notification
             {
                 Subject = "Reset your password",
-                Body = "http://ng2net.start/reset-password/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GeneratePasswordResetToken(user.Id)),
+                Body = "http://consultare.gov.start/reset-password/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GeneratePasswordResetToken(user.Id)),
+                From = "carol.braileanu@gmail.com",
+                To = user.Email
+            };
+            this._notificationSevice.AddNotification(not);
+            return new { result = "success", message = "email_sent" };
+
+        }
+
+
+        [HttpPost]
+        [Route("send-confirm-email")]
+        public async Task<object> SendConfirmEmail([FromBody] ClaimsIdentityDTO userModel)
+        {
+            ApplicationUser user = await UserManager.FindByEmailAsync(userModel.Email);
+            if (user == null)
+                return new { error = true, message = "email_not_found" };
+            Notification not = new Notification
+            {
+                Subject = "Confirm your account",
+                Body = "http://consultare.gov.start/confirm-account/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GenerateEmailConfirmationToken(user.Id)),
                 From = "carol.braileanu@gmail.com",
                 To = user.Email
             };
@@ -129,5 +149,18 @@ namespace Ng2Net.WebApi.Controllers
                 return new { error = true, message = "password_reset_failed" };
 
         }
+
+        [HttpPost]
+        [Route("confirm-account")]
+        public async Task<object> ConfirmAccount([FromBody] ResetPasswordDTO resetModel)
+        {
+            IdentityResult result = await UserManager.ConfirmEmailAsync(resetModel.UserId, resetModel.Token);
+            if (result.Succeeded)
+                return new { message = "account_confirmed" };
+            else
+                return new { error = true, message = "account_confirm_failed" };
+
+        }
+
     }
 }

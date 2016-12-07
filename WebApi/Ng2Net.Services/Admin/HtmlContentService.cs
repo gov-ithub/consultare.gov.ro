@@ -27,6 +27,11 @@ namespace Ng2Net.Services.Admin
             return _repository.GetById(id);
         }
 
+        public HtmlContent GetByUrl(string url)
+        {
+            return _repository.GetMany().FirstOrDefault(o=>o.Url == url);
+        }
+
         public HtmlContent SaveHtmlContent(HtmlContent content)
         {
             if (_repository.IsNew(content))

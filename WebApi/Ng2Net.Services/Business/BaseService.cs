@@ -34,7 +34,7 @@ namespace Ng2Net.Services.Business
             return _repository.GetById(entity.Id);
         }
 
-        public virtual IEnumerable<T> Get()
+        public virtual IQueryable<T> Get()
         {
             return _repository.GetMany();
         }

@@ -8,14 +8,14 @@
     <a class="navbar-brand navbar-logo scroll" routerLink="/"><img src="assets/images/sigla-econsultare_on.png"></a>
 </div>
 
-<div class="navbar-collapse collapse">
+<div class="navbar-collapse collapse"> 
 <ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
-    <li role="presentation" routerLinkActive="active"><a routerLink="/propuneri-legislative">Propuneri</a></li>
-    <li role="presentation" routerLinkActive="active"><a routerLink="/">Arhiva</a></li>
-    <li role="presentation" routerLinkActive="active"><a routerLink="/">Despre econsultare</a></li>
-    <li role="presentation" routerLinkActive="active"><a routerLink="/">Contact</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink="/propuneri-legislative" class="menu-link">Propuneri</a></li>
+    <li role="presentation" routerLinkActive="active"><a class="menu-link" routerLink="/p/despre">Despre econsultare</a></li>
+    <li role="presentation" routerLinkActive="active"><a class="menu-link" routerLink="/">Contact</a></li>
+    <li role="presentation" *ngIf="!userService.currentUser.id"><a class="header-signup" (click)="openViewAccount()">Inscrie-te</a></li>
     <li role="presentation" *ngIf="!userService.currentUser.id"><a class="header-login" (click)="openLogin()">Intra in cont</a></li>
-    <li role="presentation" *ngIf="userService.currentUser.id"><a>Contul meu</a></li>
+    <li role="presentation" *ngIf="userService.currentUser.id"><a class="header-signup" (click)="openViewAccount()">Contul meu</a></li>
     <li role="presentation" *ngIf="userService.currentUser.id"><a class="header-login" (click)="userService.logout()">Iesi din cont</a></li>
 </ul>
 </div>

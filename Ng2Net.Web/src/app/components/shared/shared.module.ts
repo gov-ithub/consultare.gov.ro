@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ApplicationRoutes } from '../../app.routes';
 import { AppComponent } from '../../app.component';
-import { UserAccountService, HttpClient, ProposalsService, ContentService, ClaimsGuardService, InstitutionService } from '../../services';
+import { UserAccountService, HttpClient, ProposalsService, ContentService, ClaimsGuardService, InstitutionService, PagerService } from '../../services';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { GlobalService } from '../../services/global/global.service';
 import { EqualValidatorDirective } from '../../directives/equal-validator';
@@ -21,12 +21,14 @@ import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { MaterialModule } from '@angular/material';
 import { ReCaptchaModule } from 'angular2-recaptcha';
 import { MomentModule } from 'angular2-moment';
+import { HtmlPageComponent } from './html-page/html-page.component';
+import { PagerComponent } from './pager/pager.component';
 
 @NgModule({
   declarations: [
     EqualValidatorDirective,
     HtmlComponent, 
-    HtmlContentPipe
+    HtmlContentPipe, HtmlPageComponent, PagerComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { MomentModule } from 'angular2-moment';
      HttpClient,
      ContentService,
      InstitutionService,
-     ProposalsService
+     ProposalsService,
+     PagerService,
   ],
   exports: [ 
     BrowserModule,
@@ -63,7 +66,8 @@ import { MomentModule } from 'angular2-moment';
     NKDatetimeModule,
     MaterialModule,
     ReCaptchaModule,
-    MomentModule
+    MomentModule,
+    PagerComponent
 ],
 })
 export class SharedModule { }

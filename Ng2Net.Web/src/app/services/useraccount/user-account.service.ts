@@ -58,14 +58,28 @@ export class UserAccountService {
   }
 
   sendResetPasswordLink(email: string) {
+    console.log(email);
         let obs = this.http.post('/api/account/send-reset-password', { 'Email': email })
       .map((result) => result.json())
       .share();
       return obs;
   }
-
+  resendActivationLink(email: string) {
+    console.log(email);
+        let obs = this.http.post('/api/account/send-confirm-email', { 'Email': email })
+      .map((result) => result.json())
+      .share();
+      return obs;
+  }
   resetPassword(userId: string, token: string, password: string) {
         let obs = this.http.post('/api/account/reset-password', { 'UserId': userId, 'Token': token, 'Password': password })
+      .map((result) => result.json())
+      .share();
+      return obs;
+  }
+
+  confirmAccount(userId: string, token: string) {
+        let obs = this.http.post('/api/account/confirm-account', { 'UserId': userId, 'Token': token })
       .map((result) => result.json())
       .share();
       return obs;

@@ -42,6 +42,15 @@ namespace Ng2Net.WebApi.Controllers
             return _service.GetHtmlContents().ToDictionary(x => x.Name, y => y.Content);
         }
 
+        [HttpGet]
+        [Route("getbyurl/{url}")]
+        public HtmlContentDTO GetByUrl(string url)
+        {
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<HtmlContent, HtmlContentDTO>(); }).CreateMapper();
+
+            return mapper.Map<HtmlContentDTO>(_service.GetByUrl(url));
+        }
+
         [Authentication(Claims = new string[] { "EditHtmlContent" })]
         [HttpGet]
         [Route("get/{id}")]
@@ -56,7 +65,7 @@ namespace Ng2Net.WebApi.Controllers
         [Authentication(Claims = new string[] { "EditHtmlContent" })]
         [HttpPost]
         [Route("save")]
-        public HtmlContentDTO Get([FromBody] HtmlContentDTO model)
+        public HtmlContentDTO Save([FromBody] HtmlContentDTO model)
         {
             HtmlContent content = string.IsNullOrEmpty(model.Id) ? new HtmlContent() : _service.GetHtmlContent(model.Id);
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<HtmlContentDTO, HtmlContent>(); }).CreateMapper();

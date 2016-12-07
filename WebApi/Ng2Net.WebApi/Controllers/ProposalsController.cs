@@ -49,18 +49,20 @@ namespace Ng2Net.WebApi.Controllers
 
         [HttpGet]
         [Route("find")]
-        public virtual IEnumerable<ProposalDTO> Find(string filterQuery = "", int pageNo = 0, int pageSize = 0)
+        public virtual PagedResultsDTO<ProposalDTO> Find(string filterQuery = "", int pageNo = 0, int pageSize = 0)
         {
             if (pageSize <= 0)
                 return null;
 
             var mapper = new MapperConfiguration(cfg => {
+                cfg.CreateMap<PagedResultsDTO<Proposal>, PagedResultsDTO<ProposalDTO>>();
                 cfg.CreateMap<Proposal, ProposalDTO>();
                 cfg.CreateMap<Institution, InstitutionDTO>();
             }).CreateMapper();
 
-
-            return mapper.Map<List<ProposalDTO>>(proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery)).OrderByDescending(p=>p.StartDate).Skip(pageNo*pageSize).Take(pageSize).ToList());
+            var query = proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery)).OrderByDescending(p => p.StartDate);
+            var result = PagedResultsDTO<Proposal>.GetPagedResultsDTO(query, pageNo, pageSize);
+            return mapper.Map<PagedResultsDTO<ProposalDTO>>(result);
         }
     }
 }

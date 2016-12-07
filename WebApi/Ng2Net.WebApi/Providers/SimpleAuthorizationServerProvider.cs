@@ -33,6 +33,10 @@ namespace Ng2Net.WebApi
                 context.SetError("invalid_grant", "User name sau parola invalida");
                 return;
             }
+            if (!user.EmailConfirmed)
+            {
+                context.SetError("account_unconfirmed", "Contul nu a fost confirmat");
+            }
 
             ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(_userManager, "JWT");
 
