@@ -18,6 +18,8 @@ import { HtmlComponent  } from '../shared';
 import { HtmlContentPipe, EqualValidatorDirective } from '../../directives';
 import { BackendRoutes } from './backend.routes';
 import { SharedModule } from '../shared/shared.module';
+import { InstitutionEditComponent } from './institution/institution-edit/institution-edit.component';
+import { InstitutionListComponent } from './institution/institution-list/institution-list.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { SharedModule } from '../shared/shared.module';
     ContentListComponent,
     ContentEditComponent,
     ProposalListComponent,
-    ProposalEditComponent
+    ProposalEditComponent,
+    InstitutionEditComponent,
+    InstitutionListComponent
   ],
   entryComponents: [
     ContentEditComponent,

@@ -1,0 +1,70 @@
+<div class="modal-header">
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  <h4 class="modal-title">
+    <app-html contentName="backend.content.edit"></app-html>
+  </h4>
+</div>
+<div class="modal-body">
+  <div class="box">
+    <div *ngIf="(http.loading | async) > 0" class="overlay">
+      <i class="fa fa-refresh fa-spin"></i>
+    </div>
+    <div class="box-header with-border">
+      <h3 class="box-title">
+        <app-html contentName="backend.content.page.contentlist.boxtitle"></app-html>
+      </h3>
+      <div class="box-tools">
+        <form #myform="ngForm" (submit)="refresh()">
+          <div style="display:inline-block">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <input type="text" [(ngModel)]="filterQuery" name="table_search" class="form-control pull-right" placeholder="Search">
+
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              </div>
+
+
+            </div>
+          </div>
+        </form>
+        <button type="button" (click)="openEdit({})" class="btn btn-sm btn-info pull-right box-tools-btn"><i class="fa fa-plus"></i></button>
+
+      </div>
+    </div>
+
+
+    <!-- /.box-header -->
+    <div class="box-body">
+
+      <table class="table table-hover">
+        <tr>
+          <th style="width:80px">
+            <app-html contentName="Data publicarii"></app-html>
+          </th>
+
+          <th style="width:150px">
+            Institutie
+          </th>
+          <th>
+            <app-html contentName="Titlu"></app-html>
+          </th>
+          <th style="width:50px;" class="text-center">
+            <app-html contentName="backend.content.delete"></app-html>
+          </th>
+        </tr>
+        <tr *ngFor="let item of institutions">
+          <td>{{item.startDate | amDateFormat:'DD.MM.YYYY'}}</td>
+          <td>{{item.institution.name}}</td>
+          <td><a (click)="openEdit(item)">{{item.title}}</a></td>
+          <td><button class="btn btn-sm btn-default" (click)="delete(item)" type="button"><i class="fa fa-trash"></i></button></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" type="submit"><app-html contentName="backend.content.save"></app-html></button>
+</div>
