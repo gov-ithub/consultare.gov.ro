@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+/* Default styles override */
 BODY{ font-family: Lato}
+input[type=text] {   
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
 .header-fixed{ top:0px; width:100%; position:fixed; z-index:100 }
 .header-fixed a { text-transform: uppercase; }
 .header-fixed.top .navbar-logo.top, .header-fixed.scroll .navbar-logo.scroll { display: inherit }
@@ -61,7 +71,6 @@ section .overlay.dark
   background: rgba(0, 0, 0, 0.5);
 }
 /* Proposals */
-.proposals { margin:50px 0px }
 .proposal .proposal-left { margin-bottom: 20px }
 .proposal-institution { color:#ef734c; font-size: 11pt; margin: 3px 0px;  }
 .proposals-title, H1 { font-family: Lato; font-size: 28pt; font-weight: 300;  margin:20px 0px }
@@ -78,14 +87,21 @@ section .overlay.dark
 .md-radio-label-content { display:inline !important; padding-left: 0px !important;  padding-top:3px !important }
 .md-radio-label { white-space: normal !important; display:inline !important; }
 .search-form { padding:40px 0px } 
-.proposal-search-input { padding:24px; box-shadow:none; font-family: Lato; border:solid 1px #c2c2c2; font-weight: bold;}
-.proposal-search-button { padding: 14px; display: inline-block; height: 50px; width: 55px; border-radius: 0px; border-left: transparent;color: #c2c2c2; }
+.proposal-search-input { appearance: searchfield; padding:24px; box-shadow: 0px; font-family: Lato; border:solid 1px #c2c2c2; font-weight: bold;}
+.proposal-search-button, .proposal-search-button:hover, .proposal-search-button:active:focus, .proposal-search-button:active, .proposal-search-button:focus  { padding: 14px; pointer-events: all; display: inline-block; height: 50px; width: 55px; border-radius: 0px; border-left: transparent;color: #c2c2c2; background-color: transparent; box-shadow: none; }
 .proposal-search-dropdown { background-color: #f2f2f2; font-family: Lato; border:none; font-weight: bold;  } 
 .pagination { margin:0px; font-family: Lato; font-weight: bold;  }
 .pagination > li > a, .pagination > li > span { background-color:#F2f2F2; margin:5px 3px; color:#000000; border: none }
 .pagination > li:first-child > a, .pagination > li:first-child > span,
 .pagination > li:last-child > a, .pagination > li:last-child > span { border-radius:0px; }
 .pagination > li.total-results > a, .pagination > li.total-results > span { background-color: #FFFFFF }
+@media (min-width: 991px)
+{
+	.container.main-content {
+    	width: 800px;
+		padding: 40px 0px;
+	}
+}
 /*=========================
   Icons
  ================= */
