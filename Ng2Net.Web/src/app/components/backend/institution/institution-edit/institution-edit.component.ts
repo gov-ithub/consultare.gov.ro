@@ -15,8 +15,8 @@ export class InstitutionEditComponent implements OnInit {
   private parentComponent: any = {};
   private result: string;
   private editMode: string = "HTML";
-  @ViewChild('myForm')
-  private myForm: NgForm;
+  @ViewChild('instForm')
+  private instForm: NgForm;
 
   constructor(private activeModal: NgbActiveModal, private institutionService: InstitutionService ) { }
 
@@ -24,7 +24,7 @@ export class InstitutionEditComponent implements OnInit {
   }
 
   save() {
-    if (!this.myForm.valid) {
+    if (!this.instForm.valid) {
       return;
     }
     this.institutionService.saveInstitution(this.institution).subscribe(result => {
