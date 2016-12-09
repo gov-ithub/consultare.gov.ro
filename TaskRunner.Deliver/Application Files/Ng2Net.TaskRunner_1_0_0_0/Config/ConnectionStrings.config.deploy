@@ -1,0 +1,5 @@
+﻿<?xml version="1.0"?>
+<connectionStrings>
+  <clear />
+  <add name="DefaultConnection" connectionString="data source=(local);initial catalog=consultare.gov.start;Integrated Security=SSPI" providerName="System.Data.SqlClient" />
+</connectionStrings>

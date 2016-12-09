@@ -17,7 +17,7 @@ export class PublicSignupComponent implements OnInit {
   private myForm: NgForm;
   private signup: boolean = true;
   private signupResult: boolean = false;
-
+  private showError: boolean = false;
 
   @Input()
   public edit: boolean;
@@ -49,8 +49,10 @@ export class PublicSignupComponent implements OnInit {
 
 
   userRegister() {
-    if (!this.myForm.valid)
+    if (!this.myForm.valid) {
+      this.showError = true;
       return;
+    }
     this.currentUser.subscriptions = this.institutions.filter(i => i.selected);
     this.userAccountService.register(this.currentUser).subscribe((result) => {
       if (!result.error) {

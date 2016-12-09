@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   constructor(private modalService: NgbModal, private userService: UserAccountService, private scrollSpyService: ScrollSpyService) { }
 
   private scrollPos: string = 'top';
+  private menuOpen: boolean = false;
 
   ngOnInit() {
 
@@ -27,7 +28,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   openLogin() {
-    let modal = this.modalService.open(PublicLoginComponent, { keyboard: false });
+    let modal = this.modalService.open(PublicLoginComponent, { size: 'sm', keyboard: false });
   }
 
   openViewAccount() {

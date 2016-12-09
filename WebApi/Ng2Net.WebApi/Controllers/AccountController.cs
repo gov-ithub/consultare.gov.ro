@@ -110,7 +110,6 @@ namespace Ng2Net.WebApi.Controllers
             replacements.Add("LINK", "/reset-password/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GeneratePasswordResetToken(user.Id)));
             replacements.Add("FULLNAME", user.FirstName + " " + user.LastName);
             Notification not = _notificationSevice.ConstructNotification("email.reset-password.subject", "email.masterTemplate", "email.reset-password.body", "email.defaultFrom", replacements);
-            not.From = "carol.braileanu@gmail.com";
             not.To = user.Email;
             this._notificationSevice.AddNotification(not);
             return new { result = "success", message = "email_sent" };
@@ -131,7 +130,6 @@ namespace Ng2Net.WebApi.Controllers
             replacements.Add("FULLNAME", user.FirstName + " " + user.LastName);
             Notification not = _notificationSevice.ConstructNotification("email.confirm-account.subject", "email.masterTemplate", "email.confirm-account.body", "email.defaultFrom", replacements);
 
-            not.From = "carol.braileanu@gmail.com";
             not.To = user.Email;
             this._notificationSevice.AddNotification(not);            
             return new { result = "success", message = "email_sent" };

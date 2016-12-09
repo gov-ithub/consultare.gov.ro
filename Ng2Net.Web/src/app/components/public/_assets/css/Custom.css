@@ -15,14 +15,27 @@ input[type=text] {
 .header-fixed a { text-transform: uppercase; }
 .header-fixed.top .navbar-logo.top, .header-fixed.scroll .navbar-logo.scroll, .header-fixed.top .separator-top, .header-fixed.scroll .separator-scroll { display: inherit }
 .header-fixed.top .navbar-logo.scroll, .header-fixed.scroll .navbar-logo.top, .header-fixed.top .separator-scroll, .header-fixed.scroll .separator-top { display: none }
+.header-fixed.top .navbar-collapse.collapse .separator-scroll, .header-fixed.top .navbar-collapse.collapse .separator-top { display:none }
 .header-fixed.top a { color:#FFFFFF; }
 .header-fixed.scroll { background-color:#FFFFFF; box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.41);  }
 .header-fixed .nav { font-family: 'Lato'; font-weight: bold }
-.navbar-brand { padding: 25px 15px; height:60px }
-.navbar-logo { padding:20px 15px }
+.navbar-brand { padding: 20px 15px; height:60px }
+.navbar-logo { padding:17px 15px }
 .navbar-nav > li > a { padding-top: 25px; padding-bottom: 25px; }
 .header-fixed.top .nav > li > .menu-link:hover, .header-fixed.top .nav > li > .menu-link:active, .header-fixed.top .nav > li > .menu-link:hover, .header-fixed.top .nav > li > .menu-link:focus { color:#407dd0; background:transparent }
 .nav > li > a.header-login, .nav > li > a.header-login:hover { background-color:#1956aa; color:#FFFFFF; padding:8px 15px !important; margin:16px 0px; border-radius: 3px }
+.navbar-collapse { transition: all 3s }
+.navbar-collapse { opacity:1 }
+.navbar-collapse.collapse { opacity:0 }
+
+@media (min-width: 768px) {
+.user-menu{ float:left; display:inline-block !important; margin-left:-15px }
+}
+@media (max-width: 768px) {
+	.about-box { margin:60px 0px } 
+}
+
+
 .header-fixed.scroll .nav > li > a.header-signup, .header-fixed.scroll .nav > li > a.header-signup:active, .header-fixed.scroll .nav > li > a.header-signup:focus, .header-fixed.scroll .nav > li > a.header-signup:hover { border:solid 2px #1956aa; color: #1956aa }
 .nav > li > a.header-signup, .nav > li > a.header-signup:active, .nav > li > a.header-signup:focus, .nav > li > a.header-signup:hover { background-color:transparent; padding: 6px 12px !important; margin:16px 10px; border:solid 2px #FFFFFF; color: #FFFFFF; border-radius: 3px; }
 
@@ -37,8 +50,7 @@ footer a { text-decoration: none; color: #FFFFFF !important }
 .hero .heroSubtitle, .hero-bottom .heroSubtitle  { font-size: 14pt; line-height: 22pt; margin-top:20px; margin-bottom: 10px }
 .hero-bottom { text-align: center }
 .hero-bottom .heroContent { font-weight: 300; padding-top:130px; font-size:32pt; line-height: 32pt; color:#FFFFFF  }
-.login-inst-fieldset { max-height:300px; padding:20px 0px; overflow-y: auto; }
-
+.login-inst-fieldset { padding:20px 0px; }
 
 /* Overlay */
 section { position: relative }
@@ -79,7 +91,9 @@ section .overlay.dark
 .proposal .proposal-links { margin-bottom: 8px; }
 
 /* About page */
-.about-row { margin-top: 80px; margin-bottom: 40px; }
+@media (min-width: 768px) {
+
+.about-row { margin-top: 80px; margin-bottom: 40px; } }
 .about-box { border: solid 1px #d9e2fe; padding: 40px 10px 40px 10px; text-align:center; min-height:240px }
 .about-box .icon { text-align: center; margin: -80px auto 30px auto; display:block; padding:12px; background-color: #FFFFFF }
 
@@ -88,6 +102,7 @@ section .overlay.dark
 /* Bootstrap */
 .btn { font-family: Lato; font-size:11pt; border-radius: 3px }
 .form-control { border:solid 1px #CCC; border-radius: 0px; box-shadow: none }
+.form-control-feedback { color: #CCCCCC; }
 .modal-content { border-radius: 0px }
 .btn-primary { background-color:#1956aa; }
 .md-radio-container { vertical-align: middle; top:0px !important }
@@ -102,6 +117,15 @@ section .overlay.dark
 .pagination > li:first-child > a, .pagination > li:first-child > span,
 .pagination > li:last-child > a, .pagination > li:last-child > span { border-radius:0px; }
 .pagination > li.total-results > a, .pagination > li.total-results > span { background-color: #FFFFFF }
+.container.main-content {
+    padding-top: 40px;
+		padding-bottom: 40px }
+
+@media (min-width: 768px) {
+.modal-sm {
+    width: 400px;
+} }
+
 @media (min-width: 991px)
 {
 	.container.main-content {

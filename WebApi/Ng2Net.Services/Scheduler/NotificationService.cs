@@ -28,6 +28,9 @@ namespace Ng2Net.Services.Scheduler
             HtmlContent templateContent = _contentRepo.Get(c => c.Name == template);
             HtmlContent subjectContent = _contentRepo.Get(c => c.Name == subjectTemplate);
             HtmlContent fromContent = _contentRepo.Get(c => c.Name == fromTemplate);
+            HtmlContent rootUrlContent = _contentRepo.Get(c => c.Name == "email.defaultUrl");
+            if (rootUrlContent != null && !replacements.ContainsKey("ROOT_URL"))
+                replacements.Add("ROOT_URL", rootUrlContent.Content);
             string templateResult = Utils.ProcessReplacements(templateContent.Content, replacements);
             var masterReplacements = new Dictionary<string, string>();
             masterReplacements.Add("CONTENT", templateResult);
