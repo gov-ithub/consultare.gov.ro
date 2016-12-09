@@ -49,7 +49,7 @@ namespace Ng2Net.WebApi.Controllers
 
         [HttpGet]
         [Route("find")]
-        public virtual PagedResultsDTO<ProposalDTO> Find(string filterQuery = "", int pageNo = 0, int pageSize = 0)
+        public virtual PagedResultsDTO<ProposalDTO> Find(string filterQuery = "", string institutionId = "", int pageNo = 0, int pageSize = 0)
         {
             if (pageSize <= 0)
                 return null;
@@ -60,7 +60,7 @@ namespace Ng2Net.WebApi.Controllers
                 cfg.CreateMap<Institution, InstitutionDTO>();
             }).CreateMapper();
 
-            var query = proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery)).OrderByDescending(p => p.StartDate);
+            var query = proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery) && (string.IsNullOrEmpty(institutionId) || p.InstitutionId==institutionId)).OrderByDescending(p => p.StartDate);
             var result = PagedResultsDTO<Proposal>.GetPagedResultsDTO(query, pageNo, pageSize);
             return mapper.Map<PagedResultsDTO<ProposalDTO>>(result);
         }

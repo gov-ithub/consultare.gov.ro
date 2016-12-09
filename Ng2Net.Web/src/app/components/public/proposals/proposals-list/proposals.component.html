@@ -20,7 +20,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="form-group">
-              <select name="institution" class="form-control proposal-search-dropdown">
+              <select name="institution" class="form-control proposal-search-dropdown" (change)="institutionId = $event.target.value; refreshData(0);">
         <option value="">- selecteaza institutie -</option>
         <option *ngFor="let item of institutions" value="{{item.id}}">{{item.name}}</option>
         </select>
@@ -58,7 +58,7 @@
       <hr style="clear:both; " />
 
     </div>
-    <div class="text-center">
+    <div class="text-right">
       <app-pager *ngIf="showSearch" [instance]="pagerInstance" (onPageChange)="refreshData($event)"></app-pager>
     </div>
 

@@ -48,6 +48,12 @@ export class ContentService {
     return obs;
   }
 
+  quickSaveHtmlContent(name: string, content: string) {
+    let obs = this.http.post(`/api/content/quicksave`, { name: name, content: content })
+    .map(result => result.json()).share();
+    return obs;
+  }
+
   deleteHtmlContent(id: string) {
     let obs = this.http.delete(`/api/content/${id}`)
     .map(result => result.json()).share();

@@ -3,21 +3,30 @@
         <div class="pull-right hidden-lg hidden-md">
             <a class="navbar-brand" href=""><i class="fa fa-bars"></i></a>
         </div>
-<div class="navbar-header">
-    <a class="navbar-brand navbar-logo top" routerLink="/"><img src="assets/images/sigla-econsultare.png"></a>
-    <a class="navbar-brand navbar-logo scroll" routerLink="/"><img src="assets/images/sigla-econsultare_on.png"></a>
-</div>
-
-<div class="navbar-collapse collapse"> 
-<ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
-    <li role="presentation" routerLinkActive="active"><a routerLink="/propuneri-legislative" class="menu-link">Propuneri</a></li>
-    <li role="presentation" routerLinkActive="active"><a class="menu-link" routerLink="/p/despre">Despre econsultare</a></li>
-    <li role="presentation" routerLinkActive="active"><a class="menu-link" routerLink="/">Contact</a></li>
-    <li role="presentation" *ngIf="!userService.currentUser.id"><a class="header-signup" (click)="openViewAccount()">Inscrie-te</a></li>
-    <li role="presentation" *ngIf="!userService.currentUser.id"><a class="header-login" (click)="openLogin()">Intra in cont</a></li>
-    <li role="presentation" *ngIf="userService.currentUser.id"><a class="header-signup" (click)="openViewAccount()">Contul meu</a></li>
-    <li role="presentation" *ngIf="userService.currentUser.id"><a class="header-login" (click)="userService.logout()">Iesi din cont</a></li>
-</ul>
-</div>
-</div>
+        <div class="navbar-header">
+            <a class="navbar-brand navbar-logo top" routerLink="/"><img src="assets/images/sigla-econsultare.png"></a>
+            <a class="navbar-brand navbar-logo scroll" routerLink="/"><img src="assets/images/sigla-econsultare_on.png"></a>
+        </div>
+        <div *ngIf="userService.currentUser.id" class="navbar-collapse collapse" style="float:left; display:inline-block !important; margin-left:-15px">
+            <img src="/assets/public/images/separator.png" class="separator-top" style="float:left; margin-top:10px; margin-right:5px; opacity: .3">
+            <img src="/assets/public/images/separator_scroll.png" class="separator-scroll" style="float:left; margin-top:10px; margin-right:5px; opacity: .3">
+            <ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
+                <li role="presentation" routerLinkActive="active">
+                    <a (click)="openViewAccount()" class="menu-link" style="text-transform: capitalize; padding: 19px 10px">
+                        <img src="/assets/public/images/blank_user.png" style="width:32px; margin-right:8px; border-radius: 50%;">
+                            {{userService.currentUser.firstName}} {{userService.currentUser.lastName}}</a>
+                </li>
+            </ul> 
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
+                <li role="presentation" routerLinkActive="active"><a routerLink="/propuneri-legislative" class="menu-link">Propuneri</a></li>
+                <li role="presentation" routerLinkActive="active"><a class="menu-link" routerLink="/p/despre">Despre econsultare</a></li>
+                <li role="presentation" routerLinkActive="active"><a class="menu-link" routerLink="/p/contact">Contact</a></li>
+                <li role="presentation" *ngIf="!userService.currentUser.id"><a class="header-signup" (click)="openViewAccount()">Inscrie-te</a></li>
+                <li role="presentation" *ngIf="!userService.currentUser.id"><a class="header-login" (click)="openLogin()">Intra in cont</a></li>
+                <li role="presentation" *ngIf="userService.currentUser.id"><a class="header-login" (click)="userService.logout()">Iesi din cont</a></li>
+            </ul>
+        </div>
+    </div>
 </header>

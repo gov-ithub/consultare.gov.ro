@@ -52,7 +52,7 @@ namespace Ng2Net.WebApi.Controllers
         public virtual IEnumerable<InstitutionDTO> Get()
         {
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
-            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get());
+            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get().OrderBy(i=>i.Name));
         }
     }
 }

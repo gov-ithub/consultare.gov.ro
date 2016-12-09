@@ -7,6 +7,9 @@ namespace Ng2Net.Data.Migrations
     {
         public override void Up()
         {
+            Sql("ALTER DATABASE [consultare.gov.start] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;");
+            Sql("ALTER DATABASE [consultare.gov.start] COLLATE Latin1_general_CI_AI", suppressTransaction: true);
+            Sql("ALTER DATABASE [consultare.gov.start] SET MULTI_USER;");
             CreateTable(
                 "dbo.HtmlContents",
                 c => new

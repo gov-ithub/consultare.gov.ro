@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ContentService } from '../../../services';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,11 +11,11 @@ export class HtmlPageComponent implements OnInit {
 
   private contentName: string;
 
-  constructor (private contentService: ContentService, private route: ActivatedRoute) { }
+  constructor (private contentService: ContentService, private route: ActivatedRoute, public changeDetectorRef: ChangeDetectorRef ) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.contentService.getHtmlContentByUrl(params['url']).subscribe(result => this.contentName = result.name); 
+      this.contentService.getHtmlContentByUrl(params['url']).subscribe(result => { this.contentName = result.name; this.changeDetectorRef.detectChanges(); }); 
     });
   }
 

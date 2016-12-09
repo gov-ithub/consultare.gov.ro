@@ -9,11 +9,12 @@ export class ProposalsService {
   constructor(private http: HttpClient) { }
 
   
-  listProposals(filter: string, pageNo: number, pageSize: number): Observable<any> {
+  listProposals(filter: string, institutionId: string, pageNo: number, pageSize: number): Observable<any> {
     let params = new URLSearchParams();
     if (filter && filter !== '')
       params.set('filterQuery', filter);
-
+    if (institutionId && institutionId !== '')
+      params.set('institutionId', institutionId);
     params.set('pageNo', pageNo.toString());
     params.set('pageSize', pageSize.toString());
     return this.http.get('/api/proposals/find', {search: params}).map((result) => result.json());

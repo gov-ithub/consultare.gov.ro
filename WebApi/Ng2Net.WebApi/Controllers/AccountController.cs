@@ -106,13 +106,12 @@ namespace Ng2Net.WebApi.Controllers
             ApplicationUser user = await UserManager.FindByEmailAsync(userModel.Email);
             if (user == null)
                 return new { error = true, message = "email_not_found" };
-            Notification not = new Notification
-            {
-                Subject = "Reset your password",
-                Body = "http://consultare.gov.start/reset-password/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GeneratePasswordResetToken(user.Id)),
-                From = "carol.braileanu@gmail.com",
-                To = user.Email
-            };
+            Dictionary<string, string> replacements = new Dictionary<string, string>();
+            replacements.Add("LINK", "/reset-password/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GeneratePasswordResetToken(user.Id)));
+            replacements.Add("FULLNAME", user.FirstName + " " + user.LastName);
+            Notification not = _notificationSevice.ConstructNotification("email.reset-password.subject", "email.masterTemplate", "email.reset-password.body", "email.defaultFrom", replacements);
+            not.From = "carol.braileanu@gmail.com";
+            not.To = user.Email;
             this._notificationSevice.AddNotification(not);
             return new { result = "success", message = "email_sent" };
 
@@ -126,13 +125,14 @@ namespace Ng2Net.WebApi.Controllers
             ApplicationUser user = await UserManager.FindByEmailAsync(userModel.Email);
             if (user == null)
                 return new { error = true, message = "email_not_found" };
-            Notification not = new Notification
-            {
-                Subject = "Confirm your account",
-                Body = "http://consultare.gov.start/confirm-account/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GenerateEmailConfirmationToken(user.Id)),
-                From = "carol.braileanu@gmail.com",
-                To = user.Email
-            };
+
+            Dictionary<string, string> replacements = new Dictionary<string, string>();
+            replacements.Add("LINK", "/confirm-account/" + HttpContext.Current.Server.UrlEncode(user.Id) + "?token=" + HttpUtility.UrlEncode(this.UserManager.GenerateEmailConfirmationToken(user.Id)));
+            replacements.Add("FULLNAME", user.FirstName + " " + user.LastName);
+            Notification not = _notificationSevice.ConstructNotification("email.confirm-account.subject", "email.masterTemplate", "email.confirm-account.body", "email.defaultFrom", replacements);
+
+            not.From = "carol.braileanu@gmail.com";
+            not.To = user.Email;
             this._notificationSevice.AddNotification(not);            
             return new { result = "success", message = "email_sent" };
 
