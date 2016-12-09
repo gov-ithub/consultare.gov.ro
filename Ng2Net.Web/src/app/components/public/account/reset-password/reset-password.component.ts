@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserAccountService, ContentService } from '../../../../services';
 import { ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-public-reset-password',
@@ -23,7 +24,7 @@ export class PublicResetPasswordComponent implements OnInit {
 
 
 
-  constructor(private userAccountService: UserAccountService, private route: ActivatedRoute, private contentService: ContentService) {
+  constructor(private userAccountService: UserAccountService, private route: ActivatedRoute, private contentService: ContentService, private activeModal: NgbActiveModal) {
   }
   
   ngOnInit() {

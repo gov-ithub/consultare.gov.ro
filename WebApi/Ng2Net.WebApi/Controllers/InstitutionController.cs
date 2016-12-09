@@ -60,9 +60,13 @@ namespace Ng2Net.WebApi.Controllers
         public virtual IEnumerable<InstitutionDTO> Find([FromUri]string pageNo, [FromUri]string pageSize, [FromUri]string filterQuery = null)
         {
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
+<<<<<<< HEAD
             var pagNoInt = Int32.Parse(pageNo);
             var pagSizeInt = Int32.Parse(pageSize);
             return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Filter(filterQuery, pagNoInt, pagSizeInt));
+=======
+            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get().OrderBy(i=>i.Name));
+>>>>>>> 103647bb2df94bc1192a26de3db7ac45a7e67b30
         }
     }
 }

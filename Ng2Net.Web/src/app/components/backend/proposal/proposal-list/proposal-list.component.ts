@@ -22,7 +22,7 @@ export class ProposalListComponent implements OnInit {
   }
 
   refresh(pageNo: number) {
-    this.proposalService.listProposals(this.filterQuery, pageNo, this.pagerService.defaultPagerConfig.pageSize).subscribe(result => {
+    this.proposalService.listProposals(this.filterQuery, null, pageNo, this.pagerService.defaultPagerConfig.pageSize).subscribe(result => {
       this.proposals = result.results
       this.pagerService.refreshInstances(this.pagerInstance, pageNo, result.totalResults);
     });

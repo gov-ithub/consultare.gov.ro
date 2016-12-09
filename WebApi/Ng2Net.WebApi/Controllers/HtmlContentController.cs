@@ -76,6 +76,15 @@ namespace Ng2Net.WebApi.Controllers
             return mapper.Map<HtmlContentDTO>(content);
         }
 
+        [Authentication(Claims = new string[] { "EditHtmlContent" })]
+        [HttpPost]
+        [Route("quicksave")]
+        public bool QuickSave([FromBody] HtmlContentDTO model)
+        {
+            _service.QuickSaveHtmlContent(model.Name, model.Content);
+            return true;
+        }
+
 
         [Authentication(Claims = new string[] { "EditHtmlContent" })]
         [HttpDelete]

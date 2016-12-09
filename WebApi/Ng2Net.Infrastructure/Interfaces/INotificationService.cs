@@ -10,5 +10,6 @@ namespace Ng2Net.Infrastructure.Interfaces
     public interface INotificationService
     {
         void AddNotification(Notification notification);
+        Notification ConstructNotification(string subjectTemplate, string masterTemplate, string template, string fromTemplate, Dictionary<string, string> replacements);
     }
 }

@@ -1,6 +1,6 @@
 import { Component, Input, ApplicationRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { ContentService } from '../../../services';
+import { ContentService, UserAccountService } from '../../../services';
 import { HtmlContentPipe } from '../../../directives';
 import { ApplicationRoutes } from '../../../app.routes';
 import { BackendModule } from '../../backend/backend.module';
@@ -18,7 +18,8 @@ export class HtmlComponent {
 
   @Input('contentName')
   private contentName: string;
-
+  private editorOpen: boolean = false;
+  private saveSuccess: boolean = false;
   private get content(){
     return this.sanitizer.bypassSecurityTrustHtml(new HtmlContentPipe().transform(this.contentName, this.contentService.htmlContent));
   }
@@ -27,12 +28,14 @@ export class HtmlComponent {
   private router: Router, 
   private sanitizer: DomSanitizer,
   private modalService: NgbModal,
-  private appRef: ApplicationRef ) { 
+  private appRef: ApplicationRef,
+  private userService: UserAccountService ) { 
     (<any>window).angular = (<any>window).angular || {parentComponent: this};
   }
 
-  navigateUrl(url: string){
+  navigateUrl(url: string) {
     this.router.navigateByUrl(url);
+    this.appRef.tick();
   }
 
   openSignUp() {
@@ -40,4 +43,11 @@ export class HtmlComponent {
     this.appRef.tick();
   }
 
+  quickSaveContent() {  
+    this.contentService.quickSaveHtmlContent(this.contentName, this.contentService.htmlContent[this.contentName]).subscribe(res=> {
+      if (res === true) {
+        this.saveSuccess=true;
+        setTimeout(()=>{ this.saveSuccess = false; }, 3000);
+      } }); 
+  }
 }

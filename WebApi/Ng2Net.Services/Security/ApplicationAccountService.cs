@@ -59,6 +59,7 @@ namespace Ng2Net.Services.Security
             if (user.OriginalValues["Email"].ToString() != applicationUser.Email)
             {
                 applicationUser.EmailConfirmed = false;
+
             }
 
         }

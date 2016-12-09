@@ -10,31 +10,57 @@
     <div class="row">
       <div class="col-md-12">
         <div class="form-group has-feedback">
-          <input type="text" placeholder="prenume" name="prenume" [(ngModel)]="currentUser.firstName" required class="form-control">
+          <input type="text" placeholder="prenume" name="prenume" [(ngModel)]="currentUser.firstName" #firstName="ngModel" required class="form-control">
+          <div *ngIf="!firstName.valid && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> {{ 'backend.errors.userProfile.firstName' | htmlContent:contentService.htmlContent
+          }}
+        </div>
+
         </div>
       </div>
       <div class="col-md-12">
         <div class="form-group has-feedback">
-          <input type="text" placeholder="nume" name="nume" [(ngModel)]="currentUser.lastName" required class="form-control">
+          <input type="text" placeholder="nume" name="nume" [(ngModel)]="currentUser.lastName" #lastName="ngModel" required class="form-control">
+          <div *ngIf="!lastName.valid && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> {{ 'backend.errors.userProfile.lastName' | htmlContent:contentService.htmlContent
+          }}
+        </div>
+
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="form-group has-feedback">
-          <input type="text" placeholder="adresa e-mail" name="email" [(ngModel)]="currentUser.email" required class="form-control">
+          <input type="text" placeholder="adresa e-mail" name="email" [(ngModel)]="currentUser.email" #email="ngModel" required class="form-control">
+          <div *ngIf="!email.valid && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> {{ 'backend.errors.userProfile.email' | htmlContent:contentService.htmlContent
+          }}
+        </div>
+
         </div>
       </div>
     </div>
     <div class="row" *ngIf="!currentUser.id">
       <div class="col-md-12">
         <div class="form-group has-feedback">
-          <input type="password" placeholder="parola" class="form-control" name="password" required [(ngModel)]="currentUser.password">
+          <input type="password" placeholder="parola" class="form-control" name="password" required minlength="6" #password="ngModel"
+            [(ngModel)]="currentUser.password">
+          <div *ngIf="!password.valid && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> {{ 'backend.errors.userProfile.password' | htmlContent:contentService.htmlContent
+          }}
+        </div>
+
         </div>
       </div>
       <div class="col-md-12" *ngIf="!currentUser.id">
         <div class="has-feedback">
-          <input type="password" placeholder="repeta parola" class="form-control" name="password2" required [(ngModel)]="currentUser.password2">
+          <input type="password" placeholder="repeta parola" class="form-control" name="password2" validateEqual="password" #repeatPassword="ngModel"
+            required [(ngModel)]="currentUser.password2">
+        </div>
+        <div *ngIf="!repeatPassword.valid && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> {{ 'backend.errors.userProfile.repeatPassword' | htmlContent:contentService.htmlContent
+          }}
         </div>
       </div>
     </div>
@@ -63,10 +89,12 @@
       </div>
       <hr *ngIf="!currentUser.id" />
     </fieldset>
-    <div class="form-group" *ngIf="!currentUser.id">
-      <re-captcha language="ro" site_key="6LenoA0UAAAAALsqEBPPeqyeh_3ea0XsrhgsAhl7"></re-captcha>
-    </div>
-    <md-checkbox *ngIf="!currentUser.id">Sunt de acord cu termenii si conditiile de utilizare</md-checkbox>
+    <md-checkbox required [(checked)]="acceptTos" (change)="acceptTos=$event.checked" *ngIf="!currentUser.id">Sunt de acord cu termenii si conditiile de utilizare</md-checkbox>
+            <div *ngIf="!acceptTos && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> {{ 'backend.errors.userProfile.acceptTos' | htmlContent:contentService.htmlContent
+          }}
+        </div>
+
   </div>
 
   <div class="modal-footer">

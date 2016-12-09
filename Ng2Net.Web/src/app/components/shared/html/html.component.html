@@ -1,1 +1,11 @@
 <span [innerHtml]="content"></span>
+<a class="btn btn-default" (click)="editorOpen=true" *ngIf="userService.currentUser?.claims?.editHtmlContent === 'true'"><i class="fa fa-edit"></i></a>
+<div class="content-editor" *ngIf="editorOpen">
+    <textarea [(ngModel)]="contentService.htmlContent[contentName]" class='form-control html-edit-control'></textarea>
+    
+    <div class="modal-footer">
+        <span class="text-muted" *ngIf="saveSuccess"><i class="fa fa-save"></i> Datele au fost salvate</span>
+        <button class="btn btn-default" (click)="editorOpen=false">Anuleaza</button>
+        <button class="btn btn-primary" (click)="quickSaveContent()">Salveaza modificari</button>
+    </div>
+</div>

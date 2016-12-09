@@ -24,3 +24,6 @@ margin-left:5px; display:inline-block
 form {
     display:inline
 }
+
+.content-editor { position:fixed; z-index:100; bottom:0px; left:0px; right:0px; background-color:#FFFFFF; }
+.html-edit-control { height:300px !important; font-family: 'Courier New'; font-size: 12px; }
