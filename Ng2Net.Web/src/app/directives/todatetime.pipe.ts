@@ -9,6 +9,6 @@ export class ToDateTimePipe implements PipeTransform {
     constructor() {}
 
   transform(value: string) {
-    return value ? new Date(value) : undefined;
+    return value && value.toLowerCase().indexOf('invalid')<0 ? new Date(value) : undefined;
   }
 }

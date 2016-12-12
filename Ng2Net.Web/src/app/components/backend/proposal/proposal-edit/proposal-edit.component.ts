@@ -54,6 +54,7 @@ export class ProposalEditComponent implements OnInit {
     log(x)
   {console.log(x);}
   getMoment(date)
-  { return moment(date).format('YYYY-MM-DD[T]HH:mm:ss'); }
+  { 
+    return moment(date).format('YYYY-MM-DD[T]HH:mm:ss'); }
 
 }
