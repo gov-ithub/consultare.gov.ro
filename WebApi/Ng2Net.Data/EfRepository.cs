@@ -78,7 +78,8 @@ namespace Ng2Net.Data
             if (entity == null)
                 throw new ArgumentNullException("entity");
 
-            this.Entities.Add(entity);
+            entity = this.Entities.Add(entity);
+            this.Save();
         }
 
         public virtual void Save()

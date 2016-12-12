@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InstitutionService, HttpClient } from '../../../../services';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { InstitutionEditComponent } from '../../';
 
 @Component({
@@ -13,7 +14,7 @@ export class InstitutionListComponent implements OnInit {
   private institutions: any[] = [];
   private filterQuery: string = '';
 
-  constructor(private modalService: NgbModal, private institutionService: InstitutionService, private http: HttpClient) { }
+  constructor(private activeModal: NgbActiveModal, private modalService: NgbModal, private institutionService: InstitutionService, private http: HttpClient) { }
 
   ngOnInit() {
     this.refresh();

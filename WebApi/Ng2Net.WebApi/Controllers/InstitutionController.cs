@@ -31,18 +31,18 @@ namespace Ng2Net.WebApi.Controllers
 
         [HttpPost]
         [Route("save")]
-        public Institution Save(Institution entity)
+        public Institution Save(InstitutionDTO entityDTO)
         {
-            instService.GetById(entity.Id);
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); }).CreateMapper();
-            var result = mapper.Map<Institution>(entity);
-            if (string.IsNullOrEmpty(result.Id))
+            var result = mapper.Map<Institution>(entityDTO);
+            if (string.IsNullOrEmpty(entityDTO.Id))
             {
-                result.Id = Guid.NewGuid().ToString();
+                result.Id = new Guid().ToString();
                 return instService.Add(result);
             }
             else
             {
+                result = instService.GetById(result.Id);
                 return instService.Edit(result);
             }
         }
@@ -60,13 +60,13 @@ namespace Ng2Net.WebApi.Controllers
         public virtual IEnumerable<InstitutionDTO> Find([FromUri]string pageNo, [FromUri]string pageSize, [FromUri]string filterQuery = null)
         {
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
-<<<<<<< HEAD
-            var pagNoInt = Int32.Parse(pageNo);
-            var pagSizeInt = Int32.Parse(pageSize);
-            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Filter(filterQuery, pagNoInt, pagSizeInt));
-=======
+
+            //var pagNoInt = Int32.Parse(pageNo);
+            //var pagSizeInt = Int32.Parse(pageSize);
+            //return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Filter(filterQuery, pagNoInt, pagSizeInt));
+
             return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get().OrderBy(i=>i.Name));
->>>>>>> 103647bb2df94bc1192a26de3db7ac45a7e67b30
+
         }
     }
 }
