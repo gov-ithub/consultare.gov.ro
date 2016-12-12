@@ -43,5 +43,10 @@ namespace Ng2Net.Services.Business
         {
             return _repository.GetById(id);
         }
+
+        public virtual void Save()
+        {
+            _repository.Save();
+        }
     }
 }

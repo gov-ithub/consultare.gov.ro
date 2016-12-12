@@ -15,18 +15,17 @@ input[type=text] {
 .header-fixed a { text-transform: uppercase; }
 .header-fixed.top .navbar-logo.top, .header-fixed.scroll .navbar-logo.scroll, .header-fixed.top .separator-top, .header-fixed.scroll .separator-scroll { display: inherit }
 .header-fixed.top .navbar-logo.scroll, .header-fixed.scroll .navbar-logo.top, .header-fixed.top .separator-scroll, .header-fixed.scroll .separator-top { display: none }
-.header-fixed.top .navbar-collapse.collapse .separator-scroll, .header-fixed.top .navbar-collapse.collapse .separator-top { display:none }
+.header-fixed.top .navbar-collapse:not(.collapse) .separator-scroll, .header-fixed.top .navbar-collapse:not(.collapse) .separator-top { display:none }
 .header-fixed.top a { color:#FFFFFF; }
 .header-fixed.scroll { background-color:#FFFFFF; box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.41);  }
 .header-fixed .nav { font-family: 'Lato'; font-weight: bold }
-.navbar-brand { padding: 20px 15px; height:60px }
-.navbar-logo { padding:17px 15px }
+.navbar-brand { padding: 20px 15px; height:70px }
+.navbar-logo { padding:22px 15px }
 .navbar-nav > li > a { padding-top: 25px; padding-bottom: 25px; }
+.navbar-brand.bars { padding:24px 15px; }
 .header-fixed.top .nav > li > .menu-link:hover, .header-fixed.top .nav > li > .menu-link:active, .header-fixed.top .nav > li > .menu-link:hover, .header-fixed.top .nav > li > .menu-link:focus { color:#407dd0; background:transparent }
 .nav > li > a.header-login, .nav > li > a.header-login:hover { background-color:#1956aa; color:#FFFFFF; padding:8px 15px !important; margin:16px 0px; border-radius: 3px }
-.navbar-collapse { transition: all 3s }
-.navbar-collapse { opacity:1 }
-.navbar-collapse.collapse { opacity:0 }
+.header-fixed .separator { float:left; margin-top:10px; margin-right:5px; opacity: .3 }
 
 @media (min-width: 768px) {
 .user-menu{ float:left; display:inline-block !important; margin-left:-15px }

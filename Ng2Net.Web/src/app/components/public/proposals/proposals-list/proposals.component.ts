@@ -15,6 +15,9 @@ export class ProposalsComponent implements OnInit {
   public showSearch: boolean;
   public institutionId: string;
   private pageNo: number;
+  private sortField: string = 'limitDate';
+  private sortDirection: string = 'desc';
+  private futureOnly: boolean = false;
   private pagerInstance = "proposals.component";
   constructor(private proposalsService: ProposalsService,
     private institutionService: InstitutionService,
@@ -32,7 +35,7 @@ export class ProposalsComponent implements OnInit {
   {
     this.pageNo = pageNo;
     let pageSize = this.showSearch ? 20 : 5;
-      this.proposalsService.listProposals(this.filterQuery, this.institutionId, pageNo, this.showSearch ? 20 : 5).subscribe((result) => {
+      this.proposalsService.listProposals(this.filterQuery, this.institutionId, pageNo, this.showSearch ? 20 : 5, this.futureOnly, this.sortField, this.sortDirection).subscribe((result) => {
         this.items = result.results;
         this.pagerService.refreshInstances(this.pagerInstance, this.pageNo, result.totalResults, pageSize);
         this.changeDetectorRef.detectChanges();

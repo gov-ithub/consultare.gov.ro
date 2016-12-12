@@ -42,6 +42,18 @@ export class HtmlComponent {
     let component = this.modalService.open(PublicSignupComponent, { keyboard: false });
     this.appRef.tick();
   }
+  openEditor() {
+    if (this.userService.currentUser && this.userService.currentUser.claims &&
+    this.userService.currentUser.claims['editHtmlContent'] === 'true') {
+      this.editorOpen=true;
+      $('body').css('margin-bottom','365px');
+    }
+  }
+
+  closeEditor() {
+      this.editorOpen=false;
+      $('body').css('margin-bottom','inherit');
+  }
 
   quickSaveContent() {  
     this.contentService.quickSaveHtmlContent(this.contentName, this.contentService.htmlContent[this.contentName]).subscribe(res=> {

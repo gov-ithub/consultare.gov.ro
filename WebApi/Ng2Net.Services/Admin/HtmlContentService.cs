@@ -29,7 +29,12 @@ namespace Ng2Net.Services.Admin
 
         public bool QuickSaveHtmlContent(string name, string content)
         {
-            _repository.Get(c => c.Name == name).Content = content;
+            HtmlContent contentPart = _repository.Get(c => c.Name == name);
+            if (contentPart == null) {
+                contentPart = new HtmlContent() { Name = name, Content = content };
+                _repository.Insert(contentPart);
+            }
+            contentPart.Content = content;
             _repository.Save();
             return true;
         }

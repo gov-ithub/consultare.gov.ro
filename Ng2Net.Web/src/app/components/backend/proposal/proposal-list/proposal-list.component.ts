@@ -22,19 +22,22 @@ export class ProposalListComponent implements OnInit {
   }
 
   refresh(pageNo: number) {
-    this.proposalService.listProposals(this.filterQuery, null, pageNo, this.pagerService.defaultPagerConfig.pageSize).subscribe(result => {
+    this.proposalService.listProposals(this.filterQuery, null, pageNo, this.pagerService.defaultPagerConfig.pageSize, false, 'startDate', 'desc').subscribe(result => {
       this.proposals = result.results
       this.pagerService.refreshInstances(this.pagerInstance, pageNo, result.totalResults);
     });
   }
 
   openEdit(proposal: any) {
-    this.router.navigate([`admin/proposal-edit`]);
+    if (proposal.id)
+      this.router.navigate([`admin/proposal-edit/${proposal.id}`]);
+    else
+      this.router.navigate([`admin/proposal-edit`]);
   }
 
   delete(proposal: any) {
     if (confirm('Are you sure?')) {
-      this.proposalService.deleteProposal(proposal.id).subscribe(() => this.refresh(0));
+      this.proposalService.deleteProposal(proposal).subscribe(() => this.refresh(0));
     }
   }
 }

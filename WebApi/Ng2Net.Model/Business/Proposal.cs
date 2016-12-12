@@ -13,8 +13,6 @@ namespace Ng2Net.Model.Business
         public string Title { get; set; }
         public string InstitutionId { get; set; }
         public virtual Institution Institution { get; set; }
-        public string InitiatingInstitutionId { get; set; }
-        public virtual Institution InitiatingInstitution { get; set; }
         public string Description { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -22,7 +20,6 @@ namespace Ng2Net.Model.Business
         [Required]
         [StringLength(1000)]
         public string Link { get; set; }
-        [Required]
         [StringLength(1000)]
         public string Email { get; set; }
         public string Documents { get; set; }

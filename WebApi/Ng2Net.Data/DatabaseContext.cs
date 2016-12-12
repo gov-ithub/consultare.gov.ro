@@ -37,7 +37,6 @@ namespace Ng2Net.Data
 
             modelBuilder.Entity<ProposalCategory>().HasKey(p => p.Id).HasMany(p => p.Proposals);
             modelBuilder.Entity<Institution>().HasKey(i=>i.Id).HasMany(i => i.Proposals).WithOptional().HasForeignKey(i => i.InstitutionId);
-            modelBuilder.Entity<Proposal>().HasKey(i => i.Id).HasOptional(p => p.InitiatingInstitution);
             modelBuilder.Entity<Proposal>().HasRequired(p => p.Institution);
         }
 

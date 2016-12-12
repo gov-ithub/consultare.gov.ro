@@ -16,10 +16,12 @@ namespace Ng2Net.WebApi.Controllers
     public class ProposalsController : BaseController
     {
         private IProposalService proposalService;
+        private IInstitutionService institutionService;
 
-        public ProposalsController(IProposalService proposalService)
+        public ProposalsController(IProposalService proposalService, IInstitutionService institutionService)
         {
             this.proposalService = proposalService;
+            this.institutionService = institutionService;
         }
 
         [HttpPost]
@@ -28,10 +30,13 @@ namespace Ng2Net.WebApi.Controllers
             return proposalService.Add(entity);
         }
 
-        [HttpPost]
-        public void Delete(Proposal entity)
+        [HttpDelete]
+        [Route("{id}")]
+        public void Delete(string id)
         {
-            proposalService.Delete(entity);
+            var proposal = proposalService.GetById(id);
+            proposalService.Delete(proposal);
+            proposalService.Save();
         }
 
         [HttpPost]
@@ -48,8 +53,20 @@ namespace Ng2Net.WebApi.Controllers
         }
 
         [HttpGet]
+        [Route("get/{id}")]
+        public virtual ProposalDTO GetById(string id)
+        {
+            var mapper = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Proposal, ProposalDTO>();
+                cfg.CreateMap<Institution, InstitutionDTO>();
+            }).CreateMapper();
+
+            return mapper.Map<ProposalDTO>(proposalService.GetById(id));
+        }
+
+        [HttpGet]
         [Route("find")]
-        public virtual PagedResultsDTO<ProposalDTO> Find(string filterQuery = "", string institutionId = "", int pageNo = 0, int pageSize = 0)
+        public virtual PagedResultsDTO<ProposalDTO> Find(string filterQuery = "", string institutionId = "", bool futureOnly = false, string sortField= "limitDate", string sortDirection="desc", int pageNo = 0, int pageSize = 0)
         {
             if (pageSize <= 0)
                 return null;
@@ -60,9 +77,45 @@ namespace Ng2Net.WebApi.Controllers
                 cfg.CreateMap<Institution, InstitutionDTO>();
             }).CreateMapper();
 
-            var query = proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery) && (string.IsNullOrEmpty(institutionId) || p.InstitutionId==institutionId)).OrderByDescending(p => p.StartDate);
+            var query = proposalService.Get().Where(p => p.Title.ToLower().Contains(filterQuery) && (string.IsNullOrEmpty(institutionId) || p.InstitutionId == institutionId) && (!futureOnly || p.LimitDate>DateTime.Now));
+
+            switch (sortField)
+            {
+                case "startDate":
+                    query = sortDirection == "asc" ? query.OrderBy(p => p.StartDate) : query.OrderByDescending(p => p.StartDate);
+                    break;
+                case "limitDate":
+                    query = sortDirection == "desc" ? query.OrderBy(p => p.LimitDate) : query.OrderByDescending(p => p.LimitDate);
+                    break;
+            }
+
             var result = PagedResultsDTO<Proposal>.GetPagedResultsDTO(query, pageNo, pageSize);
             return mapper.Map<PagedResultsDTO<ProposalDTO>>(result);
+        }
+
+        [HttpPost]
+        [Route("save")]
+        public virtual ProposalDTO Save([FromBody]ProposalDTO model)
+        {
+            Proposal proposal = string.IsNullOrEmpty(model.Id) ? new Proposal() : proposalService.GetById(model.Id);
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<ProposalDTO, Proposal>();
+                cfg.CreateMap<InstitutionDTO, Institution>();
+            }).CreateMapper();
+            mapper.Map(model, proposal);
+            proposal.Institution = this.institutionService.GetById(proposal.Institution.Id);
+
+            if (string.IsNullOrEmpty(proposal.Id))
+            {
+                proposal.Id = string.IsNullOrEmpty(proposal.Id) ? Guid.NewGuid().ToString() : proposal.Id;
+                proposalService.Add(proposal);
+            }
+
+            proposalService.Save();
+            mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Proposal, ProposalDTO>();
+                cfg.CreateMap<Institution, InstitutionDTO>();
+            }).CreateMapper();
+            return mapper.Map<ProposalDTO>(proposal);
+
         }
     }
 }

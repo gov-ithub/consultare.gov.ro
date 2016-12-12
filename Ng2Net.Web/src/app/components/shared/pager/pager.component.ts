@@ -38,7 +38,8 @@ export class PagerComponent implements OnInit {
     this.config.totalPages = Math.ceil(this.config.totalResults/this.config.pageSize);
     this.startPage = this.config.pageNo<((this.config.showPages-1)/2) ? 0 : this.config.pageNo>this.config.totalPages-((this.config.showPages+1)/2) ? this.config.totalPages-this.config.showPages : this.config.pageNo - Math.floor((this.config.showPages-1)/2);
     this.endPage = this.config.pageNo>this.config.totalPages-((this.config.showPages+1)/2) ? this.config.totalPages : this.config.pageNo<((this.config.showPages-1)/2) ? this.config.showPages : this.config.pageNo + Math.floor((this.config.showPages+1)/2);
-
+    if (this.startPage<0) this.startPage=0;
+    if (this.endPage>this.config.totalPages) this.endPage = this.config.totalPages-1;
     for(let i=this.startPage; i<this.endPage; i++)
     {
       this.pageArray[this.pageArray.length] = i;

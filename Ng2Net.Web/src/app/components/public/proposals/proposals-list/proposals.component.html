@@ -30,6 +30,19 @@
             <app-pager *ngIf="showSearch" [instance]="pagerInstance" (onPageChange)="refreshData($event)"></app-pager>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <md-checkbox name="curentOnly" [ngModel]="futureOnly" (change)="futureOnly=$event.checked; refreshData(0)">Doar popunerile pentru care se mai pot trimite sugestii</md-checkbox>        </div>
+        <div class="col-sm-6 text-right form-inline"><app-html contentName="public.proposals.sortby"></app-html>
+
+           <select name="sortby" class="form-control proposal-search-dropdown" (change)="sortField = $event.target.value; log($event); refreshData(0);">
+            <option value="limitDate">Data limita</option>
+            <option value="startDate">Data publicarii</option>
+           </select>
+           <a *ngIf="sortDirection==='asc'" (click)="sortDirection='desc';refreshData(0)"><b><i class="fa fa-lg fa-sort-amount-asc"></i></b></a>
+           <a *ngIf="sortDirection==='desc'" (click)="sortDirection='asc';refreshData(0)"><b><i class="fa fa-lg fa-sort-amount-desc"></i></b></a>
+        </div>
+        </div>
       </div>
     </form>
 
@@ -41,15 +54,19 @@
 
       <div class="proposal-left">
         <div class="proposal-institution">
-          {{item.institution.name}} <span *ngIf="item.institution.name !== item.initiatingInstitution.name">/ {{item.initiatingInstitution.name}}</span>
+          {{item.institution.name}} 
         </div>
 
         <div class="proposal-date" *ngIf="item.startDate">
-          Data publicarii: {{item.startDate | amDateFormat:'DD.MM.YYYY'}}
+          <app-html contentName="public.proposal.startDate"></app-html> {{item.startDate | amDateFormat:'DD.MM.YYYY'}}
         </div>
         <div class="proposal-date" *ngIf="item.endDate">
-          Data incheierii dezbaterii publice: {{item.endDate | amDateFormat:'DD.MM.YYYY'}}
+          <app-html contentName="public.proposal.endDate"></app-html> {{item.endDate | amDateFormat:'DD.MM.YYYY'}}
         </div>
+        <div class="proposal-date" style="font-weight:bold" *ngIf="item.limitDate">
+          <app-html contentName="public.proposal.limitDate"></app-html> {{item.limitDate | amTimeAgo}}
+        </div>
+
       </div>
       <div class="proposal-links">
         <a *ngIf="item.email" class="btn btn-primary" href="mailto:{{item.email}}"><i class="fa fa-lg fa-edit"></i> Propune modificari</a>

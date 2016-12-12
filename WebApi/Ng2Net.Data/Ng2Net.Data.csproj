@@ -126,6 +126,14 @@
     <Compile Include="Migrations\201612050002179_ProposalDocumentTypes1.Designer.cs">
       <DependentUpon>201612050002179_ProposalDocumentTypes1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612121123067_Email.cs" />
+    <Compile Include="Migrations\201612121123067_Email.Designer.cs">
+      <DependentUpon>201612121123067_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612121754494_removeinitiatinginst.cs" />
+    <Compile Include="Migrations\201612121754494_removeinitiatinginst.Designer.cs">
+      <DependentUpon>201612121754494_removeinitiatinginst.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -175,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612050002179_ProposalDocumentTypes1.resx">
       <DependentUpon>201612050002179_ProposalDocumentTypes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612121123067_Email.resx">
+      <DependentUpon>201612121123067_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612121754494_removeinitiatinginst.resx">
+      <DependentUpon>201612121754494_removeinitiatinginst.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

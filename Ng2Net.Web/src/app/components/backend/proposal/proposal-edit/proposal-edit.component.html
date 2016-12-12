@@ -17,65 +17,68 @@
             <form novalidate #myForm="ngForm" (submit)="save()">
                 <div class="callout callout-success" *ngIf="result">{{ result }}</div>
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label><app-html contentName="backend.label.title"></app-html>:</label>
-                            <input class="form-control" required [(ngModel)]="proposal.title" name="title" />
+                            <textarea class="form-control" rows="5" [(ngModel)]="proposal.title" name="title"></textarea>
                         </div>
-                    </div>
-                </div>
-                <!--div class="row">
-                    <div class="col-lg-8">
                         <div class="form-group">
-                            <label><app-html contentName="backend.label.description"></app-html>:</label>
-                            <input class="form-control" required [(ngModel)]="proposal.description" name="name" />
+                            <label><app-html contentName="backend.label.link"></app-html>:</label>
+                            <input class="form-control" [(ngModel)]="proposal.link" name="link" />
                         </div>
-                    </div>
-                </div-->
 
-                <div class="row">
-                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <label><app-html contentName="backend.label.email"></app-html>:</label>
+                            <input class="form-control" [(ngModel)]="proposal.email" name="email" />
+                        </div>
                         <div class="form-group">
                             <label><app-html contentName="backend.label.institution"></app-html>:</label>
-                            <input class="form-control" required [(ngModel)]="proposal.institution" name="institution" />
+                                <select name="institution" class="form-control proposal-search-dropdown" [ngModel]="proposal.institution?.id" (change)="proposal.institution=proposal.institution||{};proposal.institution.id=$event.target.value">
+                                    <option>- selecteaza institutie -</option>
+                                    <option *ngFor="let item of institutions" [value]="item.id">{{item.name}}</option>
+                                </select>
                             <button type="button" (click)="browseInstitution({})" class="btn btn-sm btn-info pull-right box-tools-btn" name="browseInst"><i class="fa fa-plus"></i></button>
                         </div>
                     </div>
+                    <div class="col-sm-6 container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><app-html contentName="backend.label.startdate"></app-html>:</label>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.startDate | toDateTime" (ngModelChange)="proposal.startDate = getMoment($event)" name="startdate"></datetime>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><app-html contentName="backend.label.enddate"></app-html>:</label>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.endDate | toDateTime" (ngModelChange)="proposal.endDate = getMoment($event)" name="enddate"></datetime>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><app-html contentName="backend.label.limitdate"></app-html>:</label>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" (ngModelChange)="proposal.limitDate = getMoment($event)"  [ngModel]="proposal.limitDate | toDateTime" name="limitdate"></datetime>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
+
                 <ckeditor name="ckEditor" [(ngModel)]="proposal.description" [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="form-group">
-                            <label><app-html contentName="backend.label.startdate"></app-html>:</label>
-                            <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true}" [(ngModel)]="proposal.startdate" name="startdate" required></datetime>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="form-group">
-                            <label><app-html contentName="backend.label.enddate"></app-html>:</label>
-                            <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true}" [(ngModel)]="proposal.enddate" name="enddate" required></datetime>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="form-group">
-                            <label><app-html contentName="backend.label.limitdate"></app-html>:</label>
-                            <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true}" [(ngModel)]="proposal.limitdate" name="limitdate" required></datetime>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="form-group">
-                            <label><app-html contentName="backend.label.email"></app-html>:</label>
-                            <input class="form-control" required [(ngModel)]="proposal.email" name="email" />
-                        </div>
-                    </div>
-                </div>
             </form>
+        </div>
+        <div class="box-footer text-right">
+            <button class="btn btn-default" (click)="back()">Inapoi</button>
+            <button class="btn btn-primary" (click)="save()">Salveaza propunere</button>
         </div>
     </div>
 </section>

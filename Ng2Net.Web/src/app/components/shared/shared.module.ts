@@ -14,7 +14,7 @@ import { BackendModule } from '../../components/backend/backend.module';
 import { PublicModule } from '../../components/public/public.module';
 import { PublicRoutes } from '../../components/public/public.routes';
 import { HtmlComponent } from '../../components/shared';
-import { HtmlContentPipe } from '../../directives';
+import { HtmlContentPipe, ToDateTimePipe } from '../../directives';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
@@ -28,7 +28,10 @@ import { PagerComponent } from './pager/pager.component';
   declarations: [
     EqualValidatorDirective,
     HtmlComponent, 
-    HtmlContentPipe, HtmlPageComponent, PagerComponent
+    HtmlContentPipe,
+    HtmlPageComponent,
+    PagerComponent,
+    ToDateTimePipe,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import { PagerComponent } from './pager/pager.component';
     NKDatetimeModule,
     MaterialModule.forRoot(),
     ReCaptchaModule,
-    MomentModule
+    MomentModule,
   ],
   providers: [
      ClaimsGuardService,
@@ -67,7 +70,8 @@ import { PagerComponent } from './pager/pager.component';
     MaterialModule,
     ReCaptchaModule,
     MomentModule,
-    PagerComponent
+    PagerComponent,
+    ToDateTimePipe,
 ],
 })
 export class SharedModule { }
