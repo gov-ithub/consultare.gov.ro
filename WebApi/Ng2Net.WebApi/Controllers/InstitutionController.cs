@@ -13,7 +13,7 @@ using System.Web.Http;
 namespace Ng2Net.WebApi.Controllers
 {
     [RoutePrefix("api/institutions")]
-    public class InstitutionController : ApiController
+    public class InstitutionController : BaseController
     {
         private IInstitutionService instService;
 
@@ -22,37 +22,51 @@ namespace Ng2Net.WebApi.Controllers
             this.instService = instService;
         }
 
-        [HttpPost]
-        [Route("add")]
-        public Institution Add(InstitutionDTO entity)
+        [HttpDelete]
+        [Route("delete")]
+        public void Delete(string id)
         {
-            Mapper.Initialize(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); });
-            return instService.Add(Mapper.Map<Institution>(entity));
+            instService.Delete(instService.GetById(id));
         }
 
         [HttpPost]
-        public void Delete(InstitutionDTO entity)
-        {
-            instService.Delete(instService.GetById(entity.Id));
-        }
-
-        [HttpPost]
-        public Institution Edit(Institution entity)
+        [Route("save")]
+        public Institution Save(Institution entity)
         {
             instService.GetById(entity.Id);
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); }).CreateMapper();
             var result = mapper.Map<Institution>(entity);
             if (string.IsNullOrEmpty(result.Id))
+            {
                 result.Id = Guid.NewGuid().ToString();
-            return instService.Edit(result);
+                return instService.Add(result);
+            }
+            else
+            {
+                return instService.Edit(result);
+            }
         }
 
         [HttpGet]
         [Route("get")]
-        public virtual IEnumerable<InstitutionDTO> Get()
+        public virtual InstitutionDTO Get(string id)
         {
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
+            return mapper.Map<InstitutionDTO>(instService.GetById(id));
+        }
+
+        [HttpGet]
+        [Route("find")]
+        public virtual IEnumerable<InstitutionDTO> Find([FromUri]string pageNo, [FromUri]string pageSize, [FromUri]string filterQuery = null)
+        {
+            var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
+<<<<<<< HEAD
+            var pagNoInt = Int32.Parse(pageNo);
+            var pagSizeInt = Int32.Parse(pageSize);
+            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Filter(filterQuery, pagNoInt, pagSizeInt));
+=======
             return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get().OrderBy(i=>i.Name));
+>>>>>>> 103647bb2df94bc1192a26de3db7ac45a7e67b30
         }
     }
 }

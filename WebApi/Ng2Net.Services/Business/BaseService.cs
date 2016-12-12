@@ -11,7 +11,7 @@ namespace Ng2Net.Services.Business
 {
     public class BaseService<T> : IBaseService<T> where T : BaseEntity
     {
-        private IRepository<T> _repository;
+        protected IRepository<T> _repository;
 
         public BaseService(IRepository<T> repository)
         {
@@ -35,6 +35,11 @@ namespace Ng2Net.Services.Business
         }
 
         public virtual IQueryable<T> Get()
+        {
+            return _repository.GetMany();
+        }
+
+        public virtual IEnumerable<T> Filter(string filterQuery, int pagNo, int pagSize)
         {
             return _repository.GetMany();
         }

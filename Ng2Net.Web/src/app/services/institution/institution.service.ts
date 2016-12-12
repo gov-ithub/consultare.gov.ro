@@ -29,8 +29,8 @@ export class InstitutionService {
     return obs;
   }
 
-  saveInstitution(proposal: any) {
-    let obs = this.http.post(`/api/institutions/save`, proposal)
+  saveInstitution(institution: any) {
+    let obs = this.http.post(`/api/institutions/save`, institution)
       .map(result => result.json()).share();
     return obs;
   }
