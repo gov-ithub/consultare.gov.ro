@@ -23,10 +23,11 @@ namespace Ng2Net.WebApi.Controllers
         }
 
         [HttpDelete]
-        [Route("delete")]
+        [Route("{id}")]
         public void Delete(string id)
         {
-            instService.Delete(instService.GetById(id));
+            var inst = instService.GetById(id);
+            instService.Delete(inst);
         }
 
         [HttpPost]
@@ -37,7 +38,7 @@ namespace Ng2Net.WebApi.Controllers
             var result = mapper.Map<Institution>(entityDTO);
             if (string.IsNullOrEmpty(entityDTO.Id))
             {
-                result.Id = new Guid().ToString();
+                result.Id = Guid.NewGuid().ToString();
                 return instService.Add(result);
             }
             else

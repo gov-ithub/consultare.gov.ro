@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InstitutionService, HttpClient } from '../../../../services';
+import { InstitutionService, HttpClient, PagerService } from '../../../../services';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { InstitutionEditComponent } from '../../';
 
 @Component({
@@ -13,15 +12,19 @@ export class InstitutionListComponent implements OnInit {
 
   private institutions: any[] = [];
   private filterQuery: string = '';
+  private pagerInstance='proposals.component';
 
-  constructor(private activeModal: NgbActiveModal, private modalService: NgbModal, private institutionService: InstitutionService, private http: HttpClient) { }
+  constructor(private modalService: NgbModal, private institutionService: InstitutionService, private http: HttpClient, private pagerService: PagerService) { }
 
   ngOnInit() {
-    this.refresh();
+    this.refresh(0);
   }
 
-  refresh() {
-    this.institutionService.listInstitutions(this.filterQuery, 0, 50).subscribe(result => this.institutions = result);
+  refresh(pageNo: number=0) {
+    this.institutionService.listInstitutions(this.filterQuery, pageNo, this.pagerService.defaultPagerConfig.pageSize).subscribe(result => {
+      this.institutions = result
+      this.pagerService.refreshInstances(this.pagerInstance, pageNo, result.totalResults);
+    });
   }
 
   openEdit(instituion: any) {
@@ -32,7 +35,7 @@ export class InstitutionListComponent implements OnInit {
 
   delete(instituion: any) {
     if (confirm('Are you sure?')) {
-    this.institutionService.deleteInstitution(instituion.id).subscribe(() => this.refresh());
+    this.institutionService.deleteInstitution(instituion.id).subscribe(() => this.refresh(0));
     }
   }
 }

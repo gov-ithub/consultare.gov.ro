@@ -136,6 +136,7 @@ namespace Ng2Net.Data
                 throw new ArgumentNullException("entity");
 
             this.Entities.Remove(entity);
+            this.Save();
         }
 
         /// <summary>

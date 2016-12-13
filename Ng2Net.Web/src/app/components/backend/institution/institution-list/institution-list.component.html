@@ -1,12 +1,27 @@
-<div class="modal-header">
-  <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  <h4 class="modal-title">
-    <app-html contentName="backend.content.edit"></app-html>
-  </h4>
-</div>
-<div class="modal-body">
+<section class="content-header">
+  <h1>
+    <div class="pull-right">
+      <form #myform="ngForm" (submit)="refresh(0)">
+        <div style="display:inline-block">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" [(ngModel)]="filterQuery" name="table_search" class="form-control pull-right" placeholder="Search">
+
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+
+
+          </div>
+        </div>
+      </form>
+      <button type="button" (click)="openEdit({})" class="btn btn-sm btn-info pull-right box-tools-btn"><i class="fa fa-plus"></i></button>
+    </div>
+
+    <app-html contentName="backend.content.page.institutions.title"></app-html>
+
+  </h1>
+</section>
+<section class="modal-body">
   <div class="box">
     <div *ngIf="(http.loading | async) > 0" class="overlay">
       <i class="fa fa-refresh fa-spin"></i>
@@ -40,7 +55,7 @@
 
       <table class="table table-hover">
         <tr>
-          <th style="width:80px">
+          <th>
             <app-html contentName="Nume"></app-html>
           </th>
           <th>
@@ -57,8 +72,8 @@
         </tr>
       </table>
     </div>
+    <div class="box-footer">
+      <app-pager [instance]="pagerInstance" extraClass="pagination-sm no-margin pull-right" (onPageChange)="refresh($event)"></app-pager>
+    </div>
   </div>
-</div>
-<div class="modal-footer">
-  <button class="btn btn-primary" type="submit"><app-html contentName="backend.content.save"></app-html></button>
-</div>
+</section>

@@ -33,11 +33,10 @@
                         </div>
                         <div class="form-group">
                             <label><app-html contentName="backend.label.institution"></app-html>:</label>
-                                <select name="institution" class="form-control proposal-search-dropdown" [ngModel]="proposal.institution?.id" (change)="proposal.institution=proposal.institution||{};proposal.institution.id=$event.target.value">
-                                    <option>- selecteaza institutie -</option>
-                                    <option *ngFor="let item of institutions" [value]="item.id">{{item.name}}</option>
-                                </select>
-                            <button type="button" (click)="browseInstitution({})" class="btn btn-sm btn-info pull-right box-tools-btn" name="browseInst"><i class="fa fa-plus"></i></button>
+                            <select name="institution" class="form-control proposal-search-dropdown" [ngModel]="proposal.institution?.id" (change)="proposal.institution=proposal.institution||{};proposal.institution.id=$event.target.value">
+                                <option>- selecteaza institutie -</option>
+                                <option *ngFor="let item of institutions" [value]="item.id">{{item.name}}</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-sm-6 container-fluid">
