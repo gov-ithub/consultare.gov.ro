@@ -30,23 +30,6 @@
       <h3 class="box-title">
         <app-html contentName="backend.content.page.contentlist.boxtitle"></app-html>
       </h3>
-      <div class="box-tools">
-        <form #myform="ngForm" (submit)="refresh()">
-          <div style="display:inline-block">
-            <div class="input-group input-group-sm" style="width: 150px;">
-              <input type="text" [(ngModel)]="filterQuery" name="table_search" class="form-control pull-right" placeholder="Search">
-
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-              </div>
-
-
-            </div>
-          </div>
-        </form>
-        <button type="button" (click)="openEdit({})" class="btn btn-sm btn-info pull-right box-tools-btn"><i class="fa fa-plus"></i></button>
-
-      </div>
     </div>
 
 
