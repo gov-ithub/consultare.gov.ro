@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { ProposalsService, HttpClient, InstitutionService } from '../../../../services';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
 import { InstitutionListComponent } from '../../';
 import { ActivatedRoute } from '@angular/router';
@@ -23,7 +22,7 @@ export class ProposalEditComponent implements OnInit {
   @ViewChild('myForm')
   private myForm: NgForm;
 
-  constructor(private modalService: NgbModal, private proposalService: ProposalsService, private http: HttpClient, private route: ActivatedRoute,
+  constructor(private proposalService: ProposalsService, private http: HttpClient, private route: ActivatedRoute,
   private institutionService: InstitutionService, private location: Location ) { }
 
   ngOnInit() {
@@ -32,11 +31,6 @@ export class ProposalEditComponent implements OnInit {
         this.proposalService.getProposal(params['id']).subscribe(result => { this.proposal = result; console.log(result); });
     });
     this.institutionService.getInstitutions().subscribe(result => this.institutions = result);
-  }
-
-  browseInstitution(){
-    let modal = this.modalService.open(InstitutionListComponent, { size: 'lg', keyboard: false });
-    modal.componentInstance.parentComponent = this;
   }
 
   save() {

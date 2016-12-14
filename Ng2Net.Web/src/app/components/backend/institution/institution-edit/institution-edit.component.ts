@@ -30,6 +30,7 @@ export class InstitutionEditComponent implements OnInit {
     this.institutionService.saveInstitution(this.institution).subscribe(result => {
       this.institution = result;
       this.result = 'Informatiile au fost salvate';
-      this.parentComponent.refresh(); });
+      this.parentComponent.refresh();
+    });
   }
 }
