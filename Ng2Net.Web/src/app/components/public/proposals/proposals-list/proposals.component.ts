@@ -15,9 +15,11 @@ export class ProposalsComponent implements OnInit {
   public showSearch: boolean;
   public institutionId: string;
   private pageNo: number;
+  @Input()
   private sortField: string = 'limitDate';
-  private sortDirection: string = 'desc';
-  private futureOnly: boolean = false;
+  private sortDirection: string = 'asc';
+  @Input()
+  private futureOnly: boolean = true;
   private pagerInstance = "proposals.component";
   constructor(private proposalsService: ProposalsService,
     private institutionService: InstitutionService,
@@ -41,4 +43,5 @@ export class ProposalsComponent implements OnInit {
         this.changeDetectorRef.detectChanges();
      });
   }
+  getDate() { return new Date(); }
 }

@@ -6,6 +6,11 @@ using System.Threading;
 using Ng2Net.TaskRunner.Interfaces;
 using Ng2Net.Infrastrucure.Logging;
 using Microsoft.Practices.Unity;
+using System.Diagnostics;
+using Ng2Net.Infrastructure.Data;
+using Ng2Net.Model.Scheduler;
+using Ng2Net.Data;
+using System.Linq;
 
 namespace Ng2Net.TaskRunner
 {
@@ -14,6 +19,7 @@ namespace Ng2Net.TaskRunner
         List<Thread> _threads = new List<Thread>();
         Logging log = new Logging();
         IUnityContainer container;
+
 
         public TaskRunnerService()
         {
@@ -28,7 +34,6 @@ namespace Ng2Net.TaskRunner
 //#endif
             try
             {
-
                 foreach (ServiceTask task in ServiceTask.GetTasks())
                 {
 
@@ -64,14 +69,33 @@ namespace Ng2Net.TaskRunner
 
         private void ExecuteServiceTask(ServiceTask task)
         {
+            TaskRunnerLog runnerLog = new TaskRunnerLog()
+            {
+                DateStarted = DateTime.Now,
+                TaskName = task.Name,
+                TaskResult = "RUNNING"
+            };
+
             try
             {
+                IRepository<TaskRunnerLog> taskRunnerLogRepository = new EfRepository<TaskRunnerLog>(new DatabaseContext());
+                taskRunnerLogRepository.GetMany(l => l.TaskResult == "RUNNING" && l.TaskName == task.Name).ToList().ForEach(l => {
+                    l.DateEnded = DateTime.Now;
+                    l.TaskResult = "STOPPED"; });
+                taskRunnerLogRepository.Save();
+                taskRunnerLogRepository.Insert(runnerLog);
+                taskRunnerLogRepository.Save();
                 IServiceTask serviceTask = (IServiceTask)Activator.CreateInstance(task.ExecuteAssembly, task.ExecuteModule).Unwrap();                
                 serviceTask.Run(task.Settings);
+                runnerLog.TaskResult = "COMPLETE";
+                runnerLog.DateEnded = DateTime.Now;
+                taskRunnerLogRepository.Save();
             }
             catch (Exception ex)
             {
                 Logging.LogException(ex);
+                runnerLog.TaskResult = "ERROR";
+                runnerLog.DateEnded = DateTime.Now;
             }
         }
 

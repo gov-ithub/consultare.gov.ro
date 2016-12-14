@@ -26,7 +26,6 @@ form {
 }
 
 .content-editor { position:fixed; z-index:100001; bottom:0px; left:0px; right:0px; background-color:#FFFFFF; }
-.html-edit a, .html-edit button { z-index: 100002 }
 .html-edit:hover * { opacity: .8 }
 .html-edit:hover .btn-show-edit { display:inherit }
 .html-edit .btn-show-edit { display:none; background-color: #c87f0a; border-radius: 2px; padding:3px; font-size:8pt; z-index: 10000; white-space: nowrap; color: #FFFFFF !important; position:absolute; left:5px; top:-12px; opacity:1 !important }

@@ -11,15 +11,18 @@ namespace Ng2Net.TaskRunner.ServiceTasks
     class ProcessSubscriptions : IServiceTask
     {
         private IRepository<Proposal> _repository;
+        private IRepository<TaskRunnerLog> _taskrunnerLogRepository;
 
         public ProcessSubscriptions()
         {
-            _repository = new EfRepository<Proposal>(new DatabaseContext());
+            var context = new DatabaseContext();
+            _repository = new EfRepository<Proposal>(context);
+            _taskrunnerLogRepository = new EfRepository<TaskRunnerLog>(context);
         }
 
         public void Run(string settings)
         {
-            SubscriptionProcessor proc = new SubscriptionProcessor(_repository, JsonConvert.DeserializeObject<SubscriptionProcessorSettings>(settings));
+            SubscriptionProcessor proc = new SubscriptionProcessor(_repository, _taskrunnerLogRepository, JsonConvert.DeserializeObject<SubscriptionProcessorSettings>(settings));
             int Processed = proc.ProcessQueue();
             if (Processed > 0)
                 Logging.LogMessage(string.Format("NotificationProcessor: Processed {0} notifications\r\n", Processed.ToString()));

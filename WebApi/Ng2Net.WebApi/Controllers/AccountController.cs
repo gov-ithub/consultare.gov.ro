@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using Ng2Net.Services.Business;
 using Microsoft.AspNet.Identity.Owin;
 using Ng2Net.Services;
+using Ng2Web.WebApi.CustomAttributes;
 
 namespace Ng2Net.WebApi.Controllers
 {
@@ -30,7 +31,6 @@ namespace Ng2Net.WebApi.Controllers
         private IApplicationAccountService _accountService;
         private INotificationService _notificationSevice;
         private IInstitutionService _institutionService;
-        //to be changed using di
         public AccountController(IApplicationAccountService accountService, INotificationService notificationService, IInstitutionService institutionService)
         {
             _accountService = accountService;
@@ -60,7 +60,7 @@ namespace Ng2Net.WebApi.Controllers
             }
 
             applicationUser.Subscriptions.Clear();
-            if (!claimsDTO.SubscribedToAll)
+            if (claimsDTO.SubscriptionType == "SELECTED")
             {
                 foreach (InstitutionDTO inst in claimsDTO.Subscriptions)
                 {
@@ -131,7 +131,7 @@ namespace Ng2Net.WebApi.Controllers
             Notification not = _notificationSevice.ConstructNotification("email.confirm-account.subject", "email.masterTemplate", "email.confirm-account.body", "email.defaultFrom", replacements);
 
             not.To = user.Email;
-            this._notificationSevice.AddNotification(not);            
+            this._notificationSevice.AddNotification(not);
             return new { result = "success", message = "email_sent" };
 
         }
@@ -157,6 +157,22 @@ namespace Ng2Net.WebApi.Controllers
                 return new { message = "account_confirmed" };
             else
                 return new { error = true, message = "account_confirm_failed" };
+
+        }
+
+        [Authentication(Claims = new string[] { })]
+        [HttpPost]
+        [Route("unsubscribe")]
+        public async Task<object> Unsubscribe()
+        {
+            CurrentUser.SubscriptionType = "UNSUBSCRIBED";
+            CurrentUser.Subscriptions.Clear();
+            IdentityResult result = await UserManager.UpdateAsync(CurrentUser);
+
+            if (result.Succeeded)
+                return new { message = "unsubscribed" };
+            else
+                return new { error = true, message = result.Errors };
 
         }
 

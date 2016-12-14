@@ -82,10 +82,10 @@ namespace Ng2Net.WebApi.Controllers
             switch (sortField)
             {
                 case "startDate":
-                    query = sortDirection == "asc" ? query.OrderBy(p => p.StartDate) : query.OrderByDescending(p => p.StartDate);
+                    query = sortDirection == "asc" ? query.OrderBy(p => p.StartDate ?? DateTime.MaxValue) : query.OrderByDescending(p => p.StartDate ?? DateTime.MinValue);
                     break;
                 case "limitDate":
-                    query = sortDirection == "desc" ? query.OrderBy(p => p.LimitDate) : query.OrderByDescending(p => p.LimitDate);
+                    query = sortDirection == "asc" ? query.OrderBy(p => p.LimitDate ?? DateTime.MaxValue) : query.OrderByDescending(p => p.LimitDate ?? DateTime.MinValue);
                     break;
             }
 

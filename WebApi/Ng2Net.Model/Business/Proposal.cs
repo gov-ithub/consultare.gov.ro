@@ -17,7 +17,6 @@ namespace Ng2Net.Model.Business
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public DateTime? LimitDate { get; set; }
-        [Required]
         [StringLength(1000)]
         public string Link { get; set; }
         [StringLength(1000)]

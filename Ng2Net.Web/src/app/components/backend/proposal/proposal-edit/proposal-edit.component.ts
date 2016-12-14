@@ -46,13 +46,11 @@ export class ProposalEditComponent implements OnInit {
     this.proposalService.saveProposal(this.proposal).subscribe(result => {
       this.proposal = result;
       this.result = 'Informatiile au fost salvate';
-      this.parentComponent.refresh(); });
+      });
   }
   back() {
     this.location.back();
   }
-    log(x)
-  {console.log(x);}
   getMoment(date)
   { 
     return moment(date).format('YYYY-MM-DD[T]HH:mm:ss'); }

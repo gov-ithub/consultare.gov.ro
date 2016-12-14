@@ -47,6 +47,7 @@ export class UserAccountService {
       let obs = this.http.get('/api/account/me').map((result) => result.json()).share();
       obs.subscribe((result) => {
           this.currentUser = result || this.currentUser;
+          console.log(this.currentUser);
       });
       return obs;
     }
@@ -87,6 +88,13 @@ export class UserAccountService {
 
   register(user: any) {
       let obs = this.http.post('/api/account/save', user)
+      .map((result) => result.json())
+      .share();
+      return obs;  
+  }
+
+  unsubscribe() {
+      let obs = this.http.post('/api/account/unsubscribe', {})
       .map((result) => result.json())
       .share();
       return obs;  

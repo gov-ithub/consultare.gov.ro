@@ -9,10 +9,12 @@ namespace Ng2Net.Model.Scheduler
 {
     public class TaskRunnerLog : BaseEntity
     {
-        public DateTime? DateStarted { get; set; }
+        [StringLength(255)]
+        public string TaskName { get; set; }
+        public DateTime DateStarted { get; set; }
         public DateTime? DateEnded { get; set; }
 
         [StringLength(255)]
-        public string JobResult { get; set;}
+        public string TaskResult { get; set; }
     }
 }

@@ -11,4 +11,5 @@ export const PublicRoutes: Routes = [
       { path: 'p/:url', component: HtmlPageComponent },
       { path: 'reset-password/:userId', component: HomeComponent, data: { action: 'resetPassword' } },
       { path: 'confirm-account/:userId', component: HomeComponent, data: { action: 'confirmAccount' } },
+      { path: 'unsubscribe', component: HomeComponent, data: { action: 'unsubscribe' } },
 ]} ];

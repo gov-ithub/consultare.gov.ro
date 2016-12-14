@@ -18,6 +18,8 @@ export class PublicSignupComponent implements OnInit {
   private signup: boolean = true;
   private signupResult: boolean = false;
   private showError: boolean = false;
+  private showUnsubResult: boolean = false;
+  private error: string;
 
   @Input()
   public edit: boolean;
@@ -54,6 +56,7 @@ export class PublicSignupComponent implements OnInit {
       return;
     }
     this.currentUser.subscriptions = this.institutions.filter(i => i.selected);
+    console.log(this.currentUser);
     this.userAccountService.register(this.currentUser).subscribe((result) => {
       if (!result.error) {
         this.signup=false;
@@ -65,4 +68,16 @@ export class PublicSignupComponent implements OnInit {
   openResendEmail() {
     let modal = this.modalService.open(PublicSignupComponent, { keyboard: false });
   }
+
+  unsubscribe() {
+    if (confirm('Doresti sa te dezabonezi de la notificari?'))
+      this.userAccountService.unsubscribe().subscribe((result) => {
+        if (!result.error) {
+          this.showUnsubResult = true;
+          this.userAccountService.getCurrentUser(true).subscribe(() => 
+          this.currentUser = this.userAccountService.currentUser);
+        }
+      });
+  }
+
 }

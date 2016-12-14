@@ -27,7 +27,8 @@ namespace Ng2Net.Model.Security
 
         public string UnsubscribeToken { get; set; }
 
-        public bool SubscribedToAll { get; set; }
+        [StringLength(255)]
+        public string SubscriptionType { get; set; }
 
         public virtual IList<Institution> Subscriptions { get; set; }
 

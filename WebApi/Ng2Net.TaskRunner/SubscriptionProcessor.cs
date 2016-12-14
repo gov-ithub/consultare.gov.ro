@@ -24,14 +24,16 @@ namespace Ng2Net.TaskRunner
         public int FailedNotifications { get; set; }
         public int TotalNotifications { get; set; }
         private IRepository<Proposal> _repository;
+        private IRepository<TaskRunnerLog> _taskRunnerLogRepository;
         private DatabaseContext _dc;
         private SubscriptionProcessorSettings _settings;
 
-        public SubscriptionProcessor(IRepository<Proposal> repository, SubscriptionProcessorSettings settings)
+        public SubscriptionProcessor(IRepository<Proposal> repository, IRepository<TaskRunnerLog> taskRunnerLogRepository, SubscriptionProcessorSettings settings)
         {
             this._repository = repository;
             this._dc = new DatabaseContext();
             this._settings = settings;
+            this._taskRunnerLogRepository = taskRunnerLogRepository;
         }
 
         public string LogFileName { get; set; }
@@ -40,11 +42,13 @@ namespace Ng2Net.TaskRunner
         {
 
             Dictionary<string, List<Proposal>> dictProposalsForUsers = new Dictionary<string, List<Proposal>>();
-            DateTime dReferenceDate = DateTime.Now.AddYears(-1); //take from db 
+
+            TaskRunnerLog lastRun = _taskRunnerLogRepository.GetMany(l => l.TaskResult.ToUpper() == "COMPLETE").OrderByDescending(l => l.DateStarted).FirstOrDefault();
+            DateTime dReferenceDate = lastRun!=null ? lastRun.DateStarted : DateTime.Now.AddMonths(-7);
 
             List<Proposal> lstProposals = this._repository.GetMany(x => x.StartDate > dReferenceDate && x.EndDate > DateTime.Now).ToList();
 
-            List<ApplicationUser> lstUsersSubscribedToAll = _dc.Users.Where(x => x.SubscribedToAll == true).ToList();
+            List<ApplicationUser> lstUsersSubscribedToAll = _dc.Users.Where(x => x.SubscriptionType == "ALL").ToList();
             foreach (ApplicationUser xApplicationUser in lstUsersSubscribedToAll)
             {
                 dictProposalsForUsers.Add(xApplicationUser.Id, lstProposals);
@@ -53,7 +57,7 @@ namespace Ng2Net.TaskRunner
             List<ApplicationUser> lstUserFromProposals = new List<ApplicationUser>();
             foreach(Proposal xProposal in lstProposals)
             {
-                foreach(ApplicationUser xUser in xProposal.Institution.SubscribedUsers)
+                foreach(ApplicationUser xUser in xProposal.Institution.SubscribedUsers.Where(u=>u.SubscriptionType == "SELECTED"))
                 {
                     if (!dictProposalsForUsers.ContainsKey(xUser.Id))
                     {
@@ -70,7 +74,7 @@ namespace Ng2Net.TaskRunner
             lstAllUsers.AddRange(lstUserFromProposals);
 
             //add to notification table
-            foreach (KeyValuePair<string, List<Proposal>> entry in dictProposalsForUsers)
+            foreach (KeyValuePair<string, List<Proposal>> entry in dictProposalsForUsers.Where(p=>p.Value.Count()>0))
             {
                 AddToNotification(lstAllUsers.Find(x=>x.Id==entry.Key),entry.Value);
             }

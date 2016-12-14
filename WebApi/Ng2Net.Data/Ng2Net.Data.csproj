@@ -134,6 +134,18 @@
     <Compile Include="Migrations\201612121754494_removeinitiatinginst.Designer.cs">
       <DependentUpon>201612121754494_removeinitiatinginst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612130840153_TaskRunnerLogModifications.cs" />
+    <Compile Include="Migrations\201612130840153_TaskRunnerLogModifications.Designer.cs">
+      <DependentUpon>201612130840153_TaskRunnerLogModifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612131121593_SubsciptionType.cs" />
+    <Compile Include="Migrations\201612131121593_SubsciptionType.Designer.cs">
+      <DependentUpon>201612131121593_SubsciptionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612141237326_LinkNotRequired.cs" />
+    <Compile Include="Migrations\201612141237326_LinkNotRequired.Designer.cs">
+      <DependentUpon>201612141237326_LinkNotRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -189,6 +201,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612121754494_removeinitiatinginst.resx">
       <DependentUpon>201612121754494_removeinitiatinginst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612130840153_TaskRunnerLogModifications.resx">
+      <DependentUpon>201612130840153_TaskRunnerLogModifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612131121593_SubsciptionType.resx">
+      <DependentUpon>201612131121593_SubsciptionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612141237326_LinkNotRequired.resx">
+      <DependentUpon>201612141237326_LinkNotRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

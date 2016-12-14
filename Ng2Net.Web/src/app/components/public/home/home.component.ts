@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ContentService } from '../../../services';
+import { ContentService, UserAccountService } from '../../../services';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PublicResetPasswordComponent, PublicConfirmAccountComponent } from '../';
+import { PublicResetPasswordComponent, PublicConfirmAccountComponent, PublicSignupComponent, PublicLoginComponent } from '../';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ import { PublicResetPasswordComponent, PublicConfirmAccountComponent } from '../
 export class HomeComponent implements OnInit {
 
   constructor(private contentService: ContentService, private route: ActivatedRoute,
-    private modalService: NgbModal) {
+    private modalService: NgbModal, private userAccountService: UserAccountService) {
     switch(route.snapshot.data['action']) {
       case 'resetPassword':
         let modal = this.modalService.open(PublicResetPasswordComponent, { keyboard: false });
@@ -25,6 +25,16 @@ export class HomeComponent implements OnInit {
         confirmAccountModal.componentInstance.userId = route.snapshot.params['userId'];
         confirmAccountModal.componentInstance.token = route.snapshot.queryParams['token'];
         confirmAccountModal.componentInstance.confirmAccount();
+        break;
+      case 'unsubscribe':
+      userAccountService.getCurrentUser().subscribe(() => {
+          if (userAccountService.currentUser.id) {
+            let unsubscribeModal = this.modalService.open(PublicSignupComponent, { keyboard: false });
+          } else {
+            let unsubscribeModal = this.modalService.open(PublicLoginComponent, { size:'sm', keyboard: false });
+            unsubscribeModal.componentInstance.redirectTo = "signup";
+          }
+        });
         break;
       default:
     }

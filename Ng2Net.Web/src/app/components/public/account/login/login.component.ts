@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserAccountService, ContentService } from '../../../../services';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PublicForgotPasswordComponent, PublicResendActivationComponent } from '../../';
+import { PublicForgotPasswordComponent, PublicResendActivationComponent, PublicSignupComponent } from '../../';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class PublicLoginComponent implements OnInit {
   private login: boolean = true;
   private forgotPassword: boolean = false;
   private resendActivation: boolean = false;
-
+  public redirectTo: string;
   constructor( private activeModal: NgbActiveModal, 
   private userAccountService: UserAccountService,
   private contentService: ContentService,
@@ -35,6 +35,10 @@ export class PublicLoginComponent implements OnInit {
     this.userAccountService.login(this.currentUser).subscribe((result) => {
       if (!result.error) {
         this.activeModal.close();
+        if (this.redirectTo) {
+          let signupModal = this.modalService.open(PublicSignupComponent, { keyboard: false });
+          this.userAccountService.getCurrentUser(true).subscribe(result => signupModal.componentInstance.currentUser = result);
+        }
       }
     });
   }
