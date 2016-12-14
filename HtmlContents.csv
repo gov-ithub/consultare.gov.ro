@@ -24,3 +24,6 @@ e2aff455-0943-4c66-b1bf-33514e1ed4e3,backend.httpError.password_reset,Parola res
 e51405b1-8f57-4f09-8e93-07257af63dc3,backend.resetPassword.prompt,Reseteaza parola,NULL
 ee849ac1-ece6-453a-b200-063268bc2e70,backend.content.page.contentlist.boxtitle,Zone continut,NULL
 f2f84dd0-fe24-4e9f-bcc8-718105e0b455,backend.forgotPassword.prompt,Introduceti adresa de e-mail,NULL
+d8c0b152-79c4-487c-89c7-c9f9f018852c,backend.content.page.institutions.title,Administrare institutii,NULL
+6582066f-20c9-4ddf-a81a-8364d7dde686,backend.menu.institution,Institutii,NULL
+2a5ac8a6-3572-40ad-bdfb-36491a7edaa6,backend.content.type,Tip,NULL
