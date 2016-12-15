@@ -44,13 +44,15 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label><app-html contentName="backend.label.startdate"></app-html>:</label>
-                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.startDate | toDateTime" (ngModelChange)="proposal.startDate = getMoment($event)" name="startdate"></datetime>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.startDate | toDateTime"
+                                        (ngModelChange)="proposal.startDate = getMoment($event)" name="startdate"></datetime>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label><app-html contentName="backend.label.enddate"></app-html>:</label>
-                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.endDate | toDateTime" (ngModelChange)="proposal.endDate = getMoment($event)" name="enddate"></datetime>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.endDate | toDateTime"
+                                        (ngModelChange)="proposal.endDate = getMoment($event)" name="enddate"></datetime>
                                 </div>
                             </div>
 
@@ -60,7 +62,8 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label><app-html contentName="backend.label.limitdate"></app-html>:</label>
-                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" (ngModelChange)="proposal.limitDate = getMoment($event)"  [ngModel]="proposal.limitDate | toDateTime" name="limitdate"></datetime>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" (ngModelChange)="proposal.limitDate = getMoment($event)"
+                                        [ngModel]="proposal.limitDate | toDateTime" name="limitdate"></datetime>
                                 </div>
                             </div>
 
@@ -68,16 +71,30 @@
                             </div>
 
                         </div>
+                        <div class="row" *ngIf="proposal.id">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <legend><a (click)="openEditDocument()" class="btn btn-sm pull-right btn-info"><i class="fa fa-plus"></i></a>Documente</legend>
+                                    <table class="table table-responsive">
+                                        <tr *ngFor="let doc of proposal.proposalDocuments">
+                                            <td><a (click)="openEditDocument(doc)" target="_blank"><img style="height:24px; padding-right:5px" [src]="'/assets/images/docicons/' + doc.type + '.png'" /> {{doc.name}}</a></td>
+                                            <td style="width:50px"><a href="{{doc.url}}" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-external-link"></i></a></td>
+                                            <td style="width:50px"><a (click)="deleteDocument(doc.id)" class="btn btn-sm btn-default"><i class="fa fa-trash"></i></a></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-
-
-                <ckeditor name="ckEditor" [(ngModel)]="proposal.description" [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
+                    <ckeditor name="ckEditor" [(ngModel)]="proposal.description" [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
             </form>
+            </div>
+            <div class="box-footer text-right">
+                <button class="btn btn-default" (click)="back()">Inapoi</button>
+                <button class="btn btn-primary" (click)="save()">Salveaza propunere</button>
+            </div>
         </div>
-        <div class="box-footer text-right">
-            <button class="btn btn-default" (click)="back()">Inapoi</button>
-            <button class="btn btn-primary" (click)="save()">Salveaza propunere</button>
-        </div>
-    </div>
 </section>

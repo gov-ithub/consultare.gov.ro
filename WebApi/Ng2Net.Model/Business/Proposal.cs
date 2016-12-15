@@ -24,6 +24,6 @@ namespace Ng2Net.Model.Business
         public string Documents { get; set; }
         public string Observations { get; set; }
         public bool Archived { get; set; }
-        public IList<ProposalCategory> ProposalCategories { get; set; }
+        public virtual List<ProposalDocument> ProposalDocuments { get; set; }
     }
 }

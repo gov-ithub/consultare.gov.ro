@@ -43,4 +43,10 @@ export class ProposalsService {
     return obs;
   }
 
+  deleteDocument(proposalId: string, docId: string) {
+    let obs = this.http.delete(`/api/proposals/document/delete/${proposalId}/${docId}`)
+    .share();
+    return obs;
+  }
+
 }

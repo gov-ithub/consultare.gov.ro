@@ -72,7 +72,13 @@
         </div>
 
       </div>
-      <div class="proposal-links">
+       <div class="proposal-links">
+       <div *ngFor="let doc of item.proposalDocuments" class="proposal-link">
+          <a href="{{doc.url}}" target="_blank"><img style="height:24px; padding-right:5px" [src]="'/assets/images/docicons/' + doc.type + '.png'" />{{doc.name}}</a>
+        </div>
+
+      </div>
+      <div class="proposal-email">
         <a *ngIf="item.email && (item.limitDate | toDateTime)>getDate()" class="btn btn-primary" href="mailto:{{item.email}}"><i class="fa fa-lg fa-edit"></i> Propune modificari</a>
       </div>
 

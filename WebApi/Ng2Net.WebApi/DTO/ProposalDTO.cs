@@ -22,6 +22,7 @@ namespace Ng2Net.WebApi.DTO
         public string Email { get; set; }
 
         public string Observations { get; set; }
+        public virtual List<ProposalDocumentDTO> ProposalDocuments { get; set; }
 
     }
 }

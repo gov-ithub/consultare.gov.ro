@@ -21992,3 +21992,1514 @@ The statement has been terminated.
 2016-12-14 19:07:45,714 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
 2016-12-14 19:07:46,807 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
 2016-12-14 19:07:46,810 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:36:46,052 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-14 23:36:46,087 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-14 23:36:47,003 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:36:47,005 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:36:47,009 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:36:47,011 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:36:47,263 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:36:47,306 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:03,378 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:03,379 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:03,385 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:03,386 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:09,150 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:09,150 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:11,082 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:11,083 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:12,356 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:12,357 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:14,284 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:14,285 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:15,592 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:15,593 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:25,415 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:25,421 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:25,457 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:25,461 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:25,580 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-14 23:37:25,582 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-14 23:37:27,611 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:27,615 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:27,844 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:37:27,844 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:37:34,320 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:34,325 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:34,445 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:37:34,455 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-14 23:37:59,648 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:59,655 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:59,849 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:37:59,855 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:00,143 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-14 23:38:00,144 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-14 23:38:00,152 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:00,156 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-14 23:38:07,346 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:07,349 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Filter System.ArgumentException: Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.GetRange(Int32 index, Int32 count)
+   at Ng2Net.Services.Business.InstitutionService.Filter(String filterQuery, Int32 pagNo, Int32 pagSize) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\InstitutionService.cs:line 27
+   at DynamicModule.ns.Wrapped_IInstitutionService_cc4d457f8eab4ffbaf696795ef6532a4.<Filter_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-14 23:38:08,148 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:08,151 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Filter System.ArgumentException: Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.GetRange(Int32 index, Int32 count)
+   at Ng2Net.Services.Business.InstitutionService.Filter(String filterQuery, Int32 pagNo, Int32 pagSize) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\InstitutionService.cs:line 27
+   at DynamicModule.ns.Wrapped_IInstitutionService_cc4d457f8eab4ffbaf696795ef6532a4.<Filter_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-14 23:38:08,878 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:08,881 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Filter System.ArgumentException: Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.GetRange(Int32 index, Int32 count)
+   at Ng2Net.Services.Business.InstitutionService.Filter(String filterQuery, Int32 pagNo, Int32 pagSize) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\InstitutionService.cs:line 27
+   at DynamicModule.ns.Wrapped_IInstitutionService_cc4d457f8eab4ffbaf696795ef6532a4.<Filter_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-14 23:38:09,451 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:09,454 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Filter System.ArgumentException: Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.GetRange(Int32 index, Int32 count)
+   at Ng2Net.Services.Business.InstitutionService.Filter(String filterQuery, Int32 pagNo, Int32 pagSize) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\InstitutionService.cs:line 27
+   at DynamicModule.ns.Wrapped_IInstitutionService_cc4d457f8eab4ffbaf696795ef6532a4.<Filter_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-14 23:38:09,947 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:09,950 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Filter System.ArgumentException: Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.GetRange(Int32 index, Int32 count)
+   at Ng2Net.Services.Business.InstitutionService.Filter(String filterQuery, Int32 pagNo, Int32 pagSize) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\InstitutionService.cs:line 27
+   at DynamicModule.ns.Wrapped_IInstitutionService_cc4d457f8eab4ffbaf696795ef6532a4.<Filter_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-14 23:38:11,557 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:11,564 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-14 23:38:22,393 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:22,403 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:22,496 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-14 23:38:22,500 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-14 23:38:23,277 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:23,285 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:23,354 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:23,358 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-14 23:38:24,228 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:24,234 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:24,311 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:38:24,311 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:38:47,468 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:47,475 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:47,572 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-14 23:38:47,573 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-14 23:38:48,665 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:48,674 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:38:48,746 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:38:48,749 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-14 23:39:01,222 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:01,229 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:01,307 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-14 23:39:01,309 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-14 23:39:02,921 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:02,925 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:02,992 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:39:02,995 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-14 23:39:03,861 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:03,867 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:03,925 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:39:03,925 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-14 23:39:09,412 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:09,424 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:09,524 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-14 23:39:09,525 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-14 23:39:09,917 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:09,924 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:09,979 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-14 23:39:09,984 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-14 23:39:10,870 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:10,875 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-14 23:39:10,938 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-14 23:39:10,939 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:17:27,836 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:17:27,883 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:17:28,171 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:17:28,177 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:17:28,279 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:17:28,289 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:17:28,410 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:17:28,412 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:18:05,609 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:18:05,619 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:18:05,687 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:18:05,700 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:18:05,998 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:18:05,999 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:18:06,040 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:18:06,040 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:19:20,612 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:19:20,698 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:19:20,988 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:19:20,992 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:19:21,157 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:19:21,167 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:19:21,379 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:19:21,392 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:20:48,180 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:20:48,228 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:20:48,526 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:20:48,531 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:20:48,654 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:20:48,665 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:20:48,799 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:20:48,803 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:20:58,466 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:20:58,473 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:20:58,832 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:20:58,854 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:20:58,884 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:20:58,885 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:21:04,946 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:21:04,949 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:21:04,979 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:21:05,005 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:21:05,007 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 00:21:05,342 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 00:21:09,270 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:09,275 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:09,382 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:21:09,382 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:21:11,901 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:11,916 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:12,387 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:21:12,388 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:21:12,521 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:21:12,536 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:21:17,817 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:21:17,821 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:21:17,850 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:21:17,851 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:21:17,851 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 00:21:17,859 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 00:21:20,188 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:20,215 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:20,458 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:21:20,459 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:21:49,993 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:49,997 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:50,087 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Filter 
+2016-12-15 00:21:50,096 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Filter 
+2016-12-15 00:21:52,233 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:52,240 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:52,376 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:21:52,377 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:21:58,588 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:58,599 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:21:58,882 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:21:58,883 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:22:01,277 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:22:01,304 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:22:01,673 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:22:01,674 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:22:04,511 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:22:04,524 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:22:04,833 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:22:04,834 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:22:04,850 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:22:04,871 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:34:43,767 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:34:43,779 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:34:43,832 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:34:43,837 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:34:44,208 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:34:44,210 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:34:44,261 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:34:44,262 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:34:44,264 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:34:44,291 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:39:18,553 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:39:18,562 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:39:18,616 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:39:18,620 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:39:18,969 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:39:18,970 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:39:18,976 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:39:18,977 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:39:19,029 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:39:19,034 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:40:40,172 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:40:40,182 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:40:40,281 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:40:40,288 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:40:41,364 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:40:41,365 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:40:41,500 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:40:41,501 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:40:41,507 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:40:41,531 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:41:42,495 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:41:42,542 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:41:42,614 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:41:42,621 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:41:43,070 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:41:43,071 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:41:43,078 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:41:43,095 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:41:43,101 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:41:43,102 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:48:38,980 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:48:38,988 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:48:39,039 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:48:39,043 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:48:39,383 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:48:39,384 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:48:39,445 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:48:39,446 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:48:39,448 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:48:39,470 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:51:02,764 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:02,804 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:03,158 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:03,193 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:04,293 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:51:04,329 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:51:04,381 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:51:04,383 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:51:04,414 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:51:04,415 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:51:15,667 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:15,675 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:15,733 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:15,738 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:51:16,120 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:51:16,122 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:51:16,131 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:51:16,132 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:51:16,139 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:51:16,143 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:52:03,146 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:03,158 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:03,265 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:03,273 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:03,920 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:52:03,922 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:52:03,937 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:52:03,947 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:52:03,948 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:52:03,973 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 00:52:15,316 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:15,326 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:15,386 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:15,392 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 00:52:15,779 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 00:52:15,781 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 00:52:15,790 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 00:52:15,791 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 00:52:15,802 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 00:52:15,817 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:26:28,988 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:26:29,042 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:26:29,339 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:26:29,344 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:26:29,760 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:26:29,764 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:26:29,769 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:26:29,771 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:26:29,931 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:26:29,984 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:27:30,797 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:30,837 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:30,991 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:30,997 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:31,387 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:27:31,389 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:27:31,406 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:27:31,407 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:27:31,530 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:27:31,539 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:27:43,370 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:43,389 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:43,503 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:43,509 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:27:43,892 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:27:43,893 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:27:43,900 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:27:43,914 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:27:43,989 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:27:43,989 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:42:36,452 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:36,508 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:36,817 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:36,822 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:37,072 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:42:37,082 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:42:37,096 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:42:37,098 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:42:37,195 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:42:37,282 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:42:59,162 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:59,174 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:59,237 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:59,242 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:42:59,596 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:42:59,597 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:42:59,601 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:42:59,617 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:42:59,664 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:42:59,665 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:47:14,322 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:47:14,331 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:47:14,405 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:47:14,409 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:47:14,736 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:47:14,737 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:47:14,740 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:47:14,747 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:47:14,748 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:47:14,748 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:47:25,501 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:47:25,505 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:47:25,533 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:47:25,579 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:47:25,585 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:47:25,668 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_5fb087358bdc4c02867064b093452e6b.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:48:41,837 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:48:41,844 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:48:41,873 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:48:41,874 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:48:41,877 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:48:41,878 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_5fb087358bdc4c02867064b093452e6b.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:50:10,897 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:50:13,663 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:50:20,338 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:50:20,346 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:51:10,779 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:51:50,026 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_5fb087358bdc4c02867064b093452e6b.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:52:09,802 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:52:09,916 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:52:13,835 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:52:13,837 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:54:29,968 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:54:29,999 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_5fb087358bdc4c02867064b093452e6b.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:55:31,994 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:55:32,152 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:55:32,818 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:55:32,823 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:55:33,292 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:55:33,311 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:55:33,396 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:55:33,399 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:55:34,329 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:55:34,590 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:55:44,675 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:55:44,682 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:55:44,727 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:55:44,774 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:55:44,779 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:55:44,864 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_625b61bbda8a474f9a927fa7e0f863f1.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:56:01,266 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:56:01,276 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:56:01,310 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:56:01,312 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:56:01,318 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:56:01,320 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_625b61bbda8a474f9a927fa7e0f863f1.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:56:26,528 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:56:26,532 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:56:26,566 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:56:26,568 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:56:26,574 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:56:26,575 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_625b61bbda8a474f9a927fa7e0f863f1.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:56:38,397 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:56:38,410 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:56:38,497 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:56:38,504 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:56:39,347 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:56:39,349 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:56:39,353 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:56:39,355 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:56:39,461 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:56:39,469 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:57:02,154 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:57:02,158 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:57:02,190 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:57:02,190 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:57:02,195 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:57:02,198 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_625b61bbda8a474f9a927fa7e0f863f1.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 01:59:25,541 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:59:25,598 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:59:25,999 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:59:26,004 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 01:59:26,383 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 01:59:26,387 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 01:59:26,437 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 01:59:26,445 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 01:59:26,567 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:59:26,657 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:59:35,585 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:59:35,588 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:59:35,634 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 01:59:35,701 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 01:59:35,708 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 01:59:35,803 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_d5e281929fc84335a59d1797091c0a8d.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 02:00:13,517 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:00:16,655 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:00:23,276 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:00:23,285 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:02:07,760 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 02:02:12,408 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_d5e281929fc84335a59d1797091c0a8d.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 02:03:04,364 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:03:04,495 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:03:04,612 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:03:04,614 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:03:31,948 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 02:03:37,779 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_d5e281929fc84335a59d1797091c0a8d.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 02:03:56,333 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:03:56,720 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:03:57,130 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:03:57,496 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:03:59,436 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 02:03:59,451 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 02:03:59,482 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:04:00,148 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:04:00,399 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 02:04:00,400 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 02:04:11,542 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:04:11,649 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:04:11,765 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:04:11,769 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:05:40,096 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 02:05:52,741 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_d5e281929fc84335a59d1797091c0a8d.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 02:06:18,890 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:06:19,308 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:06:19,700 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:06:19,980 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:06:21,869 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 02:06:21,878 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 02:06:21,883 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:06:21,897 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 02:06:21,912 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 02:06:22,269 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:07:58,176 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:07:58,277 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:07:58,768 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:07:58,778 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:07:59,220 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 02:07:59,240 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 02:07:59,605 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 02:07:59,610 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 02:07:59,693 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:07:59,883 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:08:05,535 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:08:05,559 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:08:05,759 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:08:06,084 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:08:06,134 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 02:08:06,648 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.Exception: Property: Id Error: The Id field is required.
+ ---> System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 89
+   --- End of inner exception stack trace ---
+   at Ng2Net.Data.EfRepository`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Data\EfRepository.cs:line 101
+   at Ng2Net.Services.Business.BaseService`1.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\BaseService.cs:line 54
+   at DynamicModule.ns.Wrapped_IProposalService_f30e084b7f514cdca9945dcbde159162.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 02:09:06,064 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:09:06,753 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:09:07,456 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:09:07,835 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:09:10,220 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 02:09:10,224 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 02:09:10,455 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 02:09:10,455 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 02:09:10,747 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:09:10,978 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:13:26,513 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:13:26,929 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:13:27,963 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:13:28,098 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:14:48,199 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:14:48,257 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:14:48,601 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:14:48,607 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:14:49,273 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 02:14:49,284 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 02:14:49,345 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 02:14:49,347 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 02:14:49,485 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:14:49,573 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:14:56,224 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:14:56,230 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:14:56,268 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:14:56,319 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 02:14:56,326 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 02:14:56,744 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 02:15:03,947 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:15:03,956 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:15:04,035 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:15:04,039 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 02:15:04,370 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 02:15:04,371 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 02:15:04,383 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 02:15:04,389 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 02:15:04,390 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 02:15:04,393 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:20:43,277 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:20:43,339 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:20:43,708 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:20:43,712 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:20:44,011 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:20:44,014 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:20:44,018 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:20:44,024 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:20:44,156 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:20:44,220 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:27:22,015 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:22,023 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:22,078 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:22,082 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:22,501 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:27:22,502 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:27:22,538 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:27:22,539 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:27:22,551 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:27:22,556 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:27:29,265 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:27:29,277 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:27:29,329 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:27:29,335 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:27:29,339 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:27:29,345 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:27:38,212 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:38,217 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:38,316 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:38,321 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:27:38,702 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:27:38,707 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:27:38,709 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:27:38,711 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:27:38,769 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:27:38,770 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:30:53,707 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:30:53,766 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:30:54,066 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:30:54,071 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:30:54,335 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:30:54,346 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:30:54,450 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:30:54,542 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:30:54,544 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:30:54,572 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:33:06,221 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:33:06,230 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:33:06,302 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:33:06,311 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:33:06,653 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:33:06,654 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:33:06,660 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:33:06,666 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:33:06,716 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:33:06,717 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:33:17,873 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:33:17,876 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:33:17,929 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:33:17,939 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:34:57,189 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:34:57,243 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:34:57,526 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:34:57,529 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:34:57,808 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:34:57,815 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:34:57,816 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:34:57,817 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:34:57,951 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:34:58,031 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:35:07,195 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:35:07,205 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:35:07,261 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:35:07,269 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:35:07,274 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:35:07,726 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:35:14,253 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:35:14,259 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:35:14,355 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:35:14,359 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:35:14,716 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:35:14,717 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:35:14,731 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:35:14,745 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:35:14,804 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:35:14,804 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:36:51,964 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:36:52,016 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:36:52,303 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:36:52,307 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:36:52,595 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:36:52,607 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:36:52,620 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:36:52,622 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:36:52,763 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:36:52,815 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:40:25,985 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:40:26,010 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:40:26,071 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:40:26,077 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:40:26,401 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:40:26,403 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:40:26,403 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:40:26,404 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:40:26,503 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:40:26,510 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:43:38,471 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:43:38,477 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:43:38,697 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:43:38,705 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:43:39,616 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:43:39,620 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:43:39,622 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:43:39,629 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:43:39,690 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:43:39,691 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:44:12,371 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:12,382 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:12,451 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:12,461 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:12,865 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:44:12,867 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:44:12,875 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:44:12,877 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:44:12,882 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:44:12,898 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:44:54,657 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:54,694 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:54,843 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:54,847 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:44:55,256 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:44:55,257 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:44:55,264 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:44:55,265 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:44:55,279 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:44:55,304 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:46:32,693 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:32,703 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:32,765 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:32,772 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:33,178 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:46:33,180 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:46:33,186 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:46:33,188 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:46:33,196 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:46:33,208 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:46:41,779 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:46:41,784 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:46:41,850 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:46:41,856 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:46:41,865 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:46:42,283 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:46:49,689 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:49,695 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:49,733 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:49,738 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:46:49,977 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:46:49,978 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:46:49,985 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:46:49,986 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:46:50,009 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:46:50,015 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:47:08,369 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:47:08,373 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:47:08,407 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:47:08,409 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:47:08,416 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:47:08,420 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:47:14,836 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:47:14,844 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:47:14,885 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:47:14,890 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:47:15,940 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:47:15,941 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:47:15,943 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:47:15,944 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:47:15,945 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:47:15,952 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:50:21,231 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:50:21,300 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:50:21,718 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:50:21,727 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:50:22,070 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:50:22,075 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:50:22,083 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:50:22,085 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:50:22,321 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:50:22,599 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:51:23,681 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:51:23,771 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:51:24,302 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:51:24,309 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:51:24,602 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:51:24,611 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:51:24,617 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:51:24,619 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:51:24,710 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:51:24,799 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:52:33,696 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:52:33,715 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:52:33,813 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:52:33,817 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:52:34,191 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:52:34,193 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:52:34,204 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:52:34,205 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:52:34,309 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:52:34,320 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:52:43,183 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:52:43,186 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:52:43,235 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:52:43,238 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:52:43,249 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:52:43,611 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:54:05,835 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:54:05,851 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:54:06,126 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:54:06,132 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 09:54:06,905 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 09:54:06,906 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 09:54:07,236 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:54:07,237 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:54:07,348 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:07,370 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:15,989 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:15,993 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:16,027 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:16,027 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:16,033 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:54:16,042 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:54:16,160 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:54:16,160 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:54:16,163 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:16,172 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:25,499 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:25,503 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:25,543 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:25,544 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:25,549 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:54:25,553 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:54:25,664 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:54:25,665 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:54:25,669 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:25,674 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:59,185 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:59,192 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:59,224 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:59,225 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 09:54:59,231 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 09:54:59,240 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 09:54:59,344 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 09:54:59,345 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 09:54:59,350 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 09:54:59,360 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:25:50,205 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:25:50,551 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:25:51,423 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:25:52,592 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:25:53,161 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:25:53,167 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:25:53,171 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:25:53,177 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:25:53,448 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:25:53,583 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:26:22,932 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:26:23,066 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:26:23,260 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:26:23,265 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:26:27,434 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:26:27,502 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:26:28,977 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:26:29,100 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:26:29,101 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:26:29,102 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:27:02,373 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:27:02,495 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:27:02,667 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:27:02,669 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:27:06,027 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:27:36,883 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.ArgumentOutOfRangeException: StartIndex cannot be less than zero.
+Parameter name: startIndex
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at Ng2Net.Services.Business.ProposalService.RunRules(DbEntityEntry ent) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\ProposalService.cs:line 35
+   at Ng2Net.Services.Business.ProposalService.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\ProposalService.cs:line 25
+   at DynamicModule.ns.Wrapped_IProposalService_1b7d561a47e848199dd9f07c60c1fd39.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 10:28:47,623 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:28:48,054 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:28:48,676 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:28:48,704 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:28:48,712 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:28:48,979 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:28:49,270 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:28:49,273 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:28:49,302 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:28:49,307 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:29:08,787 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:29:08,873 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:29:08,964 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:29:08,970 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:29:09,474 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:29:09,474 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:29:09,483 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:29:09,489 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:29:09,545 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:29:09,573 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:29:17,589 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:29:17,595 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:29:17,625 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:29:17,626 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:29:17,631 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:29:17,632 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:29:17,766 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:29:17,769 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:29:17,769 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:29:17,779 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:30:41,344 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:30:41,641 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:30:41,936 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:30:42,184 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:30:43,154 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:30:43,157 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:30:43,159 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:30:43,265 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:30:43,266 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:30:43,270 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:00,570 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:00,751 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:00,961 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:00,964 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:06,409 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:32:06,473 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:32:07,634 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:32:07,635 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:32:07,744 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:08,145 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:18,384 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:18,497 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:18,686 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:18,690 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:18,697 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:32:33,542 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:32:34,343 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:32:34,345 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:32:34,346 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:34,459 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:53,304 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:53,416 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:53,634 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:32:53,636 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:32:53,643 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:32:57,774 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:32:59,842 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:33:00,222 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:33:00,251 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:33:00,252 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:33:53,588 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:33:53,707 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:33:53,891 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:33:53,895 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:33:53,902 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:34:10,668 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:34:11,071 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:34:11,073 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:34:11,076 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:34:11,098 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:40:14,188 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:40:14,485 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:40:15,259 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:40:16,238 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:40:16,929 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:40:16,958 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:40:16,960 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:40:16,989 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:40:17,126 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:40:17,370 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:41:27,011 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:41:27,397 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:41:27,920 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:41:28,178 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:41:29,935 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:41:29,945 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:41:30,077 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:41:30,078 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:41:30,178 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:41:30,294 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:42:10,053 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:10,482 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:10,850 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:11,107 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:12,615 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:42:12,618 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:42:12,696 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:42:12,696 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:42:12,801 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:42:12,980 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:42:40,354 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:40,733 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:41,344 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:41,639 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:43,690 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:42:44,001 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:42:44,003 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:42:44,203 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:42:44,204 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:42:44,768 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:42:53,120 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:53,445 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:53,757 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:53,990 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:42:55,465 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:42:55,466 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:42:56,171 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:42:56,348 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:42:56,349 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:42:56,516 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:43:19,508 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:19,975 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:20,593 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:20,962 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:25,271 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:43:25,272 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:43:26,112 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:43:26,116 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:43:26,129 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:43:26,482 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:43:37,809 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:38,287 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:38,838 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:39,173 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:43:42,964 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:43:42,966 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:43:43,319 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:43:43,394 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:43:43,396 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:43:44,083 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:44:03,415 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:44:03,750 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:44:04,160 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:44:04,424 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:44:06,888 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:44:06,890 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:44:07,512 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:44:08,510 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:44:08,526 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:44:09,154 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:44:20,410 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:44:20,415 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:44:20,730 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:44:20,764 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:44:20,804 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:44:20,874 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:44:21,825 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:44:21,843 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:44:21,845 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:44:21,846 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:45:32,981 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:45:33,169 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:45:33,360 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:45:33,363 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:45:33,367 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:45:48,309 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
+Parameter name: length
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at Ng2Net.Services.Business.ProposalService.RunRules(DbEntityEntry ent) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\ProposalService.cs:line 39
+   at Ng2Net.Services.Business.ProposalService.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\ProposalService.cs:line 25
+   at DynamicModule.ns.Wrapped_IProposalService_d708961dd9c64e20a8c4773de7822ea3.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 10:46:40,436 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:46:40,466 ERROR Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Exception Save System.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
+Parameter name: length
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at Ng2Net.Services.Business.ProposalService.RunRules(DbEntityEntry ent) in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\ProposalService.cs:line 39
+   at Ng2Net.Services.Business.ProposalService.Save() in C:\Work\Gov-ITHub\consultare.gov.ro\WebApi\Ng2Net.Services\Business\ProposalService.cs:line 25
+   at DynamicModule.ns.Wrapped_IProposalService_d708961dd9c64e20a8c4773de7822ea3.<Save_DelegateImplementation>__6(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+2016-12-15 10:47:51,006 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:47:51,099 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:47:51,634 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:47:51,639 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 10:47:52,062 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 10:47:52,079 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 10:47:52,112 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:47:52,115 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:47:52,565 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:47:53,024 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:02,276 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:02,354 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:02,717 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:02,731 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:02,756 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:48:05,560 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:48:06,559 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:06,649 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:06,656 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:48:06,657 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:48:11,542 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:11,565 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:11,737 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:11,739 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:11,754 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:48:11,757 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:48:12,883 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:48:12,885 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:48:12,964 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:13,068 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:30,449 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:30,459 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:30,494 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:30,495 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:48:30,500 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:48:30,511 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:48:30,623 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:48:30,624 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:48:30,631 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:48:30,641 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:49:06,619 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:49:06,626 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:49:06,657 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:49:06,658 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:49:06,667 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:49:06,762 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:49:06,866 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:49:06,867 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:49:06,872 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:49:06,881 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:49:28,247 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:49:28,260 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:49:28,286 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:49:28,287 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 10:49:28,297 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 10:49:28,301 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 10:49:28,419 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 10:49:28,420 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 10:49:28,424 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 10:49:28,428 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:02:11,173 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:02:11,234 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:02:11,535 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:02:11,540 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:02:11,712 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:02:11,720 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:02:11,751 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:02:11,753 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:02:11,831 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:02:11,879 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:05,429 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:05,430 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:05,438 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:05,438 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:05,763 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:03:05,763 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:03:05,763 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:03:05,764 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:03:05,877 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:05,896 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:07,884 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:07,905 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:07,936 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:03:08,627 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:03:08,680 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:03:08,681 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:03:08,684 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:08,694 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:15,747 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:15,755 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:15,793 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:15,797 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:03:16,030 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:03:16,031 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:03:16,036 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:16,044 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:03:16,044 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:03:16,046 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:17,746 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:17,749 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:17,752 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:03:17,761 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:03:17,791 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:03:17,793 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:17,793 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:03:17,797 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:18,632 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:18,634 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:18,636 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:03:18,639 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:03:18,670 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:03:18,671 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:03:18,672 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:18,680 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:19,085 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:19,088 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:03:19,089 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:03:19,095 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:03:19,118 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:03:19,119 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:03:19,122 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:03:19,124 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:04:19,043 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:04:19,050 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:04:19,089 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:04:19,093 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:04:19,339 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:04:19,340 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:04:19,340 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:04:19,345 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:04:19,348 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:04:19,364 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:04:41,912 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:04:41,915 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:04:41,971 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:04:41,979 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:04:41,993 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:04:42,074 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:04:42,178 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:04:42,179 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:04:42,183 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:04:42,193 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:05:04,434 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:05:04,447 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:05:04,482 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:05:04,483 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:05:04,495 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:05:04,502 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:05:04,616 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:05:04,616 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:05:04,622 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:05:04,632 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:05:10,748 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:05:10,754 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:05:10,900 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:05:10,901 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:05:12,493 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:05:12,499 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:05:12,633 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:05:12,634 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:05:34,422 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:05:34,427 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:05:34,430 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Add 
+2016-12-15 11:05:34,466 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Add 
+2016-12-15 11:05:51,017 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:05:51,025 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:05:51,176 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:05:51,177 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:06:14,962 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:06:14,963 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:06:19,226 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:06:19,238 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:06:19,425 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:06:19,426 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:06:19,431 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:06:19,437 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:07:05,956 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:07:05,967 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:07:06,144 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:07:06,145 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:07:07,667 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:07:07,675 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:07:07,861 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:07:07,862 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:07:25,705 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:07:25,708 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:07:25,708 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Add 
+2016-12-15 11:07:25,722 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Add 
+2016-12-15 11:09:31,871 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:09:31,935 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:09:32,259 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:09:32,263 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:09:32,568 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:09:32,574 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:09:32,576 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:09:32,577 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:09:53,497 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:09:53,521 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:09:53,526 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Add 
+2016-12-15 11:09:54,083 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Add 
+2016-12-15 11:09:54,085 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:09:54,099 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:14:40,446 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:14:40,526 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:14:41,224 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:14:41,229 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:14:41,230 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:14:41,239 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:14:55,206 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:14:55,212 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:14:55,585 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:14:55,588 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:14:59,392 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:14:59,398 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:14:59,400 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Delete 
+2016-12-15 11:14:59,815 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Delete 
+2016-12-15 11:14:59,816 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:14:59,816 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:14:59,858 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:14:59,858 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:15:02,070 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:15:02,081 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:15:02,082 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Delete 
+2016-12-15 11:15:02,101 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Delete 
+2016-12-15 11:15:02,101 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:15:02,102 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:15:02,253 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:15:02,254 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:19:23,514 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:23,523 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:23,570 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:23,575 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:23,801 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:19:23,811 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:19:23,845 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:19:23,846 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:19:28,997 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:29,002 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:29,229 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:19:29,231 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:19:44,356 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:19:44,365 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:19:44,366 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Add 
+2016-12-15 11:19:44,573 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Add 
+2016-12-15 11:19:44,573 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:19:44,575 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:19:44,694 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:44,698 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:19:44,908 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:19:44,909 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:19:44,916 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:19:44,927 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:05,784 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:05,790 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:05,825 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:05,826 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:05,841 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:20:05,866 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:20:05,995 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:20:05,996 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:20:06,000 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:06,015 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:08,150 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:08,163 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:08,169 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:20:08,217 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:20:08,285 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:20:08,286 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:20:08,318 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:08,326 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:12,777 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:12,816 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:12,884 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:12,885 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:12,890 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:20:12,908 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:20:13,083 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:13,084 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:20:13,086 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:20:13,089 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:15,339 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:15,350 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:15,352 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:20:15,357 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:20:15,406 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:20:15,407 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:20:15,414 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:15,433 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:19,943 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:20:19,951 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:20:20,058 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:20:20,059 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:20:23,990 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetById 
+2016-12-15 11:20:23,995 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetById 
+2016-12-15 11:20:23,996 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Delete 
+2016-12-15 11:20:24,014 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Delete 
+2016-12-15 11:20:24,015 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Save 
+2016-12-15 11:20:24,018 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Save 
+2016-12-15 11:20:24,346 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:20:24,347 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:53:38,376 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:53:38,439 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:53:39,018 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:53:39,022 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:53:39,043 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:53:39,046 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:53:39,476 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:53:39,516 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:53:52,321 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:53:52,322 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:53:52,340 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:53:52,341 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:53:52,346 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:53:52,347 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:53:52,521 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:53:52,530 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:53:55,096 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:53:55,097 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:53:55,290 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:53:55,290 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:53:58,576 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:53:58,577 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:54:30,983 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:54:30,984 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:54:32,586 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:54:32,587 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:54:34,871 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:54:34,872 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:57:29,745 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:57:29,746 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:57:30,077 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:57:30,078 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:57:30,111 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:57:30,111 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:57:30,224 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:57:30,267 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:57:40,005 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:57:40,006 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:57:51,253 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:57:51,254 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:59:52,326 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 11:59:52,329 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 11:59:52,717 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:59:52,718 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:59:52,839 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:59:52,840 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 11:59:53,111 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:59:53,131 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 11:59:59,411 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 11:59:59,412 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:00:17,067 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:00:17,068 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:01:22,050 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:01:22,051 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:01:22,246 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 12:01:22,248 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 12:01:22,258 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:01:22,258 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:01:22,427 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 12:01:22,446 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 12:01:41,043 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:01:41,044 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:01:41,108 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 12:01:41,109 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 12:01:41,149 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:01:41,150 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:01:41,247 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 12:01:41,265 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 12:02:16,231 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetHtmlContents 
+2016-12-15 12:02:16,233 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetHtmlContents 
+2016-12-15 12:02:16,331 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:02:16,332 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:02:16,356 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking GetClaimsDictionaryByUser 
+2016-12-15 12:02:16,358 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:02:16,359 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:02:16,381 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking GetClaimsDictionaryByUser 
+2016-12-15 12:02:21,951 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:02:21,952 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 
+2016-12-15 12:02:35,752 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - Before Invoking Get 
+2016-12-15 12:02:35,753 INFO Ng2Net.Infrastructure.Logging.LoggingInterceptionBehavior - After Invoking Get 

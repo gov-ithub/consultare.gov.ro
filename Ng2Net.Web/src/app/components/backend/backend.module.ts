@@ -13,11 +13,12 @@ import { BackendLoginComponent,
   BackendMasterComponent,
   ContentListComponent,
   ProposalListComponent,
-  ProposalEditComponent } from './';
+  ProposalEditComponent, 
+  DocumentEditComponent,
+  InstitutionEditComponent,
+  InstitutionListComponent } from './';
 import { BackendRoutes } from './backend.routes';
 import { SharedModule } from '../shared/shared.module';
-import { InstitutionEditComponent } from './institution/institution-edit/institution-edit.component';
-import { InstitutionListComponent } from './institution/institution-list/institution-list.component';
 
 
 @NgModule({
@@ -37,11 +38,13 @@ import { InstitutionListComponent } from './institution/institution-list/institu
     ProposalListComponent,
     ProposalEditComponent,
     InstitutionEditComponent,
-    InstitutionListComponent
+    InstitutionListComponent,
+    DocumentEditComponent,
   ],
   entryComponents: [
     ContentEditComponent,
-    ProposalEditComponent
+    ProposalEditComponent,
+    DocumentEditComponent,
   ],
 
 })

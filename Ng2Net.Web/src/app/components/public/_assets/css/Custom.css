@@ -82,12 +82,13 @@ section .overlay.dark
   background: rgba(0, 0, 0, 0.5);
 }
 /* Proposals */
-.proposal .proposal-left { margin-bottom: 20px }
+.proposal .proposal-left { margin-bottom: 15px }
 .proposal-institution { color:#ef734c; font-size: 11pt; margin: 3px 0px;  }
 .proposals-title, H1 { font-family: Lato; font-size: 28pt; font-weight: 300;  margin:20px 0px }
 .proposals .proposal-title { font-size:14pt; color:#3766b0 }
 .proposal .proposal-date { font-size: 11pt }
-.proposal .proposal-links { margin-bottom: 8px; }
+.proposal .proposal-links { margin-bottom: 20px; }
+.proposal .proposal-links .proposal-link { margin:5px 0px }
 
 /* About page */
 @media (min-width: 768px) {

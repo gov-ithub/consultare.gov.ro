@@ -40,7 +40,6 @@ namespace Ng2Net.WebApi
 
             container.RegisterType<IInstitutionService, InstitutionService>(interceptor, behaver);
             container.RegisterType<IHtmlContentService, HtmlContentService>(interceptor, behaver);
-            container.RegisterType<ICategoryService, CategoryService>(interceptor, behaver);
             container.RegisterType<INotificationService, NotificationService>(interceptor, behaver);
             container.RegisterType<IProposalService, ProposalService>(interceptor, behaver);
             container.RegisterType<IApplicationAccountService, ApplicationAccountService>(interceptor, behaver);

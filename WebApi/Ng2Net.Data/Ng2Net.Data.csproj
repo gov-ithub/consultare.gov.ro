@@ -146,6 +146,14 @@
     <Compile Include="Migrations\201612141237326_LinkNotRequired.Designer.cs">
       <DependentUpon>201612141237326_LinkNotRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612142211533_ProposalDocuments.cs" />
+    <Compile Include="Migrations\201612142211533_ProposalDocuments.Designer.cs">
+      <DependentUpon>201612142211533_ProposalDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612150749277_ProposalDocuments2.cs" />
+    <Compile Include="Migrations\201612150749277_ProposalDocuments2.Designer.cs">
+      <DependentUpon>201612150749277_ProposalDocuments2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -210,6 +218,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612141237326_LinkNotRequired.resx">
       <DependentUpon>201612141237326_LinkNotRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612142211533_ProposalDocuments.resx">
+      <DependentUpon>201612142211533_ProposalDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612150749277_ProposalDocuments2.resx">
+      <DependentUpon>201612150749277_ProposalDocuments2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

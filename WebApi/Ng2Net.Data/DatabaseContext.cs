@@ -15,6 +15,7 @@ namespace Ng2Net.Data
         public DbSet<HtmlContent> HtmlContents { get; set; }
         public DbSet<Institution> Institutions { get; set; }
         public DbSet<TaskRunnerLog> TaskRunnerLogs { get; set; }
+        public DbSet<ProposalDocument> ProposalDocuments { get; set; }
 
         public DatabaseContext(): base("name=DefaultConnection")
         {
@@ -35,7 +36,6 @@ namespace Ng2Net.Data
             modelBuilder.Entity<ApplicationUser>().HasMany(u => u.Logins).WithMany().Map(cs => { cs.MapLeftKey("Id"); cs.MapRightKey("UserId"); });
             modelBuilder.Entity<IdentityRole>().HasMany(u => u.Users).WithOptional().HasForeignKey(l => l.RoleId);
 
-            modelBuilder.Entity<ProposalCategory>().HasKey(p => p.Id).HasMany(p => p.Proposals);
             modelBuilder.Entity<Institution>().HasKey(i=>i.Id).HasMany(i => i.Proposals).WithOptional().HasForeignKey(i => i.InstitutionId);
             modelBuilder.Entity<Proposal>().HasRequired(p => p.Institution);
         }
