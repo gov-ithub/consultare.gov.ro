@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PublicSignupComponent implements OnInit {
 
-  public currentUser: any = { subscribedToAll: true };
+  public currentUser: any = { subscriptionType: 'ALL' };
   @ViewChild('myForm')
   private myForm: NgForm;
   private signup: boolean = true;

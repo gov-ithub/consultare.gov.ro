@@ -23,29 +23,36 @@ namespace Ng2Net.WebApi.Controllers
         }
 
         [HttpDelete]
-        [Route("{id}")]
-        public void Delete(string id)
+        [Route("{id}/{destinationInstitutionId}")]
+        public object Delete(string id, string destinationInstitutionId = null)
         {
             var inst = instService.GetById(id);
+            if (!string.IsNullOrEmpty(destinationInstitutionId))
+            {
+                var destInstitution = instService.GetById(destinationInstitutionId);
+                inst.Proposals.ToList().ForEach(i => i.Institution = destInstitution);
+            }
             instService.Delete(inst);
+            instService.Save();
+            return new { };
         }
 
         [HttpPost]
         [Route("save")]
-        public Institution Save(InstitutionDTO entityDTO)
+        public InstitutionDTO Save(InstitutionDTO entityDTO)
         {
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<InstitutionDTO, Institution>(); }).CreateMapper();
-            var result = mapper.Map<Institution>(entityDTO);
+
+            Institution result = string.IsNullOrEmpty(entityDTO.Id) ? new Institution() : instService.GetById(entityDTO.Id);
+            mapper.Map<InstitutionDTO, Institution>(entityDTO, result);
             if (string.IsNullOrEmpty(entityDTO.Id))
             {
                 result.Id = Guid.NewGuid().ToString();
-                return instService.Add(result);
+                instService.Add(result);
             }
-            else
-            {
-                result = instService.GetById(result.Id);
-                return instService.Edit(result);
-            }
+            instService.Save();
+            mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
+            return mapper.Map<InstitutionDTO>(result);
         }
 
         [HttpGet]
@@ -61,7 +68,7 @@ namespace Ng2Net.WebApi.Controllers
         public virtual IEnumerable<InstitutionDTO> Get()
         {
             var mapper = new MapperConfiguration(cfg => { cfg.CreateMap<Institution, InstitutionDTO>(); }).CreateMapper();
-            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get());
+            return mapper.Map<IEnumerable<InstitutionDTO>>(instService.Get()).OrderBy(p=>p.Name);
         }
 
         [HttpGet]

@@ -10,7 +10,7 @@ namespace Ng2Net.Model.Business
         public string Name { get; set; }
         public string Type { get; set; }
         public string Url { get; set; }
-        public IList<Proposal> Proposals { get; set; }
+        public virtual IList<Proposal> Proposals { get; set; }
         public virtual IList<ApplicationUser> SubscribedUsers { get; set; }
     }
 }

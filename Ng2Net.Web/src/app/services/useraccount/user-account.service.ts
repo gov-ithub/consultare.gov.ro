@@ -47,7 +47,6 @@ export class UserAccountService {
       let obs = this.http.get('/api/account/me').map((result) => result.json()).share();
       obs.subscribe((result) => {
           this.currentUser = result || this.currentUser;
-          console.log(this.currentUser);
       });
       return obs;
     }

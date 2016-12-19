@@ -35,9 +35,8 @@ export class InstitutionService {
     return obs;
   }
 
-  deleteInstitution(id: string) {
-    let obs = this.http.delete(`/api/institutions/${id}`)
-      .map(result => result.json()).share();
+  deleteInstitution(id: string, destinationInstitutionId: string = '') {
+    let obs = this.http.delete(`/api/institutions/${id}/${destinationInstitutionId}`).share();
     return obs;
   }
 

@@ -17,12 +17,19 @@ export class InstitutionEditComponent implements OnInit {
   private editMode: string = "HTML";
   @ViewChild('instForm')
   private instForm: NgForm;
+  private institutions: any[] = [];
+  private deleteInstitution: boolean = false;
+  private destInstitutionId: string;
 
   constructor(private activeModal: NgbActiveModal, private institutionService: InstitutionService ) { }
 
   ngOnInit() {
   }
 
+  confirmDelete() {
+    this.institutionService.getInstitutions().subscribe(result => { this.institutions = result.filter(x=>x.id!=this.institution.id); this.deleteInstitution=true; });
+    
+  }
   save() {
     if (!this.instForm.valid) {
       return;
@@ -33,4 +40,13 @@ export class InstitutionEditComponent implements OnInit {
       this.parentComponent.refresh();
     });
   }
+
+  cancelDelete() {
+    this.deleteInstitution = false;
+  }
+
+  delete() {
+    this.institutionService.deleteInstitution(this.institution.id, this.destInstitutionId).subscribe(() => { this.activeModal.close(); this.parentComponent.refresh() });
+  }
+
 }

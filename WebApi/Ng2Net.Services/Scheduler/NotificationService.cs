@@ -34,6 +34,8 @@ namespace Ng2Net.Services.Scheduler
             string templateResult = Utils.ProcessReplacements(templateContent.Content, replacements);
             var masterReplacements = new Dictionary<string, string>();
             masterReplacements.Add("CONTENT", templateResult);
+            masterReplacements.Add("ROOT_URL", rootUrlContent.Content);
+
             templateResult = Utils.ProcessReplacements(masterTemplateContent.Content, masterReplacements);
             return new Notification() { Body = templateResult, Subject=Utils.ProcessReplacements(subjectContent.Content, replacements), From = fromContent.Content };
         }

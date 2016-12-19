@@ -21,7 +21,7 @@
         <div [class]="'navbar-collapse' + (menuOpen ? '' : ' collapse')">
             <ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
                 <li role="presentation" routerLinkActive="active"><a routerLink="/propuneri-legislative" (click)="menuOpen=false" class="menu-link">Propuneri</a></li>
-                <li role="presentation" routerLinkActive="active"><a class="menu-link" (click)="menuOpen=false" routerLink="/p/despre">Despre econsultare</a></li>
+                <li role="presentation" routerLinkActive="active"><a class="menu-link" (click)="menuOpen=false" routerLink="/p/despre">Despre e-consultare</a></li>
                 <li role="presentation" routerLinkActive="active"><a class="menu-link" (click)="menuOpen=false" routerLink="/p/contact">Contact</a></li>
                 <li role="presentation" *ngIf="!userService.currentUser.id"><a [class]="(!menuOpen ? 'header-signup' : 'menu-link')" (click)="menuOpen=false;openViewAccount()">Inscrie-te</a></li>
                 <li role="presentation" *ngIf="!userService.currentUser.id"><a [class]="(!menuOpen ? 'header-login' : 'menu-link')" (click)="menuOpen=false;openLogin()">Intra in cont</a></li>

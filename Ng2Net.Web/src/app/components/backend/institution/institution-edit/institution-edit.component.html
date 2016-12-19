@@ -34,7 +34,16 @@
       </div>
     </div>
   </div>
-  <div class="modal-footer">
-    <button class="btn btn-primary" type="submit"><app-html contentName="backend.content.save"></app-html></button>
+  <div class="modal-footer" *ngIf="!deleteInstitution">
+    <button class="btn btn-danger" type="button" (click)="confirmDelete()"><app-html contentName="backend.content.delete"></app-html></button>
+    <button class="btn btn-primary" type="submit">Salveaza</button>
+  </div>
+  <div class="modal-footer form-inline" *ngIf="deleteInstitution">
+    <select name="institution" class="form-control" (change)="destInstitutionId = $event.target.value;">
+        <option value="">- selecteaza institutie -</option>
+        <option *ngFor="let item of institutions" value="{{item.id}}">{{item.name}}</option>
+        </select>
+    <button class="btn btn-default" type="button" (click)="cancelDelete()"><i class="fa fa-times"></i></button>
+    <button class="btn btn-danger" type="button" (click)="delete()"><i class="fa fa-check"></i></button>
   </div>
 </form>

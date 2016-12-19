@@ -27,9 +27,10 @@ export class InstitutionListComponent implements OnInit {
     });
   }
 
-  openEdit(instituion: any) {
+  openEdit(institution: any) {
     let modal = this.modalService.open(InstitutionEditComponent, { size: 'lg', keyboard: false });
-    modal.componentInstance.instituion = instituion;
+    console.log(institution);
+    modal.componentInstance.institution = institution;
     modal.componentInstance.parentComponent = this;
   }
 
