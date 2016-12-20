@@ -1,0 +1,100 @@
+<section class="content-header">
+    <h1>
+        <app-html contentName="backend.proposal.page.title"></app-html>
+    </h1>
+</section>
+<section class="content">
+    <div class="box">
+        <div *ngIf="(http.loading | async) > 0" class="overlay">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+        <div class="box-header with-border">
+            <h3 class="box-title">
+                <app-html contentName="backend.content.page.contentlist.boxtitle"></app-html>
+            </h3>
+        </div>
+        <div class="box-body">
+            <form novalidate #myForm="ngForm" (submit)="save()">
+                <div class="callout callout-success" *ngIf="result">{{ result }}</div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label><app-html contentName="backend.label.title"></app-html>:</label>
+                            <textarea class="form-control" rows="5" [(ngModel)]="proposal.title" name="title"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label><app-html contentName="backend.label.link"></app-html>:</label>
+                            <input class="form-control" [(ngModel)]="proposal.link" name="link" />
+                        </div>
+
+                        <div class="form-group">
+                            <label><app-html contentName="backend.label.email"></app-html>:</label>
+                            <input class="form-control" [(ngModel)]="proposal.email" name="email" />
+                        </div>
+                        <div class="form-group">
+                            <label><app-html contentName="backend.label.institution"></app-html>:</label>
+                            <select name="institution" class="form-control proposal-search-dropdown" [ngModel]="proposal.institution?.id" (change)="proposal.institution=proposal.institution||{};proposal.institution.id=$event.target.value">
+                                <option>- selecteaza institutie -</option>
+                                <option *ngFor="let item of institutions" [value]="item.id">{{item.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><app-html contentName="backend.label.startdate"></app-html>:</label>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.startDate | toDateTime"
+                                        (ngModelChange)="proposal.startDate = getMoment($event)" name="startdate"></datetime>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><app-html contentName="backend.label.enddate"></app-html>:</label>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" [ngModel]="proposal.endDate | toDateTime"
+                                        (ngModelChange)="proposal.endDate = getMoment($event)" name="enddate"></datetime>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><app-html contentName="backend.label.limitdate"></app-html>:</label>
+                                    <datetime [timepicker]="false" [datepicker]="{autoclose:true,forceParse:true,format:'d.mm.yyyy'}" (ngModelChange)="proposal.limitDate = getMoment($event)"
+                                        [ngModel]="proposal.limitDate | toDateTime" name="limitdate"></datetime>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                            </div>
+
+                        </div>
+                        <div class="row" *ngIf="proposal.id">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <legend><a (click)="openEditDocument()" class="btn btn-sm pull-right btn-info"><i class="fa fa-plus"></i></a>Documente</legend>
+                                    <table class="table table-responsive">
+                                        <tr *ngFor="let doc of proposal.proposalDocuments">
+                                            <td><a (click)="openEditDocument(doc)" target="_blank"><img style="height:24px; padding-right:5px" [src]="'/assets/images/docicons/' + doc.type + '.png'" /> {{doc.name}}</a></td>
+                                            <td style="width:50px"><a href="{{doc.url}}" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-external-link"></i></a></td>
+                                            <td style="width:50px"><a (click)="deleteDocument(doc.id)" class="btn btn-sm btn-default"><i class="fa fa-trash"></i></a></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    <ckeditor name="ckEditor" [(ngModel)]="proposal.description" [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
+            </form>
+            </div>
+            <div class="box-footer text-right">
+                <button class="btn btn-default" (click)="back()">Inapoi</button>
+                <button class="btn btn-primary" (click)="save()">Salveaza propunere</button>
+            </div>
+        </div>
+</section>

@@ -1,0 +1,32 @@
+<header [class]="'header-fixed ' + (menuOpen ? 'scroll' : scrollPos)" scrollSpy>
+    <div class="container">
+        <div class="pull-right hidden-lg hidden-md">
+            <a class="navbar-brand bars" (click)="menuOpen=!menuOpen"><i *ngIf="!menuOpen" class="fa fa-bars"></i><i *ngIf="menuOpen" class="fa fa-times"></i></a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand navbar-logo top" routerLink="/"><img src="assets/images/sigla-econsultare.png"></a>
+            <a class="navbar-brand navbar-logo scroll" routerLink="/"><img src="assets/images/sigla-econsultare_on.png"></a>
+        </div>
+        <div *ngIf="userService.currentUser.id" [class]="'navbar-collapse user-menu' + (menuOpen ? '' : ' collapse')" style="">
+            <ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
+                <li role="presentation" routerLinkActive="active">
+                    <img src="/assets/public/images/separator.png" class="separator separator-top" *ngIf="!menuOpen">
+                    <img src="/assets/public/images/separator_scroll.png" class=" separator separator-scroll" *ngIf="!menuOpen">
+
+                    <a (click)="menuOpen=false;openViewAccount()" class="menu-link" style="text-transform: capitalize; padding: 19px 10px">
+                        <img src="/assets/public/images/blank_user.png" style="width:32px; margin-right:8px; border-radius: 50%;">{{userService.currentUser.firstName}} {{userService.currentUser.lastName}}</a>
+                </li>
+            </ul>
+        </div>
+        <div [class]="'navbar-collapse' + (menuOpen ? '' : ' collapse')">
+            <ul class="nav navbar-nav navbar-right navbar-fixed hidden-sm">
+                <li role="presentation" routerLinkActive="active"><a routerLink="/propuneri-legislative" (click)="menuOpen=false" class="menu-link">Propuneri</a></li>
+                <li role="presentation" routerLinkActive="active"><a class="menu-link" (click)="menuOpen=false" routerLink="/p/despre">Despre e-consultare</a></li>
+                <li role="presentation" routerLinkActive="active"><a class="menu-link" (click)="menuOpen=false" routerLink="/p/contact">Contact</a></li>
+                <li role="presentation" *ngIf="!userService.currentUser.id"><a [class]="(!menuOpen ? 'header-signup' : 'menu-link')" (click)="menuOpen=false;openViewAccount()">Inscrie-te</a></li>
+                <li role="presentation" *ngIf="!userService.currentUser.id"><a [class]="(!menuOpen ? 'header-login' : 'menu-link')" (click)="menuOpen=false;openLogin()">Intra in cont</a></li>
+                <li role="presentation" *ngIf="userService.currentUser.id"><a [class]="(!menuOpen ? 'header-login' : 'menu-link')" (click)="menuOpen=false;userService.logout()">Iesi din cont</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

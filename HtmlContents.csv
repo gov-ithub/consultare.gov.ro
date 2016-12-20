@@ -1,0 +1,29 @@
+Id,Name,Content,Url
+031e19c1-4735-42aa-ab1b-3d00d36eb7da,backend.login.forgotPassword,Ai uitat parola?,NULL
+16ad9821-17dc-4634-88b8-61da50fa73ed,backend.httpErrors.email_not_found,Adresa de e-mail nu a fost gasita in baza de date,NULL
+1fd17e79-2fd9-44fc-b658-76378ee4735f,backend.content.url,Url,NULL
+32d9b598-e22c-4ea0-9be3-b7dfb25e1064,backend.content.edit,Editeaza continut,NULL
+3cf05f33-3e19-4424-9079-39c330430749,backend.login.signin,Intra in cont,NULL
+3feeac33-5b38-43f8-b196-fb856c815df6,backend.content.page.contentlist.title,Administrare continut <small>administrare zone de continut</small>,NULL
+47d22f93-3b5f-4721-b4c8-30d846cbdc68,backend.menu.content,Continut,NULL
+4a588d58-a4d3-4507-8090-336f1527e59c,backend.httpError.password_reset_failed,Link invalid. Va rugam incercati din nou.,NULL
+4ae99bb3-1499-4997-87f7-23f83a96c1b3,backend.content.content,Continut,NULL
+5454c21d-a41d-48a3-b6b4-49c51dc3be7d,backend.content.page.contentlist.search,Cauta,NULL
+6556056b-6170-424a-8de6-a13bc4253a32,backend.menu.logout,Iesire din cont,NULL
+67c26788-a08e-45de-8a2b-65af6ccfbf08,backend.login.password,parola,NULL
+6c3c5b77-04d6-4c32-974f-1af065517c6b,backend.errors.login.password,Parola trebuie sa aibe minim 6 caractere,NULL
+6e540a40-7b44-40fb-98aa-f1b790aa69e3,backend.content.save,Salveaza continut,NULL
+8801d818-9889-4a62-8c84-cc1ca9a28d10,backend.menu.navigation,Meniu Principal,NULL
+89898486-c11d-40a1-8c9e-8c77b65f3a2e,backend.login.email,adresa e-mail,NULL
+8ab7ac03-ac7a-40d4-9846-2bc1043f139d,backend.login.prompt,Introduceti adresa de e-mail si parola pentru autentificare,NULL
+9ee801e9-a173-4664-b1ed-d4321d3a8573,backend.content.delete,Sterge,NULL
+c8ac5bac-2c16-41bd-8191-045a1931eb12,backend.errors.login.repeatPassword,Parolele nu sunt identice,NULL
+cff423ef-39cb-4dbf-97d3-ad23788dcbfc,backend.content.name,Nume,NULL
+d96156cf-7ac6-454c-bd81-5fa2bb1047f2,backend.login.repeatPassword,repeta parola,NULL
+e2aff455-0943-4c66-b1bf-33514e1ed4e3,backend.httpError.password_reset,Parola resetata cu succes,NULL
+e51405b1-8f57-4f09-8e93-07257af63dc3,backend.resetPassword.prompt,Reseteaza parola,NULL
+ee849ac1-ece6-453a-b200-063268bc2e70,backend.content.page.contentlist.boxtitle,Zone continut,NULL
+f2f84dd0-fe24-4e9f-bcc8-718105e0b455,backend.forgotPassword.prompt,Introduceti adresa de e-mail,NULL
+d8c0b152-79c4-487c-89c7-c9f9f018852c,backend.content.page.institutions.title,Administrare institutii,NULL
+6582066f-20c9-4ddf-a81a-8364d7dde686,backend.menu.institution,Institutii,NULL
+2a5ac8a6-3572-40ad-bdfb-36491a7edaa6,backend.content.type,Tip,NULL

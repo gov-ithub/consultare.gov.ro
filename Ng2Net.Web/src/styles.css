@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+.logo-loader {
+    margin-top: 300px;
+    text-align: center;
+    display: block;
+    margin: 300px auto 0px auto;
+    width: 300px;
+}
+.loader-container
+{ 
+    text-align: center;
+    color: #fff
+}
+a { cursor: pointer }
+
+.ng-invalid:not(form):not(datetime), datetime.ng-invalid .form-control  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.box-tools-btn{
+margin-left:5px; display:inline-block
+}
+
+form {
+    display:inline
+}
+
+.content-editor { position:fixed; z-index:100001; bottom:0px; left:0px; right:0px; background-color:#FFFFFF; }
+.html-edit:hover * { opacity: .8 }
+.html-edit:hover .btn-show-edit { display:inherit }
+.html-edit .btn-show-edit { display:none; background-color: #c87f0a; border-radius: 2px; padding:3px; font-size:8pt; z-index: 10000; white-space: nowrap; color: #FFFFFF !important; position:absolute; left:5px; top:-12px; opacity:1 !important }
+.html-edit { cursor: pointer }
+.html-edit-control { height:300px !important; font-family: 'Courier New'; font-size: 12px; width:100% !important; display:block !important }

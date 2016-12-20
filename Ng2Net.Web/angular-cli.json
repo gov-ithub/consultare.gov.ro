@@ -1,0 +1,71 @@
+{
+  "project": {
+    "version": "1.0.0-beta.18",
+    "name": "ng2Net.web"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+      "assets",
+      "favicon.ico",
+	  "web.config"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
+      "mobile": false,
+      "styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min.css",
+        "../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min.css",
+        "../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css"
+      ],
+      "scripts": [
+        "../node_modules/moment/min/moment.min.js",
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min.js",
+        "../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"
+      ],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "addons": [],
+  "packages": [],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu">
+      <li class="header"><app-html contentName="backend.menu.navigation"></app-html></li>
+          <li routerLinkActive="active">
+            <a routerLink="proposal-list">
+              <i class="fa fa-list"></i>
+              <span><app-html contentName="backend.menu.proposal"></app-html></span>
+            </a> 
+          </li>
+          <li routerLinkActive="active">
+            <a routerLink="institution-list">
+              <i class="fa fa-list"></i>
+              <span><app-html contentName="backend.menu.institution"></app-html></span>
+            </a> 
+          </li>
+          <li routerLinkActive="active">
+            <a routerLink="content-list">
+              <i class="fa fa-list"></i>
+              <span><app-html contentName="backend.menu.content"></app-html></span>
+            </a>
+          </li>
+          <li>
+            <a (click)="logout()">
+              <i class="fa fa-sign-out"></i>
+              <span><app-html contentName="backend.menu.logout"></app-html></span>
+            </a>
+          </li>
+      <!-- Optionally, you can add icons to the links -->
+
+    </ul><!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>

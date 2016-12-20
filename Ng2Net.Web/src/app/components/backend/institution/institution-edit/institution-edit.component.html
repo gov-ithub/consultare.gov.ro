@@ -1,0 +1,49 @@
+<div class="modal-header">
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  <h4 class="modal-title">
+    <app-html contentName="backend.content.edit"></app-html>
+  </h4>
+</div>
+<form novalidate #instForm="ngForm" (submit)="save()">
+  <div class="modal-body">
+    <div class="callout callout-success" *ngIf="result">{{ result }}</div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="form-group">
+          <label><app-html contentName="backend.content.name"></app-html>:</label>
+          <input class="form-control" required [(ngModel)]="institution.name" name="name" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="form-group">
+          <label><app-html contentName="backend.content.type"></app-html>:</label>
+          <input class="form-control" [(ngModel)]="institution.type" name="type" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="form-group">
+          <label><app-html contentName="backend.content.url"></app-html>:</label>
+          <input class="form-control" [(ngModel)]="institution.url" name="url" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer" *ngIf="!deleteInstitution">
+    <button class="btn btn-danger" type="button" (click)="confirmDelete()"><app-html contentName="backend.content.delete"></app-html></button>
+    <button class="btn btn-primary" type="submit">Salveaza</button>
+  </div>
+  <div class="modal-footer form-inline" *ngIf="deleteInstitution">
+    <select name="institution" class="form-control" (change)="destInstitutionId = $event.target.value;">
+        <option value="">- selecteaza institutie -</option>
+        <option *ngFor="let item of institutions" value="{{item.id}}">{{item.name}}</option>
+        </select>
+    <button class="btn btn-default" type="button" (click)="cancelDelete()"><i class="fa fa-times"></i></button>
+    <button class="btn btn-danger" type="button" (click)="delete()"><i class="fa fa-check"></i></button>
+  </div>
+</form>

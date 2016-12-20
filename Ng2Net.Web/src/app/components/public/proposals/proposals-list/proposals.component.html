@@ -1,0 +1,100 @@
+<section class="proposals">
+  <div *ngIf="(http.loading | async) > 0" class="overlay">
+    <i class="fa fa-refresh fa-spin"></i>
+  </div>
+
+  <div class="container main-content">
+    <div class="proposals-title">Propuneri legislative <span *ngIf="!showSearch">noi</span></div>
+
+    <form (submit)="refreshData(0)" #myForm="ngForm">
+      <div class="search-form" *ngIf="showSearch">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group has-feedback">
+              <input type="text" name="filter" placeholder="cauta propunere" [(ngModel)]="filterQuery" class="form-control proposal-search-input"
+              />
+              <button class="btn btn-default form-control-feedback proposal-search-button" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <select name="institution" class="form-control proposal-search-dropdown" (change)="institutionId = $event.target.value; refreshData(0);">
+        <option value="">- selecteaza institutie -</option>
+        <option *ngFor="let item of institutions" value="{{item.id}}">{{item.name}}</option>
+        </select>
+            </div>
+          </div>
+          <div class="col-sm-8 text-right">
+            <app-pager *ngIf="showSearch" [instance]="pagerInstance" (onPageChange)="refreshData($event)"></app-pager>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <md-checkbox name="curentOnly" [ngModel]="!futureOnly" (change)="futureOnly=!$event.checked; refreshData(0)">
+              <app-html contentName="public.proposals.expired"></app-html>
+            </md-checkbox>
+          </div>
+          <div class="col-sm-6 text-right form-inline">
+            <app-html contentName="public.proposals.sortby"></app-html>
+
+            <select name="sortby" class="form-control proposal-search-dropdown" (change)="sortField = $event.target.value; refreshData(0);">
+            <option value="limitDate">Dată limita primire sugestii</option>
+            <option value="startDate">Data publicarii anuntului</option>
+           </select>
+            <a *ngIf="sortDirection==='asc'" (click)="sortDirection='desc';refreshData(0)"><b><i class="fa fa-lg fa-sort-amount-asc"></i></b></a>
+            <a *ngIf="sortDirection==='desc'" (click)="sortDirection='asc';refreshData(0)"><b><i class="fa fa-lg fa-sort-amount-desc"></i></b></a>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="proposal" *ngFor="let item of items">
+      <div class="proposal-title">
+        <a [href]="item.link" target="_blank">{{item.title}}</a>
+      </div>
+
+      <div class="proposal-left">
+        <div class="proposal-institution">
+          {{item.institution.name}}
+        </div>
+
+        <div class="proposal-date" *ngIf="item.startDate">
+          <app-html contentName="public.proposal.startDate"></app-html> {{item.startDate | amDateFormat:'DD.MM.YYYY'}}
+        </div>
+        <div class="proposal-date" *ngIf="item.endDate">
+          <app-html contentName="public.proposal.endDate"></app-html> {{item.endDate | amDateFormat:'DD.MM.YYYY'}}
+        </div>
+        <div class="proposal-date" style="font-weight:bold" *ngIf="item.limitDate">
+          <app-html contentName="public.proposal.limitDate"></app-html> {{item.limitDate | amDateFormat:'DD.MM.YYYY'}}
+          <span *ngIf="(item.limitDate | toDateTime)<=getDate()" class="text-danger"><app-html contentName="public.proposals.dateExpired"></app-html></span>
+          <span *ngIf="(item.limitDate | toDateTime)>getDate()">({{item.limitDate | amTimeAgo}})</span>
+        </div>
+
+      </div>
+      <div class="proposal-links">
+        <div *ngFor="let doc of item.proposalDocuments" class="proposal-link">
+          <a href="{{doc.url}}" target="_blank"><img style="height:24px; padding-right:5px" [src]="'/assets/images/docicons/' + doc.type + '.png'" />{{doc.name}}</a>
+        </div>
+
+      </div>
+      <div class="proposal-email">
+        <a *ngIf="item.email && (item.limitDate | toDateTime)>getDate()" class="btn btn-primary" href="mailto:{{item.email}}?subject={{item.title}}"><i class="fa fa-lg fa-edit"></i> Propune modificari</a>
+      </div>
+
+      <hr style="clear:both; " />
+    </div>
+    <div class="text-center" *ngIf="!showSearch">
+      <a class="btn btn-primary" style="padding:15px" routerLink="/propuneri-legislative">
+        <app-html contentName="public.proposals.viewall"></app-html>
+      </a>
+    </div>
+
+    <div class="text-right">
+      <app-pager *ngIf="showSearch" [instance]="pagerInstance" (onPageChange)="refreshData($event)"></app-pager>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,17 @@
+header {
+ animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+        transition: all .3s;
+}
+
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD80EEF7-E6CF-4F77-81A1-01A9DF7A76AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ng2Net.Data</RootNamespace>
+    <AssemblyName>Ng2Net.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseContext.cs" />
+    <Compile Include="EfRepository.cs" />
+    <Compile Include="Migrations\201611231221591_Initial.cs" />
+    <Compile Include="Migrations\201611231221591_Initial.Designer.cs">
+      <DependentUpon>201611231221591_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611261118515_ApplicationUserSubscriptions.cs" />
+    <Compile Include="Migrations\201611261118515_ApplicationUserSubscriptions.Designer.cs">
+      <DependentUpon>201611261118515_ApplicationUserSubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611291127446_ProposalsCorrection.cs" />
+    <Compile Include="Migrations\201611291127446_ProposalsCorrection.Designer.cs">
+      <DependentUpon>201611291127446_ProposalsCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612011542403_ProposalTitle.cs" />
+    <Compile Include="Migrations\201612011542403_ProposalTitle.Designer.cs">
+      <DependentUpon>201612011542403_ProposalTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612011713398_UserSubscribe.cs" />
+    <Compile Include="Migrations\201612011713398_UserSubscribe.Designer.cs">
+      <DependentUpon>201612011713398_UserSubscribe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612021523333_AddNewStuff.cs" />
+    <Compile Include="Migrations\201612021523333_AddNewStuff.Designer.cs">
+      <DependentUpon>201612021523333_AddNewStuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612042014537_Subscrioptions.cs" />
+    <Compile Include="Migrations\201612042014537_Subscrioptions.Designer.cs">
+      <DependentUpon>201612042014537_Subscrioptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612050000086_ProposalDocumentTypes.cs" />
+    <Compile Include="Migrations\201612050000086_ProposalDocumentTypes.Designer.cs">
+      <DependentUpon>201612050000086_ProposalDocumentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612050002179_ProposalDocumentTypes1.cs" />
+    <Compile Include="Migrations\201612050002179_ProposalDocumentTypes1.Designer.cs">
+      <DependentUpon>201612050002179_ProposalDocumentTypes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612121123067_Email.cs" />
+    <Compile Include="Migrations\201612121123067_Email.Designer.cs">
+      <DependentUpon>201612121123067_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612121754494_removeinitiatinginst.cs" />
+    <Compile Include="Migrations\201612121754494_removeinitiatinginst.Designer.cs">
+      <DependentUpon>201612121754494_removeinitiatinginst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612130840153_TaskRunnerLogModifications.cs" />
+    <Compile Include="Migrations\201612130840153_TaskRunnerLogModifications.Designer.cs">
+      <DependentUpon>201612130840153_TaskRunnerLogModifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612131121593_SubsciptionType.cs" />
+    <Compile Include="Migrations\201612131121593_SubsciptionType.Designer.cs">
+      <DependentUpon>201612131121593_SubsciptionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612141237326_LinkNotRequired.cs" />
+    <Compile Include="Migrations\201612141237326_LinkNotRequired.Designer.cs">
+      <DependentUpon>201612141237326_LinkNotRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612142211533_ProposalDocuments.cs" />
+    <Compile Include="Migrations\201612142211533_ProposalDocuments.Designer.cs">
+      <DependentUpon>201612142211533_ProposalDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612150749277_ProposalDocuments2.cs" />
+    <Compile Include="Migrations\201612150749277_ProposalDocuments2.Designer.cs">
+      <DependentUpon>201612150749277_ProposalDocuments2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ng2Net.Infrastructure\Ng2Net.Infrastructure.csproj">
+      <Project>{a9a352cc-69f5-4289-9dc4-584d94869338}</Project>
+      <Name>Ng2Net.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ng2Net.Model\Ng2Net.Model.csproj">
+      <Project>{77FD617F-D8EF-4EC5-9663-203968F99F00}</Project>
+      <Name>Ng2Net.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IdentityHelpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611231221591_Initial.resx">
+      <DependentUpon>201611231221591_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611261118515_ApplicationUserSubscriptions.resx">
+      <DependentUpon>201611261118515_ApplicationUserSubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611291127446_ProposalsCorrection.resx">
+      <DependentUpon>201611291127446_ProposalsCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011542403_ProposalTitle.resx">
+      <DependentUpon>201612011542403_ProposalTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011713398_UserSubscribe.resx">
+      <DependentUpon>201612011713398_UserSubscribe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612021523333_AddNewStuff.resx">
+      <DependentUpon>201612021523333_AddNewStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612042014537_Subscrioptions.resx">
+      <DependentUpon>201612042014537_Subscrioptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612050000086_ProposalDocumentTypes.resx">
+      <DependentUpon>201612050000086_ProposalDocumentTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612050002179_ProposalDocumentTypes1.resx">
+      <DependentUpon>201612050002179_ProposalDocumentTypes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612121123067_Email.resx">
+      <DependentUpon>201612121123067_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612121754494_removeinitiatinginst.resx">
+      <DependentUpon>201612121754494_removeinitiatinginst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612130840153_TaskRunnerLogModifications.resx">
+      <DependentUpon>201612130840153_TaskRunnerLogModifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612131121593_SubsciptionType.resx">
+      <DependentUpon>201612131121593_SubsciptionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612141237326_LinkNotRequired.resx">
+      <DependentUpon>201612141237326_LinkNotRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612142211533_ProposalDocuments.resx">
+      <DependentUpon>201612142211533_ProposalDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612150749277_ProposalDocuments2.resx">
+      <DependentUpon>201612150749277_ProposalDocuments2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

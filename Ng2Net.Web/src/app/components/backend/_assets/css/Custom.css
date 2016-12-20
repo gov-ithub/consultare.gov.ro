@@ -1,0 +1,11 @@
+BODY{ 
+    background: #d2d6de;
+}
+
+.login-logo img { 
+    max-width:200px
+}
+
+.logo-sm {
+    max-height:35px
+}

@@ -1,0 +1,67 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    <app-html contentName="backend.content.page.contentlist.title"></app-html>
+
+
+  </h1>
+</section>
+<section class="content">
+  <div class="box">
+    <div *ngIf="(http.loading | async) > 0" class="overlay">
+      <i class="fa fa-refresh fa-spin"></i>
+    </div>
+    <div class="box-header with-border">
+      <h3 class="box-title">
+        <app-html contentName="backend.content.page.contentlist.boxtitle"></app-html>
+      </h3>
+      <div class="box-tools">
+        <form #myform="ngForm" (submit)="refresh()">
+          <div style="display:inline-block">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <input type="text" [(ngModel)]="filterQuery" name="table_search" class="form-control pull-right" placeholder="{{contentService.htmlContent['backend.content.page.contentlist.search']}}">
+
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              </div>
+
+
+            </div>
+          </div>
+        </form>
+        <button type="button" (click)="openEdit({})" class="btn btn-sm btn-info pull-right box-tools-btn"><i class="fa fa-plus"></i></button>
+
+      </div>
+    </div>
+
+
+    <!-- /.box-header -->
+    <div class="box-body">
+
+      <table class="table table-hover">
+        <tr>
+          <th>
+            <app-html contentName="backend.content.name"></app-html>
+          </th>
+          <th>
+            <app-html contentName="backend.content.content"></app-html>
+          </th>
+          <th>
+            <app-html contentName="backend.content.url"></app-html>
+          </th>
+          <th style="width:50px;" class="text-center">
+            <app-html contentName="backend.content.delete"></app-html>
+          </th>
+        </tr>
+        <tr *ngFor="let item of htmlContents">
+          <td><a (click)="openEdit(item)">{{item.name}}</a></td>
+          <td>{{item.content}}</td>
+          <td>{{item.url}}</td>
+          <td><button class="btn btn-sm btn-default" (click)="delete(item)" type="button"><i class="fa fa-trash"></i></button></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+</section>

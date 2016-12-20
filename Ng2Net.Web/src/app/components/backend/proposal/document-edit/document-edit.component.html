@@ -1,0 +1,29 @@
+<div class="modal-header">
+ <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+     <h4 class="modal-title">Editeaza document</h4>
+</div>
+<form novalidate #myForm="ngForm" (submit)="save()">
+<div class="modal-body">
+  <div class="form-group">
+    <label>Nume:</label>
+    <input class="form-control" #name="ngModel" name="name" required [(ngModel)]="document.name" />
+            <div *ngIf="!name.valid && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> Introduceti numele
+        </div>
+
+  </div>
+  <div class="form-group">
+    <label>Url:</label>
+    <input class="form-control" #url="ngModel" name="url" required [(ngModel)]="document.url" />
+                <div *ngIf="!url.valid && showError" class="text-danger">
+          <i class="fa fa-info-circle"></i> Introduceti URL-ul
+        </div>
+
+  </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="submit"><app-html contentName="backend.content.save"></app-html></button>
+</div>
+</form>

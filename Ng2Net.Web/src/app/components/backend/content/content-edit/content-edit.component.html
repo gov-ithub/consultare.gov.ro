@@ -1,0 +1,33 @@
+<div class="modal-header">
+ <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+     <h4 class="modal-title"><app-html contentName="backend.content.edit"></app-html></h4>
+</div>
+<form novalidate #myForm="ngForm" (submit)="save()">
+<div class="modal-body">
+ <div class="callout callout-success" *ngIf="result">{{ result }}</div>
+<div class="row">
+  <div class="col-lg-8">
+   <div class="form-group">
+    <label><app-html contentName="backend.content.name"></app-html>:</label>
+    <input class="form-control" required [(ngModel)]="htmlContent.name" name="name" />
+   </div>
+  </div>
+  <div class="col-lg-4">
+  <div class="form-group">
+    <label><app-html contentName="backend.content.url"></app-html>:</label>
+    <input class="form-control" [(ngModel)]="htmlContent.url" name="url" />
+   </div>
+</div>
+  </div>
+<ckeditor *ngIf="editMode === 'RICH'" name="ckEditor"
+    [(ngModel)]="htmlContent.content"
+    [config]="{skin: 'flat,/assets/ckeditor/flat/', customConfig: '/assets/ckeditor/config.js'}"></ckeditor>
+    <textarea class="form-control" style="height:500px" *ngIf="editMode === 'HTML'" name="contentEdit"
+    [(ngModel)]="htmlContent.content"></textarea>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="submit"><app-html contentName="backend.content.save"></app-html></button>
+</div>
+</form>
