@@ -24,13 +24,14 @@ export class PublicSignupComponent implements OnInit {
   @Input()
   public edit: boolean;
   private institutions: any[];
-  constructor( private activeModal: NgbActiveModal, 
-  private userAccountService: UserAccountService,
-  private contentService: ContentService,
-  private institutionService: InstitutionService,
-  public changeDetectorRef: ChangeDetectorRef,
-  public route: ActivatedRoute,
-  private modalService: NgbModal,
+  constructor( 
+    private activeModal: NgbActiveModal, 
+    private userAccountService: UserAccountService,
+    private contentService: ContentService,
+    private institutionService: InstitutionService,
+    public changeDetectorRef: ChangeDetectorRef,
+    public route: ActivatedRoute,
+    private modalService: NgbModal,
  ) { }
 
   ngOnInit() {
