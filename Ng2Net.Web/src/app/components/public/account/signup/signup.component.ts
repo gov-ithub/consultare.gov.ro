@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild, ChangeDetectorRef, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserAccountService, ContentService, InstitutionService } from '../../../../services';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
+import { HtmlPopupComponent } from '../../../shared';
 
 
 @Component({
@@ -29,7 +30,6 @@ export class PublicSignupComponent implements OnInit {
     private userAccountService: UserAccountService,
     private contentService: ContentService,
     private institutionService: InstitutionService,
-    public changeDetectorRef: ChangeDetectorRef,
     public route: ActivatedRoute,
     private modalService: NgbModal,
  ) { }
@@ -46,7 +46,6 @@ export class PublicSignupComponent implements OnInit {
             sub.selected = true;
           }
         });
-      this.changeDetectorRef.detectChanges();
     });
   }
 
@@ -81,4 +80,9 @@ export class PublicSignupComponent implements OnInit {
       });
   }
 
+  openTerms() {
+    let component = this.modalService.open(HtmlPopupComponent);
+    component.componentInstance.contentName = 'public.termsandconditions.content';
+    component.componentInstance.titleName = 'public.termsandconditions.title';
+  }
 }

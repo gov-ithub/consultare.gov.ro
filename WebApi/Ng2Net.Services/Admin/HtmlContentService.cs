@@ -27,6 +27,11 @@ namespace Ng2Net.Services.Admin
             return _repository.GetById(id);
         }
 
+        public HtmlContent GetByName(string name)
+        {
+            return _repository.Get(c => c.Name == name);
+        }
+
         public bool QuickSaveHtmlContent(string name, string content)
         {
             HtmlContent contentPart = _repository.Get(c => c.Name == name);

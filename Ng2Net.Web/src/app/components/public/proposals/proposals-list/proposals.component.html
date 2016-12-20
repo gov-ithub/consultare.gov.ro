@@ -4,7 +4,7 @@
   </div>
 
   <div class="container main-content">
-    <div class="proposals-title">Propuneri legislative <span *ngIf="!showSearch">noi</span></div>
+    <div class="proposals-title"><app-html contentName="public.proposals.pageTitle"></app-html></div>
 
     <form (submit)="refreshData(0)" #myForm="ngForm">
       <div class="search-form" *ngIf="showSearch">

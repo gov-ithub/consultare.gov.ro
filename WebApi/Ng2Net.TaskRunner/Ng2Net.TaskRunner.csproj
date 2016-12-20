@@ -196,6 +196,10 @@
       <Project>{77FD617F-D8EF-4EC5-9663-203968F99F00}</Project>
       <Name>Ng2Net.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ng2Net.Services\Ng2Net.Services.csproj">
+      <Project>{66B7E9FD-57D9-45AB-A659-875E0352EE53}</Project>
+      <Name>Ng2Net.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

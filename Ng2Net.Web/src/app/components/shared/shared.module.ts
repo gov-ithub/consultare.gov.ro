@@ -22,7 +22,9 @@ import { MaterialModule } from '@angular/material';
 import { ReCaptchaModule } from 'angular2-recaptcha';
 import { MomentModule } from 'angular2-moment';
 import { HtmlPageComponent } from './html-page/html-page.component';
+import { HtmlPopupComponent } from './html-popup/html-popup.component';
 import { PagerComponent } from './pager/pager.component';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { PagerComponent } from './pager/pager.component';
     HtmlPageComponent,
     PagerComponent,
     ToDateTimePipe,
+    HtmlPopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,9 @@ import { PagerComponent } from './pager/pager.component';
      ProposalsService,
      PagerService,
   ],
+  entryComponents: [
+    HtmlPopupComponent,
+  ],
   exports: [ 
     BrowserModule,
     FormsModule,
@@ -74,4 +80,5 @@ import { PagerComponent } from './pager/pager.component';
     ToDateTimePipe,
 ],
 })
+
 export class SharedModule { }

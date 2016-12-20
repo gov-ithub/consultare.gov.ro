@@ -11,5 +11,6 @@ namespace Ng2Net.Infrastructure.Interfaces
         void DeleteHtmlContent(string id);
         HtmlContent GetByUrl(string url);
         bool QuickSaveHtmlContent(string name, string content);
+        HtmlContent GetByName(string name);
     }
 }
