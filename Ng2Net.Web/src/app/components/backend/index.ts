@@ -5,6 +5,8 @@ export * from './proposal/proposal-edit/proposal-edit.component';
 export * from './proposal/document-edit/document-edit.component';
 export * from './institution/institution-list/institution-list.component';
 export * from './institution/institution-edit/institution-edit.component';
+export * from './uadmin/user-list/user-list.component';
+export * from './uadmin/user-edit/user-edit.component';
 export * from './login/login.component';
 export * from './app-header/app-header.component';
 export * from './menu-aside/menu-aside.component';

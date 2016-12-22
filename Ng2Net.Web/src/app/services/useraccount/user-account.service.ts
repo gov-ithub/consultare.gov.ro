@@ -3,6 +3,7 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { HttpClient } from '../httpClient/httpClient';
 import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
+import { URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/catch';
 
@@ -50,6 +51,30 @@ export class UserAccountService {
       });
       return obs;
     }
+  }
+
+  listUsers(filter: string) {
+    let params = new URLSearchParams();
+    if (filter && filter !== '')
+      params.set('filterQuery', filter);
+
+    return this.http.get('/api/account/users', { search: params }).map((result) => result.json()).share();
+  }
+
+  listUserRoles(id: string){
+    return this.http.get(`/api/account/user-roles/${id}`).map((result) => result.json()).share();
+  }
+
+  listIdentityRoles(){
+    return this.http.get(`/api/account/identity-roles`).map((result) => result.json()).share();
+  }
+
+  grantUserRole(userid:string,roleid:string){
+    return this.http.post(`/api/account/grant-user-role/${userid}/${roleid}`,"").map((result) => result).share();
+  }
+
+  removeUserRole(userid:string,roleid:string){
+    return this.http.post(`/api/account/remove-user-role/${userid}/${roleid}`,"").map((result) => result).share();
   }
 
   logout() {

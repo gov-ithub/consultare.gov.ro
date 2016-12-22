@@ -8,6 +8,11 @@ namespace Ng2Net.Infrastructure.Interfaces
     {
         Dictionary<string, string> GetClaimsDictionaryByUser(ApplicationUser user);
         ApplicationUser GetById(string id);
+        IEnumerable<ApplicationUser> GetUsers(string filterQuery);
+        IEnumerable<ApplicationRole> GetUserRoles(string userId);
+        IEnumerable<ApplicationRole> GetIdentityRoles();
+        void GrantUserRole(string userid, string roleid);
+        void RemoveUserRole(string userid, string roleid);
         int Save();
         IApplicationUserService UserService { get; }
     }

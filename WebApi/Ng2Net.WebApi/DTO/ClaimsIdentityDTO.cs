@@ -22,6 +22,7 @@ namespace Ng2Net.WebApi.DTO
         public string Password { get; set; }
 
         public string SubscriptionType { get; set; }
+        public bool EmailConfirmed { get; set; }
 
         public Dictionary<string, string> Claims { get; set; }
 

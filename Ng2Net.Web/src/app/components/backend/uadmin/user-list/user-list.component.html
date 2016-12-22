@@ -1,0 +1,64 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    <div class="pull-right">
+      <form #myform="ngForm" (submit)="refresh(0)">
+        <div style="display:inline-block">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" [(ngModel)]="filterQuery" name="table_search" class="form-control pull-right" placeholder="Search">
+
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+
+
+          </div>
+        </div>
+      </form>
+      <button type="button" (click)="openEdit({})" class="btn btn-sm btn-info pull-right box-tools-btn"><i class="fa fa-plus"></i></button>
+    </div>
+
+    <app-html contentName="backend.content.page.users.title"></app-html>
+
+
+  </h1>
+</section>
+<section class="content">
+
+  <div class="box">
+    <div *ngIf="(http.loading | async) > 0" class="overlay">
+      <i class="fa fa-refresh fa-spin"></i>
+    </div>
+
+    <!-- /.box-header -->
+    <div class="box-body">
+      <table class="table table-hover">
+        <tr>
+          <th style="width:150px">
+            <app-html contentName="Nume utilizator"></app-html>
+          </th>
+
+          <th style="width:300px">
+            <app-html contentName="Nume"></app-html>
+          </th>
+          <th>
+            <app-html contentName="Prenume"></app-html>
+          </th>
+          <th style="width:50px;" class="text-center">
+            <app-html contentName="backend.content.delete"></app-html>
+          </th>
+        </tr>
+        <tr *ngFor="let item of users">
+          <td><a (click)="openEdit(item)">{{item.userName}}</a></td>
+          <td>{{item.lastName}}</td>
+          <td>{{item.firstName}}</td>
+          <td><button class="btn btn-sm btn-default" (click)="delete(item)" type="button"><i class="fa fa-trash"></i></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="box-footer">
+    </div>
+
+  </div>
+
+</section>

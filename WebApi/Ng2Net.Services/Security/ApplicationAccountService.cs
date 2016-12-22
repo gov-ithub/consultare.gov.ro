@@ -41,6 +41,60 @@ namespace Ng2Net.Services.Security
             return _context.Users.FirstOrDefault(u=>u.Id == id);
         }
 
+        public IEnumerable<ApplicationRole> GetUserRoles(string userId)
+        {
+            var user = _context.Users.Include("Roles").FirstOrDefault(u => u.Id == userId);
+            var roles = from role in _context.Roles.ToList()
+                        join userRole in user.Roles on role.Id equals userRole.RoleId
+                        select new ApplicationRole { Id = role.Id, Name = role.Name };
+
+            return roles;
+        }
+
+        public IEnumerable<ApplicationRole> GetIdentityRoles()
+        {
+            return _context.Roles.ToList().Select(role=> new ApplicationRole { Id = role.Id, Name = role.Name });
+        }
+
+        public IEnumerable<ApplicationUser> GetUsers(string filterQuery)
+        {
+            if(string.IsNullOrEmpty(filterQuery))
+                return _context.Users;
+
+            return _context.Users.Where(u => u.UserName.Contains(filterQuery));
+        }
+
+        public void GrantUserRole(string userid, string roleid)
+        {
+            var user = _context.Users.Include("Roles").First(u => u.Id == userid);
+            var role = _context.Roles.First(r => r.Id == roleid);
+
+            if (user == null || role == null)
+                return;
+
+            if (user.Roles.Any(r => r.RoleId == role.Id))
+                return;
+
+            user.Roles.Add(new IdentityUserRole { UserId = user.Id, RoleId = role.Id });
+            _context.SaveChanges();
+
+        }
+
+        public void RemoveUserRole(string userid, string roleid)
+        {
+            var user = _context.Users.Include("Roles").First(u => u.Id == userid);
+
+            if (user == null)
+                return;
+
+            var userRole = user.Roles.First(r => r.RoleId == roleid);
+            if (userRole != null)
+            {
+                user.Roles.Remove(userRole);
+                _context.SaveChanges();
+            }
+        }
+
         public int Save()
         {
             var changedEntries = _context.ChangeTracker.Entries().Where(e => new EntityState[] { /*EntityState.Added*,*/ EntityState.Modified/*, EntityState.Deleted*/ }.Contains(e.State)).Where(e => typeof(ApplicationUser).IsAssignableFrom(e.Entity.GetType())).ToList();

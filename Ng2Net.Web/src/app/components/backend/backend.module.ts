@@ -19,6 +19,9 @@ import { BackendLoginComponent,
   InstitutionListComponent } from './';
 import { BackendRoutes } from './backend.routes';
 import { SharedModule } from '../shared/shared.module';
+import { UserListComponent } from './uadmin/user-list/user-list.component';
+import { UserEditComponent } from './uadmin/user-edit/user-edit.component';
+import { RoleEditComponent } from './uadmin/role-edit/role-edit.component';
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import { SharedModule } from '../shared/shared.module';
     InstitutionEditComponent,
     InstitutionListComponent,
     DocumentEditComponent,
+    UserListComponent,
+    UserEditComponent,
+    RoleEditComponent,
   ],
   entryComponents: [
     ContentEditComponent,

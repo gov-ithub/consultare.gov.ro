@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { BackendLoginComponent, ContentListComponent, ForgotPasswordComponent, ResetPasswordComponent, BackendHomeComponent, BackendMasterComponent, ProposalListComponent, ProposalEditComponent, InstitutionListComponent, InstitutionEditComponent } from './';
+import { BackendLoginComponent, ContentListComponent, ForgotPasswordComponent, ResetPasswordComponent, BackendHomeComponent, BackendMasterComponent, ProposalListComponent, ProposalEditComponent, InstitutionListComponent, InstitutionEditComponent
+      , UserListComponent, UserEditComponent } from './';
 import { ClaimsGuardService } from '../../services';
 
 export const BackendRoutes: Routes = [
@@ -34,6 +35,16 @@ export const BackendRoutes: Routes = [
       }
       , {
             path: 'institution-edit', component: InstitutionEditComponent, data: { claims: ['editProposals'] },
+            canActivate: [ClaimsGuardService]
+      }, {
+            path: 'user-list', component: UserListComponent, data: { claims: ['adminLogin'] },
+            canActivate: [ClaimsGuardService]
+      }, {
+            path: 'user-edit/:id', component: UserEditComponent, data: { claims: ['adminLogin'] },
+            canActivate: [ClaimsGuardService]
+      }
+      , {
+            path: 'user-edit', component: UserEditComponent, data: { claims: ['adminLogin'] },
             canActivate: [ClaimsGuardService]
       }
 ] }];
