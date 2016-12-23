@@ -28,10 +28,15 @@ namespace Ng2Net.TaskRunner
         }
         protected override void OnStart(string[] args)
         {
-//#if DEBUG
-//            while (!Debugger.IsAttached)
-//                System.Threading.Thread.Sleep(5000);
-//#endif
+            //#if DEBUG
+            //            while (!Debugger.IsAttached)
+            //                System.Threading.Thread.Sleep(5000);
+            //#endif         
+            StartService();
+        }
+
+        public void StartService()
+        {
             try
             {
                 foreach (ServiceTask task in ServiceTask.GetTasks())
@@ -99,12 +104,17 @@ namespace Ng2Net.TaskRunner
             }
         }
 
-        protected override void OnStop()
+        public void StopService()
         {
             foreach (Thread t in _threads)
             {
                 t.Abort();
             }
+        }
+
+        protected override void OnStop()
+        {
+            StopService();
         }
     }
 }
