@@ -95,7 +95,7 @@
         </md-radio-group>
       </div>
     </div>
-    <md-checkbox required [(checked)]="acceptTos" (change)="acceptTos=$event.checked" *ngIf="!currentUser.id">Sunt de acord cu termenii si conditiile de utilizare</md-checkbox>
+    <md-checkbox required [(checked)]="acceptTos" (change)="acceptTos=$event.checked" *ngIf="!currentUser.id">Sunt de acord cu <a (click)="openTerms()">termenii si conditiile de utilizare</a></md-checkbox>
     <div *ngIf="!acceptTos && showError" class="text-danger">
       <i class="fa fa-info-circle"></i> {{ 'backend.errors.userProfile.acceptTos' | htmlContent:contentService.htmlContent
       }}

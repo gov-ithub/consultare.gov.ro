@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { UserAccountService, HttpClient } from './services';
 import { Router, NavigationEnd } from '@angular/router';
 import * as moment from 'moment';
 import 'moment/locale/ro';
+declare var ga:any;
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import 'moment/locale/ro';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+
   constructor(private userService: UserAccountService, private http: HttpClient, private router: Router) {
     moment.locale("ro");
   };
@@ -21,6 +23,9 @@ export class AppComponent implements OnInit {
           return;
       }
       document.body.scrollTop = 0;
+      if (!evt.url.toLowerCase().startsWith('/admin')) {
+        ga('send', 'pageview', { page: evt.url });
+      }
     });
   }
 }

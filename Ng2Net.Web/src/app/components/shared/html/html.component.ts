@@ -1,4 +1,4 @@
-import { Component, Input, ApplicationRef } from '@angular/core';
+import { Component, Input, ApplicationRef, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContentService, UserAccountService } from '../../../services';
 import { HtmlContentPipe } from '../../../directives';
@@ -29,18 +29,22 @@ export class HtmlComponent {
   private sanitizer: DomSanitizer,
   private modalService: NgbModal,
   private appRef: ApplicationRef,
-  private userService: UserAccountService ) { 
+  private userService: UserAccountService,
+  private zone: NgZone ) { 
     (<any>window).angular = (<any>window).angular || {parentComponent: this};
   }
 
   navigateUrl(url: string) {
-    this.router.navigateByUrl(url);
-    this.appRef.tick();
+    this.zone.run(() => {
+      this.router.navigateByUrl(url);
+      this.appRef.tick();
+    });
   }
 
   openSignUp() {
-    let component = this.modalService.open(PublicSignupComponent, { keyboard: false });
-    this.appRef.tick();
+    this.zone.run(() => {
+      let component = this.modalService.open(PublicSignupComponent, { keyboard: false });
+    });
   }
   openEditor() {
     if (this.userService.currentUser && this.userService.currentUser.claims &&

@@ -6,11 +6,10 @@ import { HomeComponent, HomeMasterComponent, PublicSignupComponent, NavbarCompon
   ProposalsComponent, ProposalsPageComponent, PublicResetPasswordComponent, PublicForgotPasswordComponent,
 PublicConfirmAccountComponent, PublicResendActivationComponent } from './';
 
-
 @NgModule({
   imports: [
     SharedModule,
-    ScrollSpyModule.forRoot()
+    ScrollSpyModule.forRoot(),
   ],
   declarations: [
     HomeComponent,
@@ -34,4 +33,5 @@ PublicConfirmAccountComponent, PublicResendActivationComponent } from './';
     PublicResendActivationComponent,
   ]
 })
+
 export class PublicModule { }

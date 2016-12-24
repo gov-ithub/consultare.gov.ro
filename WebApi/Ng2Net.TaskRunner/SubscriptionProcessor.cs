@@ -14,7 +14,8 @@ using Ng2Net.Infrastrucure.Logging;
 using Ng2Net.Model.Business;
 using Ng2Net.Data;
 using Ng2Net.Model.Security;
-
+using Ng2Net.Infrastructure.Interfaces;
+using Ng2Net.Services;
 
 namespace Ng2Net.TaskRunner
 {
@@ -27,13 +28,17 @@ namespace Ng2Net.TaskRunner
         private IRepository<TaskRunnerLog> _taskRunnerLogRepository;
         private DatabaseContext _dc;
         private SubscriptionProcessorSettings _settings;
+        private INotificationService _notificationService;
+        private IHtmlContentService _contentService;
 
-        public SubscriptionProcessor(IRepository<Proposal> repository, IRepository<TaskRunnerLog> taskRunnerLogRepository, SubscriptionProcessorSettings settings)
+        public SubscriptionProcessor(IRepository<Proposal> repository, IRepository<TaskRunnerLog> taskRunnerLogRepository, SubscriptionProcessorSettings settings, INotificationService notificationService, IHtmlContentService contentService)
         {
             this._repository = repository;
             this._dc = new DatabaseContext();
             this._settings = settings;
             this._taskRunnerLogRepository = taskRunnerLogRepository;
+            this._notificationService = notificationService;
+            this._contentService = contentService;
         }
 
         public string LogFileName { get; set; }
@@ -43,12 +48,12 @@ namespace Ng2Net.TaskRunner
 
             Dictionary<string, List<Proposal>> dictProposalsForUsers = new Dictionary<string, List<Proposal>>();
 
-            TaskRunnerLog lastRun = _taskRunnerLogRepository.GetMany(l => l.TaskResult.ToUpper() == "COMPLETE").OrderByDescending(l => l.DateStarted).FirstOrDefault();
-            DateTime dReferenceDate = lastRun!=null ? lastRun.DateStarted : DateTime.Now.AddMonths(-7);
+            TaskRunnerLog lastRun = _taskRunnerLogRepository.GetMany(l => l.TaskName == "ProcessSubscriptions" && l.TaskResult.ToUpper() == "COMPLETE").OrderByDescending(l => l.DateStarted).FirstOrDefault();
+            DateTime dReferenceDate = lastRun!=null ? lastRun.DateStarted : DateTime.MinValue;
 
-            List<Proposal> lstProposals = this._repository.GetMany(x => x.StartDate > dReferenceDate && x.EndDate > DateTime.Now).ToList();
+            List<Proposal> lstProposals = this._repository.GetMany(x => x.StartDate > dReferenceDate && x.LimitDate > DateTime.Now).ToList();
 
-            List<ApplicationUser> lstUsersSubscribedToAll = _dc.Users.Where(x => x.SubscriptionType == "ALL").ToList();
+            List<ApplicationUser> lstUsersSubscribedToAll = _dc.Users.Where(x => x.SubscriptionType == "ALL" && x.EmailConfirmed).ToList();
             foreach (ApplicationUser xApplicationUser in lstUsersSubscribedToAll)
             {
                 dictProposalsForUsers.Add(xApplicationUser.Id, lstProposals);
@@ -57,7 +62,7 @@ namespace Ng2Net.TaskRunner
             List<ApplicationUser> lstUserFromProposals = new List<ApplicationUser>();
             foreach(Proposal xProposal in lstProposals)
             {
-                foreach(ApplicationUser xUser in xProposal.Institution.SubscribedUsers.Where(u=>u.SubscriptionType == "SELECTED"))
+                foreach(ApplicationUser xUser in xProposal.Institution.SubscribedUsers.Where(u=>u.EmailConfirmed && u.SubscriptionType == "SELECTED"))
                 {
                     if (!dictProposalsForUsers.ContainsKey(xUser.Id))
                     {
@@ -83,20 +88,29 @@ namespace Ng2Net.TaskRunner
 
         private void AddToNotification(ApplicationUser xUser, List<Proposal> lstProposal)
         {
-            string sBody = "";
-            foreach (Proposal xProposal in lstProposal)
+            Dictionary<string, string> replacements = new Dictionary<string, string>();
+            replacements.Add("FULLNAME", xUser.FirstName + " " + xUser.LastName);
+            replacements.Add("PROPOSALCOUNT", lstProposal.ToString());
+
+            string proposalsContent = "";
+            foreach (Proposal xProposal in lstProposal.OrderBy(p => p.Institution.Name).ThenBy(p => p.StartDate == null ? DateTime.MaxValue : p.StartDate))
             {
-                sBody = sBody + xProposal.Link;
-                sBody = sBody + Environment.NewLine;
-                sBody = sBody + xProposal.Title;
-                sBody = sBody + Environment.NewLine;
-                sBody = sBody + Environment.NewLine;
+                var rowTemplate = _contentService.GetByName("email.weeklynotification.rowTemplate");
+                Dictionary<string, string> rowReplacements = new Dictionary<string, string>();
+                rowReplacements.Add("PROPOSAL_TITLE", xProposal.Title);
+
+                rowReplacements.Add("PROPOSAL_INSTITUTION", xProposal.Institution.Name);
+                rowReplacements.Add("PROPOSAL_STARTDATE", xProposal.StartDate == null ? "-" : xProposal.StartDate.Value.ToString("dd.MM.yyyy"));
+                rowReplacements.Add("PROPOSAL_ENDDATE", xProposal.EndDate == null ? "-" : xProposal.EndDate.Value.ToString("dd.MM.yyyy"));
+                rowReplacements.Add("PROPOSAL_LIMITDATE", xProposal.LimitDate==null ? "-" : xProposal.LimitDate.Value.ToString("dd.MM.yyyy"));
+
+                proposalsContent += Utils.ProcessReplacements(rowTemplate.Content, rowReplacements);
             }
-            Notification xNotification = new Notification();
-            xNotification.From= this._settings.SmtpUserName;
+            replacements.Add("PROPOSALCONTENT", proposalsContent);
+
+            Notification xNotification = this._notificationService.ConstructNotification("email.weeklynotification.title", "email.masterTemplate", "email.weeklynotification.template", "email.defaultFrom", replacements);
+
             xNotification.To= xUser.Email;
-            xNotification.Subject= lstProposal.Count.ToString() + " propuneri legislative noi";
-            xNotification.Body = sBody;
             _dc.Notifications.Add(xNotification);
             _dc.SaveChanges();
         }

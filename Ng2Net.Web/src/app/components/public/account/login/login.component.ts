@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserAccountService, ContentService } from '../../../../services';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
