@@ -6,79 +6,58 @@
     <app-html contentName="backend.content.edit"></app-html>
   </h4>
 </div>
-<form novalidate #ngForm="ngForm" (submit)="save()">
-  <div class="modal-body">
+<div class="modal-body">
+  <form novalidate #ngForm="ngForm" (submit)="save()">
     <div class="callout callout-success" *ngIf="result">{{ result }}</div>
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="form-group">
-          <label><app-html contentName="backend.user.userName"></app-html>:</label>
-          <input class="form-control" required [(ngModel)]="user.userName" name="userName" />
-        </div>
+    <div class="form-group">
+      <label><app-html contentName="backend.user.email"></app-html>:</label>
+      <input class="form-control" [(ngModel)]="user.email" name="email" />
+    </div>
+    <div class="form-group">
+      <label><app-html contentName="backend.user.firstName"></app-html>:</label>
+      <input class="form-control" [(ngModel)]="user.firstName" name="firstName" />
+    </div>
+    <div class="form-group">
+      <label><app-html contentName="backend.user.lastName"></app-html>:</label>
+      <input class="form-control" [(ngModel)]="user.lastName" name="lastName" />
+    </div>
+    <div class="form-group">
+      <md-checkbox [(ngModel)]="user.emailConfirmed" name="emailConfirmed">
+        <app-html contentName="backend.user.emailConfirmed"></app-html>
+      </md-checkbox>
+
+    </div>
+    <table class="table table-hover">
+      <tr>
+        <th style="width:150px">
+          <app-html contentName="Nume rol"></app-html>
+        </th>
+        <th style="width:50px;" class="text-center">
+          <app-html contentName="backend.content.delete"></app-html>
+        </th>
+      </tr>
+      <tr *ngFor="let item of userRoles">
+        <td><a (click)="openEditRole(item)">{{item.name}}</a></td>
+        <td style="width:50px; text-align:center"><button class="btn btn-sm btn-default" (click)="deleteRole(item)" type="button"><i class="fa fa-trash"></i></button></td>
+      </tr>
+    </table>
+
+    <div class="form-group">
+      <div *ngIf="addRoleOpen">
+        <select name="userRole" style="display:inline-block; width:initial" class="form-control proposal-search-dropdown" [ngModel]="userRoleid"
+          (change)="userRoleid=$event.target.value">
+                <option value="">- selecteaza rol -</option>
+                <option *ngFor="let item of identityRoles" [value]="item.id">{{item.name}}</option>
+            </select>
+        <button class="btn btn-info" (click)="addRole()" type="button"><i class="fa fa-check"></i></button>
+        <button class="btn btn-default" (click)="addRoleOpen=false" type="button"><i class="fa fa-times"></i></button>
+      </div>
+      <div>
+        <button class="btn btn-info" (click)="addRoleOpen=true" type="button">Adauga rol</button>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="form-group">
-          <label><app-html contentName="backend.user.email"></app-html>:</label>
-          <input class="form-control" [(ngModel)]="user.email" name="email" />
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="form-group">
-          <label><app-html contentName="backend.user.firstName"></app-html>:</label>
-          <input class="form-control" [(ngModel)]="user.firstName" name="firstName" />
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="form-group">
-          <label><app-html contentName="backend.user.lastName"></app-html>:</label>
-          <input class="form-control" [(ngModel)]="user.lastName" name="lastName" />
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="form-group">
-          <label><app-html contentName="backend.user.emailConfirmed"></app-html>:</label>
-          <input type="checkbox" [(ngModel)]="user.emailConfirmed" name="emailConfirmed" [disabled]="true"/>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="form-group">
-          <label><app-html contentName="backend.user.addrole"></app-html>:</label>
-          <select name="userRole" class="form-control proposal-search-dropdown" [ngModel]="userRoleid" (change)="userRoleid=userRoleid||{};userRoleid=$event.target.value">
-                                <option>- selecteaza rol -</option>
-                                <option *ngFor="let item of identityRoles" [value]="item.id">{{item.name}}</option>
-                            </select>
-          <button class="btn btn-primary" (click)="addRole()">Adauga rol</button>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <table class="table table-hover">
-        <tr>
-          <th style="width:150px">
-            <app-html contentName="Nume rol"></app-html>
-          </th>
-          <th style="width:50px;" class="text-center">
-            <app-html contentName="backend.content.delete"></app-html>
-          </th>
-        </tr>
-        <tr *ngFor="let item of userRoles">
-          <td><a (click)="openEditRole(item)">{{item.name}}</a></td>
-          <td><button class="btn btn-sm btn-default" (click)="deleteRole(item)" type="button"><i class="fa fa-trash"></i></button></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="modal-footer form-inline">
-    <button class="btn btn-primary" (click)="save()">Salveaza utilizator</button>
-  </div>
-</form>
+  </form>
+</div>
+<div class="modal-footer form-inline">
+  <button class="btn btn-primary" (click)="save()">Salveaza utilizator</button>
+</div>

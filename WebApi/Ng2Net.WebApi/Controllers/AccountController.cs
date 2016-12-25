@@ -23,6 +23,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Ng2Net.Services;
 using Ng2Web.WebApi.CustomAttributes;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Linq;
 
 namespace Ng2Net.WebApi.Controllers
 {
@@ -32,27 +33,31 @@ namespace Ng2Net.WebApi.Controllers
         private IApplicationAccountService _accountService;
         private INotificationService _notificationSevice;
         private IInstitutionService _institutionService;
+        private IMapper _mapper; 
         public AccountController(IApplicationAccountService accountService, INotificationService notificationService, IInstitutionService institutionService)
         {
             _accountService = accountService;
             _notificationSevice = notificationService;
             _institutionService = institutionService;
 
-            Mapper.Initialize(cfg =>
+            _mapper = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<ApplicationUser, ClaimsIdentityDTO>();
                 cfg.CreateMap<RoleClaim, ClaimDTO>();
                 cfg.CreateMap<Institution, InstitutionDTO>();
-                cfg.CreateMap<ClaimsIdentityDTO, ApplicationUser>().ForMember(dest => dest.Subscriptions, opt => opt.UseValue<IList<InstitutionDTO>>(null)).ForMember(dest => dest.Claims, opt => opt.Ignore());
+                cfg.CreateMap<ApplicationUser, ClaimsIdentityDTO>().ForMember(dest => dest.Subscriptions, opt => opt.Ignore()).ForMember(dest => dest.Claims, opt => opt.Ignore());
+                cfg.CreateMap<ClaimsIdentityDTO, ApplicationUser>().ForMember(dest => dest.Subscriptions, opt => opt.Ignore()).ForMember(dest => dest.Claims, opt => opt.Ignore());
+
                 cfg.CreateMap<ApplicationRole, UserRoleDTO>();
-            });
+                cfg.CreateMap<IdentityRole, UserRoleDTO>();
+            }).CreateMapper();
         }
 
         [Route("save")]
         public async Task<ClaimsIdentityDTO> SaveUser(ClaimsIdentityDTO claimsDTO)
         {
             var applicationUser = string.IsNullOrEmpty(claimsDTO.Id) ? new ApplicationUser() : _accountService.GetById(claimsDTO.Id);
-            Mapper.Map(claimsDTO, applicationUser);
+            _mapper.Map(claimsDTO, applicationUser);
             //applicationUser.UserName = claimsDTO.Email;
             bool sendConfirmationEmail = false;
 
@@ -95,7 +100,7 @@ namespace Ng2Net.WebApi.Controllers
         public IEnumerable<UserRoleDTO> GetUserRoles([FromUri]string id)
         {
             var roles = _accountService.GetUserRoles(id);
-            var result = Mapper.Map<IEnumerable<UserRoleDTO>>(roles);
+            var result = _mapper.Map<IEnumerable<UserRoleDTO>>(roles);
 
             return result;
         }
@@ -104,8 +109,8 @@ namespace Ng2Net.WebApi.Controllers
         [Route("identity-roles")]
         public IEnumerable<UserRoleDTO> GetIdentityRoles()
         {
-            var roles = _accountService.GetIdentityRoles();
-            var result = Mapper.Map<IEnumerable<UserRoleDTO>>(roles);
+            var roles = _accountService.GetIdentityRoles().ToList();
+            var result = _mapper.Map<IEnumerable<UserRoleDTO>>(roles);
 
             return result;
         }
@@ -114,11 +119,7 @@ namespace Ng2Net.WebApi.Controllers
         public IEnumerable<ClaimsIdentityDTO> GetUsers([FromUri]string filterQuery = null)
         {
             var users = _accountService.GetUsers(filterQuery);
-
-            foreach (var user in users)
-            {
-                yield return GetDTOFromUser(user);
-            }
+            return _mapper.Map<IEnumerable<ClaimsIdentityDTO>>(users);
         }
 
         [HttpPost]
@@ -146,7 +147,7 @@ namespace Ng2Net.WebApi.Controllers
 
         public ClaimsIdentityDTO GetDTOFromUser(ApplicationUser user)
         {
-            ClaimsIdentityDTO result = Mapper.Map<ClaimsIdentityDTO>(user);
+            ClaimsIdentityDTO result = _mapper.Map<ClaimsIdentityDTO>(user);
             result.Claims = _accountService.GetClaimsDictionaryByUser(user);
             return result;
         }

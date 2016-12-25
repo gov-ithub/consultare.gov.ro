@@ -14,11 +14,12 @@ export class UserEditComponent implements OnInit {
   private user: any = {};
   private parentComponent: any = {};
   private userRoles: any[] = [];
-  private userRoleid: string;
+  private userRoleid: string = '';
   private identityRoles: any[] = [];
   @ViewChild('ngForm')
   private ngForm: NgForm;
   private result: string;
+  private addRoleOpen: boolean = false;
 
   constructor(private activeModal: NgbActiveModal, private userService: UserAccountService) { }
 
@@ -37,6 +38,11 @@ export class UserEditComponent implements OnInit {
   }
 
   addRole(){
+    if (!this.addRoleOpen) { 
+      this.addRoleOpen=true;
+      return;
+    }
+
     this.userService.grantUserRole(this.user.id, this.userRoleid).subscribe(result=>{
       this.refresh();
     });
@@ -49,6 +55,7 @@ export class UserEditComponent implements OnInit {
   }
 
   save() {
+     console.log('done');
     if (!this.ngForm.valid) {
       return;
     }

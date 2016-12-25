@@ -44,19 +44,18 @@ namespace Ng2Net.Services.Security
         public IEnumerable<ApplicationRole> GetUserRoles(string userId)
         {
             var user = _context.Users.Include("Roles").FirstOrDefault(u => u.Id == userId);
-            var roles = from role in _context.Roles.ToList()
-                        join userRole in user.Roles on role.Id equals userRole.RoleId
-                        select new ApplicationRole { Id = role.Id, Name = role.Name };
+
+            var roles = _context.ApplicationRoles.ToList().Where(r => user.Roles.Select(a => a.RoleId).ToArray().Contains(r.Id));
 
             return roles;
         }
 
-        public IEnumerable<ApplicationRole> GetIdentityRoles()
+        public IQueryable<ApplicationRole> GetIdentityRoles()
         {
-            return _context.Roles.ToList().Select(role=> new ApplicationRole { Id = role.Id, Name = role.Name });
+            return _context.ApplicationRoles;
         }
 
-        public IEnumerable<ApplicationUser> GetUsers(string filterQuery)
+        public IQueryable<ApplicationUser> GetUsers(string filterQuery)
         {
             if(string.IsNullOrEmpty(filterQuery))
                 return _context.Users;

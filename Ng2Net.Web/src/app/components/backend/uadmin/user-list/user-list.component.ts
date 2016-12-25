@@ -27,8 +27,7 @@ export class UserListComponent implements OnInit {
   }
 
   openEdit(user: any) {
-    let modal = this.modalService.open(UserEditComponent, { size: 'lg', keyboard: false });
-    console.log(user);
+    let modal = this.modalService.open(UserEditComponent, { keyboard: false });
     modal.componentInstance.user = user;
     modal.componentInstance.parentComponent = this;
   }

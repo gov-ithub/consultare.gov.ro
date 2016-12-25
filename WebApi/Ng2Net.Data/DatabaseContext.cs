@@ -16,6 +16,8 @@ namespace Ng2Net.Data
         public DbSet<Institution> Institutions { get; set; }
         public DbSet<TaskRunnerLog> TaskRunnerLogs { get; set; }
         public DbSet<ProposalDocument> ProposalDocuments { get; set; }
+        public DbSet<ApplicationRole> ApplicationRoles { get; set; }
+
 
         public DatabaseContext(): base("name=DefaultConnection")
         {

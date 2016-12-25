@@ -1,6 +1,8 @@
-﻿using Ng2Net.Infrastructure.Interfaces;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Ng2Net.Infrastructure.Interfaces;
 using Ng2Net.Model.Security;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Ng2Net.Infrastructure.Interfaces
 {
@@ -8,9 +10,9 @@ namespace Ng2Net.Infrastructure.Interfaces
     {
         Dictionary<string, string> GetClaimsDictionaryByUser(ApplicationUser user);
         ApplicationUser GetById(string id);
-        IEnumerable<ApplicationUser> GetUsers(string filterQuery);
+        IQueryable<ApplicationUser> GetUsers(string filterQuery);
         IEnumerable<ApplicationRole> GetUserRoles(string userId);
-        IEnumerable<ApplicationRole> GetIdentityRoles();
+        IQueryable<ApplicationRole> GetIdentityRoles();
         void GrantUserRole(string userid, string roleid);
         void RemoveUserRole(string userid, string roleid);
         int Save();
