@@ -56,6 +56,7 @@ namespace Ng2Net.WebApi.Controllers
         [Route("save")]
         public async Task<ClaimsIdentityDTO> SaveUser(ClaimsIdentityDTO claimsDTO)
         {
+			//test
             var applicationUser = string.IsNullOrEmpty(claimsDTO.Id) ? new ApplicationUser() : _accountService.GetById(claimsDTO.Id);
             _mapper.Map(claimsDTO, applicationUser);
             //applicationUser.UserName = claimsDTO.Email;
