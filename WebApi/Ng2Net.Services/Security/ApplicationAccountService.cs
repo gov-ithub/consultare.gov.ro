@@ -75,7 +75,7 @@ namespace Ng2Net.Services.Security
                 return;
 
             user.Roles.Add(new IdentityUserRole { UserId = user.Id, RoleId = role.Id });
-            _context.SaveChanges();
+            this.Save();
 
         }
 
@@ -90,20 +90,22 @@ namespace Ng2Net.Services.Security
             if (userRole != null)
             {
                 user.Roles.Remove(userRole);
-                _context.SaveChanges();
+                this.Save();
             }
         }
 
         public int Save()
         {
-            var changedEntries = _context.ChangeTracker.Entries().Where(e => new EntityState[] { /*EntityState.Added*,*/ EntityState.Modified/*, EntityState.Deleted*/ }.Contains(e.State)).Where(e => typeof(ApplicationUser).IsAssignableFrom(e.Entity.GetType())).ToList();
+            var changedEntries = _context.ChangeTracker.Entries();
+            changedEntries = changedEntries.Where(e => new EntityState[] { /*EntityState.Added*,*/ EntityState.Modified/*, EntityState.Deleted*/ }.Contains(e.State));
+            changedEntries = changedEntries.Where(e => typeof(ApplicationUser).IsAssignableFrom(e.Entity.GetType())).ToList();
 
             foreach (var user in changedEntries)
             {
                 RunRules(user);
             }
 
-            return _context.SaveChanges();
+            return this.Save();
         }
 
         private void RunRules(DbEntityEntry user)
@@ -112,7 +114,7 @@ namespace Ng2Net.Services.Security
             if (user.OriginalValues["Email"].ToString() != applicationUser.Email)
             {
                 applicationUser.EmailConfirmed = false;
-
+                applicationUser.UserName = applicationUser.Email;
             }
 
         }

@@ -83,6 +83,7 @@ namespace Ng2Net.WebApi.Controllers
             }
             else
             {
+                _accountService.Save();
                 result = await ((ApplicationUserService)_accountService.UserService).UpdateAsync(applicationUser);
                 if (!result.Succeeded) throw new Exception(result.Errors.ToString());
                 sendConfirmationEmail = false;

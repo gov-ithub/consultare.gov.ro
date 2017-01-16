@@ -77,7 +77,15 @@ namespace Ng2Net.TaskRunner
             List<ApplicationUser> lstAllUsers = new List<ApplicationUser>();
             lstAllUsers.AddRange(lstUsersSubscribedToAll);
             lstAllUsers.AddRange(lstUserFromProposals);
-
+            if (!string.IsNullOrEmpty(_settings.TestUser))
+            {
+                lstAllUsers = lstAllUsers.Where(u => u.UserName == _settings.TestUser).ToList();
+                if (lstAllUsers.Count() == 0) {
+                    Logging.LogMessage("No test users with login name: " + _settings.TestUser);
+                    return 0;
+                }
+                dictProposalsForUsers = dictProposalsForUsers.Where(r => r.Key == lstAllUsers.First().Id).ToDictionary(c=>c.Key, d=>d.Value);
+            }
             //add to notification table
             foreach (KeyValuePair<string, List<Proposal>> entry in dictProposalsForUsers.Where(p=>p.Value.Count()>0))
             {
@@ -134,5 +142,6 @@ namespace Ng2Net.TaskRunner
     public class SubscriptionProcessorSettings
     {
         public string SmtpUserName { get; set; }
+        public string TestUser { get; set; }
     }
 }
