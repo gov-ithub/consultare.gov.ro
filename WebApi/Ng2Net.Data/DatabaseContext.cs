@@ -12,6 +12,7 @@ namespace Ng2Net.Data
     {
         public DbSet<RoleClaim> RoleClaims { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<CrawlerConfiguration> CrawlerConfigurations { get; set; }
         public DbSet<HtmlContent> HtmlContents { get; set; }
         public DbSet<Institution> Institutions { get; set; }
         public DbSet<TaskRunnerLog> TaskRunnerLogs { get; set; }

@@ -25,5 +25,6 @@ namespace Ng2Net.Model.Business
         public string Observations { get; set; }
         public bool Archived { get; set; }
         public virtual List<ProposalDocument> ProposalDocuments { get; set; }
+        public string ProposalSignature { get; set; }
     }
 }

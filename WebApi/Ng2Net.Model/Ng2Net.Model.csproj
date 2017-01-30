@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Scheduler\CrawlerConfiguration.cs" />
     <Compile Include="Business\ProposalDocument.cs" />
     <Compile Include="Scheduler\Notification.cs" />
     <Compile Include="Scheduler\TaskRunnerLog.cs" />

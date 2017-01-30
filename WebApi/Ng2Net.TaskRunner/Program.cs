@@ -14,15 +14,27 @@ namespace Ng2Web.TaskRunner
         /// The main entry point for the application.
         /// </summary>
         static void Main()
-        {
-            
+        {            
             log4net.Config.XmlConfigurator.Configure();
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[]
+
+            TaskRunnerService service = new TaskRunnerService();
+
+            if (Environment.UserInteractive)
             {
-                new TaskRunnerService()
-            };
-            ServiceBase.Run(ServicesToRun);
+                service.StartService();
+                Console.WriteLine("Press any key to stop program");
+                Console.ReadKey();
+                service.StopService();
+            }
+            else
+            {
+                ServiceBase[] ServicesToRun;
+                ServicesToRun = new ServiceBase[]
+                {
+                    new TaskRunnerService()
+                };
+                ServiceBase.Run(ServicesToRun);
+            }            
         }
     }
 }
