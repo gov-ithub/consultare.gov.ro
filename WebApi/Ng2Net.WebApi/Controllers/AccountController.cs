@@ -24,6 +24,7 @@ using Ng2Net.Services;
 using Ng2Web.WebApi.CustomAttributes;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Linq;
+using System.Net;
 
 namespace Ng2Net.WebApi.Controllers
 {
@@ -57,6 +58,15 @@ namespace Ng2Net.WebApi.Controllers
         public async Task<ClaimsIdentityDTO> SaveUser(ClaimsIdentityDTO claimsDTO)
         {
             var applicationUser = string.IsNullOrEmpty(claimsDTO.Id) ? new ApplicationUser() : _accountService.GetById(claimsDTO.Id);
+            if (!string.IsNullOrEmpty(applicationUser.Id) && this.CurrentUser!=null)
+            {
+                Dictionary<string, string> dClaims = _accountService.GetClaimsDictionaryByUser(applicationUser);
+
+                if (applicationUser.Id != this.CurrentUser.Id && dClaims["manageUsers"] != "true")
+                {
+                    throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                }
+            }
             _mapper.Map(claimsDTO, applicationUser);
             //applicationUser.UserName = claimsDTO.Email;
             bool sendConfirmationEmail = false;
@@ -65,12 +75,13 @@ namespace Ng2Net.WebApi.Controllers
             if (string.IsNullOrEmpty(applicationUser.Id))
             {
                 applicationUser.Id = Guid.NewGuid().ToString();
+                applicationUser.UserName = applicationUser.Email;
                 result = await ((ApplicationUserService)_accountService.UserService).CreateAsync(applicationUser, claimsDTO.Password);
-                if (!result.Succeeded) throw new Exception(result.Errors.ToString());
+                if (!result.Succeeded) throw new Exception(result.Errors.First().ToString());
                 ((ApplicationUserService)_accountService.UserService).AddToRole(applicationUser.Id, "User");
                 sendConfirmationEmail = true;
 
-                applicationUser.Subscriptions.Clear();
+                applicationUser.Subscriptions = new List<Institution>();
                 if (claimsDTO.SubscriptionType == "SELECTED")
                 {
                     foreach (InstitutionDTO inst in claimsDTO.Subscriptions)
@@ -96,6 +107,7 @@ namespace Ng2Net.WebApi.Controllers
             return resultDTO;
         }
 
+        [Authentication(Claims = new string[] { "manageUsers" })]
         [HttpGet]
         [Route("user-roles/{id}")]
         public IEnumerable<UserRoleDTO> GetUserRoles([FromUri]string id)
@@ -106,6 +118,7 @@ namespace Ng2Net.WebApi.Controllers
             return result;
         }
 
+        [Authentication(Claims = new string[] { "manageUsers" })]
         [HttpGet]
         [Route("identity-roles")]
         public IEnumerable<UserRoleDTO> GetIdentityRoles()
@@ -116,6 +129,7 @@ namespace Ng2Net.WebApi.Controllers
             return result;
         }
 
+        [Authentication(Claims = new string[] { "manageUsers" })]
         [Route("users")]
         public IEnumerable<ClaimsIdentityDTO> GetUsers([FromUri]string filterQuery = null)
         {
@@ -123,6 +137,7 @@ namespace Ng2Net.WebApi.Controllers
             return _mapper.Map<IEnumerable<ClaimsIdentityDTO>>(users);
         }
 
+        [Authentication(Claims = new string[] { "manageUsers" })]
         [HttpPost]
         [Route("grant-user-role/{userid}/{roleid}")]
         public void GrantUserRole([FromUri]string userid, [FromUri]string roleid)
@@ -130,6 +145,7 @@ namespace Ng2Net.WebApi.Controllers
             _accountService.GrantUserRole(userid, roleid);
         }
 
+        [Authentication(Claims = new string[] { "manageUsers" })]
         [HttpPost]
         [Route("remove-user-role/{userid}/{roleid}")]
         public void RemoveUserRole([FromUri]string userid, [FromUri]string roleid)

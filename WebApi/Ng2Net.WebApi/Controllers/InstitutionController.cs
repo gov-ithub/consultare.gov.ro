@@ -31,6 +31,12 @@ namespace Ng2Net.WebApi.Controllers
             {
                 var destInstitution = instService.GetById(destinationInstitutionId);
                 inst.Proposals.ToList().ForEach(i => i.Institution = destInstitution);
+                inst.SubscribedUsers.ToList().ForEach(u =>
+                {
+                    u.Subscriptions.Remove(inst);
+                    if (u.Subscriptions.IndexOf(destInstitution) < 0)
+                        u.Subscriptions.Add(destInstitution);
+                });
             }
             instService.Delete(inst);
             instService.Save();

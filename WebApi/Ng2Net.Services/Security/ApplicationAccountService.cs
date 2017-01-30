@@ -105,7 +105,7 @@ namespace Ng2Net.Services.Security
                 RunRules(user);
             }
 
-            return this.Save();
+            return _context.SaveChanges();
         }
 
         private void RunRules(DbEntityEntry user)

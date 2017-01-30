@@ -101,7 +101,7 @@ namespace Ng2Net.TaskRunner
             replacements.Add("PROPOSALCOUNT", lstProposal.ToString());
 
             string proposalsContent = "";
-            foreach (Proposal xProposal in lstProposal.OrderBy(p => p.Institution.Name).ThenBy(p => p.StartDate == null ? DateTime.MaxValue : p.StartDate))
+            foreach (Proposal xProposal in lstProposal.OrderBy(p => p.LimitDate).ThenBy(p => p.StartDate == null ? DateTime.MaxValue : p.StartDate))
             {
                 var rowTemplate = _contentService.GetByName("email.weeklynotification.rowTemplate");
                 Dictionary<string, string> rowReplacements = new Dictionary<string, string>();
@@ -118,7 +118,7 @@ namespace Ng2Net.TaskRunner
 
             Notification xNotification = this._notificationService.ConstructNotification("email.weeklynotification.title", "email.masterTemplate", "email.weeklynotification.template", "email.defaultFrom", replacements);
 
-            xNotification.To= xUser.Email;
+            xNotification.To = xUser.Email;
             _dc.Notifications.Add(xNotification);
             _dc.SaveChanges();
         }

@@ -154,7 +154,53 @@ namespace Ng2Net.Services
             return buffer;
         }
 
-  
+        public static DataTable ExcelToDataTable(string filePath, string format = "excel")
+        {
+            OleDbConnection conn = null;
+            DataTable dt = null;
+            OleDbDataAdapter da = null;
+            string connStringName = format + "ConnString";
+            try
+            {
+
+                switch (format)
+                {
+
+                    case "csv":
+                        FileInfo fi = new FileInfo(filePath);
+                        conn = new OleDbConnection(string.Format(ConfigurationManager.AppSettings[connStringName], fi.DirectoryName));
+                        conn.Open();
+                        da = new OleDbDataAdapter("select * from [" + fi.Name + "]", conn);
+                        break;
+
+                    case "excel":
+                        conn = new OleDbConnection(string.Format(ConfigurationManager.AppSettings[connStringName], filePath));
+                        conn.Open();
+                        da = new OleDbDataAdapter("select * from [" + conn.GetSchema("Tables").Rows[0]["TABLE_NAME"] + "]", conn);
+
+                        break;
+                }
+                dt = new DataTable();
+                
+
+                da.Fill(dt);
+
+                IEnumerable<DataRow> rw = dt.Rows.Cast<DataRow>().Where(row => !row.ItemArray.All(field => field == null || field is System.DBNull || field.ToString().Trim() == ""));
+
+                dt = rw.CopyToDataTable();
+                conn.Close();
+                dt.Rows.Cast<DataRow>().ToList().ForEach(r => dt.Columns.Cast<DataColumn>().ToList().ForEach(c => {
+                    if (c.DataType == typeof(string))
+                        r[c.ColumnName] = r[c.ColumnName].ToString().Trim();
+                }));
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public static string ProcessReplacements(string s, Dictionary<string, string> replacements)
         {
             if (s == null)
